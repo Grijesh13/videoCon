@@ -1,0 +1,76 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+    </style>
+    <script src="http://cdn.peerjs.com/0.3/peer.js"></script>
+
+  </head>
+  <body>
+
+<script type="text/javascript">
+
+var localStream;
+
+//  var peer = new Peer({key: 'echoz10wryb65hfr'});     // this is my(grijesh's) key -- after registering on peerJS
+var peer = new Peer({ key: 'b8zgil4rw1nn4s4i' , debug: 3});
+
+var start = function() {
+  navigator.getUserMedia = (navigator['getUserMedia'] ||
+	navigator['webkitGetUserMedia'] ||
+	navigator['mozGetUserMedia']); 
+
+  navigator.getUserMedia({audio:true, video: true}, function (stream) {
+	localStream = stream;
+  }, function(err) {});
+};
+
+start();
+
+
+peer.on('error', function(err) {
+  console.log(err);
+});
+
+
+peer.on('open', function(peerId) {
+  console.log('My peer ID is: ' + peerId);
+
+  var call = peer.call('gijbuq2vosd4e7b9', localStream);
+  getStreamFromOther(call);
+});
+
+
+peer.on('call', function(call) {
+call.answer(localStream);
+getStreamFromOther(call);
+});  
+
+
+var getStreamFromOther = function(call) {
+ call.on('stream', function(stream) {
+    var remoteVideo = document.getElementById('talk-box-other-stream');
+    remoteVideo.src = URL.createObjectUrl(stream);
+    // 'stream' is the MediaStream of the remote peer.
+    // add it to an HTML video/canvas element.
+  });
+};
+
+</script>
+
+<div>
+<video id="talk-box-other-stream"></video>
+</div>
+
+</body></html>

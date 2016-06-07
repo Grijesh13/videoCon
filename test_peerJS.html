@@ -1,0 +1,125 @@
+<html>
+
+<head>
+    <title>WebRtc Demo</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://cdn.peerjs.com/0.3/peer.js"></script>
+
+    <script type="text/javascript">
+        $( document ).ready(function() {
+        
+    navigator.getUserMedia = ( navigator.getUserMedia ||
+                    navigator.webkitGetUserMedia ||
+                    navigator.mozGetUserMedia ||
+                    navigator.msGetUserMedia );
+
+  // get audio/video
+  navigator.getUserMedia({audio:false, video: true}, function (stream) {
+    //display video
+    $('#myVideo').prop('src', URL.createObjectURL(stream));
+    window.localStream = stream;
+  }, function (error) { console.log(error); }
+  );
+  
+   $('#makeCall').click(function () {
+      // send peer id -- websockets
+      // wait for id
+      var outgoingCall1 = peer.call($('#remotePeerId-1').val(), window.localStream);
+      window.currentCall1 = outgoingCall1;
+      outgoingCall1.on('stream', function (remoteStream1) {
+        window.remoteStream1 = remoteStream1;
+        $('#theirVideo1').prop('src', URL.createObjectURL(remoteStream1));
+      });
+      var outgoingCall2 = peer.call($('#remotePeerId-2').val(), window.localStream);
+      window.currentCall2 = outgoingCall2;
+      outgoingCall2.on('stream', function (remoteStream2) {
+        window.remoteStream2 = remoteStream2;
+        $('#theirVideo2').prop('src', URL.createObjectURL(remoteStream2));
+      });
+    });
+    
+    
+    $('#endCall').click(function () {
+      window.currentCall.close();
+    });
+    
+  
+   window.peer = new Peer({
+      key: 'b8zgil4rw1nn4s4i',  // change this key
+      debug: 3,
+      config: {'iceServers': [
+        { url: 'stun:stun.l.google.com:19302' },
+        { url: 'stun:stun1.l.google.com:19302' },
+      ]}
+    });
+
+    peer.on('open', function () {
+      $('#myPeerId').text(peer.id);
+    });
+
+    // This event: remote peer receives a call
+    peer.on('call', function (incomingCall) {
+          console.log(incomingCall);
+
+      incomingCall.answer(window.localStream);
+      // incomingCall.on('stream', function (remoteStream) {
+      //   window.remoteStream = remoteStream;
+      //   $('#theirVideo').prop('src', URL.createObjectURL(remoteStream));
+      // });
+
+         //  if (!window.sdp) {
+         //    incomingCall.answer(window.localStream);
+         //    incomingCall.on('stream', function (remoteStream) {
+         //      window.remoteStream = remoteStream;
+         //      $('#theirVideo1').prop('src', URL.createObjectURL(remoteStream));
+         //    });
+         //    window.sdp = incomingCall.sdp;
+         //  } else if (window.sdp !== incomingCall.sdp) {
+         //    incomingCall.answer(window.localStream);
+         //    incomingCall.on('stream', function (remoteStream) {
+         //      window.remoteStream = remoteStream;
+         //      $('#theirVideo2').prop('src', URL.createObjectURL(remoteStream));
+         //    });
+         // }
+    //         window.currentCall1 = incomingCall;
+    //   incomingCall.answer(window.localStream);
+    //   incomingCall.on('stream', function (remoteStream1) {
+    //     window.remoteStream1 = remoteStream1;
+    //     $('#theirVideo1').prop('src', URL.createObjectURL(remoteStream1));
+    //   });
+
+    // window.currentCall1 = incomingCall;
+    //   incomingCall.answer(window.localStream);
+    //   incomingCall.on('stream', function (remoteStream1) {
+    //     window.remoteStream1 = remoteStream1;
+    //     $('#theirVideo1').prop('src', URL.createObjectURL(remoteStream1));
+    //   });
+
+    });
+    } );
+    </script>
+</head>
+
+<body>
+    <h1>Welcome!</h1>
+    <h2>Video Chat</h2>
+    <div id="video-container">
+        <!-- note the 'autoplay' -->
+        Your friend 11111: <video id="theirVideo1" class="theirVideo" autoplay></video>
+        Your friend 22222: <video id="theirVideo2" class="theirVideo" autoplay></video>
+        <video id="myVideo" muted="true" class="myVideo" autoplay></video>: You
+    </div>
+
+    <h2>Controls</h2>
+    <div>
+        <p>Your id: <span id="myPeerId">...</span></p>
+        <p>Make a call</p><br>
+        <input type="text" placeholder="Call user id..." id="remotePeerId-1">
+        <input type="text" placeholder="Call user id..." id="remotePeerId-2">
+
+        <p><a href="#" id="makeCall">Call</a></p>
+        <p><a href="#" id="endCall">End call</a></p>
+    </div>
+</body>
+
+</html>

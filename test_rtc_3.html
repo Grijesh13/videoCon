@@ -1,0 +1,111 @@
+<html>
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="./adapter.js"></script>
+
+    <title>WebRtc Demo</title>
+
+    <script type="text/javascript">
+        var socket = io();
+        var configuration = { 'iceServers': [ { url: 'stun:stun.l.google.com:19302' }, { url: 'stun:stun1.l.google.com:19302' } ] };
+        var pc;
+        var myID;
+        var isCaller = false;
+
+        document.onload = function() {
+            // get an ID dude... UNIQUE!!
+            $.get('/getID', function(res) {
+                myID = res;
+                $('#myID').text(myID);
+            });
+        }();
+
+        function makeCall() {
+            isCaller = true;
+            start(isCaller);
+        };
+
+        // call start() to initiate
+        function start(isCaller) {
+            pc = new RTCPeerConnection(configuration);
+            pc.onicecandidate = function (evt) {
+                console.log('onicecandidate');
+                if (evt.candidate) {
+                    console.log(evt.candidate);
+                    socket.emit('chat message', JSON.stringify({ 'candidate': evt.candidate, 'targetId': myID }));
+                }
+            };
+
+            pc.onaddstream = function (evt) {
+                console.log('onaddstream');
+                if ($('#theirVideo_1').src) {
+                    $('#theirVideo_2').prop('src', URL.createObjectURL(evt.stream));
+                } else {
+                    $('#theirVideo_1').prop('src', URL.createObjectURL(evt.stream));
+                }
+            };
+
+            navigator.getUserMedia = ( navigator.getUserMedia ||
+                navigator.webkitGetUserMedia ||
+                navigator.mozGetUserMedia ||
+                navigator.msGetUserMedia );
+            navigator.getUserMedia({
+                'audio': true,
+                'video': true
+            }, function (stream) {
+                $('#myVideo').prop('src', URL.createObjectURL(stream));
+                pc.addStream(stream);
+                if (isCaller) {
+                    pc.createOffer(localDescCreated, logError);
+                } else {
+                    pc.createAnswer(localDescCreated, logError);
+                }
+            }, logError);
+        };
+
+        function localDescCreated(desc) {
+            pc.setLocalDescription(desc, function () {
+                socket.emit('chat message', JSON.stringify({ 'sdp': pc.localDescription, 'sourceID': myID }));
+            }, logError);
+        };
+
+        socket.on('chat message', function(evt) {
+            if (!pc) start(isCaller);
+            var message = JSON.parse(evt);
+            if (message.sdp && message.sourceID !== myID) {
+                pc.setRemoteDescription(new RTCSessionDescription(message.sdp));
+            } else {
+                // just to check if (message.candidate) is not empty ---> otherwise it will throw an error.
+                if (message.candidate && ) {
+                    pc.addIceCandidate(new RTCIceCandidate(message.candidate));
+                }
+            }
+        });
+
+        function logError(error) {
+            console.log(error.name + ': ' + error.message);
+        };
+
+    </script>
+</head>
+
+<body>
+    <h1>Welcome!</h1>
+    <div id="video-container">
+        <!-- note the 'autoplay' -->
+        Friend 1: <video style="width:320px;height:180px;" id="theirVideo_1" class="theirVideo" autoplay></video>
+        Friend 2: <video style="width:320px;height:180px;" id="theirVideo_2" class="theirVideo" autoplay></video>
+        You: <video style="width:320px;height:180px;" id="myVideo" muted="true" class="myVideo" autoplay></video>
+    </div>
+
+    <h2>Controls</h2>
+    <div>
+        <h1>Val: <span id="myID"><%=val%></span></h1>
+        <p><a href="#" id="makeCall" onclick="makeCall();">Call</a></p>
+        <p><a href="#" id="endCall">End call</a></p>
+    </div>
+</body>
+
+</html>

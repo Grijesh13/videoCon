@@ -1,0 +1,107 @@
+@charset "utf-8";
+.select-dialog-jumper-panel {
+  position: relative;
+}
+.select-dialog-jumper-panel-main {
+  overflow-y: scroll;
+  width: 100%;
+}
+.select-dialog-jumper-panel-main-content {
+  width: 100%;
+}
+.select-dialog-jumper-panel-main-content-group-header {
+  background-color: #f1f1f1;
+  border: none;
+  margin-bottom: 0;
+  margin-top: 8px;
+  padding-left: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.select-dialog-jumper-panel-jumper {
+  position: absolute;
+  top: 0px;
+  right: 16px;
+  text-align: center;
+  width: 35px;
+  height: 100%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.select-dialog-jumper-panel-jumper:hover {
+  background-color: #f5f5f5;
+}
+.select-dialog-jumper-panel-jumper-item {
+  text-align: center;
+  padding: 0 8px;
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-weight: 400;
+}
+.select-dialog-jumper-panel-jumper-item.select-dialog-jumper-panel-nodata:hover {
+  cursor: default;
+  background: none;
+}
+.select-dialog-jumper-panel-jumper-item:hover {
+  cursor: pointer;
+  background-color: #dddddd;
+  font-weight: 700;
+}
+.select-dialog-jumper-panel-jumper-item-a {
+  font-size: 1.2rem;
+  color: #aaaaaa;
+  text-decoration: none;
+}
+.select-dialog-jumper-panel-jumper-item.select-dialog-jumper-panel-item-warning {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.select-dialog-jumper-panel-jumper-item:hover .select-dialog-jumper-panel-jumper-item-a {
+  color: #333333;
+}
+.select-dialog-jumper-panel-nodata:hover .select-dialog-jumper-panel-jumper-item-a {
+  cursor: default;
+  color: #aaaaaa;
+  font-weight: 400;
+}
+.select-dialog-jumper-panel-item-warning .select-dialog-jumper-panel-jumper-item-a {
+  position: relative;
+  right: 7px;
+}

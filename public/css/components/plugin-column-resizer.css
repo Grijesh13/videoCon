@@ -1,0 +1,9 @@
+@charset "utf-8";
+.grid-column-resize-support-line {
+  position: absolute;
+  z-index: 1500;
+  top: 0px;
+  height: 100%;
+  width: 2px;
+  background-color: #555555;
+}

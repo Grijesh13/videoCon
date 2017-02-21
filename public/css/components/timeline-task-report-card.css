@@ -1,0 +1,159 @@
+@charset "utf-8";
+.timeline-task-report-card {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  padding: 8px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+}
+.timeline-task-report-card-head {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timeline-task-report-card-head-main {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.timeline-task-report-card-head-time,
+.timeline-task-report-card-head-actions,
+.timeline-task-report-card-card-head-time,
+.timeline-task-report-card-card-head-actions {
+  display: none;
+}
+.timeline-task-report-card-head-main {
+  margin-bottom: 8px;
+}
+.timeline-task-report-card-head-action {
+  margin-right: 8px;
+  cursor: pointer;
+  color: #bdbdbd;
+}
+.timeline-task-report-card-head-action:hover {
+  color: #333333;
+}
+.timeline-task-report-card-head-action:last-of-type {
+  margin-right: 0;
+}
+.timeline-task-report-card-container {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: auto;
+}
+.timeline-task-report-card-lead {
+  position: relative;
+  top: .5em;
+  border-top: 1px #aaaaaa solid;
+  color: #aaaaaa;
+  line-height: 1;
+  font-size: 11.9px;
+  margin-bottom: 8px;
+}
+.timeline-task-report-card-lead-inner {
+  position: relative;
+  background-color: #ffffff;
+  padding-right: 14px;
+  display: inline-block;
+  top: -7px;
+}
+.timeline-task-report-card-content--with-indent {
+  padding-left: 8px;
+}
+.timeline-task-report-card-success,
+.timeline-task-report-card-danger {
+  margin-left: 7px;
+  margin-right: 7px;
+  font-size: 1.7rem;
+}
+.timeline-task-report-card-success {
+  color: #33ac71;
+}
+.timeline-task-report-card-danger {
+  color: #e91e63;
+}
+.timeline-task-report-card-link {
+  text-align: right;
+  font-size: 11.9px;
+}
+.timeline-task-report-card-link-text {
+  color: #4285f4;
+}
+.timeline-task-report-card-link-text:hover {
+  text-decoration: underline;
+}
+.timeline-task-report-card-warning {
+  border: 1px #f4b142 solid;
+  background-color: #fdf7ec;
+  padding: 8px;
+  color: #f4b142;
+  margin-bottom: 8px;
+}
+.timeline-task-report-card-task {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px #f1f1f1 solid;
+}
+.timeline-task-report-card-task:last-child {
+  border-bottom: none;
+}
+.timeline-task-report-card-task-picture {
+  width: 32px;
+  margin-right: 4px;
+}
+.timeline-task-report-card-task-picture-img {
+  width: 100%;
+}
+.timeline-task-report-card-task-main {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.timeline-task-report-card-task-username {
+  font-size: 11.9px;
+  /* margin-bottom: @size-base / 2; */
+}
+.timeline-task-report-card-task-username-a {
+  color: #4285f4;
+}
+.timeline-task-report-card-task-username-a:hover {
+  text-decoration: underline;
+}
+.timeline-task-report-card-task-title-badge {
+  background-color: #f4b142;
+  color: #ffffff;
+  font-size: 1.4rem;
+  padding: 4.2px 8.4px;
+  margin-left: 8px;
+}
+.timeline-task-report-card-task-detail {
+  margin-right: 6px;
+}

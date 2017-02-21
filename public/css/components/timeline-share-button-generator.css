@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col,
+.timeline-share-button-generator-column {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+/* --------------------------------------------------------------------------
+ * cell padding for layout system.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.grid-cell-padding {
+  padding: 16px 16px;
+}
+.timeline-share-button-generator {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 112px 64px 64px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+}
+@media (max-width: 767px) {
+  .timeline-share-button-generator {
+    width: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .timeline-share-button-generator {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1440px) {
+  .timeline-share-button-generator {
+    width: 970px;
+  }
+}
+@media (min-width: 1441px) {
+  .timeline-share-button-generator {
+    width: 1170px;
+  }
+}
+.timeline-share-button-generator-lead {
+  margin-top: 0;
+}
+.timeline-share-button-generator-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timeline-share-button-generator-column {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+.timeline-share-button-generator-iframe {
+  max-height: 64px;
+}
+.timeline-share-button-generator-textarea {
+  min-height: 3.5em;
+  overflow: hidden;
+}

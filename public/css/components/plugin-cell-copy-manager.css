@@ -1,0 +1,51 @@
+@charset "utf-8";
+.grid-copyable-rect-container {
+  position: absolute;
+  overflow: hidden;
+}
+.grid-copyable-rect-container:hover {
+  cursor: default;
+}
+.grid-copyable-rect-container .grid-copyable-rect {
+  position: absolute;
+  border: 1px dashed;
+  border-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-animation-duration: 0.2s;
+  -moz-animation-duration: 0.2s;
+  -o-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -o-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  -webkit-animation-timing-function: liner;
+  animation-timing-function: liner;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  z-index: 20;
+}
+.grid-copyable-rect-container .grid-copyable-rect.top {
+  animation-name: move-right;
+  -webkit-animation-name: move-right;
+  height: 2px;
+  width: 100%;
+}
+.grid-copyable-rect-container .grid-copyable-rect.right {
+  animation-name: move-down;
+  -webkit-animation-name: move-down;
+  width: 2px;
+  height: 100%;
+}
+.grid-copyable-rect-container .grid-copyable-rect.bottom {
+  animation-name: move-left;
+  -webkit-animation-name: move-left;
+  height: 2px;
+  width: 100%;
+}
+.grid-copyable-rect-container .grid-copyable-rect.left {
+  animation-name: move-up;
+  -webkit-animation-name: move-up;
+  width: 2px;
+  height: 100%;
+}

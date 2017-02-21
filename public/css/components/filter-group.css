@@ -1,0 +1,31 @@
+@charset "utf-8";
+.filter-group {
+  margin-top: 10px;
+}
+.filter-group-header {
+  border-left: 5px solid #dddddd;
+  padding: 5px 0px 5px 10px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+.filter-group-header:hover {
+  background-color: #f1f1f1;
+}
+.filter-group-header-title {
+  float: left;
+  color: #999999;
+  font-size: 1.2rem;
+}
+.filter-group-header-search {
+  color: #999999;
+  margin-left: 10px;
+}
+.filter-group-body {
+  padding: 5px 15px;
+}
+.filter-group-body-display-none {
+  display: none;
+}
+.filter-group-body-input {
+  margin-bottom: 10px;
+}

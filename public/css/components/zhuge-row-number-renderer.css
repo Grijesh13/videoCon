@@ -1,0 +1,85 @@
+@charset "utf-8";
+.zhuge-row-number-renderer {
+  color: #333333;
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.zhuge-row-number-renderer-draggable {
+  cursor: move;
+  color: #7f7f7f;
+  margin-top: 4px;
+  font-size: 1.6rem;
+}
+.zhuge-row-number-renderer-draggable.inline {
+  line-height: 15px;
+}
+.zhuge-row-number-renderer-draggable.float {
+  position: absolute;
+  left: 4px;
+  top: 8px;
+}
+.zhuge-row-number-renderer-menu {
+  margin-left: auto;
+  color: #7f7f7f;
+  margin-top: 4px;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.zhuge-row-number-renderer-menu.inline {
+  line-height: 15px;
+}
+.zhuge-row-number-renderer-menu.float {
+  position: absolute;
+  right: 4px;
+  top: 8px;
+}
+.zhuge-row-number-renderer-header-menu.goog-menu.goog-menu-vertical {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  cursor: default;
+  margin: 0;
+  outline: none;
+  padding: 8px;
+  position: absolute;
+  z-index: 1000;
+}
+.zhuge-row-number-renderer-header-menu.goog-menu.goog-menu-vertical .goog-menuitem {
+  color: #7f7f7f;
+  list-style: none;
+  height: 36px;
+  line-height: 36px;
+  margin: 0;
+  cursor: pointer;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+.zhuge-row-number-renderer-header-menu .goog-menuitem-content {
+  padding: 0 8px;
+}
+.zhuge-row-number-renderer-header-menu .goog-menuseparator {
+  border-bottom: 1px solid #dddddd;
+  margin: 4px 0;
+}
+.zhuge-row-number-renderer-header-menu .goog-menu-nocheckbox .goog-menuitem,
+.zhuge-row-number-renderer-header-menu .goog-menu-noicon .goog-menuitem {
+  padding-left: 20px;
+}
+.zhuge-row-number-renderer-header-menu .goog-menuitem-disabled .goog-menuitem-accel,
+.zhuge-row-number-renderer-header-menu .goog-menuitem-disabled .goog-menuitem-content {
+  color: #cccccc;
+}
+.zhuge-row-number-renderer-header-menu .goog-menuitem-disabled .goog-menuitem-icon {
+  zoom: 1;
+  filter: alpha(opacity=30);
+  -webkit-opacity: 0.3;
+  -moz-opacity: 0.3;
+  opacity: 0.3;
+}
+.zhuge-row-number-renderer-header-menu .goog-menuitem-highlight,
+.zhuge-row-number-renderer-header-menu .goog-menuitem-hover {
+  background-color: #f1f1f1;
+}

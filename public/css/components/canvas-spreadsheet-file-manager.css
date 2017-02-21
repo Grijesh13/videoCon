@@ -1,0 +1,866 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.canvas-spreadsheet-history-panel {
+  position: fixed;
+  z-index: 1090;
+  height: 920px;
+  width: 15%;
+  right: -15%;
+  -webkit-transition: left 0.2s ease-out 0s;
+  -moz-transition: left 0.2s ease-out 0s;
+  -o-transition: left 0.2s ease-out 0s;
+  transition: left 0.2s ease-out 0s;
+  border: solid 1px #dddddd;
+  border-top: transparent;
+  border-right: transparent;
+  -webkit-box-shadow: 3px 2px 5px #dddddd;
+  -moz-box-shadow: 3px 2px 5px #dddddd;
+  box-shadow: 3px 2px 5px #dddddd;
+  top: 50px;
+}
+.canvas-spreadsheet-history-panel .caption {
+  background-color: #303641;
+  color: #ffffff;
+  width: 100%;
+  height: 8%;
+  padding: 20px;
+  padding-top: 10%;
+}
+.canvas-spreadsheet-history-panel .content {
+  background: #ffffff;
+  height: 90%;
+  width: 100%;
+  overflow-y: scroll;
+}
+.canvas-spreadsheet-history-panel .close {
+  color: #ffffff;
+  float: right;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  zoom: 1;
+  filter: alpha(opacity=20);
+  -webkit-opacity: 0.2;
+  -moz-opacity: 0.2;
+  opacity: 0.2;
+}
+.canvas-spreadsheet-history-panel .close:hover {
+  cursor: pointer;
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+.canvas-spreadsheet-history-panel .docs-revisions-tile {
+  padding: 6px 12px;
+  border-color: #dddddd;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  outline: none;
+}
+.canvas-spreadsheet-history-panel .docs-revisions-tile-selected,
+.canvas-spreadsheet-history-panel .docs-revisions-tile:hover {
+  background-color: #e8e8e8;
+}
+.canvas-spreadsheet-history-panel .docs-revisions-tile-selected .docs-revisions-tile-timestamp {
+  color: #e91e63;
+  font-weight: 700;
+}
+.canvas-spreadsheet-history-panel .docs-revisions-tile-swatch {
+  width: 8px;
+  height: 8px;
+  position: relative;
+  top: 3px;
+  float: left;
+  margin-right: 4px;
+}
+.canvas-spreadsheet-history-panel .docs-revisions-tile-collaborator {
+  font-size: 1.2rem;
+  color: #999999;
+  margin-right: 8px;
+}
+.canvas-spreadsheet-history-panel .docs-revisions-tile-link {
+  color: #4285f4;
+  cursor: pointer;
+  font-size: 1.4rem;
+  display: block;
+}
+.canvas-spreadsheet-template-selector > .trigger {
+  position: absolute;
+  z-index: 1060;
+  height: 920px;
+  width: 1%;
+}
+.canvas-spreadsheet-template-selector .main {
+  position: fixed;
+  z-index: 1060;
+  height: 920px;
+  width: 75%;
+  left: -75%;
+  -webkit-transition: left 0.3s ease-out 0s;
+  -moz-transition: left 0.3s ease-out 0s;
+  -o-transition: left 0.3s ease-out 0s;
+  transition: left 0.3s ease-out 0s;
+  top: 50px;
+}
+.canvas-spreadsheet-template-selector .main > .header {
+  float: left;
+  background-color: #303641;
+  color: #ffffff;
+  width: 20%;
+  height: 100%;
+  padding: 20px;
+  z-index: 1060;
+}
+.canvas-spreadsheet-template-selector .main > .header .title {
+  font-size: 2.4rem;
+  color: #e8e8e8;
+  margin-bottom: 10px;
+  line-height: 40px;
+}
+.canvas-spreadsheet-template-selector .main > .header .sub-title {
+  font-size: 1.7rem;
+  margin-bottom: 40px;
+}
+.canvas-spreadsheet-template-selector .main > .header ul.category {
+  line-height: 20px;
+}
+.canvas-spreadsheet-template-selector .main > .header ul.category li {
+  padding: 10px 6px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.canvas-spreadsheet-template-selector .main > .header ul.category li > span {
+  margin-left: 10px;
+}
+.canvas-spreadsheet-template-selector .main > .header ul.category li.selected {
+  font-weight: 700;
+  background-color: #555555;
+}
+.canvas-spreadsheet-template-selector .main > .header ul.category li:not(.selected):hover {
+  background-color: #aaaaaa;
+}
+.canvas-spreadsheet-template-selector .main > .content {
+  float: left;
+  position: relative;
+  background-color: #e8e8e8;
+  width: 80%;
+  height: 100%;
+  display: none;
+}
+.canvas-spreadsheet-template-selector .main > .content .template-caption {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 40px;
+  margin-left: 30px;
+  margin-top: 20px;
+  min-height: 30px;
+}
+.canvas-spreadsheet-template-selector .main > .content .close {
+  float: right;
+  margin-top: 20px;
+  margin-right: 28px;
+}
+.canvas-spreadsheet-template-selector .main > .content .close i {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.canvas-spreadsheet-template-selector .main > .content .view-ctrl {
+  position: absolute;
+  right: 40px;
+  top: 30px;
+}
+.canvas-spreadsheet-template-selector .main > .content .view-ctrl .btn {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 0px;
+}
+.canvas-spreadsheet-template-selector .main > .content .view-ctrl .btn i {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-left: 2px;
+  margin-top: 4px;
+  display: block;
+}
+.canvas-spreadsheet-template-selector .main > .content .search-container {
+  height: 80px;
+  width: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.canvas-spreadsheet-template-selector .main > .content .search-container .input-group {
+  width: 100%;
+}
+.canvas-spreadsheet-template-selector .main > .content .search-container .input-group input {
+  width: 80%;
+  margin-left: 10px;
+  height: 30px;
+  padding: 6px;
+}
+.canvas-spreadsheet-template-selector .main > .content .search-container .input-group .input-group-btn {
+  display: inline-block;
+}
+.canvas-spreadsheet-template-selector .main > .content .search-container .input-group .input-group-btn button {
+  height: 30px;
+  width: 40px;
+  padding-top: 0px;
+  padding-left: 10px;
+  margin-top: -2px;
+  -webkit-border-radius: 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0px;
+  -moz-background-clip: padding;
+  border-radius: 0px;
+  background-clip: padding-box;
+}
+.canvas-spreadsheet-template-selector .main > .content .search-container .input-group .input-group-btn button i {
+  font-size: 1.4rem;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  margin-top: 8px;
+  display: inline-block;
+}
+.canvas-spreadsheet-template-selector .main > .content .tile-container {
+  height: 82%;
+  overflow-y: auto;
+  padding: 0 20px;
+}
+.canvas-spreadsheet-template-selector .main > .content .tile-container::-webkit-scrollbar {
+  width: 5px;
+}
+.canvas-spreadsheet-template-selector .main > .content .tile-container .tile-layout-wrapper {
+  width: 33.33%;
+  position: relative;
+  padding: 2px 10px 10px 10px;
+  float: left;
+}
+.canvas-spreadsheet-template-selector .main > .content .tile-container .tile-layout-wrapper .tile {
+  background-color: #ffffff;
+  border: 5px solid transparent;
+  height: 235px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.canvas-spreadsheet-template-selector .main > .content .tile-container .tile-layout-wrapper .tile:hover {
+  border-color: #cccccc;
+}
+.canvas-spreadsheet-template-selector .main > .content .tile-container .tile-layout-wrapper .tile > .header {
+  height: 80px;
+  color: #555555;
+  padding: 10px;
+}
+.canvas-spreadsheet-template-selector .main > .content .tile-container .tile-layout-wrapper .tile > .header i {
+  top: 0;
+  cursor: pointer;
+  font-size: 1.7rem;
+  color: #999999;
+  float: right;
+}
+.canvas-spreadsheet-template-selector .main > .content .tile-container .tile-layout-wrapper .tile > .header .title {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.canvas-spreadsheet-template-selector .main > .content .tile-container .tile-layout-wrapper .tile > .header .sub-title {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  padding-left: 0px;
+}
+.canvas-spreadsheet-template-selector .main > .content .tile-container .tile-layout-wrapper .tile .snapshot .icon {
+  margin: 0 8px;
+}
+.canvas-spreadsheet-template-selector .main > .content .tile-container .tile-layout-wrapper .tile .snapshot .icon img {
+  width: 100%;
+  height: 110px;
+}
+.canvas-spreadsheet-template-selector .main > .content .tile-container .tile-layout-wrapper .tile > .footer {
+  position: absolute;
+  bottom: 8%;
+  left: 6.5%;
+}
+.canvas-spreadsheet-file-header {
+  padding: 10px 16px 10px 18px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.canvas-spreadsheet-file-header .title-container .title {
+  font-size: 2rem;
+  line-height: 1.8;
+  color: #303641;
+  font-weight: 400;
+}
+.canvas-spreadsheet-file-header .title-container .title:hover {
+  cursor: pointer;
+}
+.canvas-spreadsheet-file-header .title-container .title-input {
+  font-size: 2rem;
+  margin-top: 4px;
+  margin-left: -4px;
+}
+.canvas-spreadsheet-file-header .title-container .title-input:focus {
+  -webkit-box-shadow: 0px 0px 0px #4285f4;
+  -moz-box-shadow: 0px 0px 0px #4285f4;
+  box-shadow: 0px 0px 0px #4285f4;
+}
+.canvas-spreadsheet-file-header .favorite {
+  margin-top: 4px;
+  font-size: 2rem;
+  margin-left: 10px;
+}
+.canvas-spreadsheet-file-header .history-hint {
+  margin-top: 12px;
+  margin-left: 10px;
+  color: #999999;
+}
+.canvas-spreadsheet-file-header .history-hint:hover {
+  cursor: pointer;
+}
+.canvas-spreadsheet-file-header .main {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  max-height: 100%;
+  z-index: 7;
+  position: relative;
+}
+.canvas-spreadsheet-file-header .main .toggle-btn {
+  padding: 6px;
+}
+.canvas-spreadsheet-file-header .main .toggle-btn i {
+  font-size: 2rem;
+}
+.canvas-spreadsheet-file-header .main .control-panel {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #ffffff;
+  width: 250px;
+  position: absolute;
+  right: 0;
+  -webkit-box-shadow: 0px 0px 5px #dddddd;
+  -moz-box-shadow: 0px 0px 5px #dddddd;
+  box-shadow: 0px 0px 5px #dddddd;
+  margin-top: 40px;
+  display: none;
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -o-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
+}
+.canvas-spreadsheet-file-header .main .control-panel.pop {
+  display: block;
+  -webkit-animation: 'popdown' 0.1s ease-out;
+  -moz-animation: 'popdown' 0.1s ease-out;
+  -o-animation: 'popdown' 0.1s ease-out;
+  animation: 'popdown' 0.1s ease-out;
+}
+.canvas-spreadsheet-file-header .main .control-panel .indicator {
+  background-color: #ffffff;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 9px;
+  -webkit-transform: rotate(45deg);
+  top: -5px;
+}
+.canvas-spreadsheet-file-header .main .control-panel ul {
+  padding-left: 5%;
+}
+.canvas-spreadsheet-file-header .main .control-panel ul li {
+  float: left;
+  width: 30%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.canvas-spreadsheet-file-header .main .control-panel ul li:hover {
+  background-color: #e8e8e8;
+  cursor: pointer;
+}
+.canvas-spreadsheet-file-header .main .control-panel ul li i {
+  font-size: 3rem;
+  text-align: center;
+  display: block;
+}
+.canvas-spreadsheet-file-header .main .control-panel ul li div.desc {
+  text-align: center;
+  font-size: 1.4rem;
+}
+.wap-core-ui-spreadsheet-open-file-dialog,
+.wap-core-ui-spreadsheet-share-file-dialog {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div {
+  width: 60%;
+  margin: auto;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content {
+  box-shadow: 0px 0px 20px #cccccc;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-header,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-header {
+  background-color: #4285f4;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-header .close,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-header .close {
+  border: 0;
+  float: right;
+  background-color: transparent;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-header .close:hover i,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-header .close:hover i {
+  color: #ffffff;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-header .dialog-title,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-header .dialog-title {
+  color: #ffffff;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body {
+  background-color: #f1f1f1;
+  padding: 20px 0px;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body::after,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl {
+  width: 50%;
+  position: absolute;
+  right: 26px;
+  top: 20px;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .switch-view-btn,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .switch-view-btn {
+  font-size: 1.7rem;
+  float: right;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .switch-view-btn i,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .switch-view-btn i {
+  display: block;
+  border: 1px solid transparent;
+  padding: 2px 4px;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .switch-view-btn i:hover,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .switch-view-btn i:hover {
+  cursor: pointer;
+  border: 1px solid #dddddd;
+  background: white;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group {
+  float: right;
+  margin-right: 16px;
+  border: 1px solid transparent;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group:hover,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group:hover {
+  cursor: pointer;
+  border: 1px solid #dddddd;
+  background: white;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group:hover .trigger,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group:hover .trigger {
+  border-left: 1px solid #dddddd;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .label-wrapper,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .label-wrapper {
+  padding: 2px;
+  display: inline-block;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .label-wrapper .direction,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .label-wrapper .direction {
+  font-size: 1.7rem;
+  display: inline-block;
+  margin-right: -4px;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .label-wrapper .label,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .label-wrapper .label {
+  display: inline-block;
+  font-size: 1.4rem;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .trigger,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .trigger {
+  padding: 2px;
+  border-left: 1px solid transparent;
+  font-size: 1.7rem;
+  display: inline-block;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .sort-by-group-context-menu,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .sort-by-group-context-menu {
+  float: right;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .sort-by-group-context-menu .sort-by-group-menu-list,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .sort-by-group-context-menu .sort-by-group-menu-list {
+  top: -2px;
+  left: -159px;
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -o-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
+  font-size: 1.4rem;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .sort-by-group-context-menu .sort-by-group-menu-list.pop,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .sort-by-group-context-menu .sort-by-group-menu-list.pop {
+  display: block;
+  -webkit-animation: 'popdown' 0.05s ease-out;
+  -moz-animation: 'popdown' 0.05s ease-out;
+  -o-animation: 'popdown' 0.05s ease-out;
+  animation: 'popdown' 0.05s ease-out;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .sort-by-group-context-menu .sort-by-group-menu-list li.active .icon i,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .sort-by-group-context-menu .sort-by-group-menu-list li.active .icon i {
+  visibility: visible ;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .sort-by-group-context-menu .sort-by-group-menu-list li .icon,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .sort-by-group-context-menu .sort-by-group-menu-list li .icon {
+  min-width: 20px;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .sort-by-group-context-menu .sort-by-group-menu-list li .icon i,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .sort-by-group .sort-by-group-context-menu .sort-by-group-menu-list li .icon i {
+  visibility: hidden;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group {
+  float: right;
+  margin-right: 16px;
+  border: 1px solid transparent;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group:hover,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group:hover {
+  cursor: pointer;
+  border: 1px solid #dddddd;
+  background: #ffffff;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group:hover .trigger,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group:hover .trigger {
+  border-left: 1px solid #dddddd;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group .trigger,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group .trigger {
+  padding: 2px;
+  border-left: 1px solid transparent;
+  font-size: 1.7rem;
+  display: inline-block;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group .label,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group .label {
+  padding: 2px;
+  display: inline-block;
+  font-size: 1.4rem;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group .owned-by-group-context-menu,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group .owned-by-group-context-menu {
+  float: right;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group .owned-by-group-context-menu .owned-by-group-menu-list,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group .owned-by-group-context-menu .owned-by-group-menu-list {
+  top: -2px;
+  left: -159px;
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -o-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
+  font-size: 1.4rem;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group .owned-by-group-context-menu .owned-by-group-menu-list.pop,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group .owned-by-group-context-menu .owned-by-group-menu-list.pop {
+  display: block;
+  -webkit-animation: 'popdown' 0.05s ease-out;
+  -moz-animation: 'popdown' 0.05s ease-out;
+  -o-animation: 'popdown' 0.05s ease-out;
+  animation: 'popdown' 0.05s ease-out;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group .owned-by-group-context-menu .owned-by-group-menu-list li.active .icon i,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group .owned-by-group-context-menu .owned-by-group-menu-list li.active .icon i {
+  visibility: visible ;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group .owned-by-group-context-menu .owned-by-group-menu-list li .icon,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group .owned-by-group-context-menu .owned-by-group-menu-list li .icon {
+  min-width: 20px;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group .owned-by-group-context-menu .owned-by-group-menu-list li .icon i,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .view-ctrl .owned-by-group .owned-by-group-context-menu .owned-by-group-menu-list li .icon i {
+  visibility: hidden;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .search-container,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .search-container {
+  height: 60px;
+  width: 50%;
+  position: absolute;
+  left: 10px;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .search-container .input-group,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .search-container .input-group {
+  width: 100%;
+  margin-left: 10px;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .search-container .input-group input,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .search-container .input-group input {
+  width: 80%;
+  margin-left: 10px;
+  height: 30px;
+  padding: 6px;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .search-container .input-group .input-group-btn,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .search-container .input-group .input-group-btn {
+  display: inline-block;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .search-container .input-group .input-group-btn button,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .search-container .input-group .input-group-btn button {
+  height: 30px;
+  width: 40px;
+  padding-top: 0px;
+  padding-left: 10px;
+  margin-top: -2px;
+  -webkit-border-radius: 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0px;
+  -moz-background-clip: padding;
+  border-radius: 0px;
+  background-clip: padding-box;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .search-container .input-group .input-group-btn button i,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .search-container .input-group .input-group-btn button i {
+  font-size: 1.4rem;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  margin: 0;
+  display: inline-block;
+  margin-top: 8px;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container {
+  height: 82%;
+  margin-top: 70px;
+  max-height: 600px;
+  padding: 0px 20px;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container:after,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container:after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table {
+  background-color: #ffffff;
+  width: calc(100% - 20px);
+  margin-left: 10px;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table thead,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table thead {
+  font-weight: 700;
+  border: 1px solid #cccccc;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table thead td,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table thead td {
+  padding: 8px;
+  line-height: 1.4;
+  vertical-align: top;
+  font-weight: 700;
+  border-top: 0;
+  font-size: 1.7rem;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table thead td.title-header,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table thead td.title-header {
+  width: 50%;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table thead td.owner-header,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table thead td.owner-header {
+  width: 20%;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table thead td.last-modified-header,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table thead td.last-modified-header {
+  width: 30%;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table tbody,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table tbody {
+  border: 1px solid #cccccc;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table tbody tr:hover,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table tbody tr:hover {
+  cursor: pointer;
+  background-color: #e8e8e8;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table tbody td,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table tbody td {
+  padding: 8px;
+  line-height: 1.4;
+  vertical-align: top;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper {
+  width: 25%;
+  position: relative;
+  padding: 10px;
+  float: left;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper .tile,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper .tile {
+  background-color: #ffffff;
+  border: 5px solid #dddddd;
+  padding: 10px;
+  transition: all .3s ease;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper .tile:hover,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper .tile:hover {
+  cursor: pointer;
+  border: 5px solid #4285f4;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper .tile .title,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper .tile .title {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper .tile .author,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper .tile .author {
+  font-size: 1.2rem;
+  color: #aaaaaa;
+  margin: 8px 0 20px 0;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper .tile .icon img,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper .tile .icon img {
+  width: 100%;
+  height: 120px;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper .tile .footer,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper .tile .footer {
+  text-align: right;
+  color: #bdbdbd;
+  margin-top: 6px;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .pagination,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .pagination {
+  float: right;
+  margin-top: 20px;
+  margin-right: 30px;
+  font-size: 1.4rem;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container {
+  display: inline-block;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item {
+  padding: 6px;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item.prev,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item.prev {
+  font-size: 1.7rem;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item.next,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item.next {
+  font-size: 1.7rem;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item:hover,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item:hover {
+  cursor: pointer;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item.page-num,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item.page-num {
+  text-decoration: underline;
+  color: #aaaaaa;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item.page-num.active,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item.page-num.active {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.7rem;
+  font-weight: 700;
+  cursor: auto;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-input-container,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-input-container {
+  display: inline-block;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-input-container .page-input,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-input-container .page-input {
+  width: 30px;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-input-container .page-sum,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .dialog-body .pagination .page-input-container .page-sum {
+  margin-right: 6px;
+}
+.wap-core-ui-spreadsheet-open-file-dialog .dialog-div .dialog-content .modal-footer,
+.wap-core-ui-spreadsheet-share-file-dialog .dialog-div .dialog-content .modal-footer {
+  margin-top: 0px;
+}

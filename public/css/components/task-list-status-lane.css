@@ -1,0 +1,112 @@
+@charset "utf-8";
+.task-list-status-lane {
+  margin: 10px 15px;
+  width: 31%;
+  min-width: 420px;
+  height: 620px;
+  float: left;
+}
+.task-list-status-lane-body {
+  height: 560px;
+  overflow-y: auto;
+}
+.task-list-status-lane-msg-holder.display-none {
+  display: none;
+}
+.task-list-status-lane-msg-notask {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.task-list-status-lane-header {
+  padding: 5px 0px;
+  border-bottom: 5px solid #f1f1f1;
+  clear: both;
+}
+.task-list-status-lane-header-right-hint {
+  margin-top: 4px;
+}
+.task-list-status-lane-header-right-hint-cnt-hint {
+  margin-right: 5px;
+}
+.task-list-status-lane-header-right-hint.not-selected {
+  color: #aaaaaa;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+.task-list-status-lane-header-right-hint.selected {
+  color: #333333;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+.task-list-status-lane-header-cnt-hint-holder {
+  font-size: 1.4rem;
+  color: #999999;
+}
+.task-list-status-lane-header-title-label {
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+.task-list-status-lane.hovered {
+  background-color: #f8f6be;
+}
+.task-list-status-lane.hovered .task-list-status-lane-header {
+  border-bottom-color: #f6f180;
+}
+.task-list-status-lane.establish .task-list-status-lane-header-title-label {
+  background-color: #999999;
+}
+.task-list-status-lane.sre-progress .task-list-status-lane-header-title-label {
+  background-color: #4285f4;
+}
+.task-list-status-lane.finish .task-list-status-lane-header-title-label {
+  background-color: #33ac71;
+}
+.task-list-status-lane.suspend .task-list-status-lane-header-title-label {
+  background-color: #e91e63;
+}
+.task-list-status-lane.approve .task-list-status-lane-header-title-label {
+  background-color: #3b77db;
+}
+.task-list-status-lane.review .task-list-status-lane-header-title-label {
+  background-color: #52188c;
+}
+.task-list-status-lane.establish .task-list-status-lane-card {
+  border-left-color: #999999;
+}
+.task-list-status-lane.establish .task-list-status-lane-card-thumb-holder {
+  display: none;
+}
+.task-list-status-lane.sre-progress .task-list-status-lane-card {
+  border-left-color: #4285f4;
+}
+.task-list-status-lane.sre-progress .task-list-status-lane-card-thumb-holder {
+  display: none;
+}
+.task-list-status-lane.finish .task-list-status-lane-card {
+  border-left-color: #33ac71;
+}
+.task-list-status-lane.finish .task-list-status-lane-card-wap-icon-calendar {
+  display: none;
+}
+.task-list-status-lane.finish .task-list-status-lane-card-wap-icon-clock {
+  display: none;
+}
+.task-list-status-lane.suspend .task-list-status-lane-card {
+  border-left-color: #e91e63;
+}
+.task-list-status-lane.suspend .task-list-status-lane-card-thumb-holder {
+  display: none;
+}
+.task-list-status-lane.approve .task-list-status-lane-card {
+  border-left-color: #4285f4;
+}
+.task-list-status-lane.approve .task-list-status-lane-card-thumb-holder {
+  display: none;
+}
+.task-list-status-lane.review .task-list-status-lane-card {
+  border-left-color: #52188c;
+}
+.task-list-status-lane.review .task-list-status-lane-card-thumb-holder {
+  display: none;
+}

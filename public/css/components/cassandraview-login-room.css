@@ -1,0 +1,176 @@
+@charset "utf-8";
+.cassandraview-login-room-main-header {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 88px 0 24px 0;
+}
+.cassandraview-login-room-main-header:after {
+  position: absolute;
+  content: '';
+  left: 49%;
+  top: 100%;
+  bottom: 0;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 16px 16px 0 16px;
+  border-color: transparent transparent transparent transparent;
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+.cassandraview-login-room-body {
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.cassandraview-login-room-body-hidden {
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.cassandraview-login-room-main-language-picker {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 32px;
+  margin-right: 40px;
+}
+.cassandraview-login-room-error-messages {
+  color: red;
+}
+.cassandraview-login-room-input {
+  color: #333333;
+  background: transparent;
+  border: 0;
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  padding: 8px 16px;
+}
+.cassandraview-login-room-input::-webkit-input-placeholder {
+  color: #7f7f7f;
+}
+.cassandraview-login-room-input:-moz-placeholder {
+  color: #7f7f7f;
+}
+.cassandraview-login-room-input::-moz-placeholder {
+  color: #7f7f7f;
+}
+.cassandraview-login-room-input:-ms-input-placeholder {
+  color: #7f7f7f;
+}
+.cassandraview-login-room-mainbody {
+  background: #c6dafb;
+  height: 100%;
+  width: 100%;
+  background-image: url("../../img/login/login-background01.jpg");
+  overflow-y: auto;
+}
+.cassandraview-login-room-input-container {
+  width: 300px;
+  margin: 5% auto;
+}
+.cassandraview-login-room-main-content-header {
+  padding-bottom: 0;
+  margin-top: 24px;
+  position: relative;
+  width: 496px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.cassandraview-login-room-main-content-header-hidden {
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.cassandraview-login-room-main-logo-image {
+  width: 496px;
+}
+.cassandraview-login-room-main-input-holder {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding-top: 4px;
+  padding-bottom: 4px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  margin-bottom: 24px;
+}
+.cassandraview-login-room-button {
+  display: block;
+  width: 100%;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  border: 1px solid #4285f4;
+  text-align: center;
+  padding: 12px 16px;
+  background-color: #4285f4;
+  -webkit-transition: border-color 0.3s ease;
+  -moz-transition: border-color 0.3s ease;
+  -o-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  color: #ffffff;
+}
+.cassandraview-login-room-button:hover,
+.cassandraview-login-room-button:focus,
+.cassandraview-login-room-button:active {
+  background-color: #1b6cf2;
+  border-color: #0e61eb;
+}
+.cassandraview-login-room-footer-credit-holder {
+  text-align: center;
+  padding: 8px 0;
+  width: 100%;
+  font-size: 1.2rem;
+}
+.cassandraview-login-room-footer-credit {
+  text-align: center;
+  color: #cccccc;
+}
+.cassandraview-login-room-footer-credit:hover {
+  text-decoration: none;
+  color: #cccccc;
+  cursor: default;
+}
+.cassandraview-login-room-footer-credit:focus {
+  outline: none;
+  border-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.cassandraview-login-room-clear-hidden {
+  display: none;
+}
+.cassandraview-login-room-notclear-hidden {
+  visibility: false;
+}

@@ -1,0 +1,225 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * report-editor-color-palette styles.
+ * (temporary style)
+ * @author rohit
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * report-editor-color-palette styles.
+ * @author rohit
+ * ------------------------------------------------------------------------*/
+.report-editor-color-palette {
+  display: table;
+  width: 100%;
+  margin: 5px;
+}
+.report-editor-color-palette-label {
+  display: table-cell;
+  width: 35%;
+  margin: 3px;
+  vertical-align: middle;
+  padding-left: 2px;
+}
+.report-editor-color-palette-value {
+  height: 32px;
+  width: 32px;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.report-editor-color-palette-value-wrapper {
+  display: table-cell;
+}
+.report-editor-color-palette-hsva-palette,
+.report-editor-color-palette-hsva-palette-sm {
+  position: relative;
+  border: 1px solid;
+  border-color: #999999;
+  width: 442px;
+  height: 276px;
+  top: 32px;
+  float: left;
+}
+.report-editor-color-palette-hsva-palette-sm {
+  width: 205px;
+  height: 185px;
+}
+.report-editor-color-palette-hsva-palette-hs-backdrop,
+.report-editor-color-palette-hsva-palette-sm-hs-backdrop,
+.report-editor-color-palette-hsva-palette-hs-image,
+.report-editor-color-palette-hsva-palette-sm-hs-image {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 256px;
+  height: 256px;
+  border: 1px solid;
+  border-color: #999999;
+}
+.report-editor-color-palette-hsva-palette-sm-hs-backdrop,
+.report-editor-color-palette-hsva-palette-sm-hs-image {
+  top: 45px;
+  width: 128px;
+  height: 128px;
+}
+.report-editor-color-palette-hsva-palette-hs-backdrop,
+.report-editor-color-palette-hsva-palette-sm-hs-backdrop {
+  background-color: #000000;
+}
+.report-editor-color-palette-hsva-palette-hs-image,
+.report-editor-color-palette-hsva-palette-v-image,
+.report-editor-color-palette-hsva-palette-a-image,
+.report-editor-color-palette-hsva-palette-hs-handle,
+.report-editor-color-palette-hsva-palette-v-handle,
+.report-editor-color-palette-hsva-palette-a-handle,
+.report-editor-color-palette-hsva-palette-swatch-backdrop {
+  background-image: url(//ssl.gstatic.com/closure/hsva-sprite.png);
+}
+.report-editor-color-palette-hsva-palette-noalpha .report-editor-color-palette-hsva-palette-hs-image,
+.report-editor-color-palette-hsva-palette-noalpha .report-editor-color-palette-hsva-palette-v-image,
+.report-editor-color-palette-hsva-palette-noalpha .report-editor-color-palette-hsva-palette-a-image,
+.report-editor-color-palette-hsva-palette-noalpha .report-editor-color-palette-hsva-palette-hs-handle,
+.report-editor-color-palette-hsva-palette-noalpha .report-editor-color-palette-hsva-palette-v-handle,
+.report-editor-color-palette-hsva-palette-noalpha .report-editor-color-palette-hsva-palette-a-handle,
+.report-editor-color-palette-hsva-palette-noalpha .report-editor-color-palette-hsva-palette-swatch-backdrop {
+  background-image: url(//ssl.gstatic.com/closure/hsva-sprite.gif);
+}
+.report-editor-color-palette-hsva-palette-sm-hs-image,
+.report-editor-color-palette-hsva-palette-sm-v-image,
+.report-editor-color-palette-hsva-palette-sm-a-image,
+.report-editor-color-palette-hsva-palette-sm-hs-handle,
+.report-editor-color-palette-hsva-palette-sm-v-handle,
+.report-editor-color-palette-hsva-palette-sm-a-handle,
+.report-editor-color-palette-hsva-palette-sm-swatch-backdrop {
+  background-image: url(//ssl.gstatic.com/closure/hsva-sprite-sm.png);
+}
+.report-editor-color-palette-hsva-palette-noalpha .report-editor-color-palette-hsva-palette-sm-hs-image,
+.report-editor-color-palette-hsva-palette-noalpha .report-editor-color-palette-hsva-palette-sm-v-image,
+.report-editor-color-palette-hsva-palette-noalpha .report-editor-color-palette-hsva-palette-sm-a-image,
+.report-editor-color-palette-hsva-palette-noalpha .report-editor-color-palette-hsva-palette-sm-hs-handle,
+.report-editor-color-palette-hsva-palette-noalpha .report-editor-color-palette-hsva-palette-sm-v-handle,
+.report-editor-color-palette-hsva-palette-noalpha .report-editor-color-palette-hsva-palette-sm-a-handle,
+.report-editor-color-palette-hsva-palette-noalpha .report-editor-color-palette-hsva-palette-swatch-backdrop {
+  background-image: url(//ssl.gstatic.com/closure/hsva-sprite-sm.gif);
+}
+.report-editor-color-palette-hsva-palette-hs-image,
+.report-editor-color-palette-hsva-palette-sm-hs-image {
+  background-position: 0 0;
+}
+.report-editor-color-palette-hsva-palette-hs-handle,
+.report-editor-color-palette-hsva-palette-sm-hs-handle {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 11px;
+  height: 11px;
+  overflow: hidden;
+  background-position: 0 -256px;
+}
+.report-editor-color-palette-hsva-palette-sm-hs-handle {
+  top: 40px;
+  background-position: 0 -128px;
+}
+.report-editor-color-palette-hsva-palette-v-image,
+.report-editor-color-palette-hsva-palette-a-image,
+.report-editor-color-palette-hsva-palette-sm-v-image,
+.report-editor-color-palette-hsva-palette-sm-a-image {
+  position: absolute;
+  top: 10px;
+  left: 286px;
+  width: 19px;
+  height: 256px;
+  border: 1px solid;
+  border-color: #999999;
+  background-color: #ffffff;
+  background-position: -256px 0;
+}
+.report-editor-color-palette-hsva-palette-a-image {
+  left: 325px;
+  background-position: -275px 0;
+}
+.report-editor-color-palette-hsva-palette-sm-v-image,
+.report-editor-color-palette-hsva-palette-sm-a-image {
+  top: 45px;
+  left: 155px;
+  width: 9px;
+  height: 128px;
+  background-position: -128px 0;
+}
+.report-editor-color-palette-hsva-palette-sm-a-image {
+  left: 182px;
+  background-position: -137px 0;
+}
+.report-editor-color-palette-hsva-palette-v-handle,
+.report-editor-color-palette-hsva-palette-a-handle,
+.report-editor-color-palette-hsva-palette-sm-v-handle,
+.report-editor-color-palette-hsva-palette-sm-a-handle {
+  position: absolute;
+  top: 5px;
+  left: 279px;
+  width: 35px;
+  height: 11px;
+  background-position: -11px -256px;
+  overflow: hidden;
+}
+.report-editor-color-palette-hsva-palette-a-handle {
+  left: 318px;
+}
+.report-editor-color-palette-hsva-palette-sm-v-handle,
+.report-editor-color-palette-hsva-palette-sm-a-handle {
+  top: 40px;
+  left: 148px;
+  width: 25px;
+  background-position: -11px -128px;
+}
+.report-editor-color-palette-hsva-palette-sm-a-handle {
+  left: 175px;
+}
+.report-editor-color-palette-hsva-palette-swatch,
+.report-editor-color-palette-hsva-palette-swatch-backdrop,
+.report-editor-color-palette-hsva-palette-sm-swatch,
+.report-editor-color-palette-hsva-palette-sm-swatch-backdrop {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 65px;
+  height: 65px;
+  border: 1px solid;
+  border-color: #999999;
+  background-color: #ffffff;
+  background-position: -294px 0;
+}
+.report-editor-color-palette-hsva-palette-sm-swatch,
+.report-editor-color-palette-hsva-palette-sm-swatch-backdrop {
+  top: 10px;
+  right: auto;
+  left: 10px;
+  width: 30px;
+  height: 22px;
+  background-position: -36px -128px;
+}
+.report-editor-color-palette-hsva-palette-swatch,
+.report-editor-color-palette-hsva-palette-sm-swatch {
+  z-index: 7;
+}
+.report-editor-color-palette-hsva-palette-swatch-backdrop,
+.report-editor-color-palette-hsva-palette-sm-swatch-backdrop {
+  z-index: 1;
+}
+.report-editor-color-palette-hsva-palette-input,
+.report-editor-color-palette-hsva-palette-sm-input {
+  position: absolute;
+  top: 85px;
+  right: 10px;
+  width: 65px;
+  font-size: 1.2rem;
+}
+.report-editor-color-palette-hsva-palette-sm-input {
+  top: 10px;
+  right: auto;
+  left: 50px;
+}

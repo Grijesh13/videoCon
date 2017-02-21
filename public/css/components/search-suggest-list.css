@@ -1,0 +1,40 @@
+@charset "utf-8";
+.search-suggest-list-wap-component {
+  position: absolute;
+  display: block;
+  top: 32px;
+  background-color: #ffffff;
+  z-index: 1000;
+  width: 100%;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.search-suggest-list-wap-component-ul {
+  margin: 0px;
+}
+.search-suggest-list-wap-component-ul.select {
+  background-color: #f1f1f1;
+}
+.search-suggest-list-wap-component-ul-li {
+  border-color: #aaaaaa;
+  border-style: solid;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.search-suggest-list-wap-component-ul-li:hover {
+  background-color: #e8e8e8;
+}
+.search-suggest-list-wap-component-ul-li:first-child {
+  border-top-width: 1px;
+}
+.search-suggest-list-wap-component-ul-li:last-child {
+  border-bottom-width: 1px;
+}
+.search-suggest-list-wap-component-ul-li-span-subtext {
+  font-size: 1.2rem;
+  color: #999999;
+  margin-left: 20px;
+}

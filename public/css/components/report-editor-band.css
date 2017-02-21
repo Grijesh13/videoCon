@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * report-editor-band styles.
+ * @author bharath
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * report-editor-band styles.
+ * (temporary style)
+ * @author bharath
+ * ------------------------------------------------------------------------*/
+.report-editor-band {
+  position: relative;
+  outline: 1px dashed #dddddd;
+  width: 100%;
+}
+.report-editor-band-label {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  text-align: center;
+  color: #bdbdbd;
+  overflow: hidden;
+}

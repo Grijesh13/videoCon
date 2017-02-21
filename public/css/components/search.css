@@ -1,0 +1,247 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * l-search styles.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col,
+.l-search .l-filter-room,
+.l-search .l-result-room {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row,
+.l-search .l-title-room,
+.l-search .l-header-left-room,
+.l-search .l-header-right-room,
+.l-search .l-category-room,
+.l-search .l-search-room,
+.l-search .l-search-right-room {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+/* --------------------------------------------------------------------------
+ * cell padding for layout system.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.grid-cell-padding,
+.l-search .l-title-room,
+.l-search .l-header-left-room,
+.l-search .l-header-right-room,
+.l-search .l-category-room,
+.l-search .l-search-room,
+.l-search .l-search-right-room,
+.l-search .l-filter-room,
+.l-search .l-result-room.l-grid-leaf {
+  padding: 16px 16px;
+}
+/* --------------------------------------------------------------------------
+ * l-search styles.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.l-search {
+  position: absolute;
+  top: 48px;
+  bottom: 0;
+  width: 100%;
+  overflow-y: auto;
+  min-width: 1280px;
+  /* grid system */
+}
+.l-search .l-search-inner {
+  min-height: 100%;
+  position: relative;
+  padding: 0 17px 0 16px;
+}
+.l-search .l-title-floor {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 80px;
+  flex-basis: 80px;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  height: 80px;
+}
+.l-search .l-input-floor {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 64px;
+  flex-basis: 64px;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  height: 64px;
+  padding: 0;
+  background-color: #f1f1f1;
+  margin: 0 16px;
+}
+.l-search .l-result-floor {
+  padding-top: 8px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-height: 100%;
+}
+.l-search .l-title-room {
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-basis: 304px;
+  flex-basis: 304px;
+  position: relative;
+}
+.l-search .l-header-left-room {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-width: 100%;
+  position: relative;
+}
+.l-search .l-header-left-room.l-room > .component {
+  margin-left: 8px;
+}
+.l-search .l-header-left-room.l-room > .component:first-child {
+  margin-left: 0;
+}
+.l-search .l-header-right-room {
+  -webkit-flex-basis: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+.l-search .l-header-right-room.l-room > .component {
+  margin-left: 8px;
+}
+.l-search .l-header-right-room.l-room > .component:first-child {
+  margin-left: 0;
+}
+.l-search .l-category-room {
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-basis: 304px;
+  flex-basis: 304px;
+  position: relative;
+}
+.l-search .l-search-room {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-width: 100%;
+  position: relative;
+}
+.l-search .l-search-right-room {
+  -webkit-flex-basis: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  position: relative;
+}
+.l-search .l-search-right-room.l-room > .component {
+  margin-left: 8px;
+}
+.l-search .l-search-right-room.l-room > .component:first-child {
+  margin-left: 0;
+}
+.l-search .l-filter-room {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 304px;
+  flex-basis: 304px;
+  margin-left: 16px;
+  position: relative;
+}
+.l-search .l-filter-room .l-grid-leaf.ltr > .component {
+  margin-left: 8px;
+}
+.l-search .l-filter-room .l-grid-leaf.ltr > .component:first-child {
+  margin-left: 0;
+}
+.l-search .l-filter-room .l-grid-leaf.rtl > .component {
+  margin-right: 8px;
+}
+.l-search .l-filter-room .l-grid-leaf.rtl > .component:first-child {
+  margin-right: 0;
+}
+.l-search .l-result-room {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  max-width: 100%;
+  position: relative;
+}
+.l-search .l-result-room .l-grid-leaf.ltr > .component {
+  margin-left: 8px;
+}
+.l-search .l-result-room .l-grid-leaf.ltr > .component:first-child {
+  margin-left: 0;
+}
+.l-search .l-result-room .l-grid-leaf.rtl > .component {
+  margin-right: 8px;
+}
+.l-search .l-result-room .l-grid-leaf.rtl > .component:first-child {
+  margin-right: 0;
+}

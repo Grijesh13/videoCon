@@ -1,0 +1,122 @@
+@charset "utf-8";
+.timeline-task-box {
+  height: 100%;
+  position: relative;
+  padding: 4px;
+}
+.timeline-task-box-outline {
+  border: 1px solid #dddddd;
+}
+.timeline-task-box-information {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.timeline-task-box-title {
+  font-size: 1.4rem;
+  padding: 0 0 4px 0;
+}
+.timeline-task-box-title-link {
+  color: #4285f4;
+  cursor: pointer;
+}
+.timeline-task-box-title-link:hover {
+  text-decoration: underline;
+}
+.timeline-task-box-title-text {
+  color: #333333;
+}
+.timeline-task-box-title-deadline {
+  display: inline-block;
+  margin-left: 12px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1px 4px;
+}
+.timeline-task-box-title-deadline.timeline-task-box-warning {
+  background-color: #f4b142;
+}
+.timeline-task-box-title-deadline.timeline-task-box-safe {
+  background-color: #4285f4;
+}
+.timeline-task-box-title-deadline.timeline-task-box-danger {
+  background-color: #e91e63;
+}
+.timeline-task-box-title-deadline.timeline-task-box-complete {
+  background-color: #33ac71;
+}
+.timeline-task-box-title-deadline.timeline-task-box-primary {
+  background-color: #4285f4;
+}
+.timeline-task-box-subtitle {
+  color: #999999;
+  font-size: 1.2rem;
+  padding-top: 8px;
+}
+.timeline-task-box-subtitle-deadline {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px;
+}
+.timeline-task-box-subtitle-deadline-caption {
+  width: 120px;
+}
+.timeline-task-box-subtitle-deadline-content {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.timeline-task-box-subtitle-assignee {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timeline-task-box-subtitle-assignee-caption {
+  width: 120px;
+}
+.timeline-task-box-subtitle-assignee-content {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timeline-task-box-actions {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 120px;
+}
+.timeline-task-box-actions-group {
+  margin-left: 8px;
+}

@@ -1,0 +1,30 @@
+@charset "utf-8";
+.timeline-back-top-button {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  display: none;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  font-size: 3rem;
+  border: solid #aaaaaa 5px;
+  -webkit-border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 10px;
+  -moz-background-clip: padding;
+  border-radius: 10px;
+  background-clip: padding-box;
+  padding: 4px 8px;
+  cursor: pointer;
+  margin: 32px;
+  color: #aaaaaa;
+  line-height: 0;
+}
+.timeline-back-top-button.timeline-back-top-button-showing {
+  display: block;
+}
+.timeline-back-top-button-icon {
+  line-height: 1.25;
+}

@@ -1,0 +1,15 @@
+@charset "utf-8";
+.timeline-combo-box-dropdown-button {
+  position: absolute;
+  right: 4px;
+  top: 8px;
+  margin: 2px;
+  cursor: pointer;
+}
+.timeline-combo-box-dropdown-button.hidden {
+  display: none;
+}
+.timeline-combo-box-dropdown-list {
+  display: block;
+  min-width: 100%;
+}

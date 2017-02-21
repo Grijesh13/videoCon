@@ -1,0 +1,49 @@
+@charset "utf-8";
+.zhuge-icon-renderer {
+  margin-right: 4px;
+}
+.zhuge-icon-renderer-text-info {
+  color: #4285f4;
+}
+.zhuge-icon-renderer-text-success {
+  color: #33ac71;
+}
+.zhuge-icon-renderer-text-warning {
+  color: #f4b142;
+}
+.zhuge-icon-renderer-text-danger {
+  color: #e91e63;
+}
+.zhuge-icon-renderer-text-white {
+  color: #ffffff;
+}
+.zhuge-icon-renderer-text-disabled {
+  color: #cccccc;
+}
+.zhuge-icon-renderer-text-lightest {
+  color: #bdbdbd;
+}
+.zhuge-icon-renderer-text-hint {
+  color: #aaaaaa;
+}
+.zhuge-icon-renderer-text-light {
+  color: #7f7f7f;
+}
+.zhuge-icon-renderer-text-normal {
+  color: #333333;
+}
+.zhuge-icon-renderer-text-strong {
+  color: #000000;
+}
+.zhuge-icon-renderer-text-pointer {
+  cursor: pointer;
+}
+.zhuge-icon-renderer-pointer {
+  cursor: pointer;
+}
+.zhuge-icon-renderer-align-fix {
+  position: inherit;
+  left: 0;
+  top: 50%;
+  margin-top: -7px;
+}

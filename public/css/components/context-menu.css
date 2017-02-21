@@ -1,0 +1,66 @@
+@charset "utf-8";
+.wap-core-ui-ContextMenu .dropdown-menu {
+  font-size: 1.4rem;
+  display: none;
+}
+.wap-core-ui-ContextMenu hr {
+  margin: 4px 0;
+}
+.wap-core-ui-ContextMenu li {
+  cursor: default;
+}
+.wap-core-ui-ContextMenu li.has-sub {
+  padding: 4px 8px;
+}
+.wap-core-ui-ContextMenu li.has-no-sub {
+  padding: 4px 8px;
+}
+.wap-core-ui-ContextMenu li.has-sub:not(.disabled):hover {
+  background-color: #f1f1f1;
+}
+.wap-core-ui-ContextMenu li.has-no-sub:not(.disabled):hover {
+  background-color: #f1f1f1;
+}
+.wap-core-ui-ContextMenu li .disabled {
+  color: #cccccc;
+}
+.wap-core-ui-ContextMenu li .caption {
+  margin-left: 0px;
+}
+.wap-core-ui-ContextMenu li i.icon {
+  margin-right: 4px;
+  margin-left: 4px;
+  position: relative;
+  top: -2px;
+}
+.wap-core-ui-ContextMenu li i.icon + .caption {
+  margin-left: 0;
+}
+.wap-core-ui-ContextMenu li i.pointer-to-submenu {
+  float: right;
+  top: -2px;
+}
+.wap-core-ui-ContextMenu li.has-no-sub:not(.disabled) {
+  cursor: pointer;
+}
+.wap-core-ui-ContextMenu li.has-sub ul {
+  position: absolute;
+  width: 100%;
+}
+.wap-core-ui-ContextMenu litext-left-margin {
+  margin-left: 4px;
+}
+.wap-core-ui-ContextMenu ul {
+  display: block;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #dddddd;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}

@@ -1,0 +1,9 @@
+@charset "utf-8";
+.timeline-inner-feed-card {
+  margin: 8px;
+  background-color: #ebe8f8;
+  position: relative;
+}
+.timeline-inner-feed .timeline-feed-card-content {
+  padding: 0px 4px 0px 16px;
+}

@@ -1,0 +1,46 @@
+@charset "utf-8";
+*::-webkit-scrollbar {
+  width: 16px;
+  background: #f1f1f1;
+}
+*::-webkit-scrollbar:hover {
+  background: #dddddd;
+}
+*::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+*::-webkit-scrollbar-piece {
+  background: #f1f1f1;
+}
+*::-webkit-scrollbar-piece:start {
+  background: #f1f1f1;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #bdbdbd;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
+.show-vertical-scrollbar {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.short-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  background: #f5f5f5;
+}
+.short-scrollbar::-webkit-scrollbar:hover {
+  background: #f1f1f1;
+}
+.short-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #dddddd;
+}
+.short-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #cccccc;
+}
+.hidden-scrollbar::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}

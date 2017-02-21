@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * style for col-auto-as-row tag handler.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row,
+.l-col-auto-as-row.rtl,
+.l-col-auto-as-row.ltr {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+/* --------------------------------------------------------------------------
+ * cell padding for layout system.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.grid-cell-padding {
+  padding: 16px 16px;
+}
+/* --------------------------------------------------------------------------
+ * style for col-auto-as-row tag handler.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.l-col-auto-as-row.l-grid-leaf {
+  padding: 8px 16px;
+}
+.l-col-auto-as-row.rtl {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-width: 100%;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.l-col-auto-as-row.ltr {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-width: 100%;
+}

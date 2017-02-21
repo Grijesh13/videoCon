@@ -1,0 +1,103 @@
+@charset "utf-8";
+.wap-core-ui-validationconfigtool {
+  font: icon;
+}
+.wap-core-ui-validationconfigtool .selected {
+  background-color: lightblue;
+}
+.highlight-element {
+  border: 5px solid red;
+  padding: 2px;
+}
+.component-sticker {
+  postion: absolute;
+  z-index: 200;
+}
+.wap-core-ui-validationconfigtool .validation-sync-button {
+  position: relative;
+  top: 0px;
+  left: 276px;
+}
+.wap-core-ui-validationconfigtool .validation-check-button {
+  position: relative;
+  top: 0px;
+  left: 226px;
+}
+.validation-sticker {
+  position: absolute;
+  top: 70px;
+  left: 0px;
+  background: wheat;
+  padding: 20px;
+  z-index: 20;
+  width: 250px;
+}
+.validation-sticker label {
+  font-size: 1rem;
+}
+.validation-sticker label.label-element {
+  font-size: 1rem;
+  width: 70px;
+}
+.validation-sticker input[type=radio] {
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
+}
+.validation-sticker h1 {
+  margin-top: -10px;
+  font-size: 2rem;
+}
+.validation-sticker .error-message-setting-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.validation-sticker .form-group.wap-core-ui-textinput input {
+  width: 150px;
+}
+.wap-core-ui-validationconfigtool li {
+  padding-left: 5px;
+  height: 25px;
+  border-top: 1px solid #aaa;
+}
+.wap-core-ui-validationconfigtool label {
+  margin-left: 22px;
+  width: 100px;
+}
+.wap-core-ui-validationconfigtool input {
+  width: 80px;
+  height: 24px;
+}
+.wap-core-ui-validationconfigtool input[type=date] {
+  width: 150px;
+  height: 24px;
+}
+.wap-core-ui-validationconfigtool select {
+  width: 80px;
+}
+.wap-core-ui-validationconfigtool .template-select-wrapper {
+  border-top: 1px solid #eee;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+.wap-core-ui-validationconfigtool .create-template-button {
+  position: absolute;
+  left: 1px;
+}
+.component-tagit-close {
+  padding: 0px 4px 0px 4px;
+}
+.component-tagit-close:hover {
+  background: lightgray;
+}
+.grid-column-cover {
+  width: 120px;
+  border: 1px solid lightgray;
+}
+.config-btn-warning {
+  background: orange;
+  color: white;
+  border-radius: 2px;
+  margin: 1px;
+}

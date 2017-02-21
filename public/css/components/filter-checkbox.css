@@ -1,0 +1,17 @@
+@charset "utf-8";
+.filter-checkbox {
+  cursor: pointer;
+}
+.filter-checkbox-label {
+  font-size: 1.2rem;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.filter-checkbox-input {
+  margin: 0px;
+  height: 30px;
+}
+.filter-checkbox-display-none {
+  display: none;
+}

@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.timeline-extension-login {
+  margin-left: 100px;
+}
+.timeline-extension-login-form {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timeline-extension-login-main-input-holder {
+  /* background: fade(@bg-color-white, 20%); */
+  background: #ffffff;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  margin-bottom: 24px;
+  margin-right: 8px;
+  width: 240px;
+}
+.timeline-extension-login-main-input {
+  color: #333333;
+  background: transparent;
+  border: 0;
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  padding: 8px 16px;
+}
+.timeline-extension-login-main-input::-webkit-input-placeholder {
+  color: #7f7f7f;
+}
+.timeline-extension-login-main-input:-moz-placeholder {
+  color: #7f7f7f;
+}
+.timeline-extension-login-main-input::-moz-placeholder {
+  color: #7f7f7f;
+}
+.timeline-extension-login-main-input:-ms-input-placeholder {
+  color: #7f7f7f;
+}
+.timeline-extension-login-main-input:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-color: #000000;
+}

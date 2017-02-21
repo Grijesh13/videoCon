@@ -1,0 +1,40 @@
+@charset "utf-8";
+.timeline-date-bar-holder-display-none {
+  display: none;
+}
+.timeline-date-bar-real {
+  width: 648px;
+  height: 0;
+  border-top: 1px solid #aaaaaa;
+  margin-left: 50px;
+  font-size: 1.7rem;
+  padding: 4px 10px;
+  position: relative;
+}
+.timeline-date-bar-text {
+  margin-right: 12px;
+}
+.timeline-date-bar-text-box {
+  min-width: 92px;
+  padding: 0px 4px;
+  top: -10px;
+  position: absolute;
+  background-color: #f1f1f1;
+  text-align: center;
+  font-size: 1.7rem;
+  color: #aaaaaa;
+  margin-left: -15px;
+}
+.timeline-date-bar-place-holder {
+  margin: 10px 0 20px 100px;
+  padding: 12px;
+  background: #ecf2fd;
+  border: 1px solid #a0c2f9;
+  cursor: pointer;
+}
+.timeline-date-bar-place-holder-text {
+  margin-right: 12px;
+}
+.timeline-date-bar-invalid {
+  display: none;
+}

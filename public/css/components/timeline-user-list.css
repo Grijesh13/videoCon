@@ -1,0 +1,16 @@
+@charset "utf-8";
+.timeline-user-list {
+  background-color: #ffffff;
+  padding: 8px;
+  width: 272px;
+}
+.timeline-user-list-header {
+  font-size: 1.7rem;
+  color: #333333;
+}
+.timeline-user-list-body {
+  padding: 8px;
+}
+.timeline-user-list-picture {
+  display: inline-block;
+}

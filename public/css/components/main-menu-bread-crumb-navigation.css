@@ -1,0 +1,33 @@
+@charset "utf-8";
+.main-menu-bread-crumb-navigation-main {
+  margin-top: 16px;
+  float: left;
+}
+.main-menu-bread-crumb-navigation-last-item {
+  margin-bottom: 8px;
+  font-size: 2.4rem;
+  color: #333333;
+}
+.main-menu-bread-crumb-navigation-separator {
+  font-size: 2rem;
+  color: #7f7f7f;
+  margin-right: 8px;
+}
+.main-menu-bread-crumb-navigation-item-wrapper {
+  display: inline-block;
+}
+.main-menu-bread-crumb-navigation-item {
+  display: inline;
+  margin-right: 8px;
+  color: #7f7f7f;
+  cursor: pointer;
+}
+.main-menu-bread-crumb-navigation-item:hover {
+  color: #333333;
+}
+.main-menu-bread-crumb-navigation-item-last {
+  cursor: default;
+}
+.main-menu-bread-crumb-navigation-item-last:hover {
+  color: #7f7f7f;
+}

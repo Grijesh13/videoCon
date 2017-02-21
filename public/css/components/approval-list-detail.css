@@ -1,0 +1,26 @@
+@charset "utf-8";
+.approval-list-detail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.approval-list-detail-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1040;
+}
+.approval-list-detail-contents {
+  position: absolute;
+  width: calc(100% -  17px);
+  background-color: #ffffff;
+  z-index: 1050;
+}
+.approval-list-detail.hidden {
+  visibility: hidden;
+}

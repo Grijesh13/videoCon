@@ -1,0 +1,117 @@
+@charset "utf-8";
+.mail-list-item {
+  display: table;
+  border-bottom: 1px solid #dddddd;
+  padding: 0 16px;
+  height: 60px;
+  width: 100%;
+  cursor: pointer;
+}
+.mail-list-item.mail-unread {
+  font-weight: 700;
+}
+.mail-list-item.mail-selected-border-left {
+  border-left: 3px solid #4285f4;
+  padding-left: 13px;
+}
+.mail-list-item.mail-selected-background {
+  background-color: #ffffff;
+}
+.mail-list-item .mail-operation {
+  display: table-cell;
+  vertical-align: middle;
+  width: 51px;
+  padding-right: 8px;
+}
+.mail-list-item .mail-operation .mail-checkbox {
+  vertical-align: middle;
+  margin-top: 2px;
+}
+.mail-list-item .mail-operation .wap-icon-star {
+  padding-left: 16px;
+}
+.mail-list-item .mail-operation .wap-icon-star-empty {
+  padding-left: 16px;
+}
+.mail-list-item .mail-photo-holder {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 8px;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  width: 50px;
+}
+.mail-list-item .mail-photo-holder .mail-photo {
+  height: 40px;
+  width: 40px;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+}
+.mail-list-item .mail-info-holder {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 22px;
+  max-width: 160px;
+}
+.mail-list-item .mail-info-holder .mail-sender-info {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mail-list-item .mail-info-holder .mail-subject {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mail-list-item .mail-attachment-tag-holder {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+  line-height: 22px;
+  padding-top: 4px;
+  padding-left: 8px;
+  max-width: 160px;
+}
+.mail-list-item .mail-attachment-tag-holder .mail-attachment-holder {
+  display: inline-block;
+  min-width: 100%;
+}
+.mail-list-item .mail-attachment-tag-holder .mail-attachment-holder .mail-important {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding-right: 8px;
+  color: #e91e63;
+}
+.mail-list-item .mail-attachment-tag-holder .mail-tag-holder {
+  display: inline-block;
+  min-width: 100%;
+  height: 22px;
+  overflow: hidden;
+}
+.mail-list-item .mail-attachment-tag-holder .mail-tag-holder .mail-tag {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  margin-right: 4px;
+}
+.mail-list-item .mail-date-time-holder {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: end;
+  line-height: 22px;
+  width: 80px;
+}

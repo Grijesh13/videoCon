@@ -1,0 +1,45 @@
+@charset "utf-8";
+.main-menu-header-tools {
+  padding-bottom: 8px;
+}
+.main-menu-header-tools:before,
+.main-menu-header-tools:after {
+  content: " ";
+  display: table;
+}
+.main-menu-header-tools:after {
+  clear: both;
+}
+.main-menu-header-tools:before,
+.main-menu-header-tools:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.main-menu-header-tools:after {
+  clear: both;
+}
+.main-menu-header-tools-button-area {
+  margin: 48px 16px 0 0;
+}
+.main-menu-header-tools-left {
+  float: left;
+}
+.main-menu-header-tools-right {
+  float: right;
+}
+.main-menu-header-tools-button {
+  height: 24px;
+  line-height: 24px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.main-menu-header-tools-button-label {
+  height: 24px;
+  line-height: 24px;
+  vertical-align: middle;
+  font-size: 2rem;
+  padding: 0 8px;
+  margin-bottom: 0;
+  cursor: pointer;
+}

@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.search-input {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.search-input > .pulldown-button {
+  height: 32px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.search-input > .pulldown-button > .button {
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  border-bottom-right-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius-topright: 0;
+  -moz-background-clip: padding;
+  border-top-right-radius: 0;
+  background-clip: padding-box;
+  margin-right: -1px;
+  border-color: #aaaaaa;
+  border-right: none;
+  padding: 5px 17px;
+}
+.search-input-holder {
+  position: relative;
+  width: 100%;
+  height: 32px;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  padding: 0;
+  margin-left: 0;
+  border: 1px solid #aaaaaa;
+  background-color: #ffffff;
+}
+.search-input-holder-inner {
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  height: calc(97%);
+}
+.search-input-holder-inner-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 7px 5px 4px 5px;
+}
+.search-input-btn-search {
+  height: 32px;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius-topleft: 0;
+  -moz-background-clip: padding;
+  border-top-left-radius: 0;
+  background-clip: padding-box;
+  margin-left: -1px;
+}

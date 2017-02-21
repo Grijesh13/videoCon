@@ -1,0 +1,442 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col,
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.preview,
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.metadata,
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.metadata .hue-drive-content-panel-item-owner,
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.metadata .hue-drive-content-panel-item-date,
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.metadata .hue-drive-content-panel-item-size {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.hue-drive-content-panel-item {
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+.hue-drive-content-panel-item.grid {
+  background: #f1f1f1;
+  height: 216px;
+  width: 256px;
+  margin-left: 16px;
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.hue-drive-content-panel-item.grid.hidden {
+  display: none;
+}
+.hue-drive-content-panel-item.grid.invisible {
+  visibility: hidden;
+}
+.hue-drive-content-panel-item.grid:hover {
+  cursor: pointer;
+  -webkit-box-shadow: #aaaaaa 5px 5px 4px;
+  -moz-box-shadow: #aaaaaa 5px 5px 4px;
+  box-shadow: #aaaaaa 5px 5px 4px;
+}
+.hue-drive-content-panel-item.grid.drag-over .hue-drive-content-panel-item-container.thumbnail-preview {
+  border-color: #fdf7ec;
+}
+.hue-drive-content-panel-item.grid.drag-over .hue-drive-content-panel-item-container.preview {
+  border-color: #fdf7ec;
+}
+.hue-drive-content-panel-item.grid.drag-over .hue-drive-content-panel-item-container.metadata {
+  background: #fdf7ec;
+}
+.hue-drive-content-panel-item.grid.selected {
+  -webkit-box-shadow: #aaaaaa 3px 3px 4px;
+  -moz-box-shadow: #aaaaaa 3px 3px 4px;
+  box-shadow: #aaaaaa 3px 3px 4px;
+}
+.hue-drive-content-panel-item.grid.selected .hue-drive-content-panel-item-container.thumbnail-preview {
+  border-color: #a0c2f9;
+}
+.hue-drive-content-panel-item.grid.selected .hue-drive-content-panel-item-container.preview {
+  border-color: #a0c2f9;
+}
+.hue-drive-content-panel-item.grid.selected .hue-drive-content-panel-item-container.metadata {
+  background: #a0c2f9;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container {
+  width: 100%;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container.thumbnail-preview {
+  height: 60%;
+  border: 2px solid #f1f1f1;
+  border-bottom: none;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  overflow-y: hidden;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container.thumbnail-preview .hue-drive-content-panel-item-thumbnail {
+  width: 100%;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container.preview {
+  height: 20%;
+  border: 2px solid #f1f1f1;
+  border-bottom: none;
+  border-top: none;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-icon-div {
+  font-size: 2.4rem;
+  padding: 8px;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-icon-or-image-div {
+  display: none;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-file-name-div {
+  line-height: 2.5;
+  padding: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-star-div {
+  line-height: 2.5;
+  padding: 2px;
+  color: #fabd11;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-star-div-icon.hidden {
+  display: none;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-star-div-icon.invisible {
+  visibility: hidden;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-tags-div {
+  display: none;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container.metadata {
+  height: 20%;
+  padding: 8px 4px;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container.metadata .hue-drive-content-panel-item-owner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container.metadata .hue-drive-content-panel-item-owner-pic-div {
+  height: 32px;
+  min-width: 32px;
+  max-width: 32px;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container.metadata .hue-drive-content-panel-item-owner-pic-div-pic {
+  height: 100%;
+  width: 100%;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container.metadata .hue-drive-content-panel-item-owner-name-div {
+  padding: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container.metadata .hue-drive-content-panel-item-date {
+  padding: 8px 0px;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hue-drive-content-panel-item.grid .hue-drive-content-panel-item-container.metadata .hue-drive-content-panel-item-size {
+  display: none;
+}
+.hue-drive-content-panel-item.list {
+  background: #ffffff;
+  border-top: 2px solid #e8e8e8;
+  height: 64px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.hue-drive-content-panel-item.list.hidden {
+  display: none;
+}
+.hue-drive-content-panel-item.list.invisible {
+  visibility: hidden;
+}
+.hue-drive-content-panel-item.list:hover {
+  background: #f1f1f1;
+  cursor: pointer;
+}
+.hue-drive-content-panel-item.list.drag-over {
+  background: #fdf7ec;
+}
+.hue-drive-content-panel-item.list.selected {
+  background: #a0c2f9;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.thumbnail-preview {
+  display: none;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.preview {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 41.66666666666667%;
+  flex-basis: 41.66666666666667%;
+  max-width: 41.66666667%;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 12px;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-icon-div {
+  display: none;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-icon-or-image-div {
+  font-size: 3rem;
+  height: 40px;
+  min-width: 48px;
+  max-width: 48px;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-icon-or-image-div-image {
+  height: 100%;
+  width: 100%;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-icon-or-image-div-image.hidden {
+  display: none;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-icon-or-image-div-image.invisible {
+  visibility: hidden;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-icon-or-image-div-icon {
+  padding: 8px;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-icon-or-image-div-icon.hidden {
+  display: none;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-icon-or-image-div-icon.invisible {
+  visibility: hidden;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-file-name-div {
+  line-height: 2.5;
+  padding: 4px 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-star-div {
+  line-height: 2.5;
+  padding: 2px;
+  float: right;
+  color: #fabd11;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-star-div-icon.hidden {
+  display: none;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-star-div-icon.invisible {
+  visibility: hidden;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-tags-div {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: reverse;
+  -moz-box-direction: reverse;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  line-height: 2.5;
+  padding: 4px;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-tags-div-tag {
+  font-size: 2rem;
+  line-height: normal;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.preview .hue-drive-content-panel-item-tags-div-tag-icon {
+  padding: 4px;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.metadata {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 58.333333333333336%;
+  flex-basis: 58.333333333333336%;
+  max-width: 58.33333333%;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 12px;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.metadata .hue-drive-content-panel-item-owner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 41.66666666666667%;
+  flex-basis: 41.66666666666667%;
+  max-width: 41.66666667%;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.metadata .hue-drive-content-panel-item-owner-pic-div {
+  font-size: 3rem;
+  height: 32px;
+  min-width: 32px;
+  max-width: 32px;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.metadata .hue-drive-content-panel-item-owner-pic-div-pic {
+  height: 100%;
+  width: 100%;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.metadata .hue-drive-content-panel-item-owner-name-div {
+  line-height: 2.5;
+  padding: 4px 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.metadata .hue-drive-content-panel-item-date {
+  line-height: 2.5;
+  padding: 4px 8px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 33.33333333333333%;
+  flex-basis: 33.33333333333333%;
+  max-width: 33.33333333%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hue-drive-content-panel-item.list .hue-drive-content-panel-item-container.metadata .hue-drive-content-panel-item-size {
+  line-height: 2.5;
+  padding: 4px 8px;
+  text-align: right;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

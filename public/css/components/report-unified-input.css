@@ -1,0 +1,151 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * report-converter-template styles.
+ * @author Vaibhav
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * report-management-information styles.
+ * @author Vaibhav
+ * ------------------------------------------------------------------------*/
+.report-unified-input {
+  background-color: #ffffff;
+  padding: 25px 32px 32px 25px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.4);
+  margin-left: 25px;
+  margin-bottom: 17px;
+}
+.report-unified-input-label {
+  font-size: 2rem;
+}
+.report-unified-input-alert {
+  border: 1px solid transparent;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.report-unified-input-basic-trip-info-header {
+  border-left: #4285f4 2px solid;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+.report-unified-input-container-fluid {
+  padding-top: 15px;
+  padding-left: 15px;
+  position: relative;
+  -webkit-transition: left 0.2s;
+  -moz-transition: left 0.2s;
+  -o-transition: left 0.2s;
+  transition: left 0.2s;
+}
+.report-unified-input-container-fluid .row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px;
+}
+.report-unified-input-container-fluid .row .col-md-2 {
+  width: 16%;
+}
+.report-unified-input-basic-info-label {
+  margin-top: 5px;
+}
+.report-unified-input-container-fluid .row .col-md-4 {
+  width: 33%;
+}
+.report-unified-input-container-fluid .form-control {
+  width: 100%;
+}
+.report-unified-input-form-control {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #aaaaaa;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+  height: 32px;
+  font-size: 1.4rem;
+}
+.report-unified-input-hide {
+  display: none;
+}
+.report-unified-input .btn {
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.report-unified-input .btn-default {
+  color: #333333;
+  background-color: #f1f1f1;
+  border-color: #dddddd;
+  margin-right: 8px;
+}
+.report-unified-input .ac-renderer {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: #ffffff;
+  position: absolute;
+  width: 33%;
+}
+.report-unified-input .ac-row {
+  cursor: pointer;
+  padding: 8px;
+  line-height: 48px;
+}
+.report-unified-input .ac-highlighted {
+  font-weight: 700;
+}
+.report-unified-input .ac-active {
+  background-color: #f1f1f1;
+}
+.report-unified-input .category-name {
+  float: right;
+  vertical-align: middle;
+  line-height: 48px;
+  color: #bdbdbd;
+}
+.report-unified-input .autocomplete-image {
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  margin: 5px;
+}
+.report-unified-input .error-class {
+  border: 1px solid #e91e63;
+}

@@ -1,0 +1,271 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * l-detail styles.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col,
+.l-detail .l-main-floor {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row,
+.l-detail .l-title-room,
+.l-detail .l-header-right-room,
+.l-detail .l-image-room,
+.l-detail .l-history-room {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+/* --------------------------------------------------------------------------
+ * cell padding for layout system.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.grid-cell-padding,
+.l-detail .l-main-content-room.l-grid-leaf,
+.l-detail .l-title-room,
+.l-detail .l-header-right-room,
+.l-detail .l-image-room,
+.l-detail .l-history-room {
+  padding: 16px 16px;
+}
+/* --------------------------------------------------------------------------
+ * l-detail styles.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.l-detail {
+  position: absolute;
+  top: 48px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  min-width: 1280px;
+}
+.l-detail .l-detail-inner {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.l-detail .l-main-floor {
+  -webkit-flex-basis: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+  padding: 0 17px 0 16px;
+}
+.l-detail .l-widget-room {
+  position: absolute;
+  display: none;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-flex-basis: 25%;
+  flex-basis: 25%;
+  width: 25%;
+  background-color: #e8e8e8;
+  position: relative;
+}
+.l-detail .l-input-form-widget-toggle-button {
+  position: absolute;
+  right: -45px;
+  top: 400px;
+  height: 28px;
+  width: 120px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  border: none;
+  -webkit-border-radius: 2px 2px 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px 2px 0 0;
+  -moz-background-clip: padding;
+  border-radius: 2px 2px 0 0;
+  background-clip: padding-box;
+  background-color: #e8e8e8;
+  color: #7f7f7f;
+}
+.l-detail .l-input-form-widget-toggle-button:hover,
+.l-detail .l-input-form-widget-toggle-button:focus,
+.l-detail .l-input-form-widget-toggle-button:active {
+  background-color: #dddddd;
+}
+.l-detail.l-widget-room-manually-shown .l-widget-room {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  min-width: 352px;
+}
+.l-detail.l-widget-room-manually-shown .l-input-form-widget-toggle-button {
+  right: 306px;
+  background-color: #e8e8e8;
+}
+@media (min-width: 1441px) {
+  .l-detail .l-main-floor {
+    -webkit-flex-basis: 75%;
+    flex-basis: 75%;
+  }
+  .l-detail .l-widget-room {
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .l-detail .l-input-form-widget-toggle-button {
+    display: none;
+  }
+}
+.l-detail .l-title-floor {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 80px;
+  flex-basis: 80px;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  height: 80px;
+  position: relative;
+}
+.l-detail .l-title-floor:after {
+  content: "";
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  margin: 0 16px;
+  border-bottom: 1px solid #dddddd;
+}
+.l-detail .l-overview-floor {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 232px;
+  flex-basis: 232px;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  height: 232px;
+}
+.l-detail .l-main-content-room {
+  padding-top: 8px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-height: 100%;
+  position: relative;
+}
+.l-detail .l-main-content-room .l-grid-leaf.ltr > .component {
+  margin-left: 8px;
+}
+.l-detail .l-main-content-room .l-grid-leaf.ltr > .component:first-child {
+  margin-left: 0;
+}
+.l-detail .l-main-content-room .l-grid-leaf.rtl > .component {
+  margin-right: 8px;
+}
+.l-detail .l-main-content-room .l-grid-leaf.rtl > .component:first-child {
+  margin-right: 0;
+}
+.l-detail .l-title-room {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-width: 100%;
+  position: relative;
+}
+.l-detail .l-header-right-room {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-width: 100%;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+.l-detail .l-header-right-room.l-room > .component {
+  margin-left: 8px;
+}
+.l-detail .l-header-right-room.l-room > .component:first-child {
+  margin-left: 0;
+}
+.l-detail .l-image-room {
+  -webkit-flex-basis: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+  position: relative;
+}
+.l-detail .l-history-room {
+  -webkit-flex-basis: 75%;
+  flex-basis: 75%;
+  max-width: 75%;
+  position: relative;
+}

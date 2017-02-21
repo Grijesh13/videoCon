@@ -1,0 +1,60 @@
+@charset "utf-8";
+.timeline-notification-feeds-area {
+  width: 700px;
+}
+.timeline-notification-feeds-area-title {
+  font-size: 2rem;
+  color: #4285f4;
+  padding: 4px;
+  margin-left: 56px;
+}
+.timeline-notification-feeds-area-subtitle {
+  color: #818da2;
+  padding: 4px;
+  margin-left: 56px;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timeline-notification-feeds-area-subtitle-feeds {
+  cursor: pointer;
+}
+.timeline-notification-feeds-area-subtitle-left {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.timeline-notification-feeds-area-subtitle-right {
+  color: #4285f4;
+  -webkit-box-direction: reverse;
+  -moz-box-direction: reverse;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+.timeline-notification-feeds-area-bottom {
+  color: #4285f4;
+  padding: 4px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: reverse;
+  -moz-box-direction: reverse;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+.timeline-notification-feeds-area-back {
+  cursor: pointer;
+}

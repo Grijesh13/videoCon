@@ -1,0 +1,176 @@
+@charset "utf-8";
+.task-create-dialog-modal {
+  top: 50px;
+}
+.task-create-dialog-modal-dialog {
+  width: 720px;
+  height: 680px;
+}
+.task-create-dialog-modal-dialog-content {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+  position: relative;
+  background-color: #ffffff;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #f1f1f1;
+  outline: 0;
+}
+.task-create-dialog-modal-dialog-content-header {
+  font-size: 1.7rem;
+  padding: 16px;
+  border-bottom: 1px solid #e8e8e8;
+  background-color: #ffffff;
+}
+.task-create-dialog-modal-dialog-content-header-close {
+  width: 33px;
+  height: 33px;
+  background: #f1f1f1;
+  display: inline-block;
+  padding: 0 4px;
+  line-height: 1;
+  color: #7f7f7f;
+  zoom: 1;
+  filter: alpha(opacity=70);
+  -webkit-opacity: 0.7;
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+  -moz-background-clip: padding-box;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  margin-top: -4px;
+  position: absolute;
+  right: 10px;
+}
+.task-create-dialog-modal-dialog-content-header-close:hover {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.task-create-dialog-modal-dialog-content-header-title-bar {
+  color: #000000;
+  border-left: 2px solid #4285f4;
+  margin-left: 4px;
+  padding-left: 16px;
+}
+.task-create-dialog-modal-dialog-content-body {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  background: #ffffff;
+  height: 720px;
+}
+.task-create-dialog-modal-dialog-content-body-users {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 8px;
+}
+.task-create-dialog-modal-dialog-content-body-users-to {
+  padding: 8px;
+}
+.task-create-dialog-modal-dialog-content-body-users-to-i {
+  font-size: 2.4rem;
+  background: #f5f5f5;
+  padding: 4px;
+}
+.task-create-dialog-modal-dialog-content-body-users-to-i:before {
+  vertical-align: bottom;
+  padding: 4px;
+}
+.task-create-dialog-modal-dialog-content-body-information {
+  height: 388px;
+}
+.task-create-dialog-modal-dialog-content-body-comment {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px;
+}
+.task-create-dialog-modal-dialog-content-body-comment-textarea {
+  width: 540px;
+  margin-right: 16px;
+}
+.task-create-dialog-modal-dialog-content-body-comment-emotion {
+  margin-right: 16px;
+}
+.task-create-dialog-modal-dialog-content-body-comment-btngroup {
+  padding-top: 4px;
+}
+.task-create-dialog-information {
+  height: 280px;
+  display: table;
+  padding: 32px;
+  width: 100%;
+}
+.task-create-dialog-information-row {
+  display: table-row;
+}
+.task-create-dialog-information-column {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 8px;
+}
+.task-create-dialog-information-column-label {
+  text-align: right;
+  width: 20%;
+}
+.task-create-dialog-name-input {
+  width: 100%;
+  padding: 4px;
+  border: 1px solid #bdbdbd;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.task-create-dialog-name-input-input {
+  border: none;
+  width: 100%;
+}
+.task-create-dialog-function-input,
+.task-create-dialog-person-input {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.task-create-dialog-function-input-input,
+.task-create-dialog-person-input-input {
+  border: 1px solid #bdbdbd;
+  -webkit-border-radius: 3px 0 0 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px 0 0 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px 0 0 3px;
+  background-clip: padding-box;
+  margin-right: -2px;
+  z-index: 1;
+  background-color: #ffffff;
+  width: 300px;
+}

@@ -1,0 +1,25 @@
+@charset "utf-8";
+.wap-panel-error {
+  padding-left: 4px;
+  border-left: 4px solid #e91e63;
+}
+.wap-panel-warning {
+  padding-left: 4px;
+  border-left: 4px solid #f4b142;
+}
+.wap-panel-success {
+  padding-left: 4px;
+  border-left: 4px solid #33ac71;
+}
+.wap-panel-information {
+  padding-left: 4px;
+  border-left: 4px solid #4285f4;
+}
+.wap-panel-plain {
+  padding-left: 4px;
+  border-left: 4px solid #ffffff;
+}
+.wap-panel-confirmation {
+  padding-left: 4px;
+  border-left: 4px solid #999999;
+}

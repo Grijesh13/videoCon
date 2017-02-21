@@ -1,0 +1,73 @@
+@charset "utf-8";
+.cassandraview-cql-room {
+  min-width: 300px;
+  min-height: 140px;
+  height: 140px;
+  width: 100%;
+}
+.cassandraview-cql-room-export-data-form {
+  display: none;
+}
+.cassandraview-cql-room-btns-list {
+  width: 100%;
+  display: table;
+  margin-bottom: 4px;
+}
+.cassandraview-cql-room-btns-list-left {
+  display: table-cell;
+  padding: 0px;
+  vertical-align: bottom;
+}
+.cassandraview-cql-room-btns-list-left-inner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.cassandraview-cql-room-btns-list-right {
+  display: table-cell;
+  text-align: right;
+}
+.cassandraview-cql-room-btn {
+  margin-bottom: 2px;
+  height: 32px;
+  margin-left: 8px;
+  background-color: #f1f1f1;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+.cassandraview-cql-room-btn:hover {
+  background-color: #dddddd;
+  border-color: #cccccc;
+}
+.cassandraview-cql-room-import-loading {
+  display: none;
+  float: right;
+}
+.cassandraview-cql-room .file-upload-all-type-wap-file-all-type-container {
+  padding: 0px;
+}
+.cassandraview-cql-room-textarea-container {
+  min-height: 100px;
+  height: 100px;
+}
+.cassandraview-cql-room-textarea-cql {
+  resize: none;
+  min-width: 300px;
+  min-height: 100px;
+  height: 100px;
+  width: 100%;
+  border: 1px solid #e8e8e8;
+}
+.cassandraview-cql-room-textarea-cql-error {
+  color: #e91e63;
+  border-width: 1px;
+  border-color: #e91e63;
+}
+.cassandraview-cql-room-btns-list-left-inner {
+  margin-bottom: 2px;
+}
+.cassandraview-cql-room-import-button-container {
+  margin-right: 8px;
+}

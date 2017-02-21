@@ -1,0 +1,54 @@
+@charset "utf-8";
+.paging-tool-group {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+.paging-tool-counter-group {
+  margin-right: 16px;
+  text-align: right;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 240px;
+  flex-basis: 240px;
+}
+.paging-tool-page-number {
+  line-height: 32px;
+  font-size: 2rem;
+  color: #33ac71;
+}
+.paging-tool-total-number {
+  line-height: 32px;
+  font-size: 1.4rem;
+  line-height: 30px;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 32px;
+}
+.paging-tool-page-unit {
+  line-height: 32px;
+  line-height: 30px;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 32px;
+  margin-left: 8px;
+}
+.paging-tool-total-unit {
+  line-height: 32px;
+  line-height: 30px;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 32px;
+  margin-left: 4px;
+}
+.paging-tool-counter-separator {
+  line-height: 30px;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 32px;
+  margin: 0 8px;
+}

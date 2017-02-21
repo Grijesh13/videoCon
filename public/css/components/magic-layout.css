@@ -1,0 +1,13 @@
+@charset "utf-8";
+.magic-layout {
+  background-color: #f1f1f1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+.magic-layout-file-preview {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 0;
+  background-color: #ffffff;
+}

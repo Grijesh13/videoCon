@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * insta-report-barcode styles.
+ * @author bharath
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * insta-report-barcode styles.
+ * @author bharath
+ * ------------------------------------------------------------------------*/
+.insta-report-barcode-on-preview:hover {
+  background-color: none;
+}
+.insta-report-barcode-area-display {
+  color: #333333;
+  cursor: pointer;
+}
+.insta-report-barcode-data {
+  margin: 5px;
+}
+.insta-report-barcode-data-img {
+  height: 50px;
+  margin: 8px;
+}
+.insta-report-barcode-data-name {
+  position: relative;
+  bottom: 12px;
+  left: 12px;
+}
+.insta-report-barcode-data-preview {
+  cursor: move;
+  margin: 0px;
+}
+.insta-report-barcode-data:hover {
+  background-color: #f1f1f1;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.insta-report-barcode-popup {
+  border: 1px;
+  border-style: solid;
+  border-color: #f1f1f1;
+  overflow-y: auto;
+  max-height: 125px;
+  background: #ffffff;
+  margin-top: 8px;
+  margin-left: 10px;
+  position: absolute;
+  overflow-x: hidden;
+  padding-right: 20px;
+}
+.insta-report-barcode-popup-element {
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+.insta-report-barcode-popup-element:hover {
+  background: #dddddd;
+}
+.insta-report-barcode-selected-element {
+  color: #333333;
+  font-size: 1.2rem;
+  background: #ffffff;
+  position: absolute;
+  top: 58px;
+  left: 10px;
+}

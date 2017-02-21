@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * report-editor-numeric-simple-inputbox styles.
+ * (temporary style)
+ * @author rohit
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * report-editor-numeric-simple-inputbox styles.
+ * @author rohit
+ * ------------------------------------------------------------------------*/
+.report-editor-numeric-simple-inputbox {
+  margin: 5px;
+}
+.report-editor-numeric-simple-inputbox-label {
+  display: inline-block;
+  width: 35%;
+  margin: 3px;
+  margin-right: 0;
+}
+.report-editor-numeric-simple-inputbox-value {
+  display: inline-block;
+  width: 80%;
+  height: 32px;
+  padding-left: 5px;
+  border: 0;
+}
+.report-editor-numeric-simple-inputbox-value-wrapper {
+  display: inline-block;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  background-color: #cccccc;
+  border: 1px solid #cccccc;
+  width: 60%;
+}
+.report-editor-numeric-simple-inputbox-unit {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+}

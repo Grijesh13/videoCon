@@ -1,0 +1,16 @@
+@charset "utf-8";
+.timeline-like-check-hidden {
+  display: none;
+}
+.timeline-like-check-icon {
+  color: #4285f4;
+  cursor: pointer;
+}
+.timeline-like-check-count-area {
+  cursor: pointer;
+  color: #4285f4;
+  padding-left: 4px;
+}
+.timeline-like-check-count-area:hover {
+  color: #4285f4;
+}

@@ -1,0 +1,23 @@
+@charset "utf-8";
+.file-upload-all-type-wap-file-drop-help {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  border: 3px dashed #999999;
+  font-size: 20px;
+  color: #aaaaaa;
+  text-align: center;
+  padding-top: 32px;
+}
+.file-upload-all-type-wap-file-all-type-container {
+  left: 0;
+  margin: 0;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  top: 0;
+}

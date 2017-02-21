@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * insta-report-add-template styles.
+ * @author Rajdeep
+ * ------------------------------------------------------------------------*/
+.show-templates {
+  width: 100%;
+}
+.show-templates-table {
+  border: solid 1px;
+  width: 100%;
+  text-align: center;
+  margin: 10px;
+  padding: 4px;
+}
+.show-templates-table-th {
+  text-align: center;
+  border: solid 1px;
+  background-color: #cccccc;
+  line-height: 50px;
+}
+.show-templates-table-td {
+  border: solid 1px;
+}
+.show-templates-table-td-button {
+  margin: 4px;
+}
+.show-templates-table-button {
+  position: relative;
+  padding: 12px 12px;
+  border: none;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+  margin: 5px;
+}
+.show-templates-button {
+  background-color: #a0c2f9;
+  left: 50%;
+  position: absolute;
+  padding: 12px 12px;
+  border: none;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+  margin: 5px;
+}

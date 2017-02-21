@@ -1,0 +1,89 @@
+@charset "utf-8";
+.wap-core-ui-mega-dropdown-button {
+  border: none;
+}
+.wap-core-ui-mega-dropdown-list-box {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  position: absolute;
+}
+.wap-core-ui-mega-dropdown-list {
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0;
+  -moz-background-clip: padding;
+  border-radius: 0;
+  background-clip: padding-box;
+  cursor: pointer;
+  order: 0;
+}
+.wap-core-ui-mega-dropdown-item-wrapper > hr {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.wap-core-ui-mega-dropdown-header-item {
+  margin: 8px 0 4px 8px;
+  border-left: 5px solid #cccccc;
+  padding-left: 4px;
+  font-weight: normal;
+}
+.wap-core-ui-mega-dropdown-normal-item {
+  border: none;
+  height: 32px;
+  padding: 8px 20px 0 20px;
+  color: #333333;
+  cursor: pointer;
+}
+.wap-core-ui-mega-dropdown-normal-item:hover {
+  background-color: #f1f1f1;
+  color: #333333;
+}
+.wap-core-ui-mega-dropdown-open {
+  display: block;
+  z-index: 1000;
+  -webkit-transition-property: width;
+  -moz-transition-property: width;
+  -o-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+.wap-core-ui-mega-dropdown-close {
+  display: none;
+  -webkit-transition-property: width;
+  -moz-transition-property: width;
+  -o-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+.wap-core-ui-mega-dropdown-pull-right {
+  float: right;
+}

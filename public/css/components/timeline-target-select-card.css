@@ -1,0 +1,36 @@
+@charset "utf-8";
+.timeline-target-select-card {
+  display: inline-block;
+  background-color: #f5f5f5;
+  margin: 4px;
+  position: relative;
+  padding: 4px 24px 4px 4px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timeline-target-select-card-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+}
+.timeline-target-select-card-title {
+  padding-top: 8px;
+}
+.timeline-target-select-card-title-sub {
+  color: #7f7f7f;
+}
+.timeline-target-select-card-i {
+  position: absolute;
+  right: 8px;
+  top: 15px;
+  font-size: 1.7rem;
+  color: #7f7f7f;
+  cursor: pointer;
+}
+.timeline-target-select-card-i:hover,
+.timeline-target-select-card-i:focus {
+  color: #bdbdbd;
+}

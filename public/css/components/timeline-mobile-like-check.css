@@ -1,0 +1,17 @@
+@charset "utf-8";
+.timeline-mobile-like-check-container {
+  margin-right: 12px;
+}
+.timeline-mobile-like-check-hidden {
+  display: none;
+}
+.timeline-mobile-like-check-count-area {
+  cursor: pointer;
+  color: #bdbdbd;
+}
+.timeline-mobile-like-check-main-icon {
+  color: #4285f4;
+}
+.timeline-mobile-like-check-main-icon-icon {
+  margin-right: 4px;
+}

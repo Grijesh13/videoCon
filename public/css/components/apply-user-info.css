@@ -1,0 +1,8 @@
+@charset "utf-8";
+.apply-user-info {
+  text-align: right;
+}
+.apply-user-info-name,
+.apply-user-info-dept {
+  color: #4285f4;
+}

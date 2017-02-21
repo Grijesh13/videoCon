@@ -1,0 +1,31 @@
+@charset "utf-8";
+.mobile-timeline-card .card-header {
+  display: block;
+  padding: 10px;
+}
+.mobile-timeline-card .facebook-avatar {
+  float: left;
+}
+.mobile-timeline-card .facebook-name {
+  margin-left: 44px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.mobile-timeline-card .facebook-date {
+  margin-left: 44px;
+  font-size: 1.2rem;
+  color: #e8e8e8;
+}
+.mobile-timeline-card .card-footer {
+  background: #f1f1f1;
+}
+.mobile-timeline-card .card-footer operation-link {
+  color: #dddddd;
+  font-weight: 500;
+}
+.mobile-timeline-card .card-content img-content {
+  display: block;
+}
+.mobile-timeline-card .card-content-inner {
+  padding: 15px 10px;
+}

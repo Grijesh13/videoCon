@@ -1,0 +1,85 @@
+@charset "utf-8";
+.mail-edit {
+  padding: 16px;
+  width: 100%;
+  height: 100%;
+}
+.mail-edit-operation-bar {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dddddd;
+}
+.mail-edit-operation-bar-button {
+  margin-right: 8px;
+}
+.mail-edit-last-saved-time-div {
+  padding-top: 6px;
+}
+.mail-edit-last-saved-time {
+  vertical-align: middle;
+}
+.mail-edit-input-container {
+  padding-top: 8px;
+}
+.mail-edit-input-container .label-element {
+  width: 72px;
+  min-width: inherit;
+  text-align: left;
+}
+.mail-edit-input-container-hidden {
+  display: none;
+}
+.mail-edit-input-container-subject {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.mail-edit-input-container-subject-container {
+  width: calc(100vw - 500px);
+}
+.mail-edit-input-container-subject-container .wap-text-input-width-size-m {
+  width: 100%;
+}
+.mail-edit-input-container-to {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.mail-edit-input-container-to .wap-button {
+  padding-left: 8px;
+}
+.mail-edit-input-container-body {
+  height: calc(100vh - 288px);
+}
+.mail-edit-input-container-body-textarea {
+  height: 100%;
+  width: 100%;
+  resize: none;
+  padding: 8px;
+}
+.mail-edit-input-container-options {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: 72px;
+}
+.mail-edit-input-container-options-button-area {
+  margin-right: 8px;
+}
+.mail-edit-label {
+  width: 72px;
+  margin-top: 8px;
+}
+.mail-edit .wap-dialog-button {
+  padding-right: 8px;
+}

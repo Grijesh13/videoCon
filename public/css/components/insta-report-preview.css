@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * insta-report-preview styles.
+ * (temporary style)
+ * @author shimbo_t
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * insta-report-preview styles.
+ * (temporary style)
+ * @author shimbo_t
+ * ------------------------------------------------------------------------*/
+.insta-report-preview {
+  margin: 0 auto;
+  display: inline-block;
+}
+.insta-report-preview-report-inner {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+}
+.insta-report-preview-report-title {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.insta-report-preview-report-page-header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.insta-report-preview-report-column-header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.insta-report-preview-report-detail {
+  position: absolute;
+  top: 25px;
+  left: 0px;
+}
+.insta-report-preview-report-column-footer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.insta-report-preview-report-page-footer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.insta-report-preview-report-summary {
+  position: absolute;
+  top: 160px;
+  left: 0px;
+}
+.insta-report-preview-report-element {
+  position: absolute;
+}
+.insta-report-preview-report-element.box {
+  border: 1px solid #555555;
+}
+.insta-report-preview-report-element.text {
+  font-size: 1rem;
+}

@@ -1,0 +1,187 @@
+@charset "utf-8";
+.magic-paste-config-tool-dialog {
+  display: none;
+}
+.magic-paste-config-tool-dialog .dialog-div {
+  width: 60%;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body {
+  background-color: #fafafa;
+  padding: 32px 0 16px 0;
+  position: static;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .search-container {
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  padding: 0 16px;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .search-container .input-group {
+  width: 100%;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .search-container .input-group .search-input {
+  width: 80%;
+  margin-left: 8px;
+  height: 30px;
+  padding: 4px;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .search-container .input-group .input-group-btn {
+  display: inline-block;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .search-container .input-group .input-group-btn .btn {
+  height: 30px;
+  width: 40px;
+  padding-top: 0;
+  padding-left: 8px;
+  margin-top: -2px;
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0;
+  -moz-background-clip: padding;
+  border-radius: 0;
+  background-clip: padding-box;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .search-container .input-group .input-group-btn .btn .wap-icon-search {
+  font-size: 1.4rem;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  margin: 0;
+  display: inline-block;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .tile-container {
+  height: 82%;
+  margin-top: 72px;
+  max-height: 600px;
+  padding: 0 16px;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .tile-container:after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table {
+  background-color: #ffffff;
+  width: calc(100% - 20px);
+  margin-left: 8px;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table .tile-table-head {
+  font-weight: 700;
+  border: 1px solid #cccccc;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table .tile-table-head .tile-table-td {
+  padding: 8px;
+  line-height: 1.4;
+  vertical-align: top;
+  font-weight: 400;
+  border-top: 0;
+  font-size: 1.4rem;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table .tile-table-head .tile-table-td.title-header {
+  width: 50%;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table .tile-table-head .tile-table-td.owner-header {
+  width: 20%;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table .tile-table-head .tile-table-td.last-modified-header {
+  width: 30%;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table .tile-table-content {
+  border: 1px solid #cccccc;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table .tile-table-content .type-item:hover {
+  cursor: pointer;
+  background-color: #ecf2fd;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-table .tile-table-content .tile-table-td {
+  padding: 8px;
+  line-height: 1.4;
+  vertical-align: top;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper {
+  width: 25%;
+  position: relative;
+  padding: 8px;
+  float: left;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper .tile {
+  background-color: #ffffff;
+  border: 5px solid #dddddd;
+  padding: 8px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper .tile:hover {
+  cursor: pointer;
+  border: 5px solid #a0c2f9;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper .tile .title {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper .tile .author {
+  font-size: 1rem;
+  color: #aaaaaa;
+  margin: 4px 0 8px 0;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .tile-container .tile-layout-wrapper .tile .footer {
+  text-align: right;
+  color: #bdbdbd;
+  margin-top: 4px;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .pagination {
+  float: right;
+  margin-top: 16px;
+  margin-right: 24px;
+  font-size: 1.4rem;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container {
+  display: inline-block;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item {
+  padding: 4px;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item.prev,
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item.next {
+  font-size: 1.7rem;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item:hover {
+  cursor: pointer;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item.page-num {
+  text-decoration: underline;
+  color: #aaaaaa;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .pagination .page-item-container .page-item.page-num.active {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.4rem;
+  font-weight: 400;
+  cursor: auto;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .pagination .page-input-container {
+  display: inline-block;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .pagination .page-input-container .page-input {
+  width: 30px;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .dialog-body .pagination .page-input-container .page-sum {
+  margin-right: 4px;
+}
+.magic-paste-config-tool-dialog .dialog-div .dialog-content .modal-footer {
+  margin-top: 0;
+}
+.magic-paste-config-tool-dialog-hint {
+  display: inline-block;
+  margin-left: 24px;
+  margin-top: 16px;
+}

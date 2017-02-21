@@ -1,0 +1,45 @@
+@charset "utf-8";
+.timeline-accordion-item-header {
+  background-color: #4285f4;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 8px;
+}
+.timeline-accordion-item-content {
+  border-left: 1px solid #bdbdbd;
+  border-right: 1px solid #bdbdbd;
+  overflow: hidden;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  height: 0px;
+}
+.timeline-accordion-item-left-icon {
+  float: left;
+}
+.timeline-accordion-item-right-icon {
+  float: right;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.timeline-accordion-item-link {
+  color: #ffffff;
+  padding: 8px;
+}
+.timeline-accordion-item-active .timeline-accordion-item-right-icon {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.timeline-accordion-item-active .timeline-accordion-item-content {
+  border-bottom: 1px solid #bdbdbd;
+  height: auto;
+}
+.timeline-accordion-item-header-right-icon:before {
+  margin-right: 0;
+}

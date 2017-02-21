@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="./adapter.debug.js"></script>
+    <!-- <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script> -->
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+    <!-- <script src="./public/adapter.js"></script> -->
+
+    <title>WebRtc Demo</title>
+
+    <script type="text/javascript">
+        // var socket = io();
+        var socket = io.connect();
+        // 'iceServers': [ { url: 'stun:stun.l.google.com:19302' }, { url: "turn:numb.viagenie.ca", username: "gitu1992@gmail.com", "credential": "lpkvmmdhgs" } ]
+        var RTCPeerConnection = window.RTCPeerConnection;
+        var configuration = { 'iceServers': [ { url: 'stun:stun.l.google.com:19302' }, { url: "turn:numb.viagenie.ca:3478", username: "gitu1992@gmail.com", credential: "lpkvmmdhgs" } ] };
+        var myID;
+        var theirID;
+        var iceCandidates = [];
+        var pc;     // for 1-1 video chat
+        var myStream;
+
+
+        // --------------------------------- Onload (For All Users) -----------------------------
+        document.onload = function() {
+            navigator.getUserMedia({
+                'audio': false,
+                'video': true
+            }, function (stream) {
+                myStream = stream;
+                // $('#myVideo').prop('src', URL.createObjectURL(myStream));
+                // $('#myVideo').srcObject = myStream;
+                // document.getElementById('myVideo').srcObject = myStream;
+                attachMediaStream(document.getElementById('myVideo'), myStream);
+                $.get('/getID', function(res) {
+                    myID = res;
+                    // $('#myID').text(myID);
+                });
+            }, logError);
+        }();
+
+
+
+        function stringify(obj, replacer, spaces, cycleReplacer) {
+            return JSON.stringify(obj, serializer(replacer, cycleReplacer), spaces)
+        };
+
+        function serializer(replacer, cycleReplacer) {
+              var stack = [], keys = []
+
+              if (cycleReplacer == null) cycleReplacer = function(key, value) {
+                if (stack[0] === value) return "[Circular ~]"
+                return "[Circular ~." + keys.slice(0, stack.indexOf(value)).join(".") + "]"
+              }
+
+              return function(key, value) {
+                if (stack.length > 0) {
+                  var thisPos = stack.indexOf(this)
+                  ~thisPos ? stack.splice(thisPos + 1) : stack.push(this)
+                  ~thisPos ? keys.splice(thisPos, Infinity, key) : keys.push(key)
+                  if (~stack.indexOf(value)) value = cycleReplacer.call(this, key, value)
+                }
+                else stack.push(value)
+
+                return replacer == null ? value : replacer.call(this, key, value)
+              }
+        };
+
+
+        // ------------------------------- Caller ------------------------------------------------
+        function makeCall() {
+            $.get('/ifRoomActive', function(res) {
+                if (res) {
+                    $.get('/getListOfUsers/' + myID, function(res) {
+                        theirID = res[0];
+                        createPeerConnection_Caller(theirID, null);
+                    });
+                }
+            });
+        };
+
+        function createOffer(pc, theirID, callback) {
+            pc.createOffer(function(desc) {
+                pc.setLocalDescription(desc, function() {
+                    socket.emit('sdp message', JSON.stringify({ 'SessDP': desc, 'sourceID': myID, 'targetID': theirID, 'offer': true }));
+                }, logError);
+            }, logError);
+        };
+
+        function createPeerConnection_Caller(theirID, callback) {
+            pc = new RTCPeerConnection(configuration);
+
+            pc.onicecandidate = function (evt) {
+                if ( evt.candidate ) {
+                    console.log('caller -- ice candidate received from stun server');
+                    socket.emit('ice message', JSON.stringify({ 'candidate': evt.candidate.candidate, 'label': evt.candidate.sdpMLineIndex, 'sourceID': myID, 'targetID': theirID, 'offer': true }));
+                }
+            };
+
+            pc.onaddstream = function (evt) {
+                // $('#theirVideo_1').prop('src', URL.createObjectURL(evt.stream));
+                // document.getElementById('theirVideo_1').srcObject = evt.stream;
+                attachMediaStream(document.getElementById('theirVideo_1'), evt.stream);
+            };
+
+            pc.onnegotiationneeded = function(evt) {
+                // console.log('onnegotiationneeded');
+            };
+
+            pc.addStream(myStream);
+            createOffer(pc, theirID, callback);
+        };
+
+
+        // ------------------------------- Callee ------------------------------------------------
+        function createPeerConnection_Callee(message) {
+            pc = new RTCPeerConnection(configuration);
+            theirID = message.sourceID;
+
+            pc.onicecandidate = function (evt) {
+                if ( evt.candidate ) {
+                    console.log('callee -- ice candidate received from stun server');
+                    socket.emit('ice message', JSON.stringify( { 'candidate': evt.candidate.candidate, 'label': evt.candidate.sdpMLineIndex, 'sourceID': myID, 'targetID': message.sourceID, 'offer': false } ));
+                }
+            };
+
+            pc.onaddstream = function (evt) {
+                // $('#theirVideo_1').prop('src', URL.createObjectURL(evt.stream));
+                // document.getElementById('theirVideo_1').srcObject = evt.stream;
+                attachMediaStream(document.getElementById('theirVideo_1'), evt.stream);
+            };
+
+            pc.onnegotiationneeded = function(evt) {
+                // console.log('onnegotiationneeded');
+            };
+
+            pc.addStream(myStream);
+            pc.setRemoteDescription(new RTCSessionDescription(message.SessDP));
+            createAnswer(message);
+        };
+
+        function createAnswer(message) {
+            // console.log(pc.connectionState);
+            pc.createAnswer(function(desc) {
+                // console.log('creating answer');
+                pc.setLocalDescription(desc, function() {
+                    // console.log('localD set');
+                    console.log('callee -- sending SDP');
+                    socket.emit('sdp message', JSON.stringify({ 'SessDP': desc, 'sourceID': myID, 'targetID': message.sourceID, 'offer': false }));
+                    for (var i = 0; i < iceCandidates.length; i++) {
+                        pc.addIceCandidate(new RTCIceCandidate( { sdpMLineIndex: iceCandidates[i].label, candidate: iceCandidates[i].candidate } ));
+                    };
+                }, logError);
+            }, logError);
+        };
+
+
+        // ------------------------------- Socket Code -------------------------------------------
+        // ---- onIceCandidate message --------
+        socket.on('ice message', function(evt) {
+            var message = JSON.parse(evt);
+            if ( message.targetID === myID && message.sourceID !== myID ) {
+                if ( pc && pc.remoteDescription ) {
+                    pc.addIceCandidate(new RTCIceCandidate( { sdpMLineIndex: message.label, candidate: message.candidate } ));
+                } else {
+                    iceCandidates.push(message);
+                }
+            }
+        });
+
+        // ---- on sdp message ---------
+        // 1) addRemoteDescription for caller, OR
+        // 2) callee receives first message which triggers createPeerConnection_Callee()
+        socket.on('sdp message', function(evt) {
+            var message = JSON.parse(evt);
+            if ( !pc && message.targetID === myID && message.sourceID !== myID ) {
+                console.log('callee -- received remote SDP');
+                createPeerConnection_Callee(message);
+            }
+            if ( message.targetID === myID && message.sourceID !== myID && !message.offer ) {
+                try {
+                    console.log('caller -- received remote SDP');
+                    pc.setRemoteDescription(new RTCSessionDescription(message.SessDP));
+                    for ( var i = 0; i < iceCandidates.length; i++ ) {
+                        pc.addIceCandidate(new RTCIceCandidate( { sdpMLineIndex: iceCandidates[i].label, candidate: iceCandidates[i].candidate } ));
+                    }
+                } catch (e) {
+                    console.error("Error " + e);
+                }
+            }
+            if ( pc && message.targetID === myID && message['screen'] ) {
+                pc.setRemoteDescription(new RTCSessionDescription(message.SessDP));
+                // console.log(pc.getRemoteStreams());
+                // createAnswer(message);
+                // createPeerConnection_Callee(message);
+            }
+        });
+
+
+        // ------------------------------- Other Common Code -------------------------------------
+
+        function createOfferForScreen(pc, theirID) {
+            pc.createOffer(function(desc) {
+                pc.setLocalDescription(desc, function() {
+                    socket.emit('sdp message', JSON.stringify({ 'SessDP': pc.localDescription, 'sourceID': myID, 'targetID': theirID, 'offer': true, 'screen': true }));
+                }, logError);
+            }, logError);
+        };
+
+        function logError(error) {
+            console.log(error.name + ': ' + error.message);
+        };
+
+        function downloadExtension() {
+            // check if the extension already exists
+            // if not...inline installation
+            chrome.webstore.install('https://chrome.google.com/webstore/detail/pkppjghnhfpimobokdfoakmglifecmcg', function() {
+                console.log('success callback');
+            }, logError);
+        };
+
+        function ssClicked() {
+            window.postMessage({ type: 'SS_UI_REQUEST', text: 'start' }, '*');
+        };
+
+        window.addEventListener('message', function (event) {
+            // user chose a stream
+            if (event.data.type && (event.data.type === 'SS_DIALOG_SUCCESS')) {
+                startScreenStreamFrom(event.data.streamId);
+            }
+        });
+
+        function startScreenStreamFrom(streamId) {
+            navigator.webkitGetUserMedia({
+                audio: false,
+                video: {
+                    mandatory: {
+                        chromeMediaSource: 'desktop',
+                        chromeMediaSourceId: streamId,
+                        maxWidth: window.screen.width,
+                        maxHeight: window.screen.height
+                    }
+                }
+            },
+            // successCallback
+            function(screenStream) {
+                document.getElementById('myVideo').src = URL.createObjectURL(screenStream);
+                pc.removeStream(myStream);
+                pc.addStream(screenStream);
+                createOfferForScreen(pc, theirID);
+            },
+            // errorCallback
+            function(err) {
+                console.log('getUserMedia failed!: ' + err);
+            });
+        };
+
+    </script>
+</head>
+
+<body class="talk">
+    <div class="talk-header">
+        <div class="talk-header-logo">
+            <img src="./logo.png" class="talk-header-logo-img"/>
+        </div>
+        <div class="talk-header-menu">
+            <i class="wap-icon-bubble talk-header-menu-icon"></i>
+            <img class="talk-header-menu-image" src="./profile.jpg"/>
+        </div>
+        <div class="talk-header-dropdown">
+            <div class="talk-header-dropdown-item">Announcements</div>
+            <div class="talk-header-dropdown-item">HUE Mail</div>
+            <div class="talk-header-dropdown-item">Profile</div>
+            <div class="talk-header-dropdown-item">Settings</div>
+            <div class="talk-header-dropdown-item">Logout</div>
+        </div>
+    </div>
+
+    <div id="video-container">
+        <!-- note the 'autoplay' -->
+        <div class="theirVideoDiv">
+            <video id="theirVideo_1" class="theirVideo" controls autoplay></video>
+        </div>
+        <video style="position:absolute;bottom:30px;width:400px;right:20px;" id="myVideo" muted="true" class="myVideo" autoplay></video>
+    </div>
+    <div>
+        <h1><span id="myID"></span></h1>
+        <p><a href="#" id="makeCall" onclick="makeCall();">Call</a></p>
+        <button id="screenShare" type="button" onclick="ssClicked();">Share Screen</button>
+    </div>
+</body>
+
+</html>

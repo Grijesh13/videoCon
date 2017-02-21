@@ -1,0 +1,504 @@
+@charset "utf-8";
+/*
+IMPORTANT:
+In order to preserve the uniform grid appearance, all cell styles need to have padding, margin and border sizes.
+No built-in (selected, editable, highlight, flashing, invalid, loading, :focus) or user-specified CSS
+classes should alter those!
+*/
+.wap-zhuge-grid {
+  /*
+   * Override the default css to get a good separator border.
+   * You can override:
+   * .zhuge-row.first
+   * .zhuge-row.last
+   * .zhuge-row.separate-above
+   * .zhuge-row.separate-below
+   * .zhuge-cell.first
+   * .zhuge-cell.last
+   * .zhuge-cell.separate-left
+   * .zhuge-cell.separate-right
+   * .zhuge-header-column.first
+   * .zhuge-header-column.last
+   * .zhuge-header-column.separate-left
+   * .zhuge-header-column.separate-right
+   * .zhuge-header-columngroup.first
+   * .zhuge-header-columngroup.last
+   * .zhuge-header-columngroup.separate-left
+   * .zhuge-header-columngroup.separate-right
+   */
+}
+.wap-zhuge-grid .cell-reorder {
+  cursor: pointer;
+}
+.wap-zhuge-grid .zhuge-edit-input {
+  width: 100%;
+  height: 100%;
+}
+.wap-zhuge-grid .zhuge-edit-input input {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 100%;
+}
+.wap-zhuge-grid .zhuge-edit-input textarea {
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+  position: absolute;
+}
+.wap-zhuge-grid .zhuge-cell.editable {
+  padding: 0px;
+}
+.wap-zhuge-grid .zhuge-pane * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wap-zhuge-grid .zhuge-header.ui-state-default,
+.wap-zhuge-grid .zhuge-headerrow.ui-state-default {
+  width: 100%;
+  overflow: hidden;
+  border-width: 0 0 1px 0;
+}
+.wap-zhuge-grid .zhuge-header-columns,
+.wap-zhuge-grid .zhuge-headerrow-columns {
+  position: relative;
+  white-space: nowrap;
+  cursor: default;
+  overflow: hidden;
+}
+.wap-zhuge-grid .zhuge-header-column.ui-state-default {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  line-height: 20px;
+  height: 28px;
+  margin: 0;
+  padding: 4px;
+  border-left: 0px;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  float: left;
+}
+.wap-zhuge-grid .zhuge-header-column.vertical-border {
+  border-right: 1px solid #dddddd;
+}
+.wap-zhuge-grid .zhuge-header-column.vertical-border:first-child {
+  border-left: 1px solid #dddddd;
+}
+.wap-zhuge-grid .zhuge-header-column.not-in-group {
+  line-height: 40px;
+  height: 50px;
+}
+.wap-zhuge-grid .zhuge-header-column.in-group {
+  margin-top: 25px;
+  height: 25px;
+}
+.wap-zhuge-grid .zhuge-header-column.align-left {
+  text-align: left;
+}
+.wap-zhuge-grid .zhuge-header-column.align-right {
+  text-align: right;
+}
+.wap-zhuge-grid .zhuge-header-column.align-center {
+  text-align: center;
+}
+.wap-zhuge-grid .zhuge-header-groups {
+  position: absolute;
+  white-space: nowrap;
+  cursor: default;
+  overflow: hidden;
+  height: 25px;
+}
+.wap-zhuge-grid .zhuge-header-columngroup {
+  position: absolute;
+  display: inline-block;
+  border-bottom: 1px solid #dddddd;
+  text-align: center;
+  height: 25px;
+  line-height: 23px;
+  z-index: 10;
+}
+.wap-zhuge-grid .zhuge-header-columngroup.vertical-border {
+  border-right: 1px solid #dddddd;
+}
+.wap-zhuge-grid .zhuge-header-columngroup.vertical-border:first-child {
+  border-left: 1px solid #dddddd;
+}
+.wap-zhuge-grid .zhuge-headerrow-column.ui-state-default {
+  padding: 4px;
+}
+.wap-zhuge-grid .zhuge-sort {
+  cursor: pointer;
+}
+.wap-zhuge-grid .zhuge-column-name.zhuge-sort:hover {
+  color: #808080;
+}
+.wap-zhuge-grid .zhuge-filter-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 5px;
+  margin-left: 4px;
+}
+.wap-zhuge-grid .zhuge-sort-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 5px;
+  margin-left: 4px;
+}
+.wap-zhuge-grid .zhuge-resizable-handle {
+  position: absolute;
+  display: block;
+  cursor: col-resize;
+  width: 6px;
+  right: 0px;
+  top: 0;
+  height: 100%;
+}
+.wap-zhuge-grid .zhuge-resizable-handle:hover {
+  background-color: #cccccc;
+}
+.wap-zhuge-grid .zhuge-resizable-handle-dragging {
+  background-color: #cccccc;
+}
+.wap-zhuge-grid .zhuge-sortable-placeholder {
+  background: #cccccc;
+}
+.wap-zhuge-grid .zhuge-header-button {
+  height: 17px;
+  width: 17px;
+  cursor: pointer;
+}
+.wap-zhuge-grid .zhuge-header-button:hover {
+  background-color: #f1f1f1;
+}
+.wap-zhuge-grid .zhuge-header-icon-area {
+  display: inline-block;
+  vertical-align: top;
+  margin: 1px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.wap-zhuge-grid .zhuge-header-icon-area.align-right {
+  right: 0;
+  position: absolute;
+}
+.wap-zhuge-grid .zhuge-header-icon-area.zhuge-header-icon-float-none {
+  float: none;
+}
+.wap-zhuge-grid .zhuge-header-button-hidden {
+  width: 0;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  -webkit-transition: 0.2s width, 0.2s opacity;
+  -moz-transition: 0.2s width, 0.2s opacity;
+  -o-transition: 0.2s width, 0.2s opacity;
+  transition: 0.2s width, 0.2s opacity;
+}
+.wap-zhuge-grid .zhuge-header-column:hover > .zhuge-header-button {
+  width: 17px;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.wap-zhuge-grid .grid-canvas {
+  position: relative;
+  outline: 0;
+  overflow: hidden;
+}
+.wap-zhuge-grid .zhuge-row.ui-widget-content,
+.wap-zhuge-grid .zhuge-row.ui-state-active {
+  position: absolute;
+  border: 0px;
+  width: 100%;
+}
+.wap-zhuge-grid .zhuge-cell,
+.wap-zhuge-grid .zhuge-headerrow-column {
+  position: absolute;
+  border-bottom: 1px solid #dddddd;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  padding: 1px 2px 2px 1px;
+  margin: 0;
+  white-space: nowrap;
+  cursor: default;
+}
+.wap-zhuge-grid .zhuge-cell.vertical-border {
+  border-right: 1px solid #dddddd;
+}
+.wap-zhuge-grid .zhuge-cell.vertical-border:first-child {
+  border-left: 1px solid #dddddd;
+}
+.wap-zhuge-grid .zhuge-cell * {
+  line-height: normal;
+}
+.wap-zhuge-grid .zhuge-group-toggle {
+  display: inline-block;
+}
+.wap-zhuge-grid .zhuge-cell.highlighted,
+.wap-zhuge-grid .zhuge-cell.active.selected.highlighed,
+.wap-zhuge-grid .zhuge-row.highlighted > .zhuge-cell,
+.wap-zhuge-grid .zhuge-row.highlighted > .zhuge-cell.active.selected {
+  background: #fef8d3;
+}
+.wap-zhuge-grid .zhuge-cell.preview,
+.wap-zhuge-grid .zhuge-cell.active.selected.preview,
+.wap-zhuge-grid .zhuge-row.preview > .zhuge-cell,
+.wap-zhuge-grid .zhuge-row.preview > .zhuge-cell.active.selected {
+  color: #aaaaaa;
+  background: #fef8d3;
+}
+.wap-zhuge-grid .zhuge-cell.info,
+.wap-zhuge-grid .zhuge-cell.active.selected.info,
+.wap-zhuge-grid .zhuge-row.info > .zhuge-cell,
+.wap-zhuge-grid .zhuge-row.info > .zhuge-cell.active.selected {
+  background: #ecf2fd;
+}
+.wap-zhuge-grid .zhuge-cell.warn,
+.wap-zhuge-grid .zhuge-cell.active.selected.warn,
+.wap-zhuge-grid .zhuge-row.warn > .zhuge-cell,
+.wap-zhuge-grid .zhuge-row.warn > .zhuge-cell.active.selected {
+  background: #fdf7ec;
+}
+.wap-zhuge-grid .zhuge-cell.error,
+.wap-zhuge-grid .zhuge-cell.active.selected.error,
+.wap-zhuge-grid .zhuge-row.error > .zhuge-cell,
+.wap-zhuge-grid .zhuge-row.error > .zhuge-cell.active.selected {
+  background: #fce8ef;
+}
+.wap-zhuge-grid .zhuge-cell.flashing {
+  border: 1px solid red !important;
+}
+.wap-zhuge-grid .zhuge-cell.editable {
+  overflow: visible;
+  background: #ffffff;
+}
+.wap-zhuge-grid .zhuge-cell.align-left {
+  text-align: left;
+}
+.wap-zhuge-grid .zhuge-cell.align-right {
+  text-align: right;
+}
+.wap-zhuge-grid .zhuge-cell.align-center {
+  text-align: center;
+}
+.wap-zhuge-grid .zhuge-cell:focus {
+  outline: none;
+}
+.wap-zhuge-grid .zhuge-reorder-proxy {
+  display: inline-block;
+  background: #4285f4;
+  zoom: 1;
+  filter: alpha(opacity=15);
+  -webkit-opacity: 0.15;
+  -moz-opacity: 0.15;
+  opacity: 0.15;
+  cursor: move;
+}
+.wap-zhuge-grid .zhuge-reorder-guide {
+  display: inline-block;
+  height: 2px;
+  background: #4285f4;
+  zoom: 1;
+  filter: alpha(opacity=70);
+  -webkit-opacity: 0.7;
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+}
+.wap-zhuge-grid .zhuge-selection {
+  position: absolute;
+  border: 2px dashed black;
+}
+.wap-zhuge-grid .zhuge-pane {
+  position: absolute;
+  outline: 0;
+  overflow: hidden;
+  width: 100%;
+}
+.wap-zhuge-grid .zhuge-pane-header {
+  display: block;
+}
+.wap-zhuge-grid .zhuge-header {
+  overflow: hidden;
+  position: relative;
+}
+.wap-zhuge-grid .zhuge-headerrow {
+  overflow: hidden;
+  position: relative;
+}
+.wap-zhuge-grid .zhuge-top-panel-scroller {
+  overflow: hidden;
+  position: relative;
+}
+.wap-zhuge-grid .zhuge-top-panel {
+  width: 10000px;
+}
+.wap-zhuge-grid .zhuge-viewport {
+  position: relative;
+  outline: 0;
+  width: 100%;
+}
+.wap-zhuge-grid .zhuge-cursor-move {
+  cursor: move;
+}
+.wap-zhuge-grid .zhuge-row.hovered-row {
+  background-color: #f1f1f1;
+}
+.wap-zhuge-grid .zhuge-header-column.hovered-col {
+  background-color: #f1f1f1;
+}
+.wap-zhuge-grid .hovered-col {
+  background-color: #f1f1f1;
+}
+.wap-zhuge-grid .hovered-cell {
+  background-color: #dddddd;
+}
+.wap-zhuge-grid .zhuge-viewport::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: solid rgba(0, 0, 0, 0);
+  border-width: 2px 2px 2px 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.wap-zhuge-grid .zhuge-viewport::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+.wap-zhuge-grid .zhuge-pane-separator {
+  background-color: #aaaaaa;
+}
+.wap-zhuge-grid .zhuge-row.separate-above .zhuge-cell {
+  border-bottom: none;
+}
+.wap-zhuge-grid .zhuge-cell.separate-left,
+.wap-zhuge-grid .zhuge-header-column.separate-left,
+.wap-zhuge-grid .zhuge-header-columngroup.separate-left {
+  border-right: none;
+}
+.wap-zhuge-grid .zhuge-header-columns {
+  background-color: #ffffff;
+}
+.wap-zhuge-grid .zhuge-header-groups {
+  background-color: #ffffff;
+}
+.wap-zhuge-grid .zhuge-header-column {
+  background-color: #ffffff;
+  border-right: 1px solid transparent;
+}
+.wap-zhuge-grid .zhuge-header-column.selected {
+  background: #ecf2fd;
+}
+.wap-zhuge-grid .zhuge-headerrow {
+  background: #f1f1f1;
+}
+.wap-zhuge-grid .zhuge-headerrow-column {
+  background: #f1f1f1;
+  border-bottom: 0;
+  height: 100%;
+}
+.wap-zhuge-grid .zhuge-row.ui-state-active {
+  background: #ecf2fd;
+}
+.wap-zhuge-grid .zhuge-row {
+  position: absolute;
+  background: #ffffff;
+  border: 0px;
+  line-height: 20px;
+}
+.wap-zhuge-grid .zhuge-row.selected {
+  z-index: 10;
+  background: #ecf2fd;
+}
+.wap-zhuge-grid .zhuge-cell {
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-width: 0;
+}
+.wap-zhuge-grid .zhuge-group {
+  border-bottom: 2px solid #cccccc;
+}
+.wap-zhuge-grid .zhuge-group-toggle {
+  width: 9px;
+  height: 9px;
+  margin-right: 5px;
+}
+.wap-zhuge-grid .zhuge-group-toggle.expanded {
+  background: url(../../img/component/zhuge/collapse.gif) no-repeat center center;
+}
+.wap-zhuge-grid .zhuge-group-toggle.collapsed {
+  background: url(../../img/component/zhuge/expand.gif) no-repeat center center;
+}
+.wap-zhuge-grid .zhuge-group-totals {
+  color: #999999;
+  background: #ffffff;
+}
+.wap-zhuge-grid .zhuge-cell.selected {
+  background-color: #ecf2fd;
+}
+.wap-zhuge-grid .zhuge-cell.active:not(.selected) {
+  -webkit-box-shadow: inset 1px 1px 0 #4285f4, inset -1px -1px 0 #4285f4;
+  -moz-box-shadow: inset 1px 1px 0 #4285f4, inset -1px -1px 0 #4285f4;
+  box-shadow: inset 1px 1px 0 #4285f4, inset -1px -1px 0 #4285f4;
+}
+.wap-zhuge-grid .zhuge-cell.active.selected {
+  background-color: #ffffff;
+}
+.wap-zhuge-grid .zhuge-cell.copied {
+  background-color: wap-color-soft(#4285f4);
+}
+.wap-zhuge-grid .zhuge-sortable-placeholder {
+  background: #cccccc;
+}
+.wap-zhuge-grid .zhuge-row.ui-state-active {
+  background: wap-color-pale(#e91e63);
+}
+.wap-zhuge-grid .zhuge-row.loading {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+.wap-zhuge-grid .zhuge-cell.invalid {
+  border-color: #e91e63;
+  -webkit-animation-duration: 0.2s;
+  -moz-animation-duration: 0.2s;
+  -o-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-name: zhuge-invalid-hilite;
+  -moz-animation-name: zhuge-invalid-hilite;
+  -o-animation-name: zhuge-invalid-hilite;
+  animation-name: zhuge-invalid-hilite;
+}
+.wap-zhuge-grid lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes zhuge-invalid-hilite{ {from { box-shadow: 0 0 6px red; } to { box-shadow: none; }}}
+@-moz-keyframes zhuge-invalid-hilite{ {from { box-shadow: 0 0 6px red; } to { box-shadow: none; }}}
+@-o-keyframes zhuge-invalid-hilite{ {from { box-shadow: 0 0 6px red; } to { box-shadow: none; }}}
+@keyframes zhuge-invalid-hilite{ {from { box-shadow: 0 0 6px red; } to { box-shadow: none; }};
+}
+.wap-zhuge-grid .zhuge-font-numeric {
+  font-family: "ＭＳ ゴシック", monospace;
+}
+.wap-zhuge-grid .zhuge-font-numeric input {
+  font-family: "ＭＳ ゴシック", monospace;
+}
+.wap-zhuge-grid .zhuge-column-insert-line {
+  background-color: #4285f4;
+  width: 2px;
+  top: 0px;
+  height: 100%;
+  z-index: 1500;
+  position: absolute;
+}

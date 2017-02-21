@@ -1,0 +1,17 @@
+@charset "utf-8";
+.wap-core-ui-inputswitcher .input-parent {
+  display: none;
+  width: 100%;
+  position: relative;
+}
+.wap-core-ui-inputswitcher .input-parent.input-enabled {
+  display: inline-block;
+}
+.wap-core-ui-inputswitcher .input-parent i {
+  display: none;
+  position: absolute;
+  top: 0;
+}
+.wap-core-ui-inputswitcher .input-parent:hover i {
+  display: inline;
+}

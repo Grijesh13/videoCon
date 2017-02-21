@@ -1,0 +1,12 @@
+@charset "utf-8";
+.a {
+  color: #333333;
+  text-decoration: none;
+  background: transparent;
+}
+.a.link {
+  color: #4285f4;
+}
+.a:hover {
+  color: #818da2;
+}

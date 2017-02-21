@@ -1,0 +1,11 @@
+@charset "utf-8";
+.timeline-public-level-icon-i {
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+.timeline-public-level-icon-popup-content {
+  padding: 4px;
+}
+.timeline-public-level-icon-popup-content-wrapper {
+  display: none;
+}

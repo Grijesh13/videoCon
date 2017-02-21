@@ -1,0 +1,90 @@
+@charset "utf-8";
+.wap-core-ui-autocompleteconfigtool {
+  width: 500px;
+  height: 800px;
+  overflow-y: scroll;
+  border: inherit;
+  font: icon;
+}
+.wap-core-ui-autocompleteconfigtool .auto-complete-configure-header {
+  height: 75px;
+}
+.wap-core-ui-autocompleteconfigtool .auto-complete-configure-body {
+  height: 640px;
+}
+.wap-core-ui-autocompleteconfigtool .auto-complete-configure-footer {
+  height: 50px;
+}
+.wap-core-ui-autocompleteconfigtool .auto-complete-configuration-save-button {
+  position: absolute;
+}
+.highlight-element {
+  border: 2px dashed #e91e63;
+  padding: 2px;
+}
+.checked-element {
+  border: 2px solid #4285f4;
+  padding: 2px;
+}
+.wap-core-ui-autocompleteconfigtool .selected-component {
+  border: 1px solid #4285f4;
+  padding: 2px;
+}
+.wap-core-ui-autocompleteconfigtool .configure-component {
+  border: 1px solid #175D9F;
+  padding: 2px;
+  font-color: white;
+}
+.wap-core-ui-autocompleteconfigtool .selected-components {
+  min-height: 50px;
+  border: 1px solid gray;
+  padding: 2px;
+}
+.wap-core-ui-autocompleteconfigtool .auto-complete-entity {
+  min-height: 50px;
+  border: 1px solid gray;
+  padding: 2px;
+}
+.wap-core-ui-autocompleteconfigtool .auto-complete-url {
+  min-height: 50px;
+  border: 1px solid gray;
+  padding: 2px;
+}
+.wap-core-ui-autocompleteconfigtool .condition-selected-components {
+  min-height: 50px;
+  border: 1px solid gray;
+  padding: 2px;
+}
+.wap-core-ui-autocompleteconfigtool .fetch-selected-components {
+  min-height: 50px;
+  border: 1px solid gray;
+  padding: 2px;
+}
+.wap-core-ui-autocompleteconfigtool .hint-selected-components {
+  min-height: 50px;
+  border: 1px solid gray;
+  padding: 2px;
+}
+.wap-core-ui-autocompleteconfigtool .identify-selected-components {
+  min-height: 50px;
+  border: 1px solid gray;
+  padding: 2px;
+}
+.wap-core-ui-autocompleteconfigtool .active-configuration {
+  border: 4px dotted #3EA9C4;
+}
+.wap-core-ui-autocompleteconfigtool .auto-complete-step-label {
+  font-weight: bold;
+  color: #175D9F;
+  padding: 2px;
+}
+.wap-core-ui-autocompleteconfigtool .configuration-item-label {
+  color: #175D9F;
+  padding: 2px;
+  font-style: italic;
+}
+.wap-core-ui-autocompleteconfigtool .auto-complete-configuration-more {
+  color: #175D9F;
+  font-weight: bold;
+  padding: 2px;
+}

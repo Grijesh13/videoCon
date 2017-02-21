@@ -1,0 +1,203 @@
+@charset "utf-8";
+/* gray is better for default */
+/* slider wrapper */
+.wap-input-slider {
+  position: relative;
+  margin: 25px;
+}
+.wap-input-slider.wap-input-slider-horizontal {
+  height: 50px;
+}
+.wap-input-slider :focus {
+  outline: none;
+}
+/* slider bar */
+.goog-twothumbslider-vertical,
+.goog-twothumbslider-horizontal,
+.goog-slider-vertical,
+.goog-slider-horizontal {
+  background: none repeat scroll 0 0 #ebebeb;
+  border-radius: 3px;
+  position: relative;
+}
+.goog-twothumbslider-horizontal,
+.goog-slider-horizontal {
+  height: 4px;
+}
+.goog-twothumbslider-horizontal.goog-twothumbslider-horizontal,
+.goog-slider-horizontal.goog-twothumbslider-horizontal {
+  height: 4px;
+}
+.goog-twothumbslider-horizontal .goog-twothumbslider-rangehighlight {
+  height: 4px;
+}
+.goog-twothumbslider-vertical,
+.goog-slider-vertical {
+  width: 10px;
+}
+/* slider range */
+.goog-twothumbslider-horizontal .goog-twothumbslider-rangehighlight {
+  position: absolute;
+  background-color: #3ea9c4;
+  border-radius: 3px;
+}
+.goog-twothumbslider-horizontal .goog-twothumbslider-rangehighlight.slider-gray {
+  background-color: #303641;
+}
+.goog-twothumbslider-horizontal .goog-twothumbslider-rangehighlight.slider-blue {
+  background-color: #21a9e1;
+}
+.goog-twothumbslider-horizontal .goog-twothumbslider-rangehighlight.slider-green {
+  background-color: #0fbd71;
+}
+.goog-twothumbslider-horizontal .goog-twothumbslider-rangehighlight.slider-yellow {
+  background-color: #f7d227;
+}
+.goog-twothumbslider-horizontal .goog-twothumbslider-rangehighlight.slider-red {
+  background-color: #ec5956;
+}
+.goog-twothumbslider-horizontal .goog-twothumbslider-rangehighlight.slider-turquoise {
+  background-color: #3ea9c4;
+}
+.goog-twothumbslider-vertical .goog-twothumbslider-rangehighlight {
+  width: 10px;
+}
+/* slider thumb (required by goog.ui.TwoThumbSlider) */
+.goog-twothumbslider-value-thumb,
+.goog-twothumbslider-extent-thumb,
+.goog-slider-thumb {
+  position: absolute;
+  overflow: visible;
+  width: 0;
+  height: 0;
+}
+/* slider handler */
+.goog-twothumbslider-handler,
+.goog-slider-handler {
+  position: relative;
+  background: none repeat scroll 0 0 #3ea9c4;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -5px 0 0 -10px;
+  cursor: pointer;
+  top: -3px;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  -moz-transition: -moz-transform 0.2s ease-out;
+  -o-transition: -o-transform 0.2s ease-out;
+  -ms-transition: -ms-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+}
+.goog-twothumbslider-handler:hover,
+.goog-slider-handler:hover {
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.goog-twothumbslider-handler.handler-gray,
+.goog-slider-handler.handler-gray {
+  background: none repeat scroll 0 0 #303641;
+}
+.goog-twothumbslider-handler.handler-gray:hover,
+.goog-slider-handler.handler-gray:hover {
+  background-color: #464e5e;
+}
+.goog-twothumbslider-handler.handler-gray:active,
+.goog-slider-handler.handler-gray:active {
+  background-color: #5b677c;
+}
+.goog-twothumbslider-handler.handler-blue,
+.goog-slider-handler.handler-blue {
+  background: none repeat scroll 0 0 #21a9e1;
+}
+.goog-twothumbslider-handler.handler-blue:hover,
+.goog-slider-handler.handler-blue:hover {
+  background-color: #1988b6;
+}
+.goog-twothumbslider-handler.handler-blue:active,
+.goog-slider-handler.handler-blue:active {
+  background-color: #136789;
+}
+.goog-twothumbslider-handler.handler-green,
+.goog-slider-handler.handler-green {
+  background: none repeat scroll 0 0 #0fbd71;
+}
+.goog-twothumbslider-handler.handler-green:hover,
+.goog-slider-handler.handler-green:hover {
+  background-color: #0b8e55;
+}
+.goog-twothumbslider-handler.handler-green:active,
+.goog-slider-handler.handler-green:active {
+  background-color: #085f39;
+}
+.goog-twothumbslider-handler.handler-yellow,
+.goog-slider-handler.handler-yellow {
+  background: none repeat scroll 0 0 #f7d227;
+}
+.goog-twothumbslider-handler.handler-yellow:hover,
+.goog-slider-handler.handler-yellow:hover {
+  background-color: #e3bc08;
+}
+.goog-twothumbslider-handler.handler-yellow:active,
+.goog-slider-handler.handler-yellow:active {
+  background-color: #b19307;
+}
+.goog-twothumbslider-handler.handler-red,
+.goog-slider-handler.handler-red {
+  background: none repeat scroll 0 0 #ec5956;
+}
+.goog-twothumbslider-handler.handler-red:hover,
+.goog-slider-handler.handler-red:hover {
+  background-color: #e72c28;
+}
+.goog-twothumbslider-handler.handler-red:active,
+.goog-slider-handler.handler-red:active {
+  background-color: #c61a16;
+}
+.goog-twothumbslider-handler.handler-turquoise,
+.goog-slider-handler.handler-turquoise {
+  background: none repeat scroll 0 0 #3ea9c4;
+}
+.goog-twothumbslider-handler.handler-turquoise:hover,
+.goog-slider-handler.handler-turquoise:hover {
+  background-color: #30889f;
+}
+.goog-twothumbslider-handler.handler-turquoise:active,
+.goog-slider-handler.handler-turquoise:active {
+  background-color: #256777;
+}
+/* slider input */
+.wap-input-slider-value-input,
+.wap-input-slider-extent-input {
+  float: left;
+  position: absolute;
+}
+.wap-input-slider-value-input input,
+.wap-input-slider-extent-input input {
+  position: relative;
+  color: #BCBCBC;
+}
+.wap-input-slider-value-input input:focus,
+.wap-input-slider-extent-input input:focus {
+  border: 1px solid #175d9f;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 1px #175d9f;
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 1px #175d9f;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 1px #175d9f;
+}
+.wap-input-slider-horizontal .wap-input-slider-value-input input,
+.wap-input-slider-horizontal .wap-input-slider-extent-input input {
+  top: 10px;
+}
+.wap-input-slider-vertical .wap-input-slider-value-input input,
+.wap-input-slider-vertical .wap-input-slider-extent-input input {
+  left: 18px;
+}
+.wap-input-slider-horizontal {
+  padding: 1px 1px 1px 1px;
+}
+.wap-slider-input-unit {
+  vertical-align: -10px;
+  margin-left: 3px;
+}

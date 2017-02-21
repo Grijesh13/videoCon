@@ -1,0 +1,324 @@
+@charset "utf-8";
+.wap-toastr-container {
+  position: fixed;
+  top: 64px;
+  right: 8px;
+  z-index: 1035;
+}
+.wap-toastrs {
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.175);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.175);
+  margin-bottom: 8px;
+  padding: 16px 16px 16px 16px;
+  width: 320px;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  zoom: 1;
+  filter: alpha(opacity=90);
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+.wap-toastrs-hidden {
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.wap-toastrs:hover {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.wap-toastrs-icon {
+  padding-right: 16px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.wap-toastrs-type-icon {
+  font-size: 2rem;
+  line-height: 100%;
+  margin: auto;
+}
+.wap-toastrs-content {
+  width: 100%;
+}
+.wap-toastrs-header {
+  padding-bottom: 4px;
+}
+.wap-toastrs-title {
+  color: #ffffff;
+  font-weight: 700;
+  display: inline-block;
+  width: 93%;
+}
+.wap-toastrs-close {
+  font-weight: 700;
+  position: relative;
+  right: -0.6em;
+  top: -0.6em;
+  float: right;
+  color: #ffffff;
+  zoom: 1;
+  filter: alpha(opacity=90);
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+.wap-toastrs-close:hover,
+.wap-toastrs-close:focus {
+  text-decoration: none;
+  cursor: pointer;
+  zoom: 1;
+  filter: alpha(opacity=65);
+  -webkit-opacity: 0.65;
+  -moz-opacity: 0.65;
+  opacity: 0.65;
+}
+.wap-toastrs-anchor {
+  cursor: pointer;
+}
+.wap-toastrs-anchor:hover .wap-toastrs-message {
+  text-decoration: underline;
+}
+.wap-toastrs-footer-button {
+  margin-top: 16px;
+  text-align: right;
+}
+.wap-toastrs-confirm-button-ok,
+.wap-toastrs-confirm-button-ng {
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: baseline;
+  -moz-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 14px;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  height: 32px;
+}
+.wap-toastrs-confirm-button-ok {
+  color: #ffffff;
+  background-color: #4285f4;
+  border-color: #4285f4;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-right: 16px;
+}
+.wap-toastrs-confirm-button-ok.disabled,
+.wap-toastrs-confirm-button-ok[disabled] {
+  zoom: 1;
+  filter: alpha(opacity=65);
+  -webkit-opacity: 0.65;
+  -moz-opacity: 0.65;
+  opacity: 0.65;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.wap-toastrs-confirm-button-ok:active,
+.wap-toastrs-confirm-button-ok.active {
+  -webkit-box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+.wap-toastrs-confirm-button-ok.disabled,
+.wap-toastrs-confirm-button-ok[disabled],
+.wap-toastrs-confirm-button-ok.disabled:hover,
+.wap-toastrs-confirm-button-ok[disabled]:hover,
+.wap-toastrs-confirm-button-ok.disabled:focus,
+.wap-toastrs-confirm-button-ok[disabled]:focus,
+.wap-toastrs-confirm-button-ok.disabled:active,
+.wap-toastrs-confirm-button-ok[disabled]:active,
+.wap-toastrs-confirm-button-ok.disabled.active,
+.wap-toastrs-confirm-button-ok[disabled].active {
+  color: #ffffff;
+  background-color: #4285f4;
+  border-color: #4285f4;
+}
+.wap-toastrs-confirm-button-ok:hover,
+.wap-toastrs-confirm-button-ok:focus,
+.wap-toastrs-confirm-button-ok.focus,
+.wap-toastrs-confirm-button-ok:active,
+.wap-toastrs-confirm-button-ok.active {
+  color: #ffffff;
+  background-color: #3b77db;
+  border-color: #3b77db;
+}
+.wap-toastrs-confirm-button-ng {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #dddddd;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wap-toastrs-confirm-button-ng.disabled,
+.wap-toastrs-confirm-button-ng[disabled] {
+  zoom: 1;
+  filter: alpha(opacity=65);
+  -webkit-opacity: 0.65;
+  -moz-opacity: 0.65;
+  opacity: 0.65;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.wap-toastrs-confirm-button-ng:active,
+.wap-toastrs-confirm-button-ng.active {
+  -webkit-box-shadow: inset 0 0px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 0px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0px 4px rgba(0, 0, 0, 0.2);
+}
+.wap-toastrs-confirm-button-ng.disabled,
+.wap-toastrs-confirm-button-ng[disabled],
+.wap-toastrs-confirm-button-ng.disabled:hover,
+.wap-toastrs-confirm-button-ng[disabled]:hover,
+.wap-toastrs-confirm-button-ng.disabled:focus,
+.wap-toastrs-confirm-button-ng[disabled]:focus,
+.wap-toastrs-confirm-button-ng.disabled:active,
+.wap-toastrs-confirm-button-ng[disabled]:active,
+.wap-toastrs-confirm-button-ng.disabled.active,
+.wap-toastrs-confirm-button-ng[disabled].active {
+  color: #999999;
+  background-color: #dddddd;
+  border-color: #dddddd;
+}
+.wap-toastrs-confirm-button-ng:hover,
+.wap-toastrs-confirm-button-ng:focus,
+.wap-toastrs-confirm-button-ng.focus,
+.wap-toastrs-confirm-button-ng:active,
+.wap-toastrs-confirm-button-ng.active {
+  color: #333333;
+  background-color: #dddddd;
+  border-color: #d2d2d2;
+}
+.wap-toastrs-message {
+  color: #ffffff;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+.wap-toastrs-message-link {
+  margin-left: 4px;
+}
+.wap-toastrs-information {
+  background-color: #4285f4;
+}
+.wap-toastrs-information-icon {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.wap-toastrs-information-icon:before {
+  content: "\f05a";
+}
+.wap-toastrs-confirmation {
+  background-color: #33ac71;
+}
+.wap-toastrs-confirmation-icon {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.wap-toastrs-confirmation-icon:before {
+  content: "\e619";
+}
+.wap-toastrs-warning {
+  background-color: #f4b142;
+}
+.wap-toastrs-warning-icon {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.wap-toastrs-warning-icon:before {
+  content: "\f071";
+}
+.wap-toastrs-error {
+  background-color: #e91e63;
+}
+.wap-toastrs-error-icon {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.wap-toastrs-error-icon:before {
+  content: "\e0f9";
+}

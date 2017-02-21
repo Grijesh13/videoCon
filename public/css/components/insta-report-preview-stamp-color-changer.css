@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+* insta-report-stamp styles.
+* @author vaibhav
+* ------------------------------------------------------------------------*/
+/*
+ * Debugging for Color Changer
+ * Vaibhav
+ */
+.insta-report-preview-stamp-color-changer-area {
+  position: absolute;
+  height: 30px;
+  width: 100px;
+}
+.insta-report-preview-stamp-color-changer-options {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  margin: 4px;
+  cursor: pointer;
+}
+.insta-report-preview-stamp-color-changer-red {
+  background-color: #e91e63;
+}
+.insta-report-preview-stamp-color-changer-black {
+  background-color: #333333;
+}
+.insta-report-preview-stamp-color-changer-blue {
+  background-color: #4285f4;
+}

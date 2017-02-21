@@ -1,0 +1,21 @@
+@charset "utf-8";
+.main-menu-section-header {
+  margin: 16px 16px 0 0;
+  padding: 0 8px;
+  background-color: #ffffff;
+  font-size: 1.7rem;
+  border-left: 1px solid transparent;
+  border-top: 1px solid #f1f1f1;
+  border-right: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  height: 40px;
+  line-height: 40px;
+}
+.main-menu-section-header-label {
+  display: inline;
+  margin-left: 8px;
+  margin-right: 8px;
+  color: #7f7f7f;
+  height: 40px;
+  line-height: 40px;
+}

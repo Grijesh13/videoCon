@@ -1,0 +1,30 @@
+@charset "utf-8";
+.timeline-connectors {
+  margin-left: 48px;
+  margin-top: 28px;
+}
+.timeline-connectors-global-actions {
+  float: right;
+  margin-bottom: 16px;
+}
+.timeline-connectors-list {
+  border: 1px solid #e8e8e8;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #ffffff;
+  width: 100%;
+}
+.timeline-connectors-item {
+  white-space: nowrap;
+}
+.timeline-connectors-item-value {
+  padding: 16px 24px;
+  border: 1px solid #e8e8e8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 480px;
+}
+.timeline-connectors-action {
+  margin-right: 8px;
+  cursor: pointer;
+}

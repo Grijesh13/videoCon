@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * report-converter-template styles.
+ * @author Vaibhav
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * insta-report-decorate styles.
+ * @author Vaibhav
+ * ------------------------------------------------------------------------*/
+.insta-report-decorate {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+.insta-report-decorate .decorate-tools-container {
+  max-width: 25%;
+  position: relative;
+}
+.insta-report-decorate .decorate-tools-container .tools-row-fixed {
+  padding: 8px 16px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.insta-report-decorate .decorate-tools-container .tools-row-auto {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 100%;
+  padding: 8px 16px;
+}
+.insta-report-decorate .decorate-result-container {
+  width: 75%;
+  background-color: #f1f1f1;
+  position: relative;
+  overflow-y: scroll;
+}
+.insta-report-decorate .decorate-result-container .tools-row-auto {
+  padding: 8px 16px;
+}

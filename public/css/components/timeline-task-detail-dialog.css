@@ -1,0 +1,28 @@
+@charset "utf-8";
+.timeline-task-detail-dialog {
+  line-height: 1.25;
+}
+.timeline-task-detail-dialog-body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timeline-task-detail-dialog-body-left {
+  width: 50%;
+  padding-right: 8px;
+}
+.timeline-task-detail-dialog-body-right {
+  width: 50%;
+  padding-left: 8px;
+}
+.timeline-task-detail-dialog .dialog-footer {
+  display: none;
+}
+.timeline-task-detail-dialog .dialog-body {
+  bottom: 0;
+}
+.timeline-task-detail-dialog .dialog-div {
+  top: 0;
+}

@@ -1,0 +1,27 @@
+@charset "utf-8";
+.mobile-emotion-button-stamp-emotion {
+  width: auto;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.mobile-emotion-button-button-area {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  font-size: 2.4rem;
+}
+.mobile-emotion-button-button-area-view {
+  margin-top: 4px;
+  width: 24px;
+  height: 24px;
+}
+.mobile-emotion-button-icon {
+  font-size: 2rem;
+}

@@ -1,0 +1,335 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.cassandraview-category-room {
+  background: #333333;
+}
+.cassandraview-category-room-button {
+  margin-right: 8px;
+  height: 32px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  color: #7f7f7f;
+}
+.cassandraview-category-room-menu {
+  display: inline-block;
+  float: right;
+  padding-top: 12px;
+}
+.cassandraview-category-room-menu-icon {
+  cursor: pointer;
+  color: #bdbdbd;
+  font-size: 2.4rem;
+}
+.cassandraview-category-room-menu-icon:hover {
+  color: #ffffff;
+}
+.cassandraview-category-room-menu-options {
+  position: absolute;
+  z-index: 1000;
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  top: 49px;
+  right: 23px;
+  display: none;
+}
+.cassandraview-category-room-menu-options:after,
+.cassandraview-category-room-menu-options:before {
+  bottom: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.cassandraview-category-room-menu-options:after {
+  border-color: transparent;
+  border-bottom-color: #ffffff;
+  border-width: 12px;
+  left: 70%;
+  margin-left: 12px;
+}
+.cassandraview-category-room-menu-options:before {
+  border-color: transparent;
+  border-bottom-color: #dddddd;
+  border-width: 12px;
+  left: 70%;
+  margin-left: 12px;
+}
+.cassandraview-category-room-menu-option {
+  padding: 8px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.cassandraview-category-room-menu-option-icon {
+  color: #000000;
+  font-size: 2rem;
+  padding-right: 4px;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+.cassandraview-category-room-menu-option-button {
+  border: none;
+  color: #333333;
+  font-size: 1.7rem;
+  display: inline-block;
+}
+.cassandraview-category-room-menu-option:hover {
+  background-color: #f1f1f1;
+}
+.cassandraview-category-room-icon {
+  float: right;
+}
+.cassandraview-category-room-notifications {
+  position: absolute;
+  z-index: 1000;
+  width: 354px;
+  background-color: #ffffff;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border: 1px solid #dddddd;
+  top: 49px;
+  right: 23px;
+  display: none;
+}
+.cassandraview-category-room-notifications-button-span {
+  font-size: 2rem;
+  color: #bdbdbd;
+  display: inline-block;
+  margin-top: 6px;
+  cursor: pointer;
+}
+.cassandraview-category-room-notifications-body-header {
+  border-bottom: 1px solid #dddddd;
+  padding: 4px;
+  text-align: right;
+}
+.cassandraview-category-room-notifications-body-header-close {
+  border: none;
+  background-color: white;
+  color: #7f7f7f;
+}
+.cassandraview-category-room-notifications-body-main {
+  border-bottom: 1px solid #dddddd;
+  text-align: center;
+  vertical-align: middle;
+  overflow-y: auto;
+  max-height: 401px;
+}
+.cassandraview-category-room-notifications-body-main-empty {
+  padding: 4px;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  color: #7f7f7f;
+}
+.cassandraview-category-room-notifications-body-main-messages {
+  color: #ffffff;
+}
+.cassandraview-category-room-notifications-body-main-messages-notification {
+  max-height: 80px;
+  height: 80px;
+  border-bottom: 1px solid #f5f5f5;
+  overflow: auto;
+}
+.cassandraview-category-room-notifications-body-main-messages-notification::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.cassandraview-category-room-notifications-body-main-messages-notification::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+.cassandraview-category-room-notifications-body-main-messages-notification::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 5px;
+}
+.cassandraview-category-room-notifications-body-main-messages-notification-title {
+  text-align: left;
+  font-weight: bold;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 4px;
+}
+.cassandraview-category-room-notifications-body-main-messages-notification-message {
+  text-align: left;
+  word-break: break-all;
+  height: 58px;
+  max-height: 58px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.cassandraview-category-room-notifications-body-main-messages-notification-error {
+  background-color: #e91e63;
+}
+.cassandraview-category-room-notifications-body-main-messages-notification-success {
+  background-color: #33ac71;
+}
+.cassandraview-category-room-notifications-body-main-messages-notification-warning {
+  background-color: #f4b142;
+}
+.cassandraview-category-room-notifications-body-main-messages-notification-info {
+  background-color: #4285f4;
+}
+.cassandraview-category-room-notifications-body-main-messages-notification-checkmark {
+  cursor: pointer;
+}
+.cassandraview-category-room-notifications-body-main::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.cassandraview-category-room-notifications-body-main::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+.cassandraview-category-room-notifications-body-main::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 5px;
+}
+.cassandraview-category-room-notifications-body-footer {
+  padding: 4px;
+  text-align: center;
+}
+.cassandraview-category-room-loadingbar {
+  z-index: 1025;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #4285f4;
+}
+.cassandraview-category-room-dialog-panel {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+}
+.cassandraview-category-room-logo-img {
+  width: 126px;
+}
+.cassandraview-category-room-logo-title {
+  display: inline-block;
+  padding-left: 16px;
+}
+.cassandraview-category-room-logo-title-locked {
+  font-size: 2.4rem;
+  color: #f4b142;
+}
+.cassandraview-category-room-dialog-log-panel {
+  overflow: auto;
+  height: 469px;
+  width: 100%;
+}
+.cassandraview-category-room-dialog-head-controls {
+  text-align: right;
+  width: 88%;
+}
+.cassandraview-category-room-dialog-log-table {
+  width: 100%;
+}
+.cassandraview-category-room-dialog-log-table-head {
+  border: 1px solid #e8e8e8;
+  text-align: center;
+  padding: 8px;
+  border-top: none;
+}
+.cassandraview-category-room-dialog-log-tr {
+  border-bottom: 1px solid #f1f1f1;
+}
+.cassandraview-category-room-dialog-log-td {
+  padding: 8px;
+  border: 1px solid #f1f1f1;
+  word-wrap: break-word;
+  max-width: 500px;
+}
+.cassandraview-category-room-dialog-log-tr:hover {
+  background-color: #f5f5f5;
+}
+.cassandraview-category-room-dialog-log-panel::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.cassandraview-category-room-dialog-log-panel::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+.cassandraview-category-room-dialog-log-panel::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 5px;
+}
+.cassandraview-category-room-li-dialog {
+  color: #000000;
+}
+.cassandraview-category-room-navbar-dialog {
+  margin-bottom: 0px;
+  margin-left: 8px;
+  display: inline-flex;
+}
+.cassandraview-category-room-header {
+  padding-left: 16px;
+  padding-right: 32px;
+  color: #ffffff;
+  margin: 0 auto;
+}
+.cassandraview-category-room-date-container-div {
+  display: inline-block;
+  width: 176px;
+  margin: 2px;
+}
+.cassandraview-category-room-logo {
+  display: inline-block;
+  height: 48px;
+  font-size: 2rem;
+}
+.cassandraview-category-room-li {
+  float: left;
+  color: #000000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.cassandraview-category-room-current-columnfamily {
+  font-size: 1.7rem;
+  display: none;
+}
+.cassandraview-category-room-dto-class-name {
+  display: none;
+}
+.cassandraview-category-room-db-date-choice-container {
+  display: flex;
+}

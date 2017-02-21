@@ -1,0 +1,710 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col,
+.first-step-guide-config-tool-edit-area .first-step-guide-front,
+.first-step-guide-config-tool-edit-area .first-step-guide-back,
+.first-step-guide-config-tool-template-item-container {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.first-step-guide-config-tool {
+  overflow-y: auto;
+  max-height: 700px;
+}
+.first-step-guide-config-tool-edit-area .first-step-guide-front,
+.first-step-guide-config-tool-edit-area .first-step-guide-back {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 75%;
+  flex-basis: 75%;
+  max-width: 75%;
+  margin-top: 48px;
+  left: -13px;
+}
+.first-step-guide-config-tool-edit-area .first-step-guide-front {
+  z-index: 1010;
+}
+.first-step-guide-config-tool-edit-area .first-step-guide-back {
+  z-index: 1000;
+}
+.first-step-guide-config-tool-edit-area .first-step-guide-render-area-container {
+  width: 95%;
+}
+.first-step-guide-config-tool-edit-area .first-step-guide-page {
+  width: 100%;
+}
+.first-step-guide-config-tool-edit-area .first-step-guide-page-content-title {
+  -webkit-transition: color 0.1s linear, background 0.1s linear;
+  -moz-transition: color 0.1s linear, background 0.1s linear;
+  -o-transition: color 0.1s linear, background 0.1s linear;
+  transition: color 0.1s linear, background 0.1s linear;
+}
+.first-step-guide-config-tool-edit-area .first-step-guide-page-content-title:hover {
+  color: #333333;
+  background: #ffffff;
+  cursor: text;
+}
+.first-step-guide-config-tool-edit-area .first-step-guide-page-content-description {
+  -webkit-transition: color 0.1s linear, background 0.1s linear;
+  -moz-transition: color 0.1s linear, background 0.1s linear;
+  -o-transition: color 0.1s linear, background 0.1s linear;
+  transition: color 0.1s linear, background 0.1s linear;
+}
+.first-step-guide-config-tool-edit-area .first-step-guide-page-content-description:hover {
+  color: #333333;
+  background: #ffffff;
+  cursor: text;
+}
+.first-step-guide-config-tool-edit-area .first-step-guide-page-content-sub-description {
+  -webkit-transition: color 0.1s linear, background 0.1s linear;
+  -moz-transition: color 0.1s linear, background 0.1s linear;
+  -o-transition: color 0.1s linear, background 0.1s linear;
+  transition: color 0.1s linear, background 0.1s linear;
+}
+.first-step-guide-config-tool-edit-area .first-step-guide-page-content-sub-description:hover {
+  color: #333333;
+  background: #ffffff;
+  cursor: text;
+}
+.first-step-guide-config-tool-edit-area .fileinput-preview {
+  border: none;
+  padding: 0;
+}
+.first-step-guide-config-tool-edit-area .first-step-guide-config-tool {
+  overflow-y: auto;
+}
+.first-step-guide-config-tool-slider-image-wrapper {
+  margin-bottom: 8px;
+  text-align: center;
+  position: relative;
+  height: 250px;
+  width: 100%;
+  padding: 8px;
+}
+.first-step-guide-config-tool-slider-image,
+.first-step-guide-config-tool-add-more-wrapper {
+  background-color: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #dddddd;
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0;
+  -moz-background-clip: padding;
+  border-radius: 0;
+  background-clip: padding-box;
+  height: 247px;
+  width: 410px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.first-step-guide-config-tool-slider-image:hover,
+.first-step-guide-config-tool-add-more-wrapper:hover {
+  -webkit-box-shadow: 0px 1px 4px 0px #999999, 0px 0px 40px #e8e8e8;
+  -moz-box-shadow: 0px 1px 4px 0px #999999, 0px 0px 40px #e8e8e8;
+  box-shadow: 0px 1px 4px 0px #999999, 0px 0px 40px #e8e8e8;
+}
+.first-step-guide-config-tool-slider-image.selected,
+.first-step-guide-config-tool-add-more-wrapper.selected {
+  -webkit-box-shadow: 0px 1px 4px 0px #999999, 0px 0px 40px #e8e8e8;
+  -moz-box-shadow: 0px 1px 4px 0px #999999, 0px 0px 40px #e8e8e8;
+  box-shadow: 0px 1px 4px 0px #999999, 0px 0px 40px #e8e8e8;
+}
+.first-step-guide-config-tool-slider-remove {
+  position: absolute;
+  z-index: 7;
+  top: 1px;
+  right: 1px;
+  font-size: 2rem;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 1px 4px 0px #999999, 0px 0px 40px #e8e8e8;
+  -moz-box-shadow: 0px 1px 4px 0px #999999, 0px 0px 40px #e8e8e8;
+  box-shadow: 0px 1px 4px 0px #999999, 0px 0px 40px #e8e8e8;
+  width: 36px;
+  height: 36x;
+  cursor: pointer;
+  color: #cccccc;
+  padding: 8px 0;
+}
+.first-step-guide-config-tool-slider-remove:hover {
+  color: #bdbdbd;
+}
+.first-step-guide-config-tool-add-more {
+  font-size: 23rem;
+  color: #aaaaaa;
+  vertical-align: middle;
+}
+.first-step-guide-config-tool-edit-area .default-img.wap-icon-image {
+  font-size: 56rem;
+  color: #aaaaaa;
+}
+.first-step-guide-config-tool-template-library .dialog-body {
+  width: 100%;
+  padding: 0;
+}
+.first-step-guide-config-tool-template-library-container {
+  height: 100%;
+}
+.first-step-guide-config-tool-template-library-category-container {
+  float: left;
+  width: 25%;
+  padding: 8px;
+}
+.first-step-guide-config-tool-template-library-category-li {
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.first-step-guide-config-tool-template-library-category-li:hover {
+  background-color: #e8e8e8;
+}
+.first-step-guide-config-tool-template-library-category-li.selected {
+  background-color: #e8e8e8;
+}
+.first-step-guide-config-tool-template-library-category-a {
+  padding-left: 12px;
+  font-size: 1.4rem;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  position: relative;
+  display: block;
+  padding: 8px 16px;
+}
+.first-step-guide-config-tool-template-library-category-count {
+  float: right;
+  color: #aaaaaa;
+}
+.first-step-guide-config-tool-template-library-template-container {
+  float: right;
+  width: 75%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: 8px;
+  padding-left: 16px;
+  background-color: #f1f1f1;
+}
+.first-step-guide-config-tool-template-item-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 33.33333333333333%;
+  flex-basis: 33.33333333333333%;
+  max-width: 33.33333333%;
+  float: left;
+  padding: 0 8px;
+}
+.first-step-guide-config-tool-template-item {
+  border: 1px solid #dddddd;
+  margin-bottom: 32px;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.175);
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.175);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.175);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.first-step-guide-config-tool-template-item:hover {
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.175);
+  -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.175);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.175);
+}
+.first-step-guide-config-tool-template-item:hover .first-step-guide-config-tool-template-select-button {
+  display: block;
+}
+.first-step-guide-config-tool-template-item:hover .first-step-guide-config-tool-template-select-button:before {
+  content: 'Select';
+}
+.first-step-guide-config-tool-template-item.selected {
+  border-color: #4285f4;
+}
+.first-step-guide-config-tool-template-item.selected .first-step-guide-config-tool-template-select-button {
+  display: block;
+  background-color: #4285f4;
+  border-color: transparent;
+  color: #ffffff;
+}
+.first-step-guide-config-tool-template-item.selected .first-step-guide-config-tool-template-select-button:before {
+  content: 'Selected';
+}
+.first-step-guide-config-tool-template-item.selected .first-step-guide-config-tool-template-select-button:hover:before {
+  content: 'Unselect';
+}
+.first-step-guide-config-tool-template-item-header {
+  height: 16px;
+  margin-top: 4px;
+  position: relative;
+}
+.first-step-guide-config-tool-template-item-name {
+  margin-left: 8px;
+  margin-top: 4px;
+}
+.first-step-guide-config-tool-template-select-button {
+  display: none;
+  position: absolute;
+  right: 4px;
+  top: 1px;
+  height: 18px;
+  border: solid 1px #dddddd;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+  background: #ffffff;
+  text-align: center;
+  padding-left: 4px;
+  padding-top: 1px;
+  width: 52px;
+  font-size: 1rem;
+  outline: none;
+  color: #aaaaaa;
+}
+.first-step-guide-config-tool-template-select-button:hover {
+  background-color: #4285f4;
+  color: #ffffff;
+}
+.first-step-guide-config-tool-template-item-thumb-container {
+  height: 140px;
+  padding: 8px;
+}
+.first-step-guide-config-tool-template-item-thumb {
+  width: 100%;
+}
+.first-step-guide-config-tool-slider-image-render-area {
+  position: relative;
+  background-color: #ffffff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  outline: none;
+}
+.first-step-guide-config-tool-slider-image-header {
+  border-bottom: 0;
+  padding: 0;
+}
+.first-step-guide-config-tool-slider-image-btn-close {
+  z-index: 1;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: #f5f5f5;
+  display: inline-block;
+  padding: 0 4px;
+  line-height: 1;
+  color: #7f7f7f;
+  zoom: 1;
+  filter: alpha(opacity=70);
+  -webkit-opacity: 0.7;
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+  text-shadow: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  cursor: default;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  float: right;
+  font-size: 0.7rem;
+}
+.first-step-guide-config-tool-slider-image-body {
+  position: relative;
+  padding: 8px;
+  width: auto;
+  height: 230px;
+}
+.first-step-guide-config-tool-slider-image-back-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  background-repeat: repeat;
+  background-position: top left;
+  background-color: transparent;
+}
+.first-step-guide-config-tool-slider-image-back-image-1 {
+  background-image: url("../../img/component/first-step-guide/tour-bg-10.jpg");
+  background-position-x: 0px;
+  background-position-y: 0px;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+.first-step-guide-config-tool-slider-image-back-image-2 {
+  background-image: url("../../img/component/first-step-guide/tour-bg-11.jpg");
+  background-position-x: 0px;
+  background-position-y: 0px;
+  -webkit-background-size: 103%;
+  -moz-background-size: 103%;
+  background-size: 103%;
+}
+.first-step-guide-config-tool-slider-image-back-image-3 {
+  background-image: url("../../img/component/first-step-guide/tour-bg-13.jpg");
+  background-position-x: 48%;
+  background-position-y: 48%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+.first-step-guide-config-tool-slider-image-back-image-4 {
+  background-image: url("../../img/component/first-step-guide/tour-bg-01.jpg");
+  background-position-x: 0px;
+  background-position-y: 0px;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+.first-step-guide-config-tool-slider-image-back-image-5 {
+  background-image: url("../../img/component/first-step-guide/tour-bg-02.jpg");
+  background-position-x: 0px;
+  background-position-y: 0px;
+  -webkit-background-size: 103%;
+  -moz-background-size: 103%;
+  background-size: 103%;
+}
+.first-step-guide-config-tool-slider-image-back-image-6 {
+  background-image: url("../../img/component/first-step-guide/tour-bg-03.jpg");
+  background-position-x: 0px;
+  background-position-y: 0px;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+.first-step-guide-config-tool-slider-image-main-wrapper {
+  position: relative;
+  padding: 0;
+  max-width: 100%;
+}
+.first-step-guide-config-tool-slider-image-main {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 210px;
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  transform: translateZ(0px);
+}
+.first-step-guide-config-tool-slider-image-pages-container {
+  width: 100%;
+  position: relative;
+  list-style: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.first-step-guide-config-tool-slider-image-pages-container .first-step-guide-page {
+  width: 100%;
+}
+.first-step-guide-config-tool-slider-image-pages-container .first-step-guide-page .first-step-guide-page-content {
+  margin-top: 0;
+  padding-left: 4px;
+}
+.first-step-guide-config-tool-slider-image-pages-container .first-step-guide-page .first-step-guide-page-content .first-step-guide-page-content-title {
+  font-size: 1rem;
+  height: 18px;
+  padding-top: 4px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+.first-step-guide-config-tool-slider-image-pages-container .first-step-guide-page .first-step-guide-page-content .first-step-guide-page-content-description {
+  font-size: 0.5rem;
+  height: 14px;
+  padding-top: 4px;
+  display: block;
+  cursor: pointer;
+}
+.first-step-guide-config-tool-slider-image-pages-container .first-step-guide-page .first-step-guide-page-content .first-step-guide-page-content-sub-description {
+  font-size: 0.5rem;
+  height: 14px;
+  padding-top: 4px;
+  display: block;
+  margin-top: -4px;
+  cursor: pointer;
+}
+.first-step-guide-config-tool-slider-image-pages-container .first-step-guide-page .first-step-guide-page-image-container {
+  text-align: center;
+  margin-top: 4px;
+}
+.first-step-guide-config-tool-slider-image-pages-container .first-step-guide-page .first-step-guide-page-image-container .first-step-guide-page-content-image {
+  height: 160px;
+  font-size: 16rem;
+  width: 266px;
+}
+.first-step-guide-config-tool-slider-image-scroll-container {
+  text-align: center;
+  font-size: 0.5rem;
+  font-weight: 700;
+  color: #7f7f7f;
+  padding-top: 4px;
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+}
+.first-step-guide-config-tool-slider-image-scroll-item {
+  background: #cccccc;
+  border: 1px solid transparent;
+  text-indent: -9999px;
+  display: block;
+  width: 6px;
+  height: 6px;
+  margin: 0 4px;
+  outline: 0;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  text-decoration: none;
+}
+.first-step-guide-config-tool-slider-image-scroll-item.active {
+  background: transparent;
+  border: 1px solid #4285f4;
+}
+.first-step-guide-config-tool-slider-image-direction {
+  position: absolute;
+  top: 50%;
+  outline: 0;
+  width: 13px;
+  height: 13px;
+  z-index: 1060;
+  background: none;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+.first-step-guide-config-tool-slider-image-direction.previous {
+  left: -3px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.first-step-guide-config-tool-slider-image-direction.next {
+  right: 0;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.first-step-guide-config-tool-slider-image-footer {
+  margin: 1px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-top: 0;
+  padding: 4px;
+  text-align: right;
+}
+.first-step-guide-config-tool-slider-image-skip-button {
+  font-size: 0.5rem;
+  cursor: default;
+}
+.business-seriousness .first-step-guide-back-image {
+  position: absolute;
+  top: -16px;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  background-repeat: repeat;
+  background-position: top left;
+  background-color: transparent;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.business-seriousness .first-step-guide-back-image.shown {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.business-seriousness .first-step-guide-back-image-1 {
+  background-image: url("../../img/component/first-step-guide/tour-bg-10.jpg");
+  background-position-x: 0px;
+  background-position-y: 0px;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+.business-seriousness .first-step-guide-back-image-2 {
+  background-image: url("../../img/component/first-step-guide/tour-bg-11.jpg");
+  background-position-x: 0px;
+  background-position-y: 0px;
+  -webkit-background-size: 103%;
+  -moz-background-size: 103%;
+  background-size: 103%;
+}
+.business-seriousness .first-step-guide-back-image-3 {
+  background-image: url("../../img/component/first-step-guide/tour-bg-13.jpg");
+  background-position-x: 48%;
+  background-position-y: 48%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+.business-seriousness .first-step-guide-back-image-4 {
+  background-image: url("../../img/component/first-step-guide/tour-bg-01.jpg");
+  background-position-x: 0px;
+  background-position-y: 0px;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+.business-seriousness .first-step-guide-back-image-5 {
+  background-image: url("../../img/component/first-step-guide/tour-bg-02.jpg");
+  background-position-x: 0px;
+  background-position-y: 0px;
+  -webkit-background-size: 103%;
+  -moz-background-size: 103%;
+  background-size: 103%;
+}
+.business-seriousness .first-step-guide-back-image-6 {
+  background-image: url("../../img/component/first-step-guide/tour-bg-03.jpg");
+  background-position-x: 0px;
+  background-position-y: 0px;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+.three-titles-and-one-middle-image .first-step-guide-page-content-title {
+  color: #ffffff;
+  font-size: 3rem;
+  background: transparent;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 8px;
+  border: none;
+  resize: none;
+  cursor: default;
+  overflow-y: hidden;
+}
+.three-titles-and-one-middle-image .first-step-guide-page-content-title.editable {
+  color: #333333;
+  background: #ffffff;
+  cursor: text;
+}
+.three-titles-and-one-middle-image .first-step-guide-page-content-description {
+  font-size: 1.7rem;
+  color: #ffffff;
+  background: transparent;
+  width: 100%;
+  height: 27px;
+  border: none;
+  padding-top: 4px;
+  resize: none;
+  cursor: default;
+  overflow-y: hidden;
+}
+.three-titles-and-one-middle-image .first-step-guide-page-content-description.editable {
+  color: #333333;
+  background: #ffffff;
+  cursor: text;
+}
+.three-titles-and-one-middle-image .first-step-guide-page-content-sub-description {
+  font-size: 1.7rem;
+  color: #ffffff;
+  background: transparent;
+  width: 100%;
+  height: 27px;
+  border: none;
+  resize: none;
+  padding-top: 4px;
+  cursor: default;
+  overflow-y: hidden;
+}
+.three-titles-and-one-middle-image .first-step-guide-page-content-sub-description.editable {
+  color: #333333;
+  background: #ffffff;
+  cursor: text;
+}
+.three-titles-and-one-middle-image .first-step-guide-page-image-container {
+  text-align: center;
+  margin-top: 16px;
+}
+.three-titles-and-one-middle-image .first-step-guide-page-content-image {
+  height: 600px;
+  border: 1px solid #aaaaaa;
+  background: #ffffff;
+  color: #aaaaaa;
+  font-size: 60rem;
+  width: 1000px;
+}
+.three-titles-and-one-middle-image.first-step-guide-configuration .first-step-guide-page-image-container {
+  margin-top: 4px;
+}

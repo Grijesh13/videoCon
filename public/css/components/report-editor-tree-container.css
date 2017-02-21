@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * report-editor-tree-container styles.
+ * (temporary style)
+ * @author rohit
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * report-editor-tree-container styles.
+ * (temporary style)
+ * @author rohit
+ * ------------------------------------------------------------------------*/
+.report-editor-tree-container-root {
+  position: absolute;
+  top: 50%;
+  border: 1px solid #dddddd;
+  left: 0px;
+  height: 50%;
+  width: 100%;
+  overflow: scroll;
+}
+.report-editor-tree-container-root::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: #f1f1f1;
+  -webkit-transition: all 600ms ease;
+  -moz-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+.report-editor-tree-container-root::-webkit-scrollbar-track {
+  -webkit-border-radius: 1px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1px;
+  -moz-background-clip: padding;
+  border-radius: 1px;
+  background-clip: padding-box;
+}
+.report-editor-tree-container-root::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 1px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1px;
+  -moz-background-clip: padding;
+  border-radius: 1px;
+  background-clip: padding-box;
+  background: #7f7f7f;
+}
+.report-editor-tree-container-root::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}

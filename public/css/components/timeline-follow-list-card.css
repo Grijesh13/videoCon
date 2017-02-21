@@ -1,0 +1,62 @@
+@charset "utf-8";
+.timeline-follow-list-card-all {
+  margin-top: 4px;
+  height: 80px;
+  width: 420px;
+  background-color: #ffffff;
+  color: #7f7f7f;
+  border: 1px solid #dddddd;
+}
+.timeline-follow-list-card-img-div {
+  display: inline-block;
+  vertical-align: top;
+}
+.timeline-follow-list-card-img {
+  height: 60px;
+  width: 60px;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+.timeline-follow-list-card-text {
+  margin-left: 8px;
+  display: inline-block;
+}
+.timeline-follow-list-card-name {
+  margin-top: 8px;
+  display: block;
+  color: #4285f4;
+}
+.timeline-follow-list-card-office {
+  margin-top: 8px;
+  font-size: 1rem;
+  display: block;
+  color: #7f7f7f;
+}
+.timeline-follow-list-card-department {
+  font-size: 1rem;
+  display: block;
+  color: #7f7f7f;
+}
+.timeline-follow-list-card-follow-button {
+  width: 90px;
+  height: 35px;
+  background-color: #33ac71;
+  display: inline-block;
+  float: right;
+  margin-top: 8px;
+  margin-right: 8px;
+  color: #ffffff;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+  padding-left: 12px;
+  padding-top: 8px;
+}
+.timeline-follow-list-card-active.timeline-follow-list-card-follow-button {
+  background-color: #e8e8e8;
+  color: #333333;
+  cursor: pointer;
+}

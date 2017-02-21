@@ -1,0 +1,27 @@
+@charset "utf-8";
+.item-table-caption {
+  padding: 20px 10px 10px 10px;
+  font-size: 19px;
+  width: 800px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.wap-core-ui-itemtable .item-outer {
+  clear: both;
+  padding: 8px 8px 8px 10px;
+}
+.wap-core-ui-itemtable div.item-label {
+  float: left;
+  clear: both;
+  width: 160px;
+  font-size: 14px;
+  color: #aaaaaa;
+}
+.wap-core-ui-itemtable div.item-label span {
+  padding: 0 24px;
+  float: right;
+}
+.wap-core-ui-itemtable div.item-text {
+  float: left;
+  font-size: 14px;
+  color: #191919;
+}

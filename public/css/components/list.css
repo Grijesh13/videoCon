@@ -1,0 +1,250 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * l-list styles.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col,
+.l-list .l-list-room,
+.l-list .l-list-summary-room {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row,
+.l-list .l-title-room,
+.l-list .l-header-right-room {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+/* --------------------------------------------------------------------------
+ * cell padding for layout system.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.grid-cell-padding,
+.l-list .l-title-room,
+.l-list .l-header-right-room,
+.l-list .l-list-summary-room.l-grid-leaf {
+  padding: 16px 16px;
+}
+/* --------------------------------------------------------------------------
+ * l-list styles.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.l-list {
+  height: calc(100% -  48px);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  top: 48px;
+  position: relative;
+}
+.l-list .l-title-floor {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 80px;
+  flex-basis: 80px;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  padding: 0 17px 0 16px;
+  position: relative;
+}
+.l-list .l-title-floor:after {
+  content: "";
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  border-bottom: 1px solid #dddddd;
+  width: 100%;
+}
+.l-list .l-list-floor {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-height: 100%;
+}
+.l-list .l-title-room {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-width: 100%;
+  position: relative;
+}
+.l-list .l-header-right-room {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-width: 100%;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+.l-list .l-header-right-room.l-room > .component {
+  margin-left: 8px;
+}
+.l-list .l-header-right-room.l-room > .component:first-child {
+  margin-left: 0;
+}
+.l-list .l-list-work-room {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 112px;
+  flex-basis: 112px;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  padding: 16px 33px 16px 32px;
+  position: relative;
+}
+.l-list .l-list-work-room.l-room > .component {
+  margin-left: 8px;
+}
+.l-list .l-list-work-room.l-room > .component:first-child {
+  margin-left: 0;
+}
+.l-list .l-list-work-room:after {
+  content: "";
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  border-bottom: 1px solid #dddddd;
+  width: 100%;
+}
+.l-list .l-list-tool-room {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 36px;
+  flex-basis: 36px;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  padding: 0 17px 0 16px;
+  position: relative;
+}
+.l-list .l-list-tool-room.l-room > .component {
+  margin-left: 8px;
+}
+.l-list .l-list-tool-room.l-room > .component:first-child {
+  margin-left: 0;
+}
+.l-list .l-list-tool-room .l-partition.l-grid-leaf {
+  padding: 2px 16px;
+}
+.l-list .l-list-tool-room:after {
+  content: "";
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  border-bottom: 1px solid #dddddd;
+  width: 100%;
+}
+.l-list .l-list-room {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  max-width: 100%;
+  position: relative;
+}
+.l-list .l-list-summary-room {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+  overflow-y: auto;
+  position: relative;
+}
+.l-list .l-list-summary-room .l-grid-leaf.ltr > .component {
+  margin-left: 8px;
+}
+.l-list .l-list-summary-room .l-grid-leaf.ltr > .component:first-child {
+  margin-left: 0;
+}
+.l-list .l-list-summary-room .l-grid-leaf.rtl > .component {
+  margin-right: 8px;
+}
+.l-list .l-list-summary-room .l-grid-leaf.rtl > .component:first-child {
+  margin-right: 0;
+}
+.l-list .l-list-summary-room > .component,
+.l-list .l-list-summary-room > .l-partition {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.l-list .l-list-summary-room:after {
+  content: "";
+  width: 1px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  border-left: 1px solid #dddddd;
+  height: 100%;
+}

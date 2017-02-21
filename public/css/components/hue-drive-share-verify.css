@@ -1,0 +1,21 @@
+@charset "utf-8";
+.hue-drive-share-verify-content {
+  margin: auto;
+}
+.hue-drive-share-verify-input {
+  line-height: 32px;
+  height: 32px;
+  padding: 8px;
+  font-size: 14px;
+  color: #333333;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #aaaaaa;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+  margin-right: 8px;
+}

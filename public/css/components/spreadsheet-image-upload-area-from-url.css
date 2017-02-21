@@ -1,0 +1,54 @@
+@charset "utf-8";
+.spreadsheet-image-upload-area-from-url {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  padding: 12px 20px;
+}
+.spreadsheet-image-upload-area-from-url-label {
+  color: #000000;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.spreadsheet-image-upload-area-from-url-input {
+  border: 1px solid #dddddd;
+  border-top: 1px solid #cccccc;
+  margin: 1px 1px 2px 8px;
+  padding: 4px;
+}
+.spreadsheet-image-upload-area-from-url-tick {
+  height: 16px;
+  width: 16px;
+  margin-left: 4px;
+  margin-bottom: 2px;
+  vertical-align: middle;
+  position: relative;
+  display: inline-block;
+}
+.spreadsheet-image-upload-area-from-url-table {
+  margin-top: 8px;
+  border-spacing: 0;
+}
+.spreadsheet-image-upload-area-from-url-table-td {
+  vertical-align: middle;
+  text-align: center;
+  color: #aaaaaa;
+  font-size: 1.2rem;
+}
+.spreadsheet-image-upload-area-from-url-table-td-div-div-h1 {
+  font-size: 1.4rem;
+  margin: 10px 0;
+}
+.spreadsheet-image-upload-area-from-url-table-td-img {
+  width: 160px;
+  height: 120px;
+}
+.spreadsheet-image-upload-area-from-url-table-td-warning1 {
+  text-align: left;
+  color: #e91e63;
+}
+.spreadsheet-image-upload-area-from-url-table-td-warning2 {
+  color: #e91e63;
+}

@@ -1,0 +1,102 @@
+@charset "utf-8";
+.application-comment-area {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.application-comment-area-img {
+  width: 40px;
+  height: 40px;
+  margin: 8px 8px 8px 4px;
+}
+.application-comment-area-post-action {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 12px;
+  right: 24px;
+}
+.application-comment-area-post-action-button {
+  top: -35px;
+  left: -8px;
+  height: 46px;
+  border: 1px solid #aaaaaa;
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0;
+  -moz-background-clip: padding;
+  border-radius: 0;
+  background-clip: padding-box;
+}
+.application-comment-area-emotion-wrapper {
+  position: relative;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.application-comment-area-input-wrapper {
+  position: relative;
+  margin: 8px 8px;
+  overflow: hidden;
+}
+.application-comment-area-reply-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.application-comment-area-reply-indicator-content {
+  padding-right: 4px;
+  background-color: #e8e8e8;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.application-comment-area-textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding-right: 72px;
+}
+.application-comment-area-textarea-border {
+  width: 100%;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.application-comment-area-close {
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 70px;
+  right: 0;
+  cursor: pointer;
+}
+.application-comment-area-post-button-wrapper {
+  display: none;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.application-comment-area-post-button {
+  margin: 16px 12px;
+}

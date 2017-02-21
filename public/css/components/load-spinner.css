@@ -1,0 +1,75 @@
+@charset "utf-8";
+.load-spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  background-repeat: no-repeat;
+  margin: 4px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.5em solid #e8e8e8;
+  border-right: 0.5em solid #e8e8e8;
+  border-bottom: 0.5em solid #e8e8e8;
+  border-left: 0.5em solid #aaaaaa;
+  -webkit-animation-name: load8;
+  -moz-animation-name: load8;
+  -o-animation-name: load8;
+  animation-name: load8;
+  -webkit-animation-duration: 1.1s;
+  -moz-animation-duration: 1.1s;
+  -o-animation-duration: 1.1s;
+  animation-duration: 1.1s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: initial;
+  -moz-animation-direction: initial;
+  -o-animation-direction: initial;
+  animation-direction: initial;
+  -webkit-animation-fill-mode: initial;
+  -moz-animation-fill-mode: initial;
+  -o-animation-fill-mode: initial;
+  animation-fill-mode: initial;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-play-state: initial;
+  -moz-animation-play-state: initial;
+  -o-animation-play-state: initial;
+  animation-play-state: initial;
+  -webkit-animation-delay: initial;
+  -moz-animation-delay: initial;
+  -o-animation-delay: initial;
+  animation-delay: initial;
+  z-index: 1000;
+  background-color: #ffffff;
+  background-position: 50% 50%;
+}
+.load-spinner.loading {
+  display: block;
+}
+.load-spinner,
+.load-spinner:after {
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  width: 4em;
+  height: 4em;
+  margin-top: calc(50% - 2em);
+}
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes load8{ 0%{-webkit--webkit-transform: rotate(0deg);   -webkit-transform: rotate(0deg); } 100%{ -webkit--webkit-transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+@-moz-keyframes load8{ 0%{-webkit--moz-transform: rotate(0deg);   -moz-transform: rotate(0deg); } 100%{ -webkit--moz-transform: rotate(360deg); -moz-transform: rotate(360deg) }}
+@-o-keyframes load8{ 0%{-webkit--o-transform: rotate(0deg);   -o-transform: rotate(0deg); } 100%{ -webkit--o-transform: rotate(360deg); -o-transform: rotate(360deg) }}
+@keyframes load8{ 0%{-webkit--webkit-transform: rotate(0deg);-webkit--moz-transform: rotate(0deg);-webkit--ms-transform: rotate(0deg);-webkit-transform: rotate(0deg);-webkit-transform: rotate(0deg);-moz-transform: rotate(0deg);-ms-transform: rotate(0deg);transform: rotate(0deg); } 100%{-webkit--webkit-transform: rotate(360deg);-webkit--moz-transform: rotate(360deg);-webkit--ms-transform: rotate(360deg);-webkit-transform: rotate(360deg);-webkit-transform: rotate(360deg);-moz-transform: rotate(360deg);-ms-transform: rotate(360deg);transform: rotate(360deg);};
+}

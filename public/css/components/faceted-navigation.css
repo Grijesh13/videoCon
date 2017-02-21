@@ -1,0 +1,195 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * @author takami_ma, sato_hi
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * @author takami_ma, sato_hi
+ * ------------------------------------------------------------------------*/
+/* memo, todo
+  facetnavi-item-labelのwidthが175px固定だけど、(142)とかは条件の入れ子があっても右揃えしたい。
+  facetnavi-buttonはbtn-groupのmixin作る。
+
+ */
+.faceted-navigation {
+  width: 100%;
+}
+.faceted-navigation-items-title {
+  margin-top: 8px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #dddddd;
+  padding-right: 4px;
+}
+.faceted-navigation-items-title-customize-icon {
+  color: #999999;
+  cursor: pointer;
+  margin-top: -3px;
+  float: right;
+}
+.faceted-navigation-items-title-customize-icon:hover {
+  background-color: #dddddd;
+}
+.faceted-navigation-group {
+  padding: 4px 0 4px 2px;
+}
+.faceted-navigation-group.faceted-navigation-group-all-open .faceted-navigation-expand-item {
+  display: none;
+}
+.faceted-navigation-group:not(.faceted-navigation-group-all-open) .faceted-navigation-item:not(.faceted-navigation-item-top-three) {
+  display: none;
+}
+.faceted-navigation-group:not(.faceted-navigation-group-all-open) .faceted-navigation-contract-item {
+  display: none;
+}
+.faceted-navigation-group-summary {
+  cursor: pointer;
+  border-left: 5px solid #dddddd;
+  padding: 4px 0 4px 4px;
+  margin-bottom: 4px;
+}
+.faceted-navigation-group-summary:hover {
+  background-color: #f1f1f1;
+}
+.faceted-navigation-group-icon {
+  color: #999999;
+  float: right;
+  margin-right: 5px;
+  margin-top: -2px;
+}
+.faceted-navigation-item {
+  margin-left: 8px;
+  padding-left: 4px;
+}
+.faceted-navigation-item-label {
+  position: relative;
+  top: 2px;
+  left: 5px;
+  display: inline-block;
+  width: 175px;
+  cursor: pointer;
+}
+.faceted-navigation-item-title {
+  color: #333333;
+  cursor: pointer;
+}
+.faceted-navigation-item-title:hover {
+  background-color: #dddddd;
+}
+.faceted-navigation-item-count {
+  color: #999999;
+  float: right;
+}
+.faceted-navigation-item-icon {
+  color: #999999;
+  float: right;
+  margin-right: 5px;
+  margin-top: 9px;
+}
+.faceted-navigation-item-value {
+  color: #999999;
+  float: right;
+}
+.faceted-navigation-item-slider {
+  width: 80%;
+}
+.faceted-navigation-item-summary {
+  cursor: pointer;
+}
+.faceted-navigation-subitem {
+  margin-left: 8px;
+  padding-left: 4px;
+}
+.faceted-navigation-subitem-label {
+  display: inline-block;
+  width: 175px;
+}
+.faceted-navigation-subitem-count {
+  color: #999999;
+  float: right;
+}
+.faceted-navigation-subitem-title {
+  color: #333333;
+  cursor: pointer;
+}
+.faceted-navigation-subitem-title:hover {
+  background-color: #dddddd;
+}
+.faceted-navigation-buttons {
+  padding-left: 20px;
+}
+.faceted-navigation-button {
+  border-color: #dddddd;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 8px;
+  background-color: #dddddd;
+  margin-left: -1px;
+}
+.faceted-navigation-button:hover {
+  background-color: #bdbdbd;
+  border-color: #dddddd;
+}
+.faceted-navigation-button:first-child {
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-bottom-left-radius: 3px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius-topleft: 3px;
+  -moz-background-clip: padding;
+  border-top-left-radius: 3px;
+  background-clip: padding-box;
+}
+.faceted-navigation-button:last-child {
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-bottom-right-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius-topright: 3px;
+  -moz-background-clip: padding;
+  border-top-right-radius: 3px;
+  background-clip: padding-box;
+}
+.faceted-navigation-expand-item {
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-left: 4px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+.faceted-navigation-expand-anchor {
+  cursor: pointer;
+  color: #999999;
+  font-size: 1.2rem;
+  float: right;
+}
+.faceted-navigation-expand-anchor:hover {
+  color: #999999;
+}
+.faceted-navigation-contract-item {
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-bottom: 20px;
+  margin-left: 8px;
+  padding-left: 4px;
+}
+.faceted-navigation-contract-anchor {
+  cursor: pointer;
+  color: #999999;
+  font-size: 1.2rem;
+  float: right;
+}
+.faceted-navigation-contract-anchor:hover {
+  color: #999999;
+}
+.faceted-navigation-slider {
+  height: 5px;
+  background-color: #aaaaaa;
+  width: 100px;
+  left: 16px;
+  position: relative;
+}
+::-webkit-details-marker {
+  display: none;
+}

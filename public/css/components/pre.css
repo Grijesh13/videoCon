@@ -1,0 +1,20 @@
+@charset "utf-8";
+.wap-core-ui-pre pre {
+  display: block;
+  padding: 8px;
+  margin: 0 0 12px;
+  font-size: 1.3rem;
+  line-height: 16px;
+  color: #333333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  overflow: auto;
+}
+.wap-core-ui-pre .line-indicator {
+  float: left;
+  padding: 8px;
+  line-height: 16px;
+}

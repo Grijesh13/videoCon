@@ -1,0 +1,190 @@
+@charset "utf-8";
+.mail-detail-page.hidden {
+  display: none;
+}
+.mail-detail-page-header {
+  background-color: #f5f5f5;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.mail-detail-page-header-subject {
+  padding-left: 16px;
+  padding-top: 28px;
+  height: 73px;
+}
+.mail-detail-page-header-subject .star {
+  font-size: 2rem;
+  color: #333333;
+  padding-left: 4px;
+}
+.mail-detail-page-header-subject .star.starred {
+  color: #f4b142;
+}
+.mail-detail-page-header-subject .subject {
+  font-size: 2rem;
+  color: #333333;
+  padding-left: 12px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: absolute;
+  width: 90%;
+}
+.mail-detail-page-header-separator {
+  margin: 0 24px;
+  border-bottom: 1px solid #dddddd;
+}
+.mail-detail-page-header-detail {
+  padding: 18px 0 4px 16px;
+  width: 100%;
+  height: 74px;
+}
+.mail-detail-page-header-detail .from-image {
+  display: inline-block;
+  vertical-align: top;
+  width: 8%;
+}
+.mail-detail-page-header-detail .from-image .user-image {
+  height: 40px;
+  width: 40px;
+  margin-right: 12px;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+}
+.mail-detail-page-header-detail-items {
+  display: inline-block;
+  color: #7f7f7f;
+  width: 90%;
+}
+.mail-detail-page-header-detail-items .label {
+  float: left;
+  width: 70px;
+  padding: 0 10px;
+  font-weight: 700;
+}
+.mail-detail-page-header-detail-items .address {
+  color: #4285f4;
+}
+.mail-detail-page-header-detail-items .from-address-item {
+  padding-bottom: 5px;
+}
+.mail-detail-page-header-detail-items .other-header-items {
+  display: inline-block;
+  width: 100%;
+}
+.mail-detail-page-header-detail-items .other-header-items .header-item {
+  float: left;
+}
+.mail-detail-page-header-detail-items .other-header-items .date {
+  padding-top: 2px;
+}
+.mail-detail-page-header-detail-items .other-header-items .header-info .wap-core-ui-button {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0 4px;
+}
+.mail-detail-page-header-detail-items .other-header-items .header-info .wap-core-ui-button .button {
+  color: #7f7f7f;
+  padding: 4px;
+  border: none;
+  background: none;
+  padding-top: 0;
+}
+.mail-detail-page-header-detail-items .other-header-items .tag-info {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: calc(100% - 350px);
+  padding-top: 2px;
+  overflow: hidden;
+}
+.mail-detail-page-header-detail-items .other-header-items .tag-info .tag {
+  float: left;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+  margin: 0 2px;
+  max-width: 30%;
+  min-width: 48px;
+}
+.mail-detail-page-header-detail-items .other-header-items .tag-info .tag-text {
+  float: left;
+  display: inline-block;
+  width: 85%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 2px;
+  color: #ffffff;
+  font-size: 1rem;
+}
+.mail-detail-page-header-detail-items .other-header-items .tag-info .tag-icon-remove {
+  float: right;
+  width: 16px;
+  font-weight: 700;
+}
+.mail-detail-page-header-detail-items .other-header-items .actions {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  float: right;
+}
+.mail-detail-page-header-detail-items .other-header-items .actions .wap-core-ui-button,
+.mail-detail-page-header-detail-items .other-header-items .actions .wap-core-ui-pulldownbutton {
+  float: left;
+}
+.mail-detail-page-header-detail-items .other-header-items .actions .wap-core-ui-button .button,
+.mail-detail-page-header-detail-items .other-header-items .actions .wap-core-ui-pulldownbutton .button {
+  color: #7f7f7f;
+  padding: 4px;
+  border: none;
+  background: none;
+}
+.mail-detail-page-header-detail-items .other-header-items .actions .wap-core-ui-button .pulldown-menu,
+.mail-detail-page-header-detail-items .other-header-items .actions .wap-core-ui-pulldownbutton .pulldown-menu {
+  right: 4px;
+}
+.mail-detail-page-body {
+  width: 100%;
+  height: calc(100% - 150px);
+  padding: 4px 8px;
+  padding-top: 16px;
+  border: none;
+  overflow: hidden;
+}
+.mail-detail-page-body .link {
+  cursor: pointer;
+}
+.mail-detail-page-body .content-area {
+  position: absolute;
+  height: calc(100% - 180px);
+  width: 98%;
+  color: #333333;
+  padding: 8px;
+  background: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: none;
+  font: inherit;
+}

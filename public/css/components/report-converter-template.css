@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * report-converter-template styles.
+ * @author rohit
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * report-converter-template styles.
+ * @author rohit
+ * ------------------------------------------------------------------------*/
+.report-converter-template {
+  width: 100%;
+}
+.report-converter-template-div {
+  height: 50px;
+  width: 100%;
+}
+.report-converter-template-label {
+  width: 20%;
+}
+.report-converter-template-button {
+  align: right;
+}

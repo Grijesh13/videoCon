@@ -1,0 +1,60 @@
+@charset "utf-8";
+.cell-overlay {
+  background-color: #4285f4;
+  z-index: 19;
+  cursor: move;
+}
+.cell-overlay-dragging {
+  background-color: #4285f4;
+  z-index: 19;
+}
+.selection-cell-overlay {
+  z-index: 18;
+}
+.handle-overlay {
+  padding: 2px;
+  background-color: transparent;
+  position: absolute;
+  z-index: 20;
+  cursor: crosshair;
+}
+.handle-overlay.dragging {
+  background-color: transparent;
+  border-color: transparent;
+}
+.handle-overlay > div {
+  border: 1px solid #ffffff;
+  background-color: #4285f4;
+}
+.header-overlay,
+.cell-overlay,
+.selection-cell-overlay {
+  display: block;
+  position: absolute;
+}
+.header-overlay,
+.cell-overlay-dragging,
+.selection-cell-overlay {
+  display: block;
+  position: absolute;
+}
+.selection-cell-overlay.left {
+  border-right: 2px solid #4285f4;
+}
+.selection-cell-overlay.right {
+  border-left: 2px solid #4285f4;
+}
+.selection-cell-overlay.bottom {
+  border-bottom: 2px solid #4285f4;
+}
+.selection-cell-overlay.top {
+  border-bottom: 2px solid #4285f4;
+}
+.autofill-preview-box {
+  font-size: 1rem;
+  background-color: #f5f5f5;
+  border: 1px solid #000000;
+  position: absolute;
+  padding: 1px;
+  box-shadow: 3px 3px 3px #555555;
+}

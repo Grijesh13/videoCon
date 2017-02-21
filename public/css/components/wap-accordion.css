@@ -1,0 +1,147 @@
+@charset "utf-8";
+.wap-accordion.hidden {
+  display: none;
+}
+.wap-accordion.invisible {
+  visibility: hidden;
+}
+.wap-accordion-header {
+  height: 32px;
+  overflow: hidden;
+}
+.wap-accordion-header-border-slit {
+  float: left;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.wap-accordion-header-padding {
+  padding: 7px 8px 7px 0;
+}
+.wap-accordion-header-border-left {
+  border-top: none;
+  border-bottom: 1px solid;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+}
+.wap-accordion-header-border-left-border-item {
+  display: inline-block;
+  height: 28px;
+  border-left: 2px solid;
+  border-left-color: #dddddd;
+  padding-right: 6px;
+}
+.wap-accordion-header-border-bottom {
+  border-top: none;
+  border-bottom: 1px solid #dddddd;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+}
+.wap-accordion-header-border-bottom-border-item {
+  display: inline-block;
+  height: 28px;
+  padding-right: 8px;
+}
+.wap-accordion-color-default {
+  color: #333333;
+  border-color: #dddddd;
+}
+.wap-accordion-color-information {
+  color: #4285f4;
+  border-color: #a0c2f9;
+}
+.wap-accordion-color-confirmation {
+  color: #33ac71;
+  border-color: #99d5b8;
+}
+.wap-accordion-color-warning {
+  color: #f4b142;
+  border-color: #f9d8a0;
+}
+.wap-accordion-color-error {
+  color: #e91e63;
+  border-color: #f48eb1;
+}
+.wap-accordion-color-default:hover {
+  background-color: #f1f1f1;
+}
+.wap-accordion-color-information:hover {
+  background-color: #ecf2fd;
+}
+.wap-accordion-color-confirmation:hover {
+  background-color: #eaf7f0;
+}
+.wap-accordion-color-warning:hover {
+  background-color: #fdf7ec;
+}
+.wap-accordion-color-error:hover {
+  background-color: #fce8ef;
+}
+.wap-accordion-color-default:focus {
+  background-color: #dddddd;
+}
+.wap-accordion-color-information:focus {
+  background-color: #d0e1fc;
+}
+.wap-accordion-color-confirmation:focus {
+  background-color: #e0f3ea;
+}
+.wap-accordion-color-warning:focus {
+  background-color: #fdf1de;
+}
+.wap-accordion-color-error:focus {
+  background-color: #fcdde8;
+}
+.wap-accordion-header {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wap-accordion-content {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  height: 0px;
+  display: none;
+}
+.wap-accordion-item-left-icon {
+  vertical-align: baseline;
+  padding-left: 8px;
+  float: left;
+  margin-top: 2px;
+}
+.wap-accordion-link {
+  vertical-align: baseline;
+  padding-left: 8px;
+}
+.wap-accordion-right-icon {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  float: right;
+  margin-top: -1px;
+}
+.wap-accordion-expanded .wap-accordion-right-icon {
+  -webkit-transform: rotate(-180deg) translateY(-3px);
+  -moz-transform: rotate(-180deg) translateY(-3px);
+  -o-transform: rotate(-180deg) translateY(-3px);
+  -ms-transform: rotate(-180deg) translateY(-3px);
+  transform: rotate(-180deg) translateY(-3px);
+}
+.wap-accordion-expanded .wap-accordion-content {
+  height: auto;
+  display: block;
+}
+.wap-accordion-header-right-icon:before {
+  margin-right: 0;
+}
+.wap-accordion-font-bold {
+  font-weight: 700;
+}
+.wap-accordion-header-border-left {
+  border-bottom-color: transparent;
+}

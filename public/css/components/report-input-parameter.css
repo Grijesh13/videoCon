@@ -1,0 +1,174 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * report-converter-template styles.
+ * @author Vaibhav
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * report-input-parameter styles.
+ * @author Lokesh
+ * ------------------------------------------------------------------------*/
+.report-input-parameter {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.4);
+  margin-left: 25px;
+  margin-bottom: 17px;
+  padding: 25px 32px 32px 25px;
+}
+.report-input-parameter .basic-trip-info-header {
+  border-left: 2px solid #4285f4;
+  padding-left: 10px;
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
+.report-input-parameter .container-fluid {
+  padding-top: 15px;
+  padding-left: 15px;
+  position: relative;
+}
+.report-input-parameter .container-fluid .row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px;
+}
+.report-input-parameter .container-fluid .row .col-md-2 {
+  width: 16%;
+  position: relative;
+  min-height: 1px;
+}
+.report-input-parameter .container-fluid .row .col-md-2 .basic-info-label {
+  margin-top: 5px;
+}
+.report-input-parameter .container-fluid .row .col-md-4 {
+  width: 33%;
+}
+.report-input-parameter .container-fluid .row .col-md-4 .col-md-2 {
+  width: 40%;
+}
+.report-input-parameter .container-fluid .row .col-md-12 {
+  width: 100%;
+}
+.report-input-parameter .container-fluid .form-control {
+  width: 100%;
+}
+.report-input-parameter .additional-card {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 25px 32px 8px 25px;
+}
+.report-input-parameter .top-message-heading {
+  color: inherit;
+  display: inline-block;
+  font-weight: 700;
+  padding-bottom: 3px;
+  padding-left: 12px;
+  padding-right: 3px;
+  margin-bottom: 6px;
+}
+.report-input-parameter .top-message-p {
+  margin: 0 0 2px 12px;
+}
+.report-input-parameter .form-control {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  color: #333333;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #aaaaaa;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+  height: 32px;
+  font-size: 1.4rem;
+}
+.report-input-parameter .hide {
+  display: none;
+}
+.report-input-parameter .app-info-message-area {
+  padding: 15px 20px 15px 20px;
+  border: none;
+  background-color: #4285f4;
+  top: 85px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.report-input-parameter .alert-info {
+  background-color: #4285f4;
+  border-color: #4285f4;
+  color: #4285f4;
+}
+.report-input-parameter .alert {
+  margin-bottom: 17px;
+  border: 1px solid transparent;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.app-info-message-area .report-input-parameter.app-info-message .message-value {
+  color: #3b77db;
+}
+.app-info-message-area .report-input-parameter.app-info-message .message-value {
+  color: #3b77db;
+}
+.report-input-parameter .basic-info-label {
+  margin-top: 5px;
+}
+.report-input-parameter .tilde {
+  font-size: 2.4rem;
+  width: 20%;
+  text-align: center;
+}
+.report-input-parameter .btn {
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.report-input-parameter .btn-default {
+  color: #333333;
+  background-color: #f1f1f1;
+  border-color: #dddddd;
+}
+.report-input-parameter .btn-primary {
+  color: #ffffff;
+  background-color: #4285f4;
+  border-color: #4285f4;
+}
+.report-input-parameter .input-parent {
+  width: 100%;
+}
+.report-input-parameter .parameter-label {
+  padding-left: 10px;
+  border-left: 2px solid #4285f4;
+}
+.report-input-parameter .error-class {
+  border: 1px solid #e91e63;
+}

@@ -1,0 +1,49 @@
+@charset "utf-8";
+.timeline-task-box-action-button-multiple {
+  position: relative;
+}
+.timeline-task-box-action-button-multiple-main-action {
+  -webkit-border-radius: 3px 0 0 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px 0 0 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px 0 0 3px;
+  background-clip: padding-box;
+}
+.timeline-task-box-action-button-multiple-main-icon {
+  -webkit-border-radius: 0 3px 3px 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 3px 3px 0;
+  -moz-background-clip: padding;
+  border-radius: 0 3px 3px 0;
+  background-clip: padding-box;
+  width: 26px;
+  padding-left: 5px;
+  border-left-color: #3b77db;
+}
+.timeline-task-box-action-button-multiple-menu {
+  display: none;
+  background-color: #4285f4;
+  color: #ffffff;
+  position: absolute;
+  right: 0;
+  min-width: 100%;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  margin-top: 2px;
+  padding: 4px 0;
+}
+.timeline-task-box-action-button-multiple-menu-item {
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.timeline-task-box-action-button-multiple-menu-item:hover {
+  background-color: #3b77db;
+}
+.timeline-task-box-action-button-multiple-menu.timeline-task-box-action-button-showing {
+  display: block;
+}

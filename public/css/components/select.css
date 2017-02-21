@@ -1,0 +1,75 @@
+@charset "utf-8";
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes rotation{ from { .-webkit-transform(rotate(0deg)); } to { .-webkit-transform(rotate(359deg)); } }}
+@-moz-keyframes rotation{ from { .-moz-transform(rotate(0deg)); } to { .-moz-transform(rotate(359deg)); } }}
+@-o-keyframes rotation{ from { .-o-transform(rotate(0deg)); } to { .-o-transform(rotate(359deg)); } }}
+@keyframes rotation{ from {.-webkit-transform(rotate(0deg));.-moz-transform(rotate(0deg));.-ms-transform(rotate(0deg));.transform(rotate(0deg)); } to {.-webkit-transform(rotate(359deg));.-moz-transform(rotate(359deg));.-ms-transform(rotate(359deg));.transform(rotate(359deg)); } };
+}
+.money-input {
+  text-align: right;
+}
+.wap-input-info-msg {
+  color: #4285f4;
+  display: block;
+}
+.wap-input-err-msg {
+  color: #e91e63;
+  display: block;
+}
+.wap-input-confirmation-msg {
+  color: #4285f4;
+  display: block;
+}
+.wap-input-warning-msg {
+  color: #e91e63;
+  display: block;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  color: #333333;
+  vertical-align: middle;
+  font-weight: 400;
+  line-height: 20px;
+  display: inline-block;
+  padding: 4px 6px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  /*Firefox用 ここから*/
+  text-indent: .01px;
+  text-overflow: "";
+  /*Firefox用 ここまで*/
+  position: relative;
+  display: block;
+  background-image: url(../../img/component/select-chevron.png);
+  background-repeat: no-repeat;
+  background-position: -webkit-calc(95%) 50%, 0 0;
+  padding: 4px 20px 4px 4px;
+}
+select::-webkit-input-placeholder {
+  color: #888888;
+}
+select:-moz-placeholder {
+  color: #888888;
+}
+select:focus {
+  border: 1px solid #4285f4;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.175) inset, 0 0 1px #4285f4;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.175) inset, 0 0 1px #4285f4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.175) inset, 0 0 1px #4285f4;
+}
+select:disabled,
+select.readonly {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+select[disabled],
+select.disabled,
+select:disabled {
+  background-color: #eeeeee;
+}

@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.spreadsheet-pivot-editor {
+  right: -500px;
+  position: fixed;
+  width: 25%;
+  height: 100vh;
+  top: 50px;
+  background: #ffffff;
+  z-index: 7;
+  border-left: 1px solid #dddddd;
+  -webkit-transition: right 0.3s linear;
+  transition: right 0.3s linear;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.spreadsheet-pivot-editor .editor-caption {
+  position: relative;
+  background: #4285f4;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 10px 12px 12px 12px;
+  height: 40px;
+}
+.spreadsheet-pivot-editor .editor-caption .caption-label {
+  position: absolute;
+  top: 5px;
+  font-size: 1.7rem;
+}
+.spreadsheet-pivot-editor .editor-caption .close-editor {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  cursor: pointer;
+}
+.spreadsheet-pivot-editor .editor-container {
+  background-color: #e8e8e8;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  padding: 8px 0px 0px;
+}
+.spreadsheet-pivot-editor .editor-container .pivot-range-selection {
+  padding: 0 20px 12px 10px;
+}
+.spreadsheet-pivot-editor .editor-container .pivot-label-button {
+  color: #4285f4;
+  font-size: 1.2rem;
+  cursor: pointer;
+  float: right;
+}
+.spreadsheet-pivot-editor .editor-container .pivot-label {
+  font-size: 1.7rem;
+}
+.spreadsheet-pivot-editor .editor-container .pivot-container {
+  border-top: 1px solid #e8e8e8;
+  padding: 8px 20px 12px 12px;
+  height: auto;
+  background-color: #ffffff;
+}
+.spreadsheet-pivot-editor .editor-container .pivot-container .filed-expansion {
+  position: relative;
+  float: right;
+  margin-right: -10px;
+}
+.spreadsheet-pivot-editor .editor-container .pivot-container .pivot-field-pill {
+  -webkit-box-shadow: 0px 2px 4px #bdbdbd;
+  -moz-box-shadow: 0px 2px 4px #bdbdbd;
+  box-shadow: 0px 2px 4px #bdbdbd;
+  border-radius: 3px;
+  background: #f1f1f1;
+  border: 1px solid #dddddd;
+  line-height: 16px;
+  margin: 8px 0;
+}
+.spreadsheet-pivot-editor .editor-container .pivot-container .pivot-field-pill-header {
+  padding: 2px 6px;
+  background: #e8e8e8;
+  position: relative;
+}
+.spreadsheet-pivot-editor .editor-container .pivot-container .pivot-field-pill-header .header-caption {
+  font-weight: 700;
+  margin-right: 6px;
+}
+.spreadsheet-pivot-editor .editor-container .pivot-container .pivot-field-pill-header .remove-field {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+}
+.spreadsheet-pivot-editor .editor-container .pivot-container .pivot-field-pill-section {
+  background: #f1f1f1;
+  padding: 8px 6px 8px 6px;
+  margin: 0 4px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.spreadsheet-pivot-editor .editor-container .pivot-container .pivot-field-pill-section span {
+  margin: 0 3px 0 2px;
+}
+.spreadsheet-pivot-editor .editor-container .pivot-container .pivot-field-pill-section .section-value {
+  cursor: pointer;
+}
+.spreadsheet-pivot-editor .editor-container .field-selection {
+  height: auto;
+  border: 1px dashed #999999;
+  margin-top: 6px;
+}

@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * report-preview-wrapper styles.
+ * (temporary style)
+ * @author Rajdeep
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * report-preview-wrapper styles.
+ * @author Rajdeep
+ * ------------------------------------------------------------------------*/
+.insta-report-preview-wrapper {
+  margin: 0 auto;
+  width: 50%;
+  position: relative;
+}

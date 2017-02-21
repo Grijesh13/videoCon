@@ -1,0 +1,20 @@
+@charset "utf-8";
+.money-label {
+  border-bottom: 3px double #cccccc;
+  padding: 0px 8px;
+  height: 40px;
+  width: 25%;
+  min-width: 320px;
+}
+.money-label-label-control {
+  padding-top: 12px;
+  margin-bottom: 0px;
+  font-size: 2rem;
+}
+.money-label-value-control {
+  font-size: 2rem;
+  margin-bottom: 0px;
+  float: right;
+  text-align: right;
+  padding-top: 12px;
+}

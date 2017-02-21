@@ -1,0 +1,97 @@
+@charset "utf-8";
+.timeline-application-information-box {
+  width: 100%;
+}
+.timeline-application-information-box-header {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+.timeline-application-information-box-content {
+  padding: 8px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timeline-application-information-box-content.timeline-application-information-box-vertical {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.timeline-application-information-box-title {
+  padding: 4px 0;
+}
+.timeline-application-information-box-title-link {
+  color: #4285f4;
+  cursor: pointer;
+}
+.timeline-application-information-box-title-link:hover,
+.timeline-application-information-box-title-link:focus {
+  text-decoration: underline;
+}
+.timeline-application-information-box-title-text {
+  color: #333333;
+}
+.timeline-application-information-box-content-left {
+  margin-right: 16px;
+}
+.timeline-application-information-box-content-right {
+  font-size: 1.2rem;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timeline-application-information-box-content-date-all {
+  color: #333333;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timeline-application-information-box-content-date-title {
+  color: #aaaaaa;
+  width: 120px;
+}
+.timeline-application-information-box-content-user-title {
+  color: #aaaaaa;
+  width: 120px;
+}
+.timeline-application-information-box-content-user-part {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4px 0;
+}
+.timeline-application-information-box-content-user-text {
+  padding-left: 4px;
+}
+.timeline-application-information-box-content-user-name {
+  color: #4285f4;
+  margin-left: 4px;
+}
+.timeline-application-information-box-content-user-office {
+  color: #aaaaaa;
+}
+.timeline-application-information-box-content-user-office-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.2rem;
+  margin: 2px 4px 0 4px;
+}

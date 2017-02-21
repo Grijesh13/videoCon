@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * element-resizer styles.
+ * @author bharath
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * element-resizer styles.
+ * @author bharath
+ * ------------------------------------------------------------------------*/
+.element-resizer-handle {
+  position: absolute;
+  display: block;
+  z-index: 1050;
+}
+.element-resizer-box {
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  background-color: #000000;
+}
+.element-resizer-box-e {
+  top: -5px;
+}
+.element-resizer-box-w {
+  top: -5px;
+}
+.element-resizer-box-n {
+  left: -5px;
+}
+.element-resizer-box-s {
+  left: -5px;
+}
+.element-resizer-e {
+  right: -5px;
+  top: 50%;
+  width: 10px;
+  height: 0px;
+  cursor: e-resize;
+}
+.element-resizer-w {
+  left: -5px;
+  top: 50%;
+  width: 10px;
+  cursor: e-resize;
+}
+.element-resizer-s {
+  height: 10px;
+  left: 50%;
+  bottom: -5px;
+  cursor: s-resize;
+}
+.element-resizer-n {
+  height: 10px;
+  left: 50%;
+  top: -5px;
+  cursor: s-resize;
+}
+.element-resizer-se {
+  cursor: se-resize;
+  height: 10px;
+  width: 10px;
+  right: -5px;
+  bottom: -5px;
+}
+.element-resizer-sw {
+  cursor: sw-resize;
+  height: 10px;
+  width: 10px;
+  left: -5px;
+  bottom: -5px;
+}
+.element-resizer-ne {
+  cursor: ne-resize;
+  height: 10px;
+  width: 10px;
+  right: -5px;
+  top: -5px;
+}
+.element-resizer-nw {
+  cursor: nw-resize;
+  height: 10px;
+  width: 10px;
+  left: -5px;
+  top: -5px;
+}
+.element-resizer-full-border-e {
+  right: -5px;
+  top: 0px;
+  width: 10px;
+  height: 100%;
+  cursor: e-resize;
+}
+.element-resizer-full-border-w {
+  left: -5px;
+  top: 0px;
+  width: 10px;
+  height: 100%;
+  cursor: e-resize;
+}
+.element-resizer-full-border-s {
+  cursor: s-resize;
+  height: 10px;
+  width: 100%;
+  left: 0px;
+  bottom: -5px;
+}
+.element-resizer-full-border-n {
+  cursor: s-resize;
+  height: 10px;
+  width: 100%;
+  left: 0px;
+  top: -5px;
+}
+.element-resizer-full-border-se {
+  cursor: se-resize;
+  height: 20px;
+  width: 20px;
+  right: -10px;
+  bottom: -10px;
+}
+.element-resizer-full-border-sw {
+  cursor: sw-resize;
+  height: 20px;
+  width: 20px;
+  left: -10px;
+  bottom: -10px;
+}
+.element-resizer-full-border-ne {
+  cursor: ne-resize;
+  height: 20px;
+  width: 20px;
+  right: -10px;
+  top: -10px;
+}
+.element-resizer-full-border-nw {
+  cursor: nw-resize;
+  height: 20px;
+  width: 20px;
+  left: -10px;
+  top: -10px;
+}

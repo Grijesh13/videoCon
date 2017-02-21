@@ -1,0 +1,46 @@
+@charset "utf-8";
+.timeline-feed-quote-task-comment {
+  font-size: 1.2rem;
+  border-top: 1px solid #dddddd;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 8px 4px;
+}
+.timeline-feed-quote-task-comment-user {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  border: none;
+}
+.timeline-feed-quote-task-comment-user-image {
+  width: 32px;
+  height: 32px;
+}
+.timeline-feed-quote-task-comment-user-comment {
+  width: calc(100% - 40px);
+}
+.timeline-feed-quote-task-comment-user-comment-user-name,
+.timeline-feed-quote-task-comment-user-comment-reply-user-name {
+  color: #4285f4;
+  font-weight: 700;
+  display: inline-block;
+}
+.timeline-feed-quote-task-comment-user-comment-time-val {
+  color: #999999;
+  margin-left: 4px;
+}
+.timeline-feed-quote-task-comment-user-comment-comment-content-panel {
+  padding-top: 4px;
+}
+.timeline-feed-quote-task-comment-user-comment-comment-content-panel-comment-content {
+  width: 100%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  margin-bottom: 4px;
+}

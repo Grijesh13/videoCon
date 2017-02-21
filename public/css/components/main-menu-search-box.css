@@ -1,0 +1,96 @@
+@charset "utf-8";
+.main-menu-search-box {
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  float: right;
+  margin-top: 8px;
+  margin-right: 16px;
+}
+.main-menu-search-box-input {
+  width: 100%;
+  border: solid 1px #bdbdbd;
+  height: 32px;
+  -webkit-border-radius: 3px 0 0 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px 0 0 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px 0 0 3px;
+  background-clip: padding-box;
+  padding: 4px 8px;
+  margin-right: -2px;
+  z-index: 1;
+}
+.main-menu-search-box-autocomplete-suggestion {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main-menu-search-box-autocomplete-suggestion-icon-wrapper {
+  float: left;
+  margin-right: 8px;
+  margin-top: 4px;
+  width: 40px;
+}
+.main-menu-search-box-autocomplete-suggestion-icon {
+  padding: 4px;
+  font-size: 32px;
+  color: #7f7f7f;
+}
+.main-menu-search-box-autocomplete-suggestion-title {
+  float: left;
+  width: 360px;
+}
+.main-menu-search-box-autocomplete-suggestion-title-sub {
+  color: #7f7f7f;
+}
+.main-menu-search-box-extra-suggestions-wrapper {
+  display: none;
+}
+.main-menu-search-box-extra-suggestions-more {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 8px;
+}
+.main-menu-search-box-extra-suggestions-more-a {
+  color: #4285f4;
+  cursor: pointer;
+}
+.main-menu-search-box-extra-suggestions-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #f1f1f1;
+}
+.main-menu-search-box-extra-suggestions-other-item {
+  cursor: pointer;
+  padding: 4px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main-menu-search-box-extra-suggestions-other-item:hover {
+  background-color: #e8e8e8;
+}
+.main-menu-search-box-extra-suggestions-other-item-keyword {
+  color: #333333;
+  margin-right: 16px;
+}
+.main-menu-search-box-extra-suggestions-other-item-sub {
+  color: #7f7f7f;
+}

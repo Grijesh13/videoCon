@@ -1,0 +1,95 @@
+@charset "utf-8";
+.select-dialog-vertical-tab {
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.select-dialog-vertical-tab-left {
+  width: 50px;
+  height: 100%;
+  border-style: none none none solid;
+  border-color: #f5f5f5;
+  padding-top: 8px;
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0;
+  -moz-background-clip: padding;
+  border-radius: 0;
+  background-clip: padding-box;
+  font-size: 1.4rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.select-dialog-vertical-tab-right {
+  width: 100%;
+  padding-left: 0;
+  margin: 0;
+  position: relative;
+  border-left: 1px solid #f1f1f1;
+  height: 100%;
+}
+.select-dialog-vertical-tab-item {
+  border-style: none;
+  position: relative;
+  margin: 8px 4px 16px 0;
+}
+.select-dialog-vertical-tab-item-link {
+  font-size: 2rem;
+  margin: 12px -12px 12px 0;
+  padding: 8px 8px 12px 12px;
+  cursor: pointer;
+}
+.select-dialog-vertical-tab-item-menu-help {
+  display: none;
+  position: absolute;
+  top: -12px;
+  left: 48px;
+  z-index: 1010;
+  background-color: #ffffff;
+  color: #333333;
+  border-style: solid solid solid none;
+  border-width: 1px;
+  border-color: #dddddd;
+  width: 200px;
+  height: 53px;
+  padding-top: 16px;
+  padding-left: 4px;
+}
+.select-dialog-vertical-tab-content {
+  display: none;
+}
+.select-dialog-vertical-tab-content.select-dialog-vertical-tab-active {
+  display: block;
+}
+.select-dialog-vertical-tab-item:hover .select-dialog-vertical-tab-item-menu-help {
+  display: block;
+}
+.select-dialog-vertical-tab-item.select-dialog-vertical-tab-active .select-dialog-vertical-tab-item-link {
+  color: #4285f4;
+  background-color: #ffffff;
+}
+.select-dialog-vertical-tab-item.select-dialog-vertical-tab-active .select-dialog-vertical-tab-item-link:after {
+  content: "";
+  border: 8px solid transparent;
+  border-left-color: #ffffff;
+  position: absolute;
+  right: -19px;
+  top: 8px;
+  z-index: 1030;
+}
+.select-dialog-vertical-tab-item.select-dialog-vertical-tab-active .select-dialog-vertical-tab-item-link:before {
+  display: none;
+}

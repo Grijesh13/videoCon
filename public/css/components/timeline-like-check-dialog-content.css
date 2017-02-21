@@ -1,0 +1,59 @@
+@charset "utf-8";
+.timeline-like-check-dialog-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timeline-like-check-dialog-content-left-area {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.timeline-like-check-dialog-content-right-area {
+  padding-top: 4px;
+  padding-left: 4px;
+}
+.timeline-like-check-dialog-content-picture {
+  height: 40px;
+  width: 40px;
+}
+.timeline-like-check-dialog-content-user-area {
+  padding-left: 6px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.timeline-like-check-dialog-content-name-area {
+  color: #4285f4;
+}
+.timeline-like-check-dialog-content-dept-area {
+  color: #7f7f7f;
+  font-size: 1rem;
+  margin-top: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.timeline-like-check-dialog-content-time {
+  color: #7f7f7f;
+}
+.timeline-like-check-dialog-content-right-top-area {
+  padding-left: 4px;
+  cursor: pointer;
+}
+.timeline-like-check-dialog-content-right-top-action {
+  position: relative;
+  top: -8px;
+  color: #7f7f7f;
+}

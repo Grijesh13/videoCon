@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.spreadsheet-modal-validate .validation-rule:first-of-type .validation-rule-remove {
+  display: none;
+}
+.spreadsheet-modal-validate .validation-rule {
+  min-height: 40px;
+}
+.spreadsheet-modal-validate .validation-rule select {
+  height: 31px;
+}
+.spreadsheet-modal-validate .validation-rule .validation-rule-remove {
+  text-align: center;
+}
+.spreadsheet-modal-validate .validation-rule .validation-rule-remove .btn-remove-rule {
+  background: none;
+  cursor: pointer;
+}
+.spreadsheet-modal-validate input {
+  margin-left: 26px;
+  line-height: 25px;
+}
+.spreadsheet-modal-validate .wap-date-picker-area {
+  margin-left: 26px;
+  line-height: 25px;
+}
+.validation-error-hint {
+  width: 200px;
+  min-height: 80px;
+  position: absolute;
+  z-index: 7;
+  border-color: #ff9999;
+  -webkit-box-shadow: 2px 2px 6px #999999;
+  -moz-box-shadow: 2px 2px 6px #999999;
+  box-shadow: 2px 2px 6px #999999;
+  background-color: #e8e8e8;
+  border: 1px solid #555555;
+  font-size: 1.2rem;
+  padding: 6px;
+  margin: 0;
+  text-align: left;
+  vertical-align: top;
+  overflow-x: hidden;
+}
+.validation-error-hint .validation-error-hint-title {
+  color: #ff9999;
+}

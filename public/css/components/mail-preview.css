@@ -1,0 +1,87 @@
+@charset "utf-8";
+.mail-address-card {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 8px;
+  border: 1px solid #dddddd;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.mail-address-card-image {
+  float: left;
+  margin: 4px;
+}
+.mail-address-card-image .card-image {
+  max-height: 64px;
+  max-width: 64px;
+}
+.mail-address-card-detail {
+  float: left;
+}
+.mail-address-card-detail-item {
+  padding: 4px 8px;
+}
+.mail-address-card-detail .bold {
+  font-weight: 700;
+}
+.mail-preview {
+  width: 100%;
+  padding: 16px;
+}
+.mail-preview-operation-bar {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dddddd;
+}
+.mail-preview-operation-bar .wap-button {
+  margin: 0 4px;
+}
+.mail-preview-page-content .subject {
+  padding: 8px 12px;
+  border-bottom: 1px solid #dddddd;
+  font-size: 2rem;
+  color: #333333;
+}
+.mail-preview-page-content .addresses {
+  padding: 8px 12px;
+  border-bottom: 1px solid #dddddd;
+}
+.mail-preview-page-content .addresses .address-box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.mail-preview-page-content .addresses .address-box.address-cards {
+  margin-left: -8px;
+}
+.mail-preview-page-content .body {
+  padding: 8px 12px;
+}
+.mail-preview-page-content .body .pre-body {
+  position: absolute;
+  height: 80%;
+  width: 97%;
+  padding: 8px 0;
+  background: none;
+  border: none;
+  color: #333333;
+  font: inherit;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

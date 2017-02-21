@@ -1,0 +1,118 @@
+@charset "utf-8";
+.tt-suggestion.tt-cursor {
+  color: #555555;
+  background-color: #e8e8e8;
+  cursor: pointer;
+}
+.tour-menu .album {
+  cursor: pointer;
+  margin: 10px;
+}
+.tour-menu .album i.complete-mark {
+  position: absolute;
+  top: calc(36%);
+  left: 340px;
+  z-index: 10;
+}
+.tour-menu .album .tour-elem-title {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 120%;
+  vertical-align: super;
+}
+.tour-menu .modal-subtitle {
+  margin-top: 8px;
+  margin-left: 50px;
+}
+.tour-menu .service-area {
+  width: 100%;
+  display: inline-block;
+}
+.tour-menu .common-area {
+  width: 100%;
+  display: inline-block;
+}
+#tour-menu-dialog {
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  right: 0px;
+  min-width: 900px;
+}
+#tour-menu-dialog .modal-header {
+  padding: 15px;
+}
+#tour-menu-dialog .modal-content {
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#tour-menu-dialog .modal-content .modal-body {
+  width: 100%;
+  bottom: 0px;
+  overflow: hidden;
+}
+#tour-menu-dialog .modal-content .modal-footer {
+  left: 10px;
+  right: 10px;
+}
+.popover.tour .popover-navigation {
+  min-height: 50px;
+}
+.tour-tour .step-count {
+  position: absolute;
+  right: 30px;
+}
+.tour-tour .close-tour {
+  margin-left: 10px;
+  position: absolute;
+  right: 8px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.popover.tour {
+  max-width: 600px;
+}
+.popover.popover-tour {
+  background-color: #175d9f;
+  color: #ffffff;
+  border-color: #175d9f;
+  font-size: 14px;
+}
+.popover.popover-tour .popover-title {
+  background-color: #114372;
+  border-bottom-color: #175d9f;
+  color: #ffffff;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  font-size: 14px;
+}
+.popover.popover-tour.top .arrow {
+  border-top-color: #303641;
+}
+.popover.popover-tour.top .arrow:after {
+  border-top-color: #303641;
+}
+.popover.popover-tour.bottom .arrow {
+  border-bottom-color: #303641;
+}
+.popover.popover-tour.bottom .arrow:after {
+  border-bottom-color: #303641;
+}
+.popover.popover-tour.left .arrow {
+  border-left-color: #303641;
+}
+.popover.popover-tour.left .arrow:after {
+  border-left-color: #303641;
+}
+.popover.popover-tour.right .arrow {
+  border-right-color: #175d9f;
+}
+.popover.popover-tour.right .arrow:after {
+  border-right-color: #175d9f;
+}

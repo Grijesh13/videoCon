@@ -1,0 +1,10 @@
+@charset "utf-8";
+.wap-accordion-group {
+  width: 100%;
+}
+.wap-accordion-group.hidden {
+  display: none;
+}
+.wap-accordion-group.invisible {
+  visibility: hidden;
+}

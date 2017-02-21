@@ -1,0 +1,304 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col,
+.hue-drive-content-panel.list .hue-drive-content-panel-list-header-preview,
+.hue-drive-content-panel.list .hue-drive-content-panel-list-header-metadata,
+.hue-drive-content-panel.list .hue-drive-content-panel-list-header-metadata-owner,
+.hue-drive-content-panel.list .hue-drive-content-panel-list-header-metadata-date,
+.hue-drive-content-panel.list .hue-drive-content-panel-list-header-metadata-size {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.hue-drive-content-panel {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.hue-drive-content-panel-body {
+  overflow: auto;
+}
+.hue-drive-content-panel-body::-webkit-scrollbar {
+  width: 5px;
+  background: #f1f1f1;
+  -webkit-transition: all 600ms ease;
+  -moz-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+.hue-drive-content-panel-body::-webkit-scrollbar-track {
+  -webkit-border-radius: 1px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1px;
+  -moz-background-clip: padding;
+  border-radius: 1px;
+  background-clip: padding-box;
+}
+.hue-drive-content-panel-body::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 1px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1px;
+  -moz-background-clip: padding;
+  border-radius: 1px;
+  background-clip: padding-box;
+  background: #7f7f7f;
+}
+.hue-drive-content-panel-body::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+.hue-drive-content-panel-no-files-available.hidden {
+  display: none;
+}
+.hue-drive-content-panel-no-files-available.invisible {
+  visibility: hidden;
+}
+.hue-drive-content-panel-no-files-available-content {
+  position: absolute;
+  top: 38%;
+  width: 100%;
+  margin: 0 auto;
+  color: #4285f4;
+  text-align: center;
+}
+.hue-drive-content-panel-no-files-available-content-icon {
+  font-size: 4rem;
+}
+.hue-drive-content-panel-no-files-available-content-span {
+  display: block;
+  padding: 8px;
+}
+.hue-drive-content-panel-drop-zone {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  border: 4px dashed #ffffff;
+  background: #000000;
+  zoom: 1;
+  filter: alpha(opacity=80);
+  -webkit-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+}
+.hue-drive-content-panel-drop-zone-content {
+  position: absolute;
+  top: 36%;
+  width: 60%;
+  margin-left: 20%;
+  text-align: center;
+}
+.hue-drive-content-panel-drop-zone-content-div {
+  display: block;
+  margin: 24px;
+}
+.hue-drive-content-panel-drop-zone-content-div-icon {
+  font-size: 6rem;
+  color: #4285f4;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  background: #cccccc;
+  padding: 16px;
+}
+.hue-drive-content-panel-drop-zone-content-text {
+  font-size: 1.7rem;
+  color: #4285f4;
+}
+.hue-drive-content-panel-drag-element {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  padding: 4px;
+  color: #333333;
+  cursor: -webkit-grabbing;
+}
+.hue-drive-content-panel.grid .hue-drive-content-panel-body {
+  height: calc(100vh -  208px);
+  padding: 0px 16px 8px 0px;
+}
+.hue-drive-content-panel.grid .hue-drive-content-panel-list-header {
+  display: none;
+}
+.hue-drive-content-panel.grid .hue-drive-content-panel-folder-section {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.hue-drive-content-panel.grid .hue-drive-content-panel-file-section {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.hue-drive-content-panel.list .hue-drive-content-panel-body {
+  height: calc(100vh -  248px);
+}
+.hue-drive-content-panel.list .hue-drive-content-panel-list-header {
+  height: 40px;
+  padding: 12px;
+  background: #ffffff;
+  border-bottom: 1px solid #f1f1f1;
+  color: #333333;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.hue-drive-content-panel.list .hue-drive-content-panel-list-header-preview {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 41.66666666666667%;
+  flex-basis: 41.66666666666667%;
+  max-width: 41.66666667%;
+}
+.hue-drive-content-panel.list .hue-drive-content-panel-list-header-metadata {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 58.333333333333336%;
+  flex-basis: 58.333333333333336%;
+  max-width: 58.33333333%;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.hue-drive-content-panel.list .hue-drive-content-panel-list-header-metadata-owner {
+  padding: 0px 8px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 41.66666666666667%;
+  flex-basis: 41.66666666666667%;
+  max-width: 41.66666667%;
+}
+.hue-drive-content-panel.list .hue-drive-content-panel-list-header-metadata-date {
+  padding: 0px 12px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 33.33333333333333%;
+  flex-basis: 33.33333333333333%;
+  max-width: 33.33333333%;
+}
+.hue-drive-content-panel.list .hue-drive-content-panel-list-header-metadata-size {
+  padding: 0px 16px;
+  text-align: right;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+}
+.hue-drive-content-panel.list .hue-drive-content-panel-folder-section {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.hue-drive-content-panel.list .hue-drive-content-panel-file-section {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}

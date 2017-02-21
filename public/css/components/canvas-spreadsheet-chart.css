@@ -1,0 +1,453 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.canvas-spreadsheet-chart-popup-chart {
+  position: absolute;
+  overflow: hidden;
+  -moz-outline: 0;
+  outline: 0;
+  z-index: 1010;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 6px 12px #cccccc;
+  -moz-box-shadow: 0 6px 12px #cccccc;
+  box-shadow: 0 6px 12px #cccccc;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding;
+}
+.canvas-spreadsheet-chart-popup-chart-header {
+  height: 40px;
+  cursor: pointer;
+  background-color: #4285f4;
+}
+.canvas-spreadsheet-chart-popup-chart-header-menu-btn {
+  font-size: 2.4rem;
+  color: #ffffff;
+  display: inline-block;
+  margin-left: 4px;
+  margin-top: 4px;
+}
+.canvas-spreadsheet-chart-popup-chart-header-panel-menu-list {
+  top: 40px;
+  left: 5px;
+  width: 150px;
+  position: absolute;
+  -webkit-box-shadow: 2px 2px 6px #cccccc;
+  -moz-box-shadow: 2px 2px 6px #cccccc;
+  box-shadow: 2px 2px 6px #cccccc;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  line-height: 20px;
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: top left;
+  -o-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+.canvas-spreadsheet-chart-popup-chart-header-panel-menu-list-li {
+  padding: 4px 8px;
+}
+.canvas-spreadsheet-chart-popup-chart-header-panel-menu-list-li.has-no-sub {
+  cursor: pointer;
+}
+.canvas-spreadsheet-chart-popup-chart-header-panel-menu-list-li:hover {
+  border: 1px solid #bdbdbd;
+  background-color: #dddddd;
+  vertical-align: middle;
+}
+.canvas-spreadsheet-chart-popup-chart-header-panel-menu-list.pop {
+  display: block;
+  -webkit-animation: 'popdown' 0.1s ease-out;
+  -moz-animation: 'popdown' 0.1s ease-out;
+  -o-animation: 'popdown' 0.1s ease-out;
+  animation: 'popdown' 0.1s ease-out;
+}
+.canvas-spreadsheet-chart-popup-chart-wap-core-chart-container {
+  position: realtive;
+  min-width: 300px;
+}
+.canvas-spreadsheet-chart-dialog {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+.canvas-spreadsheet-chart-dialog-div {
+  width: 60%;
+  margin: auto;
+}
+.canvas-spreadsheet-chart-dialog-div-header {
+  background-color: #4285f4;
+}
+.canvas-spreadsheet-chart-dialog-div-header .close {
+  background-color: transparent;
+}
+.canvas-spreadsheet-chart-dialog-div-header .close:hover .wap-icon-cancel {
+  color: #ffffff;
+}
+.canvas-spreadsheet-chart-dialog-div-header-title {
+  color: #ffffff;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body {
+  background-color: #ffffff;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part {
+  width: 30%;
+  vertical-align: top;
+  display: inline-block;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .chart-editor-tabs .chart-editor-tabs-li:focus {
+  border-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .chart-editor-tabs .chart-editor-tabs-li .chart-editor-tabs-li-a {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .start-panel .data-selection {
+  position: relative;
+  margin-top: 26px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .start-panel .data-selection .data-selection-content-wrapper {
+  border: solid 1px #dddddd;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .start-panel .data-selection .data-selection-content-wrapper .input-data-selection-content {
+  width: 86%;
+  font-size: 1.7rem;
+  height: 40px;
+  border-color: transparent;
+  margin-left: 2%;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .start-panel .data-selection .data-selection-content-wrapper .input-data-selection-content:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .start-panel .data-selection .data-selection-label {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .start-panel .data-selection .data-selection-btn {
+  position: absolute;
+  right: 2%;
+  top: 31px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .start-panel .data-selection .data-selection-btn:hover {
+  cursor: pointer;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .start-panel .data-selection .data-selection-btn i {
+  font-size: 2rem;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .start-panel .data-show-options {
+  margin-top: 20px;
+  font-size: 1.7rem;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .start-panel .data-show-options .data-show-option {
+  margin-bottom: 10px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .start-panel .data-show-options .data-show-option input {
+  margin-right: 6px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .start-panel .recently-used-charts {
+  border-top: dashed 2px #bdbdbd;
+  min-height: 100px;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .start-panel .recently-used-charts .caption {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .start-panel .recently-used-charts .recently-used-charts-content {
+  margin-top: 10px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .start-panel .recently-used-charts .recently-used-charts-content img {
+  margin-bottom: 10px;
+  float: left;
+  margin-right: 10px;
+  border: solid 5px #bdbdbd;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .start-panel .recently-used-charts .recently-used-charts-content img:hover {
+  border-color: #cccccc;
+  cursor: pointer;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .start-panel .recently-used-charts .recently-used-charts-content img.active {
+  border-color: #4285f4;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .chart-panel {
+  padding-top: 20px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .chart-panel ul.chart-list {
+  width: 40%;
+  float: left;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .chart-panel ul.chart-list li {
+  margin-bottom: 16px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .chart-panel ul.chart-list li:hover {
+  cursor: pointer;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .chart-panel ul.chart-list li:focus {
+  border-color: transprent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .chart-panel ul.chart-list li.active {
+  background-color: #f1f1f1;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .chart-panel ul.chart-list li img {
+  width: 34px;
+  height: 30px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .chart-panel ul.chart-list li span {
+  margin-left: 16px;
+  font-size: 1.7rem;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .chart-panel .chart-sub-list {
+  width: 60%;
+  float: left;
+  border-left: dashed 2px #bdbdbd;
+  padding-left: 5%;
+  height: 517px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .chart-panel .chart-sub-list img {
+  border: solid 5px #bdbdbd;
+  width: 100%;
+  height: 110px;
+  margin-bottom: 16px;
+  -webkit-transition: border-color 0.2s ease-out 0s;
+  -moz-transition: border-color 0.2s ease-out 0s;
+  -o-transition: border-color 0.2s ease-out 0s;
+  transition: border-color 0.2s ease-out 0s;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .chart-panel .chart-sub-list img:hover {
+  border-color: #cccccc;
+  cursor: pointer;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .chart-panel .chart-sub-list img .active {
+  border-color: #4285f4;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel {
+  padding-top: 20px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .section {
+  margin-bottom: 20px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .section .label {
+  font-weight: 700;
+  font-size: 1.7rem;
+  padding-top: 6px;
+  display: inline-block;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .section .control {
+  display: inline;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .section .control .btn-group {
+  float: right;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .section .control .btn-group .btn {
+  font-size: 1rem;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .section .control .btn-group .color-btn {
+  width: 40px;
+  height: 28px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .section .control .btn-group .color-btn .color-area {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .section input {
+  margin-top: 4px;
+  width: 100%;
+  font-size: 1.7rem;
+  height: 40px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .item-color {
+  position: relative;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .item-color .item-selector {
+  width: 100%;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .item-color .item-selector .dropdown-toggle {
+  width: calc(100% - 43px);
+  height: 40px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .item-color .item-selector .dropdown-toggle .active-color {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  position: absolute;
+  left: 13px;
+  top: 12px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .item-color .item-selector .dropdown-toggle .active-layer {
+  display: inline-block;
+  position: absolute;
+  left: 39px;
+  top: 12px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .item-color .item-selector .dropdown-menu {
+  width: calc(100% - 43px);
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .item-color .item-selector .dropdown-menu .color {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .item-color .item-selector .dropdown-menu .layer {
+  margin-left: 10px;
+  display: inline-block;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .item-color .item-color-btn {
+  width: 42px;
+  height: 40px;
+  position: absolute;
+  top: 25px;
+  right: 0px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .left-part .customize-panel .item-color .item-color-btn .color-area {
+  width: 16px;
+  height: 16px;
+  margin-top: 6px;
+}
+.canvas-spreadsheet-chart-dialog-div .dialog-body .right-part {
+  vertical-align: top;
+  display: inline-block;
+  border: solid 1px #cccccc;
+  width: 68%;
+  height: 550px;
+  margin-top: 62px;
+  margin-left: 2%;
+}
+.canvas-spreadsheet-chart-dialog-div .modal-footer {
+  border-top: 0px;
+  padding-right: 20px;
+  padding-bottom: 16px;
+}
+.canvas-spreadsheet-chart-data-select-dialog {
+  width: 0 ;
+  height: 0 ;
+}
+.canvas-spreadsheet-chart-data-select-dialog .dialog-div {
+  width: 400px;
+  padding: 0;
+  margin: 0;
+  top: 0;
+}
+.canvas-spreadsheet-chart-data-select-dialog .dialog-div .dialog-body {
+  min-height: 150px;
+}
+.canvas-spreadsheet-chart-data-select-dialog .dialog-div .dialog-body .caption {
+  font-size: 1.7rem;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+.canvas-spreadsheet-chart-data-select-dialog .dialog-div .dialog-body .content .content-item {
+  margin-bottom: 10px;
+  position: relative;
+}
+.canvas-spreadsheet-chart-data-select-dialog .dialog-div .dialog-body .content .content-item .only .cancel-data-selection {
+  display: none;
+}
+.canvas-spreadsheet-chart-data-select-dialog .dialog-div .dialog-body .content .content-item.active input {
+  border: solid 2px #4285f4;
+}
+.canvas-spreadsheet-chart-data-select-dialog .dialog-div .dialog-body .content .content-item .input-data-selection-content {
+  width: 90%;
+  font-size: 1.7rem;
+  height: 40px;
+  right: 0;
+  top: 0;
+}
+.canvas-spreadsheet-chart-data-select-dialog .dialog-div .dialog-body .content .content-item .cancel-data-selection {
+  float: right;
+  margin-top: 6px;
+  cursor: pointer;
+}
+.canvas-spreadsheet-chart-data-select-dialog .dialog-div .dialog-body .content .content-item .cancel-data-selection:hover {
+  color: #4285f4;
+}
+.canvas-spreadsheet-chart-data-select-dialog .dialog-div .dialog-body .content .content-item .cancel-data-selection i {
+  font-size: 2rem;
+}
+.canvas-spreadsheet-chart-data-select-dialog .dialog-div .dialog-body .add-content-hint {
+  margin-top: 20px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.canvas-spreadsheet-chart-data-select-dialog .dialog-div .dialog-body .add-content-hint:hover {
+  color: #4285f4;
+}
+.canvas-spreadsheet-chart-data-select-dialog .dialog-div .dialog-footer {
+  position: relative;
+}
+.canvas-spreadsheet-chart-axis-path,
+.canvas-spreadsheet-chart-axis-line {
+  fill: none;
+  stroke: #000000;
+  shape-rendering: crispEdges;
+}
+.canvas-spreadsheet-chart-line {
+  fill: none;
+  stroke: #4285f4;
+  stroke-width: 1.5px;
+}

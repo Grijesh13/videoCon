@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * l-mail styles.
+ * @author aseem
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+/* --------------------------------------------------------------------------
+ * cell padding for layout system.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.grid-cell-padding {
+  padding: 16px 16px;
+}
+/* --------------------------------------------------------------------------
+ * l-mail styles.
+ * @author aseem
+ * ------------------------------------------------------------------------*/
+.l-mail-page {
+  height: calc(100% -  48px);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  top: 48px;
+  position: relative;
+  font-family: "Noto Sans", "メイリオ", Meiryo, sans-serif;
+}
+.l-mail-page .l-main-floor {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-height: 100%;
+  margin-bottom: 4px;
+}
+.l-mail-page .l-mail-side-menu-room {
+  width: 250px;
+  position: relative;
+}
+.l-mail-page .l-mail-panel-room {
+  width: calc(100% - 250px);
+  position: relative;
+}
+.l-mail-page .l-mail-panel-room.l-grid-leaf {
+  padding: 8px 0 8px 8px;
+}
+.l-mail-page .l-mail-panel-room .l-grid-leaf.ltr > .component {
+  margin-left: 8px;
+}
+.l-mail-page .l-mail-panel-room .l-grid-leaf.ltr > .component:first-child {
+  margin-left: 0;
+}
+.l-mail-page .l-mail-panel-room .l-grid-leaf.rtl > .component {
+  margin-right: 8px;
+}
+.l-mail-page .l-mail-panel-room .l-grid-leaf.rtl > .component:first-child {
+  margin-right: 0;
+}
+.l-mail-page .l-mail-list-room {
+  width: 40%;
+  position: relative;
+}
+.l-mail-page .l-mail-detail-room {
+  width: 60%;
+  position: relative;
+}

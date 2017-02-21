@@ -1,0 +1,210 @@
+<html>
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="./adapter.js"></script>
+
+    <title>WebRtc Demo</title>
+
+    <script type="text/javascript">
+        var socket = io();
+        // var pc_config = webrtcDetectedBrowser === 'firefox' ? {'iceServers':[{'url':'stun:23.21.150.121'}]} : // IP address {'iceServers': [{'url': 'stun:stun.l.google.com:19302'}]};
+        // var configuration = webrtcDetectedBrowser === 'firefox' ? { 'iceServers': [ { url: 'stun:23.21.150.121' } ] } : { 'iceServers': [ { url: 'stun:stun.l.google.com:19302' }, { url: 'stun:stun1.l.google.com:19302' }, { url: "turn:numb.viagenie.ca", username: "gitu1992@gmail.com", credential: "lpkvmmdhgs" } ] };
+        var configuration = { 'iceServers': [ { url: 'stun:23.21.150.121' } ] };
+        var mapOfPCs = {};
+        var mapOfIceComplete = {};
+        var myID;
+        var usersToMakeCall;
+        var indexOfMakingCallArray = 0;
+        var insideRespond = false;  // for the responder
+        var dudeIaMakingACall = false;   // for the transmitter
+
+        document.onload = function() {
+            navigator.getUserMedia = ( navigator.getUserMedia ||
+                navigator.webkitGetUserMedia ||
+                navigator.mozGetUserMedia ||
+                navigator.msGetUserMedia );
+            navigator.getUserMedia({
+                'audio': true,
+                'video': true
+            }, function (stream) {
+                $('#myVideo').prop('src', URL.createObjectURL(stream));
+                // get an ID dude... UNIQUE!!
+                $.get('/getID', function(res) {
+                    myID = res;
+                    $('#myID').text(myID);
+                    start();
+                });
+            }, logError);
+        }();
+
+        function start() {
+            $.get('/ifRoomActive', function(res) {
+                if (res) {
+                    // i am the caller.
+                    // get list of users.
+                    $.get('/getListOfUsers/:myID', function(res) {
+                        usersToMakeCall = res;
+
+                        // serializing making calls.
+                        var forLoop = function (theirID) {
+                            createPeerObject(theirID, function(i) {
+                                if ( ++i < usersToMakeCall.length ) {
+                                    indexOfMakingCallArray++;
+                                    forLoop(usersToMakeCall[i]);
+                                }
+                            }, null);
+                        };
+                        forLoop(usersToMakeCall[0]);
+
+                        // for (var i = 0; i < usersToMakeCall.length; i++) {
+                        //     console.log('IIIIIIII ==== ', i)
+                        //     var theirID = usersToMakeCall[i];
+                        //     // function localDescCreated(desc) {
+                        //     //     console.log('inside localDescCreated');
+                        //     //     pc.setLocalDescription(desc, function () {
+                        //     //         socket.emit('chat message', JSON.stringify({ 'sdp': pc.localDescription, 'sourceID': myID, 'targetID': theirID }));
+                        //     //     }, logError);
+                        //     // };
+                        //     dudeIaMakingACall = true;
+                        //     createPeerObject(theirID, makeOffer);
+                        //     // console.log('theirID = ', theirID);
+                        //     // mapOfPCs.theirID = pc;
+                        //     // console.log('pc = ', pc);
+                        //     // pc.createOffer(localDescCreated, logError);
+                        // }
+                    });
+                } else {
+                    // sit back and enjoy.
+                    // waiting for call.
+                }
+            });
+        }
+
+        function makeOffer(pc, theirID, callback) {
+            pc.createOffer(function(desc) {
+                pc.setLocalDescription(desc, function() {
+                    socket.emit('chat message', JSON.stringify({ 'sdp': pc.localDescription, 'sourceID': myID, 'targetID': theirID }));
+                    callback(indexOfMakingCallArray);
+                }, logError);
+            }, logError);
+        }
+
+        // function localDescCreated(desc) {
+        //     pc.setLocalDescription(desc, function () {
+        //         socket.emit('chat message', JSON.stringify({ 'sdp': pc.localDescription, 'sourceID': myID, 'targetID': theirID }));
+        //     }, logError);
+        // };
+
+        function createPeerObject(theirID, callback, opt_message) {
+            // dudeIaMakingACall = true;
+            var pc = new RTCPeerConnection(configuration);
+
+            pc.onicecandidate = function (evt) {
+                if (evt.candidate) {
+                    socket.emit('chat message', JSON.stringify( { 'candidate': evt.candidate.candidate, 'label': evt.candidate.sdpMLineIndex, 'sourceID': myID, 'targetID': theirID } ));
+                }
+            };
+
+            pc.onaddstream = function (evt) {
+                if ( $('#theirVideo_1').attr('src') ) {
+                    if ( $('#theirVideo_2').attr('src') ) {
+                        $('#theirVideo_3').prop('src', URL.createObjectURL(evt.stream));
+                    } else {
+                        $('#theirVideo_2').prop('src', URL.createObjectURL(evt.stream));
+                    }
+                } else {
+                    $('#theirVideo_1').prop('src', URL.createObjectURL(evt.stream));
+                }
+            };
+            // mapOfPCs[theirID] = pc;
+            // insideRespond = false;
+            navigator.getUserMedia({
+                'audio': true,
+                'video': true
+            }, function (stream) {
+                pc.addStream(stream);
+                mapOfPCs[theirID] = pc;
+                if ( callback && opt_message ) {
+                    insideRespond = false;
+                    callback(mapOfPCs[theirID], opt_message);
+                    // wait and call (complete) {
+                    //     callback(mapOfPCs[theirID], opt_message);
+                    // }
+                } else {
+                    makeOffer(mapOfPCs[theirID], theirID, callback);
+                }
+                // pc.createOffer(localDescCreated, logError);
+                // callback();
+            }, logError);
+        }
+
+        function respond(message) {
+            var pc = createPeerObject(message.sourceID, makeAnswer, message);
+            // mapOfPCs.theirID = pc;
+            // pc.createAnswer(localDescCreated, logError);
+        };
+
+        function makeAnswer(pc, message) {
+            if ( message.sdp && message.targetID === myID ) {
+                mapOfPCs[message.sourceID].setRemoteDescription(new RTCSessionDescription(message.sdp), function () {
+                    if ( mapOfPCs[message.sourceID].remoteDescription.type == 'offer' ) {
+                        mapOfPCs[message.sourceID].createAnswer(function(desc) {
+                            mapOfPCs[message.sourceID].setLocalDescription(desc, function() {
+                                // console.log('inside answer setLocalDescription');
+                                socket.emit('chat message', JSON.stringify({ 'sdp': mapOfPCs[message.sourceID].localDescription, 'sourceID': myID, 'targetID': message.sourceID }));
+                            }, logError);
+                        }, logError);
+                    }
+                }, logError);
+            } else {
+                // just to check if (message.candidate) is not empty ---> otherwise it will throw an error.
+                if ( message.candidate && message.targetID === myID ) {
+                    mapOfPCs[message.sourceID].addIceCandidate(new mozRTCIceCandidate( {sdpMLineIndex:message.label, candidate:message.candidate} ));
+                }
+            }
+        }
+
+        socket.on('chat message', function(evt) {
+            var message = JSON.parse(evt);
+            if ( !mapOfPCs[message.sourceID] && message.targetID === myID && message.sourceID !== myID && !insideRespond ) {
+                insideRespond = true;
+                respond(message);
+            }
+            if ( message.sdp && message.targetID === myID && mapOfPCs[message.sourceID] && !insideRespond ) {
+                // 'caller' will come here !!!
+                mapOfPCs[message.sourceID].setRemoteDescription(new RTCSessionDescription(message.sdp));
+            } else {
+                // just to check if (message.candidate) is not empty ---> otherwise it will throw an error.
+                if ( message.candidate && message.targetID === myID && mapOfPCs[message.sourceID] && !insideRespond ) {
+                    mapOfPCs[message.sourceID].addIceCandidate(new mozRTCIceCandidate( {sdpMLineIndex:message.label, candidate:message.candidate} ));
+                }
+            }
+        });
+
+        function logError(error) {
+            console.log(error.name + ': ' + error.message);
+        };
+
+    </script>
+</head>
+
+<body>
+    <h1>Welcome!</h1>
+    <div id="video-container">
+        <!-- note the 'autoplay' -->
+        Friend 1: <video style="width:320px;height:180px;" id="theirVideo_1" class="theirVideo" autoplay></video>
+        Friend 2: <video style="width:320px;height:180px;" id="theirVideo_2" class="theirVideo" autoplay></video>
+        Friend 3: <video style="width:320px;height:180px;" id="theirVideo_3" class="theirVideo" autoplay></video>
+        You: <video style="width:320px;height:180px;" id="myVideo" muted="true" class="myVideo" autoplay></video>
+
+    </div>
+
+    <h2>Controls</h2>
+    <div>
+        <h1>Val: <span id="myID"><%=val%></span></h1>
+    </div>
+</body>
+
+</html>

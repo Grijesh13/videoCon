@@ -1,0 +1,42 @@
+@charset "utf-8";
+.wap-button-group {
+  display: inline-block;
+}
+.wap-button-group > .component:first-child:not(:last-child) .wap-button-group-child {
+  -webkit-border-top-right-radius: 0;
+  -moz-border-radius-topright: 0;
+  border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius-bottomright: 0;
+  -moz-background-clip: padding;
+  border-bottom-right-radius: 0;
+  background-clip: padding-box;
+}
+.wap-button-group > .component:not(:first-child):not(:last-child) .wap-button-group-child {
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0;
+  -moz-background-clip: padding;
+  border-radius: 0;
+  background-clip: padding-box;
+  margin-left: -1px;
+}
+.wap-button-group > .component:last-child:not(:first-child) .wap-button-group-child {
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-left-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius-bottomleft: 0;
+  -moz-background-clip: padding;
+  border-bottom-left-radius: 0;
+  background-clip: padding-box;
+  margin-left: -1px;
+}
+.wap-button-group.hidden {
+  display: none;
+}
+.wap-button-group.invisible {
+  visibility: hidden;
+}

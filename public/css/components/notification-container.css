@@ -1,0 +1,53 @@
+@charset "utf-8";
+.notification-container-header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: reverse;
+  -moz-box-direction: reverse;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  padding: 8px 12px;
+  border-bottom: 1px solid #dddddd;
+}
+.notification-container-header-markasread {
+  color: #4285f4;
+  text-decoration: none;
+  cursor: pointer;
+}
+.notification-container-header-markasread:hover {
+  color: #4285f4;
+  text-decoration: underline;
+}
+.notification-container-header-configuration-area {
+  margin-left: 12px;
+  cursor: pointer;
+}
+.notification-container-header-configuration-area:hover {
+  cursor: pointer;
+  color: #999999;
+}
+.notification-container-header-configuration {
+  font-size: 1.7rem;
+}
+.notification-container-footer-area {
+  text-align: center;
+  background-color: #f5f5f5;
+  padding-top: 7px;
+  height: 32px;
+  border-top: 1px solid #dddddd;
+}
+.notification-container-see-all {
+  color: #4285f4;
+  text-decoration: none;
+  cursor: pointer;
+}
+.notification-container-see-all:hover {
+  color: #4285f4;
+  text-decoration: underline;
+}

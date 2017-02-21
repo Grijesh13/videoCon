@@ -1,0 +1,321 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.canvas-spreadsheet-filter-menu {
+  background-color: #ffffff;
+  padding-bottom: 0;
+  width: 255px;
+  z-index: 1000;
+  -webkit-border-radius: 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0px;
+  -moz-background-clip: padding;
+  border-radius: 0px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 2px 4px #bdbdbd;
+  -moz-box-shadow: 0 2px 4px #bdbdbd;
+  box-shadow: 0 2px 4px #bdbdbd;
+  position: fixed;
+  display: none;
+}
+.canvas-spreadsheet-filter-menu .filter-sort-item {
+  padding-left: 20px;
+  margin: 8px 0px;
+}
+.canvas-spreadsheet-filter-menu .filter-sort-item .filter-sort-icon {
+  width: 20px;
+  margin-right: 6px;
+}
+.canvas-spreadsheet-filter-menu .filter-sort-item:hover {
+  background-color: #e8e8e8;
+  cursor: pointer;
+}
+.canvas-spreadsheet-filter-menu .filter-box {
+  padding-right: 16px;
+  margin-top: 6px;
+}
+.canvas-spreadsheet-filter-menu .filter-box-label {
+  margin-left: 4px;
+  margin-bottom: 6px;
+}
+.canvas-spreadsheet-filter-menu .filter-box-label-icon {
+  display: inline-block;
+}
+.canvas-spreadsheet-filter-menu .filter-box-label .filter-box-title {
+  display: inline-block;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.canvas-spreadsheet-filter-menu .filter-box-label-item {
+  vertical-align: middle;
+  float: right;
+  font-size: 1.4rem;
+  margin-top: 2px;
+}
+.canvas-spreadsheet-filter-menu .filter-box-label-item-link {
+  color: #4285f4;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.canvas-spreadsheet-filter-menu .filter-search {
+  margin-left: 28px;
+  padding-right: 24px;
+  width: 198px;
+  height: 22px;
+}
+.canvas-spreadsheet-filter-menu .filter-search-icon {
+  display: inline-block;
+  right: 18px;
+  font-size: 1.4rem;
+  position: absolute;
+}
+.canvas-spreadsheet-filter-menu .filter-box-content-container {
+  padding: 2px 8px;
+  height: 170px;
+  margin: 4px 0px 0px 28px;
+  overflow-y: auto;
+  border: 1px dashed #cccccc;
+}
+.canvas-spreadsheet-filter-menu .filter-box-content-container .filter-box-content-item {
+  font-size: 1.2rem;
+  margin-right: 4px;
+  height: 22px;
+}
+.canvas-spreadsheet-filter-menu .filter-box-content-container .filter-box-content-item input {
+  margin-top: 0px;
+}
+.canvas-spreadsheet-filter-menu .filter-box-content-container .filter-box-content-item .filter-box-content-text {
+  padding-left: 4px;
+}
+.canvas-spreadsheet-filter-menu .filter-box-content-container .filter-box-content-item span.highlight {
+  font-weight: 700;
+}
+.canvas-spreadsheet-filter-menu .filter-box-content-container .filter-box-content-item:hover {
+  background-color: #e8e8e8;
+  cursor: pointer;
+}
+.canvas-spreadsheet-filter-menu .filter-box-button-container {
+  padding: 14px 0px 14px 6px;
+  float: right;
+}
+.canvas-spreadsheet-filter-menu .filter-box-button-container .filter-box-button {
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+  cursor: default;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  height: 24px;
+  line-height: 22px;
+  min-width: 54px;
+  outline: 0px;
+  padding: 0 8px;
+  display: inline-block;
+}
+.canvas-spreadsheet-filter-menu .filter-box-button-container .filter-box-confirm-btn {
+  color: #303641;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  margin-right: 16px;
+}
+.canvas-spreadsheet-filter-menu .filter-box-button-container .filter-box-confirm-btn:hover {
+  color: #303641;
+  background-color: #e8e8e8;
+  border-color: #e8e8e8;
+}
+.canvas-spreadsheet-filter-menu .filter-box-button-container .filter-box-cancel-btn {
+  color: #303641;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+}
+.canvas-spreadsheet-filter-menu .filter-box-button-container .filter-box-cancel-btn:hover {
+  color: #303641;
+  background-color: #e8e8e8;
+  border-color: #e8e8e8;
+}
+.canvas-spreadsheet-filter-menu.wap-core-ui-ContextMenu .dropdown-menu {
+  position: absolute;
+  display: block;
+}
+.canvas-spreadsheet-filter-header-menu {
+  background-color: #ffffff;
+  padding: 4px 0;
+  width: 300px;
+  z-index: 1000;
+  -webkit-border-radius: 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0px;
+  -moz-background-clip: padding;
+  border-radius: 0px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 2px 4px #bdbdbd;
+  -moz-box-shadow: 0 2px 4px #bdbdbd;
+  box-shadow: 0 2px 4px #bdbdbd;
+  position: absolute;
+  border: 1px solid #bdbdbd;
+}
+.canvas-spreadsheet-filter-header-menu .filter-menu-hr {
+  margin: 4px 0;
+}
+.canvas-spreadsheet-filter-header-menu .filter-menu-item {
+  padding: 4px 8px;
+}
+.canvas-spreadsheet-filter-header-menu .filter-menu-item .filter-icon {
+  width: 20px;
+  margin-right: 6px;
+  position: relative;
+  bottom: 1px;
+}
+.canvas-spreadsheet-filter-header-menu .filter-menu-item:hover {
+  background-color: #e8e8e8;
+  cursor: pointer;
+}
+.canvas-spreadsheet-filter-header-menu .filter-select-items-title,
+.canvas-spreadsheet-filter-header-menu .filter-select-range-title,
+.canvas-spreadsheet-filter-header-menu .filter-select-search-title {
+  margin-left: 26px;
+}
+.canvas-spreadsheet-filter-header-menu .filter-select-items-title:hover,
+.canvas-spreadsheet-filter-header-menu .filter-select-range-title:hover,
+.canvas-spreadsheet-filter-header-menu .filter-select-search-title:hover {
+  cursor: default;
+}
+.canvas-spreadsheet-filter-header-menu .filter-select-search-input {
+  margin: 10px 0 10px 24px;
+  -webkit-box-shadow: 0 1px 1px #e8e8e8 inset, 0 0 1px #4285f4;
+  -moz-box-shadow: 0 1px 1px #e8e8e8 inset, 0 0 1px #4285f4;
+  box-shadow: 0 1px 1px #e8e8e8 inset, 0 0 1px #4285f4;
+  border: 1px solid #4285f4;
+  padding-left: 6px;
+  width: 255px;
+  height: 25px;
+}
+.canvas-spreadsheet-filter-header-menu .filter-select-items-content,
+.canvas-spreadsheet-filter-header-menu .filter-select-range-content {
+  margin-left: 26px;
+}
+.canvas-spreadsheet-filter-header-menu .filter-select-items-content .filter-select-all,
+.canvas-spreadsheet-filter-header-menu .filter-select-range-content .filter-select-all,
+.canvas-spreadsheet-filter-header-menu .filter-select-items-content .filter-select-item,
+.canvas-spreadsheet-filter-header-menu .filter-select-range-content .filter-select-item {
+  margin-top: 8px;
+  position: relative;
+  left: -3px;
+}
+.canvas-spreadsheet-filter-header-menu .filter-select-items-content .filter-select-all .filter-icon,
+.canvas-spreadsheet-filter-header-menu .filter-select-range-content .filter-select-all .filter-icon,
+.canvas-spreadsheet-filter-header-menu .filter-select-items-content .filter-select-item .filter-icon,
+.canvas-spreadsheet-filter-header-menu .filter-select-range-content .filter-select-item .filter-icon {
+  margin-right: 2px;
+}
+.canvas-spreadsheet-filter-header-menu .filter-select-slider {
+  width: 220px;
+  height: 10px;
+  background: none repeat scroll 0 0 #e8e8e8;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  position: relative;
+}
+.canvas-spreadsheet-filter-header-menu .filter-select-slider:hover,
+.canvas-spreadsheet-filter-header-menu .filter-select-slider:focus {
+  outline: none;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.canvas-spreadsheet-filter-header-menu .filter-select-slider .goog-twothumbslider-rangehighlight {
+  position: absolute;
+  background-color: #cccccc;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  width: 100%;
+  height: 10px;
+  left: 0px;
+}
+.canvas-spreadsheet-filter-header-menu .filter-select-slider .goog-twothumbslider-value-thumb,
+.canvas-spreadsheet-filter-header-menu .filter-select-slider .goog-twothumbslider-extent-thumb {
+  position: absolute;
+  overflow: visible;
+  width: 16px;
+  height: 16px;
+  top: -3px;
+  background: #cccccc;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  border: 1px solid #ffffff;
+}
+.canvas-spreadsheet-filter-header-menu .filter-select-slider-value-boxes {
+  position: relative;
+  width: 220px;
+  margin: 12px 0px;
+}
+.canvas-spreadsheet-filter-header-menu .filter-select-slider-value-boxes .filter-value-input {
+  width: 40px;
+  height: 25px;
+  margin-right: 6px;
+  padding: 4px;
+}
+.canvas-spreadsheet-filter-header-menu .filter-select-slider-value-boxes .filter-value-input:focus {
+  -webkit-box-shadow: 0 1px 1px #e8e8e8 inset, 0 0 1px #4285f4;
+  -moz-box-shadow: 0 1px 1px #e8e8e8 inset, 0 0 1px #4285f4;
+  box-shadow: 0 1px 1px #e8e8e8 inset, 0 0 1px #4285f4;
+  border: 1px solid #4285f4;
+}
+.canvas-spreadsheet-filter-header-menu .filter-select-slider-value-boxes .filter-value-boxes-left {
+  display: inline-block;
+}
+.canvas-spreadsheet-filter-header-menu .filter-select-slider-value-boxes .filter-value-boxes-right {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+}

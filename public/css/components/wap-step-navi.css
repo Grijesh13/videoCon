@@ -1,0 +1,171 @@
+@charset "utf-8";
+.wap-step-navi {
+  display: inline-block;
+  margin: 11px 0 0 0;
+}
+.wap-step-navi.wap-step-navi-rendering {
+  display: none;
+}
+.wap-step-navi-body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+.wap-step-navi-item {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+.wap-step-navi-step {
+  position: relative;
+  display: block;
+  padding-top: 14.75px;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  cursor: auto;
+}
+.wap-step-navi-step-title {
+  position: absolute;
+  display: block;
+  background: #e8e8e8;
+  color: #7f7f7f;
+  line-height: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: -25.5px;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-box-shadow: #e8e8e8 0 0 0 2px;
+  -moz-box-shadow: #e8e8e8 0 0 0 2px;
+  box-shadow: #e8e8e8 0 0 0 2px;
+}
+.wap-step-navi-step-desc {
+  overflow: hidden;
+  color: #7f7f7f;
+  line-height: 1;
+  font-size: 1.2rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wap-step-navi-width-size-s {
+  width: 120px;
+}
+.wap-step-navi-width-size-m {
+  width: 240px;
+}
+.wap-step-navi-width-size-l {
+  width: 360px;
+}
+.wap-step-navi-width-size-xl {
+  width: 480px;
+}
+.wap-step-navi-width-size-full {
+  width: 100%;
+}
+.wap-step-navi-step-progress {
+  background-color: #dddddd;
+  height: 2px;
+}
+.wap-step-navi-progress-indicator {
+  -webkit-transition: width 0.35s ease-in;
+  -moz-transition: width 0.35s ease-in;
+  -o-transition: width 0.35s ease-in;
+  transition: width 0.35s ease-in;
+  background-color: #4285f4;
+  width: 0.0%;
+  height: 2px;
+}
+.wap-step-navi-active .wap-step-navi-step-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #4285f4;
+  background-color: #ffffff;
+  -webkit-box-shadow: #4285f4 0 0 0 2px;
+  -moz-box-shadow: #4285f4 0 0 0 2px;
+  box-shadow: #4285f4 0 0 0 2px;
+}
+.wap-step-navi-active .wap-step-navi-step-desc {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4285f4;
+}
+.wap-step-navi-completed .wap-step-navi-step-title {
+  background-color: #4285f4;
+  color: #ffffff;
+  -webkit-box-shadow: #4285f4 0 0 0 2px;
+  -moz-box-shadow: #4285f4 0 0 0 2px;
+  box-shadow: #4285f4 0 0 0 2px;
+}
+.wap-step-navi-completed .wap-step-navi-step-desc {
+  color: #4285f4;
+}
+.wap-step-navi-large {
+  margin: 13.5px 0 0 0;
+}
+.wap-step-navi-large .wap-step-navi-step-progress {
+  height: 3px;
+}
+.wap-step-navi-large .wap-step-navi-progress-indicator {
+  height: 3px;
+}
+.wap-step-navi-large .wap-step-navi-step {
+  padding-top: 17.5px;
+}
+.wap-step-navi-large .wap-step-navi-step-title {
+  line-height: 24px;
+  font-size: 1.4rem;
+  margin-top: -31px;
+  margin-left: -12px;
+  width: 24px;
+  height: 24px;
+  -webkit-box-shadow: #e8e8e8 0 0 0 3px;
+  -moz-box-shadow: #e8e8e8 0 0 0 3px;
+  box-shadow: #e8e8e8 0 0 0 3px;
+}
+.wap-step-navi-large .wap-step-navi-active .wap-step-navi-step-title {
+  font-size: 2rem;
+  -webkit-box-shadow: #4285f4 0 0 0 3px;
+  -moz-box-shadow: #4285f4 0 0 0 3px;
+  box-shadow: #4285f4 0 0 0 3px;
+}
+.wap-step-navi-large .wap-step-navi-completed .wap-step-navi-step-title {
+  -webkit-box-shadow: #4285f4 0 0 0 3px;
+  -moz-box-shadow: #4285f4 0 0 0 3px;
+  box-shadow: #4285f4 0 0 0 3px;
+}
+.wap-step-navi-large .wap-step-navi-step-desc {
+  font-size: 1.4rem;
+}
+.wap-step-navi-large .wap-step-navi-active .wap-step-navi-step-desc {
+  font-size: 1.4rem;
+}
+.wap-step-navi.hidden {
+  display: none;
+}
+.wap-step-navi.invisible {
+  visibility: hidden;
+}

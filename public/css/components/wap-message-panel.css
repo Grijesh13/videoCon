@@ -1,0 +1,124 @@
+@charset "utf-8";
+.wap-message-panel {
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  padding: 8px 16px;
+  width: 100%;
+  height: 100%;
+}
+.wap-message-panel-show-border {
+  padding: 7px 15px;
+  border: 1px solid;
+}
+.wap-message-panel-white {
+  background-color: #ffffff;
+  border-color: #aaaaaa;
+}
+.wap-message-panel-white-content {
+  color: #333333;
+}
+.wap-message-panel-default {
+  background-color: #f1f1f1;
+  border-color: #aaaaaa;
+}
+.wap-message-panel-default-content {
+  color: #555555;
+}
+.wap-message-panel-info {
+  background-color: #ecf2fd;
+  border-color: #a0c2f9;
+}
+.wap-message-panel-info-content {
+  color: #4285f4;
+}
+.wap-message-panel-primary {
+  background-color: #ecf2fd;
+  border-color: #a0c2f9;
+}
+.wap-message-panel-primary-content {
+  color: #4285f4;
+}
+.wap-message-panel-success {
+  background-color: #eaf7f0;
+  border-color: #99d5b8;
+}
+.wap-message-panel-success-content {
+  color: #33ac71;
+}
+.wap-message-panel-warning {
+  background-color: #fdf7ec;
+  border-color: #f9d8a0;
+}
+.wap-message-panel-warning-content {
+  color: #f4b142;
+}
+.wap-message-panel-danger {
+  background-color: #fce8ef;
+  border-color: #f48eb1;
+}
+.wap-message-panel-danger-content {
+  color: #e91e63;
+}
+.wap-message-panel-header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.wap-message-panel-header .wap-header-label {
+  -webkit-box-flex: auto;
+  -moz-box-flex: auto;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  padding: 0;
+  margin-left: -2px;
+}
+.wap-message-panel-header-bold .wap-header-label {
+  font-weight: 700;
+}
+.wap-message-panel-header-fold {
+  opacity: .5;
+  cursor: pointer;
+}
+.wap-message-panel-header-fold:hover {
+  opacity: 1;
+}
+.wap-message-panel-header-close {
+  opacity: .5;
+  cursor: pointer;
+}
+.wap-message-panel-header-close:hover {
+  opacity: 1;
+}
+.wap-message-panel-header-left-margin {
+  margin-left: 4px;
+}
+.wap-message-panel-contents.hidden {
+  display: none;
+}
+.wap-message-panel-content-custom > .wap-text-label {
+  color: inherit;
+}
+.wap-message-panel-content-custom > .wap-anchor-label > .wap-anchor-label-parent {
+  color: inherit;
+}
+.wap-message-panel-content-custom > .wap-anchor-label > .wap-anchor-label-parent > .wap-anchor-label-label:hover {
+  text-decoration: underline;
+}
+.wap-message-panel.hidden {
+  display: none;
+}
+.wap-message-panel.invisible {
+  visibility: hidden;
+}

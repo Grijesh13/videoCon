@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * insta-report-add-template styles.
+ * @author Rajdeep
+ * ------------------------------------------------------------------------*/
+.add-template {
+  width: 100%;
+}
+.add-template-div-inline {
+  width: 100%;
+  margin: 8px;
+  line-height: 8px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.add-template-label {
+  width: 40%;
+}
+.add-template-input {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.add-template-button {
+  background-color: #a0c2f9;
+  position: relative;
+  left: 40%;
+  padding: 12px 12px;
+  border: none;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+  margin: 5px;
+}

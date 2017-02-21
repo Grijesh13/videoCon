@@ -1,0 +1,19 @@
+@charset "utf-8";
+.timeline-config-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4px 8px;
+  color: #333333;
+}
+.timeline-config-container-area {
+  padding: 8px;
+}
+.timeline-config-container-icon-val {
+  font-size: 1.7rem;
+}
+.timeline-config-container-text-val {
+  margin-left: 24px;
+}

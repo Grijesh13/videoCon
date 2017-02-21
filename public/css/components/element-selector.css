@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * element-selector styles.
+ * @author bharath
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * element-selector styles.
+ * @author bharath
+ * ------------------------------------------------------------------------*/
+.element-selector-wrapper {
+  outline: 2px dashed #000000;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+}
+.element-selector-front {
+  z-index: 1050;
+}

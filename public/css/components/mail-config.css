@@ -1,0 +1,125 @@
+@charset "utf-8";
+.mail-config-header {
+  background-color: #dddddd;
+  padding-top: 48px;
+  height: 102px;
+  width: calc(100vw - 250px);
+  text-align: center;
+}
+.mail-config-header-title {
+  font-size: 2rem;
+}
+.mail-config-tabs .tab-tabs {
+  background-color: #dddddd;
+  border-bottom: 3px solid #dddddd;
+}
+.mail-config-tabs .tab-content {
+  border: none;
+}
+.mail-config-tabs .tab-content .tab-content-pane {
+  height: calc(100% - 140px);
+  width: calc(100% - 98px);
+  position: absolute;
+}
+.mail-config-tag-folder-management .tab-tabs {
+  width: 10%;
+  background-color: #ffffff;
+  border-bottom: none;
+}
+.mail-config-tag-folder-management .tab-vertical {
+  padding-bottom: calc(100vh - 350px);
+}
+.mail-config-tag-folder-management .tab-content {
+  width: 80%;
+}
+.mail-config-tag-folder-management .tag-operations .wap-button,
+.mail-config-tag-folder-management .tag-edit-operations .wap-button,
+.mail-config-tag-folder-management .folder-operations .wap-button,
+.mail-config-tag-folder-management .folder-edit-operations .wap-button {
+  padding: 4px 8px 4px 0px;
+}
+.mail-config-tag-folder-management .tag-operations .wap-text-input,
+.mail-config-tag-folder-management .tag-edit-operations .wap-text-input,
+.mail-config-tag-folder-management .folder-operations .wap-text-input,
+.mail-config-tag-folder-management .folder-edit-operations .wap-text-input {
+  display: inline-block;
+  padding: 4px 8px 4px 0px;
+  margin: 8px 0;
+}
+.mail-config-tag-folder-management .wap-header-label {
+  margin-top: 8px;
+}
+.mail-config-mail-compose-management .tab-tabs {
+  width: 10%;
+  background-color: #ffffff;
+  border-bottom: none;
+}
+.mail-config-sender-info-content-input {
+  margin-bottom: 8px;
+}
+.mail-config-sender-info-content-operations {
+  margin-left: 160px;
+}
+.mail-config-sender-info-content-operations .wap-button {
+  padding: 4px 8px;
+}
+.mail-config-signature-info-content-input {
+  margin-bottom: 8px;
+}
+.mail-config-signature-info-content-input-checkbox {
+  margin-left: 200px;
+}
+.mail-config-signature-info-content-operations {
+  margin-left: 160px;
+}
+.mail-config-signature-info-content-operations .wap-button {
+  padding: 4px 8px;
+}
+.mail-config-template-info-content-new {
+  margin-bottom: 8px;
+}
+.mail-config-template-info-content-header {
+  text-align: center;
+}
+.mail-config-template-info-content-header-subject {
+  display: block;
+  font-size: 1.7rem;
+}
+.mail-config-template-info-content-header-description {
+  display: block;
+  font-size: 1.4rem;
+}
+.mail-config-template-info-content-body-input {
+  margin-bottom: 8px;
+}
+.mail-config-template-info-content-body-input .mail-address-holder-address-container {
+  width: 240px;
+}
+.mail-config-template-info-content-body-input .component .label {
+  width: 200px;
+  padding-right: 32px;
+  text-align: right;
+}
+.mail-config-template-info-content-body-input-subdiv {
+  display: inline-block;
+  margin-right: 4px;
+}
+.mail-config-template-info-content-body-input-hide {
+  display: none;
+}
+.mail-config-template-info-content-body-input-tags {
+  margin-left: 200px;
+  margin-bottom: 2px;
+}
+.mail-config-template-info-content-body-actions {
+  text-align: center;
+}
+.mail-config-template-info-content-body-actions-button {
+  display: inline-block;
+  margin-right: 8px;
+}
+.mail-config-tag-folder-management .tab-tabs {
+  width: 10%;
+  background-color: #ffffff;
+  border-bottom: none;
+}

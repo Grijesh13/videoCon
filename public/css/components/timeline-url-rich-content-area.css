@@ -1,0 +1,107 @@
+@charset "utf-8";
+.timeline-url-rich-content-area {
+  margin: 8px 8px 16px 0;
+}
+.timeline-url-rich-content-area-uneditable {
+  cursor: pointer;
+}
+.timeline-url-rich-content-area-horizontal {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timeline-url-rich-content-area-horizontal-left-image {
+  max-width: 160px;
+  height: 160px;
+  border: solid 1px #e8e8e8;
+  border-right: none;
+}
+.timeline-url-rich-content-area-vertical-top-image {
+  width: 100%;
+  border: solid 1px #e8e8e8;
+  border-bottom: none;
+}
+.timeline-url-rich-content-area-info {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0 16px;
+  border: solid 1px #e8e8e8;
+  position: relative;
+  max-height: 160px;
+}
+.timeline-url-rich-content-area-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 2rem;
+  padding: 4px 0;
+}
+.timeline-url-rich-content-area-description {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-height: 100px;
+  overflow: hidden;
+}
+.timeline-url-rich-content-area-site {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 8px 0;
+  color: #aaaaaa;
+}
+.timeline-url-rich-content-area-close {
+  position: absolute;
+  right: 6px;
+  top: 4px;
+  font-size: 1.7rem;
+  color: #aaaaaa;
+  cursor: pointer;
+  display: none;
+}
+.timeline-url-rich-content-area-progress {
+  margin: auto;
+}
+.timeline-url-rich-content-area-progress-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 30px;
+  border: solid 1px #aaaaaa;
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  margin: 8px 8px 16px 4px;
+  background-color: #7f7f7f;
+}
+.timeline-url-rich-content-area-progress-close {
+  top: 2px;
+}
+.timeline-url-rich-content-area:hover .timeline-url-rich-content-area-close {
+  display: block;
+}

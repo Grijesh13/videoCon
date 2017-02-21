@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * report-editor-font-property styles.
+ * (temporary style)
+ * @author rohit
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * report-editor-font-property styles.
+ * @author rohit
+ * ------------------------------------------------------------------------*/
+.report-editor-font-property-name-label {
+  display: inline-block;
+  width: 35%;
+  margin: 3px;
+  margin-right: 0;
+}
+.report-editor-font-property-size-label {
+  display: inline-block;
+  width: 35%;
+  margin: 3px;
+  margin-right: 0;
+}
+.report-editor-font-property-style-label {
+  display: inline-block;
+  width: 35%;
+  margin: 3px;
+  margin-right: 0;
+}
+.report-editor-font-property-horizontalalign-label {
+  display: inline-block;
+  width: 35%;
+  margin: 3px;
+  margin-right: 0;
+}
+.report-editor-font-property-value {
+  display: inline-block;
+  width: 60%;
+  height: 35px;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.report-editor-font-property-value .combo-box {
+  width: 100%;
+}
+.report-editor-font-property-value .combo-box .combo-box-single-input {
+  border: 0px;
+}
+.report-editor-font-property-value .combo-box .input-parent {
+  width: 100%;
+}
+.report-editor-font-property-row {
+  margin: 5px;
+}

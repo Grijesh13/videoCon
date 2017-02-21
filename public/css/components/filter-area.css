@@ -1,0 +1,7 @@
+@charset "utf-8";
+.filter-area-header {
+  border-bottom: 1px solid #dddddd;
+}
+.filter-area-display-none {
+  display: none;
+}

@@ -1,0 +1,34 @@
+@charset "utf-8";
+.hue-drive-folder-navigation-details {
+  height: 32px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.hue-drive-folder-navigation-children {
+  height: 240px;
+  overflow-y: auto;
+}
+.hue-drive-folder-navigation-children-child {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  overflow: hidden;
+}
+.hue-drive-folder-navigation-children-child-icon {
+  padding: 8px;
+}
+.hue-drive-folder-navigation-children-child-name {
+  padding: 8px;
+}
+.hue-drive-folder-navigation-children-child.select {
+  background: #dddddd;
+}
+.hue-drive-folder-navigation-children-child:hover {
+  background: #f1f1f1;
+}
+.hue-drive-folder-navigation-children-child.select {
+  background: #e8e8e8;
+}

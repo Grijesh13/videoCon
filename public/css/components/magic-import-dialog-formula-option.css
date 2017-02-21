@@ -1,0 +1,205 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col,
+.magic-import-dialog-formula-option-wrapper-outer-div-inner-div-var-grid-column {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.magic-import-dialog-formula-option-wrapper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -276px;
+  margin-top: -240px;
+  background: #ffffff;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div-footer {
+  border-top: 1px solid #e8e8e8;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div-footer-content {
+  float: right;
+  padding: 16px 16px 16px;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div-footer-button-set {
+  text-align: right;
+  float: right;
+  width: 100%;
+  padding: 16px 16px 16px;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div-footer-button-set-right {
+  float: right;
+  margin-left: 10px;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div-footer-button-set-left {
+  float: left;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div-inner-div-notify-message {
+  margin: 32px;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div-inner-div-var-grid {
+  color: #333333;
+  margin: 0px 32px;
+  border: #bdbdbd 1px solid;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div-inner-div-var-grid-header {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e8e8e8;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div-inner-div-var-grid-body {
+  cursor: pointer;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #ffffff;
+  max-height: 120px;
+  overflow-y: auto;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div-inner-div-var-grid-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 40px;
+  flex-basis: 40px;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div-inner-div-var-grid-row:hover {
+  background-color: #f1f1f1;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div-inner-div-var-grid-row-header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 40px;
+  flex-basis: 40px;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div-inner-div-var-grid-column {
+  padding: 10px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  max-width: 100%;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div-inner-div-combo-box {
+  margin: 0px 32px;
+  text-align: left;
+  padding: 8px;
+  border: #bdbdbd 1px solid;
+  border-top: none;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div-inner-div-input {
+  text-align: center;
+  padding: 32px;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div-inner-div-title-div {
+  padding: 16px;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.magic-import-dialog-formula-option-wrapper-outer-div-inner-div-title-div-header {
+  border-left: #3b77db 2px solid;
+  padding-left: 14px;
+  padding-top: 4px;
+}

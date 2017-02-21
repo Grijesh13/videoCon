@@ -1,0 +1,185 @@
+@charset "utf-8";
+.tab {
+  display: table;
+  width: 100%;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.tab-body {
+  display: table-row;
+}
+.tab-tabs {
+  padding-left: 0;
+  list-style: none;
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 0;
+}
+.tab-tabs:before,
+.tab-tabs:after {
+  content: " ";
+  display: table;
+}
+.tab-tabs:after {
+  clear: both;
+}
+.tab-tabs:before,
+.tab-tabs:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.tab-tabs:after {
+  clear: both;
+}
+.tab-tabs-header {
+  position: relative;
+  display: block;
+}
+.tab-tabs-header .tab-tabs-header-target {
+  position: relative;
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #333333;
+}
+.tab-tabs-header .tab-tabs-header-target:hover,
+.tab-tabs-header .tab-tabs-header-target:focus {
+  text-decoration: none;
+  background-color: #e8e8e8;
+}
+.tab-tabs-header.disabled .tab-tabs-header-target {
+  color: #7f7f7f;
+}
+.tab-tabs-header.disabled .tab-tabs-header-target:hover,
+.tab-tabs-header.disabled .tab-tabs-header-target:focus {
+  color: #7f7f7f;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: not-allowed;
+}
+.tab-tabs-header {
+  display: inline-block;
+  margin-bottom: -1px;
+}
+.tab-tabs-header-target {
+  margin-right: 4px;
+  line-height: 1.25;
+  border: 1px solid transparent;
+  color: #333333;
+  display: block;
+  margin-bottom: -1px;
+  -webkit-border-radius: 3px 3px 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px 3px 0 0;
+  -moz-background-clip: padding;
+  border-radius: 3px 3px 0 0;
+  background-clip: padding-box;
+}
+.tab-tabs-header-target:hover {
+  border-color: #e8e8e8 #e8e8e8 #dddddd;
+}
+.tab-tabs-header-target-icon {
+  font-size: 2rem;
+}
+.tab-tabs-header.active .tab-tabs-header-target,
+.tab-tabs-header.active .tab-tabs-header-target:hover,
+.tab-tabs-header.active .tab-tabs-header-target:focus {
+  color: #333333;
+  cursor: default;
+  border: 1px solid #dddddd;
+  display: block;
+  border-bottom: 1px solid transparent;
+  background-color: #ffffff;
+  margin-bottom: -1px;
+}
+.tab-tabs.right-aligned {
+  text-align: right;
+}
+.tab-tabs.right-aligned-header-target {
+  margin-left: 4px;
+  margin-right: 0;
+}
+.tab-tabs.right-aligned-header:last-child .tab-tabs.right-aligned-header-target {
+  margin-right: 4px;
+}
+.tab-tabs-header:first-child .tab-tabs-header-target {
+  margin-left: 0;
+}
+.tab-tabs-header:last-child .tab-tabs-header-target {
+  margin-right: 0;
+}
+.tab-tabs + .tab-content {
+  border: 1px solid #dddddd;
+  border-top: 0;
+  -webkit-border-radius: 0 0 3px 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 0 3px 3px;
+  -moz-background-clip: padding;
+  border-radius: 0 0 3px 3px;
+  background-clip: padding-box;
+  margin-bottom: 16px;
+  padding: 16px 8px;
+}
+.tab-tabs + .tab-content .tab-content-pane {
+  display: none;
+}
+.tab-tabs + .tab-content .tab-content-pane.active {
+  display: block;
+}
+.tab-vertical {
+  display: table-cell;
+  border-bottom: 0px;
+  vertical-align: top;
+  border-right: 1px solid #dddddd;
+}
+.tab-vertical .tab-tabs-header {
+  display: block;
+  vertical-align: top;
+}
+.tab-vertical .tab-tabs-header .tab-tabs-header-target {
+  background-color: transparent;
+  border: 0;
+  color: #333333;
+}
+.tab-vertical .tab-tabs-header .tab-tabs-header-target:hover,
+.tab-vertical .tab-tabs-header .tab-tabs-header-target:focus {
+  border: 0;
+  background-color: transparent;
+  color: #818da2;
+}
+.tab-vertical .tab-tabs-header.active .tab-tabs-header-target {
+  color: #4285f4;
+}
+.tab-vertical + .tab-content {
+  display: inline-block;
+  border: 1px solid transparent;
+  padding: 8px 16px;
+}
+.tab-header-highlighted {
+  border: 0;
+}
+.tab-header-highlighted .tab-tabs-header-target {
+  border: 0;
+}
+.tab-header-highlighted .tab-tabs-header-target:hover,
+.tab-header-highlighted .tab-tabs-header-target:focus {
+  border: 0;
+}
+.tab-header-highlighted .tab-tabs-header.active .tab-tabs-header-target {
+  border: 0;
+  border-bottom: 3px solid #e8e8e8;
+}
+.tab-header-highlighted .tab-tabs-header.active .tab-tabs-header-target:hover,
+.tab-header-highlighted .tab-tabs-header.active .tab-tabs-header-target:focus {
+  border: 0;
+  border-bottom: 3px solid #e8e8e8;
+  zoom: 1;
+  filter: alpha(opacity=70);
+  -webkit-opacity: 0.7;
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+}
+.tab-header-highlighted + .tab-content {
+  border: 0;
+}

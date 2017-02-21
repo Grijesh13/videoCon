@@ -1,0 +1,136 @@
+@charset "utf-8";
+/*
+IMPORTANT:
+In order to preserve the uniform grid appearance, all cell styles need to have padding, margin and border sizes.
+No built-in (selected, editable, highlight, flashing, invalid, loading, :focus) or user-specified CSS
+classes should alter those!
+*/
+.cardgrid-scroll-target {
+  overflow-y: auto;
+}
+.cardgrid-pane * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.cardgrid-pane.auto-height {
+  height: auto !important;
+}
+.cardgrid-pane.auto-height .cardgrid-pane-body {
+  overflow-y: hidden;
+}
+.cardgrid-pane.no-outer-border .cardgrid-pane-body {
+  border: none;
+}
+.cardgrid-pane-header {
+  /* TODO */
+}
+.cardgrid-pane-body {
+  width: 100%;
+  height: 100%;
+  border: solid 1px #e8e8e8;
+  overflow-y: auto;
+}
+.cardgrid-pane-body .cardgrid-canvas {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 16px;
+  display: inline-table;
+}
+.selected-label {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  opacity: 1;
+  transition: none;
+  z-index: 1;
+}
+.selected-label:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 30px solid #00986d;
+  border-right: 30px solid rgba(0, 0, 0, 0);
+}
+.selected-label .label {
+  position: absolute;
+  display: inline;
+  top: 0px;
+  left: 4px;
+  padding: 0;
+  background-color: #dddddd;
+  color: #ffffff;
+  border-radius: 0;
+  font-size: 75%;
+  height: 0;
+  width: 0;
+}
+.label-success {
+  background-color: #00986d;
+}
+.cardgrid-card {
+  position: relative;
+  display: inline-table;
+  margin: 0 4px 4px 0;
+  border: solid 1px #e8e8e8;
+}
+.cardgrid-card > span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.cardgrid-card .selected-label {
+  display: none;
+}
+.cardgrid-card.selected {
+  border-color: #00986d;
+  box-shadow: 0 0 0 1px #00986d inset;
+}
+.cardgrid-card.selected .selected-label {
+  display: block !important;
+}
+.cardgrid-card.hovered {
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+.cardgrid-card.hovered .cardgrid-item-hoverbutton {
+  visibility: visible;
+}
+.cardgrid-card.hovered.selected {
+  -webkit-box-shadow: 0 0 0 1px #00986d inset, 4px 4px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 0 1px #00986d inset, 4px 4px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 1px #00986d inset, 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+button.cardgrid-item {
+  color: #555555;
+  font-size: 12px;
+  font-family: "Helvetica Neue", Helvetica, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", Arial, sans-serif;
+  border: solid 1px #dddddd;
+  border-radius: 0px;
+  background: #ffffff;
+}
+button.cardgrid-item:hover {
+  background: #e6e6e6;
+}
+button.cardgrid-item:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+button.cardgrid-item.cardgrid-item-hoverbutton:hover {
+  background: #00986d;
+  color: #ffffff;
+}
+.cardgrid-item-selectbutton {
+  width: 100px;
+  height: 30px;
+}
+.cardgrid-item-hoverbutton {
+  width: 100px;
+  height: 30px;
+  visibility: hidden;
+}

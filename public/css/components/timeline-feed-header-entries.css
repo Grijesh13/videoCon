@@ -1,0 +1,148 @@
+@charset "utf-8";
+.timeline-feed-header-entries-entry {
+  display: inline;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.timeline-feed-header-entries-entry-link {
+  color: #4285f4;
+  cursor: pointer;
+}
+.timeline-feed-header-entries-entry-link:hover,
+.timeline-feed-header-entries-entry-link:focus {
+  text-decoration: underline;
+}
+.timeline-feed-header-entries-entry-mention {
+  color: #4285f4;
+  cursor: pointer;
+}
+.timeline-feed-header-entries-entry-mention:hover,
+.timeline-feed-header-entries-entry-mention:focus {
+  text-decoration: underline;
+}
+.timeline-feed-header-entries-entry-hashtag {
+  color: #4285f4;
+  cursor: pointer;
+}
+.timeline-feed-header-entries-entry-hashtag:hover,
+.timeline-feed-header-entries-entry-hashtag:focus {
+  text-decoration: underline;
+}
+.timeline-feed-header-entries-entry-emotion {
+  margin: 0 4px;
+}
+.timeline-feed-header-entries-entry-emotion-i:before {
+  vertical-align: bottom;
+}
+.timeline-feed-header-entries-entry-emotion-happy {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #cc4b78;
+}
+.timeline-feed-header-entries-entry-emotion-happy:before {
+  content: "\e0d6";
+}
+.timeline-feed-header-entries-entry-emotion-smiley {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #f89406;
+}
+.timeline-feed-header-entries-entry-emotion-smiley:before {
+  content: "\e0d8";
+}
+.timeline-feed-header-entries-entry-emotion-wink {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #00986d;
+}
+.timeline-feed-header-entries-entry-emotion-wink:before {
+  content: "\e0de";
+}
+.timeline-feed-header-entries-entry-emotion-angry {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #db0000;
+}
+.timeline-feed-header-entries-entry-emotion-angry:before {
+  content: "\e0e4";
+}
+.timeline-feed-header-entries-entry-emotion-sad {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #175d9f;
+}
+.timeline-feed-header-entries-entry-emotion-sad:before {
+  content: "\e0dc";
+}
+.timeline-feed-header-entries-entry-emotion-confused {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #3ea9c4;
+}
+.timeline-feed-header-entries-entry-emotion-confused:before {
+  content: "\e0ea";
+}
+.timeline-feed-header-entries-entry-emotion-hurry {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #dd4b39;
+}
+.timeline-feed-header-entries-entry-emotion-hurry:before {
+  content: "\e611";
+}

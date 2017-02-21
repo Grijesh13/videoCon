@@ -1,0 +1,25 @@
+@charset "utf-8";
+.timeline-filter {
+  width: 240px;
+  right: auto;
+  left: auto;
+}
+.timeline-filter-title {
+  padding: 8px 4px;
+  color: #aaaaaa;
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+.timeline-filter-list {
+  margin: 8px 0;
+}
+.timeline-filter-list-item {
+  padding: 8px;
+}
+.timeline-filter-list-item:hover {
+  background-color: #e8e8e8;
+  cursor: pointer;
+}
+.timeline-filter-list-item.active {
+  background-color: #dddddd;
+}

@@ -1,0 +1,211 @@
+@charset "utf-8";
+.timeline-textarea {
+  position: relative;
+}
+.timeline-textarea-textarea {
+  width: 100%;
+  padding: 2px 72px 2px 4px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  min-height: 42px;
+  background: #ffffff;
+  border: solid 1px #aaaaaa;
+}
+.timeline-textarea-textarea-noborder {
+  border: none;
+}
+.timeline-textarea-placeholder {
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  color: #7f7f7f;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+.timeline-textarea-placeholder.timeline-textarea-hidden {
+  display: none;
+}
+.timeline-textarea-placeholder.timeline-textarea-lighter {
+  color: #bdbdbd;
+}
+.timeline-textarea-input.timeline-textarea-hidden {
+  display: none;
+}
+.timeline-textarea-mention {
+  position: relative;
+  color: #4285f4;
+}
+.timeline-textarea-hashtag {
+  position: relative;
+  color: #4285f4;
+}
+.timeline-textarea-link {
+  color: #4285f4;
+}
+.timeline-textarea-emotion {
+  display: inline-block;
+}
+.timeline-textarea-emotion-i {
+  margin: 0 4px;
+}
+.timeline-textarea-emotion-i:before {
+  vertical-align: bottom;
+}
+.timeline-textarea-emotion-happy {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #cc4b78;
+}
+.timeline-textarea-emotion-happy:before {
+  content: "\e0d6";
+}
+.timeline-textarea-emotion-smiley {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #f89406;
+}
+.timeline-textarea-emotion-smiley:before {
+  content: "\e0d8";
+}
+.timeline-textarea-emotion-wink {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #00986d;
+}
+.timeline-textarea-emotion-wink:before {
+  content: "\e0de";
+}
+.timeline-textarea-emotion-angry {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #db0000;
+}
+.timeline-textarea-emotion-angry:before {
+  content: "\e0e4";
+}
+.timeline-textarea-emotion-sad {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #175d9f;
+}
+.timeline-textarea-emotion-sad:before {
+  content: "\e0dc";
+}
+.timeline-textarea-emotion-confused {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #3ea9c4;
+}
+.timeline-textarea-emotion-confused:before {
+  content: "\e0ea";
+}
+.timeline-textarea-emotion-hurry {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #dd4b39;
+}
+.timeline-textarea-emotion-hurry:before {
+  content: "\e611";
+}
+.timeline-textarea-autocomplete-mention-suggestion {
+  width: 380px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timeline-textarea-autocomplete-mention-suggestion-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+}
+.timeline-textarea-autocomplete-mention-suggestion-title {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.timeline-textarea-autocomplete-mention-suggestion-title-sub {
+  color: #7f7f7f;
+  font-size: 1.2rem;
+  padding-top: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.timeline-textarea-autocomplete-mention-suggestion-title-main {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timeline-textarea-autocomplete-mention-suggestion-title-main-name {
+  margin-right: 8px;
+}
+.timeline-textarea-autocomplete-mention-suggestion-title-main-userid {
+  color: #7f7f7f;
+  font-size: 1.2rem;
+  padding: 2px;
+}

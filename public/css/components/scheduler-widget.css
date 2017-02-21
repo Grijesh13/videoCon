@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * scheduler-widget styles.
+ * @author Lokesh
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * scheduler-widget styles.
+ * @author Lokesh
+ * ------------------------------------------------------------------------*/
+.scheduler-widget .left-margin {
+  font-size: 3rem;
+  cursor: pointer;
+  position: absolute;
+  left: 8px;
+  top: 30%;
+}
+.scheduler-widget .right-margin {
+  font-size: 3rem;
+  cursor: pointer;
+  position: absolute;
+  right: 8px;
+  top: 30%;
+}
+.scheduler-widget .schedules {
+  display: block;
+  width: 100%;
+  vertical-align: middle;
+  line-height: 2em;
+}
+.scheduler-widget .schedule-name {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.scheduler-widget .date-and-time {
+  font-size: 2.4rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.scheduler-widget .date-and-time .schedule-time {
+  margin-left: 18px;
+}
+.scheduler-widget .widget-card-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+.scheduler-widget .schedule-report-module,
+.scheduler-widget .schedule-template-name {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.scheduler-widget .btn {
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.scheduler-widget .btn-default {
+  color: #333333;
+  background-color: #f1f1f1;
+  border-color: #dddddd;
+}
+.scheduler-widget .no-schedule {
+  display: 8121991;
+  position: relative;
+  top: 60px;
+  font-size: 2.4rem;
+}

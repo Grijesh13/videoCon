@@ -1,0 +1,47 @@
+@charset "utf-8";
+.global-navi-button-base {
+  margin-right: 8px;
+  margin-left: 8px;
+  line-height: 46px;
+  background-color: transparent;
+  color: #bdbdbd;
+  font-size: 2rem;
+  border: none;
+}
+.global-navi-button-base:hover {
+  color: #ffffff;
+}
+.global-navi-button-caption {
+  font-size: 1.7rem;
+  line-height: 1;
+}
+.global-navi-button-icon {
+  padding-left: 8px;
+}
+.global-navi-button-user-icon {
+  float: right;
+}
+.global-navi-button-notification {
+  float: right;
+  position: relative;
+}
+.global-navi-button-chat {
+  float: right;
+}
+.global-navi-button-task {
+  float: right;
+}
+.global-navi-button-logout {
+  float: right;
+}
+.global-navi-button-badge-area {
+  position: absolute;
+  top: 24px;
+  left: 30px;
+}
+.global-navi-button-badge-area .hidden {
+  display: none;
+}
+.global-navi-button-white {
+  color: #ffffff;
+}

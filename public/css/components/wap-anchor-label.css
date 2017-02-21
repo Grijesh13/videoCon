@@ -1,0 +1,212 @@
+@charset "utf-8";
+.hint.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1010;
+  display: none;
+  max-height: 480px;
+  padding: 0;
+  text-align: left;
+  background-color: #ffffff;
+  -moz-background-clip: padding-box;
+  border: 1px solid #aaaaaa;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  border: 1px solid #cccccc;
+  color: #333333;
+  white-space: normal;
+}
+.hint.popover.top {
+  max-width: 280px;
+  margin-top: -10px;
+}
+.hint.popover.top .arrow {
+  left: 50%;
+  margin-left: -11px;
+  border-bottom-width: 0;
+  border-top-color: #aaaaaa;
+  bottom: -11px;
+}
+.hint.popover.top .arrow:after {
+  content: " ";
+  bottom: 1px;
+  margin-left: -10px;
+  border-bottom-width: 0;
+  border-top-color: #ffffff;
+}
+.hint.popover.right {
+  max-width: 640px;
+  margin-left: 10px;
+}
+.hint.popover.right .arrow {
+  top: 50%;
+  left: -11px;
+  margin-top: -11px;
+  border-left-width: 0;
+  border-right-color: #aaaaaa;
+}
+.hint.popover.right .arrow:after {
+  content: " ";
+  left: 1px;
+  bottom: -10px;
+  border-left-width: 0;
+  border-right-color: #ffffff;
+}
+.hint.popover.bottom {
+  max-width: 280px;
+  margin-top: 10px;
+}
+.hint.popover.bottom .arrow {
+  left: 50%;
+  margin-left: -11px;
+  border-top-width: 0;
+  border-bottom-color: #aaaaaa;
+  top: -11px;
+}
+.hint.popover.bottom .arrow:after {
+  content: " ";
+  top: 1px;
+  margin-left: -10px;
+  border-top-width: 0;
+  border-bottom-color: #ffffff;
+}
+.hint.popover.left {
+  max-width: 640px;
+  margin-left: -10px;
+}
+.hint.popover.left .arrow {
+  top: 50%;
+  right: -11px;
+  margin-top: -11px;
+  border-right-width: 0;
+  border-left-color: #aaaaaa;
+}
+.hint.popover.left .arrow:after {
+  content: " ";
+  right: 1px;
+  border-right-width: 0;
+  border-left-color: #ffffff;
+  bottom: -10px;
+}
+.hint.popover-text-content {
+  padding: 8px 12px;
+  word-wrap: break-word;
+}
+.hint.popover-html-content {
+  word-wrap: break-word;
+}
+.hint.popover .arrow {
+  border-width: 11px;
+}
+.hint.popover .arrow,
+.hint.popover .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 10px;
+  content: "";
+}
+.wap-anchor-label {
+  display: inline-block;
+}
+.wap-anchor-label-parent {
+  word-wrap: break-word;
+  padding: 4px 0;
+  margin-bottom: 0px;
+  height: 32px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.wap-anchor-label-parent-linkcolor {
+  color: #4285f4;
+}
+.wap-anchor-label-parent-side-padding {
+  padding: 4px 8px;
+}
+.wap-anchor-label-min-width-80 {
+  min-width: 80px;
+}
+.wap-anchor-label-min-width-120 {
+  min-width: 120px;
+}
+.wap-anchor-label-min-width-160 {
+  min-width: 160px;
+}
+.wap-anchor-label-min-width-200 {
+  min-width: 200px;
+}
+.wap-anchor-label-min-width-280 {
+  min-width: 280px;
+}
+.wap-anchor-label-min-width-360 {
+  min-width: 360px;
+}
+.wap-anchor-label-max-width-80 {
+  max-width: 80px;
+}
+.wap-anchor-label-max-width-120 {
+  max-width: 120px;
+}
+.wap-anchor-label-max-width-160 {
+  max-width: 160px;
+}
+.wap-anchor-label-max-width-200 {
+  max-width: 200px;
+}
+.wap-anchor-label-max-width-280 {
+  max-width: 280px;
+}
+.wap-anchor-label-max-width-360 {
+  max-width: 360px;
+}
+.wap-anchor-label-font-size-title {
+  font-size: 2rem;
+}
+.wap-anchor-label-font-size-subhead {
+  font-size: 1.7rem;
+}
+.wap-anchor-label-font-size-body {
+  font-size: 1.4rem;
+}
+.wap-anchor-label-font-size-caption {
+  font-size: 1.2rem;
+}
+.wap-anchor-label-font-size-subcaption {
+  font-size: 1rem;
+}
+.wap-anchor-label-font-size-strong-value {
+  font-size: 3rem;
+}
+.wap-anchor-label-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wap-anchor-label-left-margin {
+  margin-left: 4px;
+}
+.wap-anchor-label-disabled {
+  pointer-events: none;
+}
+.wap-anchor-label.hidden {
+  display: none;
+}
+.wap-anchor-label.invisible {
+  visibility: hidden;
+}

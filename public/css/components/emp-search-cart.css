@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col,
+.emp-search-cart-title-icon,
+.emp-search-cart-title-caption,
+.emp-search-cart-title-counter {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.emp-search-cart {
+  border-color: #f1f1f1;
+  background-color: #e8e8e8;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  padding-top: 6px;
+}
+.emp-search-cart :hover {
+  cursor: pointer;
+}
+.emp-search-cart-title {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.emp-search-cart-title-icon {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 8.333333333333332%;
+  flex-basis: 8.333333333333332%;
+  max-width: 8.33333333%;
+  text-align: center;
+}
+.emp-search-cart-title-caption {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 66.66666666666666%;
+  flex-basis: 66.66666666666666%;
+  max-width: 66.66666667%;
+}
+.emp-search-cart-title-counter {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+}
+.emp-search-cart-icon {
+  display: inline-block;
+  padding-bottom: 2px;
+  font-size: 2.4rem;
+}
+.emp-search-cart-caption {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  padding-top: 4px;
+}
+.emp-search-cart-count-info {
+  display: inline-block;
+}
+.emp-search-cart-count {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.emp-search-cart-count-unit {
+  font-weight: 700;
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.emp-search-cart-list-container {
+  display: none;
+  z-index: 1010;
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  background-color: #e8e8e8;
+  border-color: #f1f1f1;
+  border: solid 1px #cccccc;
+}
+.emp-search-cart-list-container.open {
+  display: block;
+}

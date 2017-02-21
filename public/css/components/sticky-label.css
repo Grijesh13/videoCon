@@ -1,0 +1,80 @@
+@charset "utf-8";
+.wap-core-ui-stickylabel {
+  margin: 4px;
+  position: relative;
+  min-width: 120px;
+  max-width: 350px;
+  border: 1px outset #dddddd;
+}
+.wap-core-ui-stickylabel.editable {
+  cursor: pointer;
+}
+.wap-core-ui-stickylabel .shadow {
+  width: 105px;
+  height: 20px;
+  content: "";
+  position: absolute;
+  right: 4px;
+  bottom: 5px;
+  -webkit-box-shadow: 0 5px 5px #555555;
+  -moz-box-shadow: 0 5px 5px #555555;
+  box-shadow: 0 5px 5px #555555;
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
+  z-index: -1;
+}
+.wap-core-ui-stickylabel .card {
+  padding: 4px 16px 4px 16px;
+  display: block;
+}
+.wap-core-ui-stickylabel .left-marker {
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.wap-core-ui-stickylabel .right-marker {
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.wap-core-ui-stickylabel .user {
+  bottom: 0;
+  font-size: 1.2rem;
+  color: #999999;
+}
+.wap-core-ui-stickylabel .edit-button {
+  display: none;
+}
+.wap-core-ui-stickylabel.editable .edit-button {
+  display: inline;
+}
+.wap-core-ui-stickylabel .remove-button {
+  display: none;
+}
+.wap-core-ui-stickylabel.editable .remove-button {
+  display: inline;
+}
+.wap-core-ui-stickylabel .design-button {
+  display: none;
+}
+.wap-core-ui-stickylabel.editable .design-button {
+  display: inline;
+}
+.wap-core-ui-stickylabel-designSelectDlg .sticky-labels-wrapper {
+  overflow-y: auto;
+  max-height: 600px;
+}
+.wap-core-ui-stickylabel-designSelectDlg .sticky-label-wrapper {
+  border: 1px solid transparent;
+}
+.wap-core-ui-stickylabel-designSelectDlg .sticky-label-wrapper.selected {
+  border: 1px solid #4285f4;
+  background-color: #a0c2f9;
+}

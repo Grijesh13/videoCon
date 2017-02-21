@@ -1,0 +1,102 @@
+@charset "utf-8";
+.spreadsheet-image-upload-area {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-spacing: 20px;
+}
+.spreadsheet-image-upload-area.file-dropping {
+  border-color: #4285f4;
+}
+.spreadsheet-image-upload-area-td {
+  border: #dddddd 4px dashed;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  font-family: "メイリオ", sans-serif;
+  height: 180px;
+  padding: 0;
+}
+.spreadsheet-image-upload-area-td-table {
+  width: 100%;
+  text-align: center;
+  border-spacing: 0;
+}
+.spreadsheet-image-upload-area-h1 {
+  font-size: 2rem;
+  color: #cccccc;
+  padding: 40px 0 10px;
+  display: block;
+}
+.spreadsheet-image-upload-area-h1.file-dropping {
+  color: #4285f4;
+}
+.spreadsheet-image-upload-area-h2 {
+  display: block;
+  padding: 16px 0 4px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #cccccc;
+}
+.spreadsheet-image-upload-area-div {
+  margin: 0;
+  background-color: #4285f4;
+  border: 1px solid #dddddd;
+  color: #ffffff;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+  cursor: default;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  height: 27px;
+  line-height: 27px;
+  min-width: 54px;
+  outline: 0;
+  padding: 0 8px;
+  position: relative;
+  display: inline-block;
+}
+.spreadsheet-image-upload-area-button {
+  display: none;
+}
+.spreadsheet-image-upload-area-progress {
+  position: absolute;
+  height: 50px;
+  top: 50%;
+  margin-top: -24px;
+  width: 100%;
+}
+.spreadsheet-image-upload-area-progress-text {
+  font-size: 1.4rem;
+  padding: 1px;
+}
+.spreadsheet-image-upload-area-progress-bar {
+  width: 70%;
+  border: #cccccc 1px solid;
+  padding: 1px;
+  position: relative;
+  display: inline-block;
+}
+.spreadsheet-image-upload-area-progress-bar-inner {
+  height: 8px;
+  -webkit-transition: width 2s;
+  -moz-transition: width 2s;
+  -o-transition: width 2s;
+  transition: width 2s;
+  background-color: #f1f1f1;
+}
+.spreadsheet-image-upload-area .file-dropping {
+  color: #4285f4;
+}

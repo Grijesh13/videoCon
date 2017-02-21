@@ -1,0 +1,306 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * approval-flow-step-list-item.xml style
+ * @author suetsugu_r
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col,
+.approval-flow-step-list-item-img {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+/**	
+ * approval-flow-step-list-item.xml style
+ * @version 0.1
+ * @author suetsugu_r
+ */
+.approval-flow-step-list-item {
+  width: 100%;
+}
+.approval-flow-step-list-item-font-size-ss {
+  font-size: 1.2rem;
+}
+.approval-flow-step-list-item-text-align-center {
+  text-align: center;
+}
+.approval-flow-step-list-item-approver-box-div {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px 0 0 0;
+  height: 48px;
+}
+.approval-flow-step-list-item-approver-box-div:hover {
+  background-color: #f1f1f1;
+}
+.approval-flow-step-list-item-approver-box.current {
+  border-left: 4px solid #4285f4;
+}
+.approval-flow-step-list-item-approver-box {
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+  clear: right;
+  border: 1px solid #aaaaaa;
+}
+.approval-flow-step-list-item-approver-box-header {
+  clear: both;
+  height: 48px;
+  font-size: 16px;
+  color: #555555;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: #dddddd 1px solid;
+  font-weight: 700;
+}
+.approval-flow-step-list-item-step-name {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-left: 16px;
+}
+.approval-flow-step-list-item-approver-box-ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+.approval-flow-step-list-item-approver-box-ul .approval-flow-step-list-item-approver-box-li:nth-child(-n+1) .approval-flow-step-list-item-approver-box-div {
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.approval-flow-step-list-item-approver-box-ul .approval-flow-step-list-item-approver-box-li:nth-child(-n+1) .approval-flow-step-list-item-approver-box-div-hidden {
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.approval-flow-step-list-item-approver-box-ul .approval-flow-step-list-item-approver-box-li:nth-child(n+2) .approval-flow-step-list-item-approver-box-div {
+  border-top: #dddddd 1px solid;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.approval-flow-step-list-item-approver-box-ul .approval-flow-step-list-item-approver-box-li:nth-child(n+2) .approval-flow-step-list-item-approver-box-div-hidden {
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.approval-flow-step-list-item-img {
+  margin: 0 8px 0 16px;
+  height: 32px;
+  width: 32px;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.1);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 32px;
+  flex-basis: 32px;
+}
+.approval-flow-step-list-item-line-arrow {
+  margin: 16px 0 24px 48px;
+}
+.approval-flow-step-list-item-line-arrow.invisible {
+  visibility: hidden;
+}
+.approval-flow-step-list-item-line-arrow:after {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 1px solid #555555;
+  border-right: 1px solid #555555;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  content: "";
+}
+.approval-flow-step-list-item-approver .approval-flow-step-list-item-li:first-child {
+  margin-top: 24px;
+}
+.approval-flow-step-list-item-approver-info {
+  width: 736px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.approval-flow-step-list-item-delete-approver-button {
+  margin-top: 8px;
+  font-size: 1.6rem;
+  margin-right: 12px;
+  color: #aaaaaa;
+}
+.approval-flow-step-list-item-delete-approver-button:hover {
+  cursor: pointer;
+  color: #333333;
+}
+.approval-flow-step-list-item-add-approver-button {
+  margin-left: 24px;
+  cursor: pointer;
+  color: #4285f4;
+}
+.approval-flow-step-list-item-clearfix:before,
+.approval-flow-step-list-item-clearfix:after {
+  display: table;
+  content: " ";
+}
+.approval-flow-step-list-item-clearfix:after {
+  clear: both;
+}
+.approval-flow-step-list-item-pull-right {
+  float: right;
+}
+.approval-flow-step-list-item-pull-left {
+  float: left;
+}
+.approval-flow-step-list-item-show {
+  display: block;
+}
+.approval-flow-step-list-item-department,
+.approval-flow-step-list-item-title {
+  margin-left: 8px;
+  width: 160px;
+  font-size: 10px;
+  color: #aaaaaa;
+}
+.approval-flow-step-list-item-name {
+  width: 200px;
+  margin-left: 8px;
+  color: #333333;
+  font-weight: 700;
+}
+.approval-flow-step-list-item-approver-search-div {
+  margin: 0 8px 0 0;
+  font-size: 12px;
+  font-weight: 400;
+}
+.approval-flow-step-list-item-icon-approved {
+  color: #33ac71;
+  margin: 4px 12px 0 8px;
+  font-size: 24px;
+}
+.approval-flow-step-list-item-step-tool-buttons {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.approval-flow-step-list-item-step-add-button,
+.approval-flow-step-list-item-step-delete-button {
+  color: #4285f4;
+  cursor: pointer;
+  margin-right: 16px;
+}
+.approval-flow-step-list-item-step-add-button.hidden,
+.approval-flow-step-list-item-step-delete-button.hidden {
+  display: none;
+}
+.approval-flow-step-list-item-step-add-button:hover,
+.approval-flow-step-list-item-step-delete-button:hover {
+  color: #818da2;
+}
+.approval-flow-step-list-item-add-approver-div {
+  border-top: 1px solid #dddddd;
+}
+.approval-flow-step-list-item-add-approver {
+  cursor: pointer;
+  padding: 8px 0 0 16px;
+  color: #4285f4;
+}
+.approval-flow-step-list-item-add-approver:hover {
+  color: #818da2;
+}

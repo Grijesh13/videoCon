@@ -1,0 +1,53 @@
+@charset "utf-8";
+.wap-core-ui-stealthpopover {
+  visibility: hidden;
+  vertical-align: middle;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.wap-core-ui-stealthpopover.near {
+  visibility: visible;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.wap-core-ui-stealthpopover:hover {
+  cursor: pointer;
+}
+.wap-core-ui-stealthpopover.pull-right {
+  float: right;
+}
+.wap-core-ui-stealthpopover-popover {
+  max-width: none;
+  max-height: none;
+}
+.wap-core-ui-stealthpopover-popover .wap-core-ui-stealthpopover-popover-menu {
+  float: left;
+  margin-right: 8px;
+}
+.wap-core-ui-stealthpopover-popover .wap-core-ui-stealthpopover-popover-menu .wap-core-ui-stealthpopover-menu-title {
+  font-weight: bold;
+}
+.wap-core-ui-stealthpopover-popover .wap-core-ui-stealthpopover-popover-menu ul {
+  list-style-type: none;
+  padding-left: 4px;
+}
+.wap-core-ui-stealthpopover-popover .wap-core-ui-stealthpopover-popover-menu ul li {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.wap-core-ui-stealthpopover-popover .wap-core-ui-stealthpopover-popover-menu ul li:hover {
+  background-color: #a0c2f9;
+}
+.wap-core-ui-stealthpopover-popover .wap-core-ui-stealthpopover-popover-content {
+  float: left;
+}

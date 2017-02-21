@@ -1,0 +1,568 @@
+@charset "utf-8";
+.user-guide .guide-toolbar-btn {
+  float: right;
+  margin: 16px 4px 16px 4px;
+  background: #ffffff;
+}
+.user-guide.description-box {
+  position: absolute;
+  border: 2px solid #e91e63;
+  width: 96%;
+  background: #ffffff;
+}
+.user-guide.description-box .overflow {
+  height: 100%;
+  overflow: hidden;
+}
+.user-guide.edit-helper {
+  outline: 2px dashed #e91e63;
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+  background: #f5f5f5;
+  zoom: 1;
+  filter: alpha(opacity=60);
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.user-guide .edit-guide-message {
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  padding: 12px;
+  background-color: #ecf2fd;
+  color: #4285f4;
+  border: 1px solid #4285f4;
+  width: 95%;
+  position: absolute;
+  left: 12px;
+  top: 80px;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.user-guide .edit-guide-message.shown {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.user-guide .hide {
+  display: none;
+}
+.user-guide.hide {
+  display: none;
+}
+.user-guide.description-box.slide {
+  -webkit-transition: height 0.2s ease-out;
+  -moz-transition: height 0.2s ease-out;
+  -o-transition: height 0.2s ease-out;
+  transition: height 0.2s ease-out;
+}
+.user-guide.description-box.edit-mode:hover:not(.editing) .bottom-icon {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: block;
+}
+.user-guide.description-box.open-box {
+  z-index: 100;
+}
+.user-guide.description-box.open-box.editing {
+  background: #ffffff;
+}
+.user-guide.description-box.open-box.editing.description-area {
+  overflow-y: auto;
+}
+.user-guide.description-box.can-open {
+  width: 100%;
+  height: 16px;
+  zoom: 1;
+  filter: alpha(opacity=60);
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  background: #dddddd;
+}
+.user-guide.description-box .bottom-icon {
+  color: #7f7f7f;
+  display: none;
+  cursor: pointer;
+}
+.user-guide.description-box .bottom-icon:hover {
+  color: #000000;
+}
+.user-guide.description-box .btn-edit-guide {
+  position: absolute;
+  bottom: 8px;
+  right: 24px;
+  margin-right: 6px;
+}
+.user-guide.description-box .btn-remove-guide {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+.user-guide-col {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  background: #f1f1f1;
+  border-left: 2px solid #dddddd;
+}
+.user-guide-info {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  border-bottom: 1px solid #dddddd;
+}
+.user-guide-info .full-help-title {
+  float: left;
+  margin-left: 20px;
+  top: 20px;
+  position: relative;
+  color: #000000;
+  font-size: 1.7rem;
+}
+.user-guide-info .hide {
+  display: none;
+}
+.user-guide-info .btn-add {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.user-guide-node {
+  position: absolute;
+  z-index: 100;
+  background: transparent;
+}
+.user-guide-node .target {
+  position: absolute;
+  border: 2px solid #e91e63;
+  z-index: 100;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.user-guide-node .target.edit-mode {
+  cursor: move;
+}
+.user-guide-node .line {
+  border: 1px solid #e91e63;
+  position: absolute;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.user-guide-node .left-arrow {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-right-color: #e91e63;
+}
+.user-guide-node .description-box {
+  border: 2px solid #e91e63;
+  background: #ffffff;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.user-guide-node .description-area {
+  padding: 12px;
+}
+.user-guide-node .expand-helper {
+  position: absolute;
+  padding: 4px;
+  cursor: ns-resize;
+  z-index: 100;
+}
+.user-guide-node .expand-helper.hide {
+  display: none;
+}
+.user-guide-node .expand-mark {
+  background: #e91e63;
+  width: 8px;
+  height: 8px;
+}
+.user-guide-node .shown {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+/*
+ * Temp Rich Editor
+ * (Use Google Closure Rich Editor)
+ * Remove these style after rich editor is rewritten
+ *
+*/
+/*
+ * Styles used by goog.ui.ToolbarRenderer.
+ */
+.user-guide {
+  /*
+ * Styles used by goog.ui.ToolbarButtonRenderer.
+ */
+  /* Pseudo-rounded corners. */
+  /* Disabled styles. */
+  /* Only draw borders when in a non-default state. */
+  /* Hover styles. */
+  /* Active/checked/selected styles. */
+  /* Pill (collapsed border) styles. */
+  /*
+ * Styles used by goog.ui.ToolbarMenuButtonRenderer.
+ */
+  /* Pseudo-rounded corners. */
+  /* Disabled styles. */
+  /* Only draw borders when in a non-default state. */
+  /* Hover styles. */
+  /* Active/open styles. */
+  /* Menu button caption style. */
+  /* Dropdown style. */
+  /*
+ * Styles used by goog.ui.ToolbarSeparatorRenderer.
+ */
+  /*
+ * Additional styling for toolbar select controls, which always have borders.
+ */
+  /* Color indicator. */
+  /* Thinner padding for color picker buttons, to leave room for the indicator. */
+}
+.user-guide .goog-toolbar {
+  /* Client apps may override the URL at which they serve the image. */
+  background: #ffffff;
+  border-bottom: 1px solid #cccccc;
+  cursor: default;
+  font-size: 1.4rem;
+  margin: 0;
+  outline: none;
+  padding: 2px;
+  position: relative;
+  zoom: 1;
+  /* The toolbar element must have layout on IE. */
+}
+.user-guide .goog-toolbar-button {
+  margin: 0 2px;
+  border: 0;
+  padding: 0;
+  color: #333333;
+  text-decoration: none;
+  list-style: none;
+  vertical-align: middle;
+  cursor: default;
+  outline: none;
+}
+.user-guide .goog-toolbar-button-outer-box,
+.user-guide .goog-toolbar-button-inner-box {
+  border-color: transparent;
+}
+.user-guide .goog-toolbar-button-outer-box {
+  border-width: 1px 0;
+  border-style: solid;
+  padding: 0;
+}
+.user-guide .goog-toolbar-button-inner-box {
+  border-width: 0 1px;
+  border-style: solid;
+  padding: 4px;
+}
+.user-guide ::root .goog-toolbar-button-inner-box {
+  /* Required to make pseudo-rounded corners work on Safari. */
+  line-height: normal;
+}
+.user-guide .goog-toolbar-button-disabled {
+  zoom: 1;
+  filter: alpha(opacity=30);
+  -webkit-opacity: 0.3;
+  -moz-opacity: 0.3;
+  opacity: 0.3;
+}
+.user-guide .goog-toolbar-button-disabled .goog-toolbar-button-outer-box,
+.user-guide .goog-toolbar-button-disabled .goog-toolbar-button-inner-box {
+  /* Disabled text/border color trumps everything else. */
+  color: #333333;
+  border-color: #999999;
+}
+.user-guide .goog-toolbar-button-hover .goog-toolbar-button-outer-box,
+.user-guide .goog-toolbar-button-active .goog-toolbar-button-outer-box,
+.user-guide .goog-toolbar-button-checked .goog-toolbar-button-outer-box,
+.user-guide .goog-toolbar-button-selected .goog-toolbar-button-outer-box {
+  border-width: 1px 0;
+  border-style: solid;
+  padding: 0;
+}
+.user-guide .goog-toolbar-button-hover .goog-toolbar-button-inner-box,
+.user-guide .goog-toolbar-button-active .goog-toolbar-button-inner-box,
+.user-guide .goog-toolbar-button-checked .goog-toolbar-button-inner-box,
+.user-guide .goog-toolbar-button-selected .goog-toolbar-button-inner-box {
+  border-width: 0 1px;
+  border-style: solid;
+  padding: 4px;
+}
+.user-guide .goog-toolbar-button-hover .goog-toolbar-button-outer-box,
+.user-guide .goog-toolbar-button-hover .goog-toolbar-button-inner-box {
+  /* Hover border style wins over active/checked/selected. */
+  border-color: #f1f1f1;
+}
+.user-guide .goog-toolbar-button-active,
+.user-guide .goog-toolbar-button-checked,
+.user-guide .goog-toolbar-button-selected {
+  /* Active/checked/selected background color always wins. */
+  background-color: #f1f1f1;
+}
+.user-guide .goog-toolbar-button-active .goog-toolbar-button-outer-box,
+.user-guide .goog-toolbar-button-active .goog-toolbar-button-inner-box,
+.user-guide .goog-toolbar-button-checked .goog-toolbar-button-outer-box,
+.user-guide .goog-toolbar-button-checked .goog-toolbar-button-inner-box,
+.user-guide .goog-toolbar-button-selected .goog-toolbar-button-outer-box,
+.user-guide .goog-toolbar-button-selected .goog-toolbar-button-inner-box {
+  border-color: #dddddd;
+}
+.user-guide .goog-toolbar-button-collapse-right,
+.user-guide .goog-toolbar-button-collapse-right .goog-toolbar-button-outer-box,
+.user-guide .goog-toolbar-button-collapse-right .goog-toolbar-button-inner-box {
+  margin-right: 0;
+}
+.user-guide .goog-toolbar-button-collapse-left,
+.user-guide .goog-toolbar-button-collapse-left .goog-toolbar-button-outer-box,
+.user-guide .goog-toolbar-button-collapse-left .goog-toolbar-button-inner-box {
+  margin-left: 0;
+}
+.user-guide .goog-toolbar-menu-button {
+  margin: 0 2px;
+  border: 0;
+  padding: 0;
+  color: #333333;
+  text-decoration: none;
+  list-style: none;
+  vertical-align: middle;
+  cursor: default;
+  outline: none;
+}
+.user-guide .goog-toolbar-menu-button-outer-box,
+.user-guide .goog-toolbar-menu-button-inner-box {
+  border-color: transparent;
+}
+.user-guide .goog-toolbar-menu-button-outer-box {
+  border-width: 1px 0;
+  border-style: solid;
+  padding: 0;
+}
+.user-guide .goog-toolbar-menu-button-inner-box {
+  border-width: 0 1px;
+  border-style: solid;
+  padding: 4px;
+}
+.user-guide ::root .goog-toolbar-menu-button-caption,
+.user-guide ::root .goog-toolbar-menu-button-dropdown {
+  /* Required to make pseudo-rounded corners work on Safari. */
+  line-height: normal;
+}
+.user-guide .goog-toolbar-menu-button-disabled {
+  zoom: 1;
+  filter: alpha(opacity=30);
+  -webkit-opacity: 0.3;
+  -moz-opacity: 0.3;
+  opacity: 0.3;
+}
+.user-guide .goog-toolbar-menu-button-disabled .goog-toolbar-menu-button-outer-box,
+.user-guide .goog-toolbar-menu-button-disabled .goog-toolbar-menu-button-inner-box {
+  /* Disabled text/border color trumps everything else. */
+  color: #333333;
+  border-color: #7f7f7f;
+}
+.user-guide .goog-toolbar-menu-button-hover .goog-toolbar-menu-button-outer-box,
+.user-guide .goog-toolbar-menu-button-active .goog-toolbar-menu-button-outer-box,
+.user-guide .goog-toolbar-menu-button-open .goog-toolbar-menu-button-outer-box {
+  border-width: 1px 0;
+  border-style: solid;
+  padding: 0;
+}
+.user-guide .goog-toolbar-menu-button-hover .goog-toolbar-menu-button-inner-box,
+.user-guide .goog-toolbar-menu-button-active .goog-toolbar-menu-button-inner-box,
+.user-guide .goog-toolbar-menu-button-open .goog-toolbar-menu-button-inner-box {
+  border-width: 0 1px;
+  border-style: solid;
+  padding: 4px;
+}
+.user-guide .goog-toolbar-menu-button-hover .goog-toolbar-menu-button-outer-box,
+.user-guide .goog-toolbar-menu-button-hover .goog-toolbar-menu-button-inner-box {
+  /* Hover border color trumps active/open style. */
+  border-color: #dddddd;
+}
+.user-guide .goog-toolbar-menu-button-active,
+.user-guide .goog-toolbar-menu-button-open {
+  /* Active/open background color wins. */
+  background-color: #dddddd;
+}
+.user-guide .goog-toolbar-menu-button-active .goog-toolbar-menu-button-outer-box,
+.user-guide .goog-toolbar-menu-button-active .goog-toolbar-menu-button-inner-box,
+.user-guide .goog-toolbar-menu-button-open .goog-toolbar-menu-button-outer-box,
+.user-guide .goog-toolbar-menu-button-open .goog-toolbar-menu-button-inner-box {
+  border-color: #dddddd;
+}
+.user-guide .goog-toolbar-menu-button-caption {
+  padding: 0 4px 0 0;
+  vertical-align: middle;
+}
+.user-guide .goog-toolbar-menu-button-dropdown {
+  width: 8px;
+  /* Client apps may override the URL at which they serve the sprite. */
+  background: url(//ssl.gstatic.com/editor/editortoolbar.png) no-repeat -388px 0;
+  vertical-align: middle;
+}
+.user-guide .goog-toolbar-separator {
+  margin: 0 2px;
+  border-left: 2px solid #dddddd;
+  border-right: 2px solid #f5f5f5;
+  padding: 0;
+  width: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  vertical-align: middle;
+  line-height: normal;
+  font-size: 2rem;
+  overflow: hidden;
+}
+.user-guide .goog-toolbar-select .goog-toolbar-menu-button-outer-box {
+  border-width: 2px 0;
+  border-style: solid;
+  padding: 0;
+}
+.user-guide .goog-toolbar-select .goog-toolbar-menu-button-inner-box {
+  border-width: 0 1px;
+  border-style: solid;
+  padding: 4px;
+}
+.user-guide .goog-toolbar-select .goog-toolbar-menu-button-outer-box,
+.user-guide .goog-toolbar-select .goog-toolbar-menu-button-inner-box {
+  border-color: #f1f1f1;
+}
+.user-guide .goog-inline-block {
+  position: relative;
+  display: inline-block;
+}
+.user-guide .goog-palette-cell .goog-palette-colorswatch {
+  border: none;
+  font-size: 1.4rem;
+  height: 18px;
+  position: relative;
+  width: 18px;
+}
+.user-guide .goog-palette-cell-hover .goog-palette-colorswatch {
+  border: 1px solid #f1f1f1;
+  height: 16px;
+  width: 16px;
+}
+.user-guide .goog-palette-cell-selected .goog-palette-colorswatch {
+  /* Client apps may override the URL at which they serve the sprite. */
+  background: url(//ssl.gstatic.com/editor/editortoolbar.png) no-repeat -368px 0;
+  border: 1px solid #333333;
+  color: #f1f1f1;
+  font-weight: 700;
+  height: 16px;
+  width: 16px;
+}
+.user-guide .goog-palette-customcolor {
+  background-color: #f5f5f5;
+  border: 1px solid #dddddd;
+  color: #555555;
+  font-size: 1.4rem;
+  height: 16px;
+  position: relative;
+  width: 16px;
+}
+.user-guide .goog-palette-cell-hover .goog-palette-customcolor {
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  color: #f5f5f5;
+}
+.user-guide .goog-menu {
+  background: #ffffff;
+  border-color: #cccccc #555555 #555555 #cccccc;
+  border-style: solid;
+  border-width: 1px;
+  cursor: default;
+  font-size: 1.4rem;
+  margin: 0;
+  min-width: 164px;
+  outline: none;
+  padding: 4px 0;
+  position: absolute;
+  z-index: 1000000;
+  /* Arbitrary, but some apps depend on it... */
+}
+.user-guide .goog-palette {
+  cursor: default;
+  outline: none;
+}
+.user-guide .goog-palette-table {
+  border: 1px solid #555555;
+  border-collapse: collapse;
+  margin: 4px;
+}
+.user-guide .goog-palette-cell {
+  border: 0;
+  border-right: 1px solid #555555;
+  cursor: pointer;
+  height: 18px;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 18px;
+}
+.user-guide .goog-color-menu-button-indicator {
+  border-bottom: 4px solid #f1f1f1;
+}
+.user-guide .goog-color-menu-button .goog-menu-button-inner-box,
+.user-guide .goog-toolbar-color-menu-button .goog-toolbar-menu-button-inner-box {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/************************   Rich Editor End  **************************/
+.user-guide .editor-discard {
+  position: absolute;
+  right: 4px;
+  top: 0;
+  font-size: 1.4rem;
+}
+.user-guide .editor-save {
+  position: absolute;
+  right: 24px;
+  top: 0;
+  font-size: 1.4rem;
+}

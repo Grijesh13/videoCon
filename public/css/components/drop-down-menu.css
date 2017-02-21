@@ -1,0 +1,98 @@
+@charset "utf-8";
+.wap-core-ui-dropdown {
+  position: relative;
+  display: inline;
+}
+.wap-core-ui-dropdown .wap-icon-caret-right {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.wap-core-ui-dropdown .dropdown-toggle {
+  position: relative;
+  padding-right: 0px;
+  text-align: left;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0;
+}
+.wap-core-ui-dropdown .dropdown-submenu {
+  position: relative;
+}
+.wap-core-ui-dropdown .wap-icon-caret-up {
+  position: absolute;
+  top: 4px;
+  right: 0px;
+  z-index: 1;
+  background: lightgray;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.wap-core-ui-dropdown .dropdown-rotate-button {
+  position: absolute;
+  right: -57px;
+  height: 34px;
+}
+.wap-core-ui-dropdown .drop-down-button {
+  position: absolute;
+  width: 20px;
+  height: 34px;
+  z-index: 1;
+  -webkit-border-radius: 0px 3px 3px 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0px 3px 3px 0px;
+  -moz-background-clip: padding;
+  border-radius: 0px 3px 3px 0px;
+  background-clip: padding-box;
+}
+.wap-core-ui-dropdown .drop-down-button > .wap-icon-caret-down {
+  position: relative;
+  left: -9px;
+  top: -2px;
+}
+.wap-core-ui-dropdown .dropdown-button-text {
+  margin-left: 2px;
+  margin-right: 12px;
+}
+.wap-core-ui-dropdown .wap-icon-caret-up:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  background: #7f7f7f;
+  z-index: 2;
+}
+.wap-core-ui-dropdown ul {
+  display: none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.wap-core-ui-dropdown .item-text {
+  margin-left: 4px;
+}
+.wap-core-ui-dropdown .dropdown-menu li:hover > a {
+  color: #191919;
+}
+.wap-core-ui-dropdown .dropdown-menu li > a {
+  color: #555555;
+}
+.wap-core-ui-dropdown li:hover > ul {
+  display: block;
+  position: absolute;
+  left: 100%;
+  top: 0px;
+}
+.wap-core-ui-dropdown > ul.root-dropdown-menu {
+  top: 150%;
+  width: 100%;
+}
+.wap-core-ui-dropdown .menu-icon {
+  float: left;
+  margin-top: 4px;
+}
+.wap-core-ui-dropdown .icon-hidden {
+  visibility: hidden;
+}

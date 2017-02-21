@@ -1,0 +1,218 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * insta-report-template styles.
+ * (temporary style)
+ * @author nishiyama_k
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col,
+.insta-report-template-tool-area,
+.insta-report-template-list-area,
+.insta-report-template-cardgrid-card-default-card-template-left,
+.insta-report-template-cardgrid-card-default-card-template-right {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+/* --------------------------------------------------------------------------
+ * cell padding for layout system.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.grid-cell-padding {
+  padding: 16px 16px;
+}
+/* --------------------------------------------------------------------------
+ * insta-report-template styles.
+ * (temporary style)
+ * @author nishiyama_k
+ * ------------------------------------------------------------------------*/
+.insta-report-template {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-height: 100%;
+}
+.insta-report-template-tool-area {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 56px;
+  flex-basis: 56px;
+  padding-left: 16px;
+  padding-top: 8px;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+.insta-report-template-tool-area-tool-icon {
+  display: inline-block;
+  font-size: 2.4rem;
+  margin: 12px 0px;
+  cursor: pointer;
+}
+.insta-report-template-tool-area-tool-icon:hover {
+  color: #818da2;
+}
+.insta-report-template-tool-area-tool-icon.active {
+  color: #4285f4;
+}
+.insta-report-template-list-area {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  max-width: 100%;
+  border: 1px solid #dddddd;
+}
+.insta-report-template-list-area-title {
+  font-size: 1.7rem;
+  padding-left: 12px;
+  padding-top: 8px;
+}
+.insta-report-template-list-area-list-content {
+  max-height: 100%;
+  overflow-y: auto;
+}
+.insta-report-template-list-area-filter-filter-tab {
+  position: relative;
+}
+.insta-report-template-list-area-filter .nav.nav-tabs {
+  border-bottom: none;
+  margin-bottom: 8px;
+  padding-left: 64px;
+}
+.insta-report-template-list-area-filter .nav.nav-tabs .tab-header:first-child {
+  border-bottom: 4px solid #4285f4;
+}
+.insta-report-template-list-area-filter .nav.nav-tabs .tab-header a:hover {
+  border-color: transparent;
+  background-color: transparent;
+}
+.insta-report-template-list-area .cardgrid-scroll-target {
+  padding: 0px !important;
+}
+.insta-report-template-list-area .cardgrid-canvas {
+  padding: 0px;
+  width: 100%;
+}
+.insta-report-template-list-area .cardgrid-card {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-height: 100%;
+  cursor: pointer;
+  margin: 0px;
+  border: none;
+  padding: 10px 24px;
+  border-left: 4px solid transparent;
+}
+.insta-report-template-list-area .cardgrid-card:hover {
+  background-color: #f1f1f1;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.insta-report-template-list-area .cardgrid-card.active {
+  background-color: #ecf2fd;
+  border-left: 3px solid #4285f4;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.insta-report-template-cardgrid-card-default-card-template-left {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 96px;
+  flex-basis: 96px;
+  height: 100%;
+  text-align: center;
+}
+.insta-report-template-cardgrid-card-default-card-template-left-img {
+  border: 1px solid #dddddd;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+}
+.insta-report-template-cardgrid-card-default-card-template-right {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  max-width: 100%;
+  height: 100%;
+  padding-left: 12px;
+}
+.insta-report-template-cardgrid-card-default-card-template-right-content {
+  font-size: 1.7rem;
+  margin-top: 16px;
+}

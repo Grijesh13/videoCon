@@ -1,0 +1,19 @@
+@charset "utf-8";
+.tag-active {
+  opacity: 1.0;
+}
+.tag-inactive {
+  opacity: 0.4;
+}
+.tag-active.tag-clickable:hover {
+  cursor: pointer;
+}
+.tag-inactive.tag-clickable:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.wap-core-ui-tag.tag-with-text {
+  padding: 0 4px;
+  border-radius: 4px;
+  margin: 0 1px;
+}

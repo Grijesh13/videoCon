@@ -1,0 +1,147 @@
+@charset "utf-8";
+.magic-import-dialog-replace-option-wrapper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.magic-import-dialog-replace-option-replace-value-div {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -320px;
+  margin-top: -144px;
+  background: #ffffff;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+}
+.magic-import-dialog-replace-option-replace-value-div-title-div {
+  padding: 16px;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.magic-import-dialog-replace-option-replace-value-div-title-div-header {
+  border-left: #3b77db 2px solid;
+  padding-left: 14px;
+  padding-top: 4px;
+}
+.magic-import-dialog-replace-option-replace-value-div-relation-table {
+  width: 300px;
+  margin: 20px 34px 20px 34px;
+  border: #bdbdbd 1px solid;
+}
+.magic-import-dialog-replace-option-replace-value-div-relation-table-head-tr {
+  height: 25px;
+  border: none;
+}
+.magic-import-dialog-replace-option-replace-value-div-relation-table-head-tr-text {
+  height: 42px;
+  background: #f1f1f1;
+}
+.magic-import-dialog-replace-option-replace-value-div-relation-table-head-tr-text-td {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 400;
+}
+.magic-import-dialog-replace-option-replace-value-div-relation-table-body {
+  border: none;
+}
+.magic-import-dialog-replace-option-replace-value-div-relation-table-body-th {
+  border: none;
+}
+.magic-import-dialog-replace-option-replace-value-div-relation-table-body-tr {
+  border: none;
+}
+.magic-import-dialog-replace-option-replace-value-div-relation-table-body-tr-td {
+  padding: 4.4px 16px;
+  text-align: center;
+}
+.magic-import-dialog-replace-option-replace-value-div-relation-table-body-tr-td-add-button {
+  font-size: 24px;
+  color: #7f7f7f;
+  -webkit-transform: translate3d(0px, 7px, 0px);
+  -moz-transform: translate3d(0px, 7px, 0px);
+  -o-transform: translate3d(0px, 7px, 0px);
+  -ms-transform: translate3d(0px, 7px, 0px);
+  transform: translate3d(0px, 7px, 0px);
+  cursor: pointer;
+}
+.magic-import-dialog-replace-option-replace-value-div-relation-table-body-tr-td-add-button:hover {
+  color: #000000;
+}
+.magic-import-dialog-replace-option-replace-value-div-relation-table-body-tr-td-remove-button {
+  font-size: 24px;
+  color: #7f7f7f;
+  -webkit-transform: translate3d(0px, 7px, 0px);
+  -moz-transform: translate3d(0px, 7px, 0px);
+  -o-transform: translate3d(0px, 7px, 0px);
+  -ms-transform: translate3d(0px, 7px, 0px);
+  transform: translate3d(0px, 7px, 0px);
+  cursor: pointer;
+}
+.magic-import-dialog-replace-option-replace-value-div-relation-table-body-tr-td-remove-button:hover {
+  color: #000000;
+}
+.magic-import-dialog-replace-option-replace-value-div-relation-table-body-tr-td-arrow {
+  display: inline;
+  margin-right: 32px;
+}
+.magic-import-dialog-replace-option-replace-value-div-relation-table-body-input {
+  -webkit-border-radius: 2.8px;
+  -moz-border-radius: 2.8px;
+  border-radius: 2.8px;
+  width: 190px;
+  margin: 5px;
+  border: 1px solid #bdbdbd;
+  -webkit-border-radius: 1px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1px;
+  -moz-background-clip: padding;
+  border-radius: 1px;
+  background-clip: padding-box;
+  height: 30px;
+  padding: 4px 12px 4px 4px;
+  display: inline;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.magic-import-dialog-replace-option-replace-value-div-relation-table-body-input:focus {
+  border: 1px solid #4285f4;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+}
+.magic-import-dialog-replace-option-replace-value-div-footer {
+  border-top: 1px solid #e8e8e8;
+}
+.magic-import-dialog-replace-option-replace-value-div-footer-content {
+  float: right;
+  padding: 16px 16px 16px;
+}
+.magic-import-dialog-replace-option-replace-value-div-button-left {
+  float: left;
+}
+.magic-import-dialog-replace-option-replace-value-div-button-right {
+  float: right;
+  margin-left: 10px;
+}
+.magic-import-dialog-replace-option-replace-value-div-button-set {
+  text-align: right;
+  float: right;
+  width: 100%;
+  padding: 16px 16px 16px;
+}

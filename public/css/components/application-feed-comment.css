@@ -1,0 +1,184 @@
+@charset "utf-8";
+.application-feed-comment {
+  border: solid 1px #dddddd;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 8px 0 4px 4px;
+  margin-top: 32px;
+  position: relative;
+}
+.application-feed-comment-user {
+  width: 40px;
+  height: 40px;
+  padding-left: 4px;
+  border: none;
+}
+.application-feed-comment-user-image {
+  height: 40px;
+  width: 40px;
+}
+.application-feed-comment-user-comment {
+  width: calc(100% - 40px);
+  padding-left: 16px;
+}
+.application-feed-comment-user-comment-user-name,
+.application-feed-comment-user-comment-reply-user-name {
+  color: #4285f4;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+.application-feed-comment-user-comment-reply-indicator {
+  padding: 0 8px;
+  color: #7f7f7f;
+}
+.application-feed-comment-user-comment-time-val {
+  color: #999999;
+  margin-left: 8px;
+  font-size: 1.2rem;
+}
+.application-feed-comment-user-comment-comment-content-panel {
+  padding-top: 4px;
+}
+.application-feed-comment-user-comment-comment-content-panel-comment-content {
+  width: 100%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  margin-bottom: 4px;
+}
+.application-feed-comment-user-comment-comment-content-panel-comment-content-emotion {
+  margin-right: 4px;
+  font-size: 1.4rem;
+}
+.application-feed-comment-user-comment-comment-content-panel-comment-content-emotion:before {
+  vertical-align: middle;
+}
+.application-feed-comment-user-comment-comment-content-panel-comment-content-text {
+  font-size: 1.4rem;
+}
+.application-feed-comment-emotion-happy {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #cc4b78;
+}
+.application-feed-comment-emotion-happy:before {
+  content: "\e0d6";
+}
+.application-feed-comment-emotion-smiley {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #f89406;
+}
+.application-feed-comment-emotion-smiley:before {
+  content: "\e0d8";
+}
+.application-feed-comment-emotion-wink {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #00986d;
+}
+.application-feed-comment-emotion-wink:before {
+  content: "\e0de";
+}
+.application-feed-comment-emotion-angry {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #db0000;
+}
+.application-feed-comment-emotion-angry:before {
+  content: "\e0e4";
+}
+.application-feed-comment-emotion-sad {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #175d9f;
+}
+.application-feed-comment-emotion-sad:before {
+  content: "\e0dc";
+}
+.application-feed-comment-emotion-confused {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #3ea9c4;
+}
+.application-feed-comment-emotion-confused:before {
+  content: "\e0ea";
+}
+.application-feed-comment-emotion-hurry {
+  font-family: 'wapicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #dd4b39;
+}
+.application-feed-comment-emotion-hurry:before {
+  content: "\e611";
+}
+.application-feed-comment-hidden {
+  display: none;
+}

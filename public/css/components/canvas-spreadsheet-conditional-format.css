@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.canvas-spreadsheet-conditional-format {
+  background-color: #ffffff;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  z-index: 1090;
+  color: #000000;
+  padding: 30px 42px;
+  -webkit-box-shadow: 0 4px 16px #bdbdbd;
+  -moz-box-shadow: 0 4px 16px #bdbdbd;
+  box-shadow: 0 4px 16px #bdbdbd;
+  border: 1px solid #aaaaaa;
+  position: fixed;
+  left: 400px;
+  top: 300px;
+}
+.canvas-spreadsheet-conditional-format .cf-title-container {
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 16px;
+}
+.canvas-spreadsheet-conditional-format .cf-rules-container {
+  font-size: 1.2rem;
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.canvas-spreadsheet-conditional-format .cf-rules-container .cf-rules-rows {
+  display: table;
+}
+.canvas-spreadsheet-conditional-format .cf-rules-container .cf-rules-rows .cf-rule {
+  display: table-row;
+}
+.canvas-spreadsheet-conditional-format .cf-rules-container .cf-rules-rows .cf-rule .cf-column {
+  display: table-cell;
+  position: relative;
+  vertical-align: top;
+  height: 85px;
+}
+.canvas-spreadsheet-conditional-format .cf-rules-container .cf-rules-rows .cf-rule .cf-column > select,
+.canvas-spreadsheet-conditional-format .cf-rules-container .cf-rules-rows .cf-rule .cf-column > input {
+  height: 30px;
+  font-size: 1.2rem;
+}
+.canvas-spreadsheet-conditional-format .cf-rules-container .cf-rules-rows .cf-rule .cf-column input.cf-value-input {
+  width: 115px;
+  display: inline-block;
+}
+.canvas-spreadsheet-conditional-format .cf-rules-container .cf-rules-rows .cf-rule .cf-column select.cf-category-select {
+  width: 100%;
+  padding: 6px;
+  background-color: whitesmoke;
+}
+.canvas-spreadsheet-conditional-format .cf-rules-container .cf-rules-rows .cf-rule .cf-column input.cf-format-checkbox {
+  margin-left: 8px;
+}
+.canvas-spreadsheet-conditional-format .cf-rules-container .cf-rules-rows .cf-rule .cf-column .cf-color-box-container {
+  padding: 6px 0 0 6px;
+}
+.canvas-spreadsheet-conditional-format .cf-rules-container .cf-rules-rows .cf-rule .cf-column .cf-color-box {
+  height: 15px;
+  width: 20px;
+  border: 1px solid lightblue;
+}
+.canvas-spreadsheet-conditional-format .cf-rules-container .cf-rules-rows .cf-rule .cf-column > span {
+  margin: 0 6px;
+}
+.canvas-spreadsheet-conditional-format .cf-rules-container .cf-rules-rows .cf-rule .cf-column-category {
+  width: 155px;
+}
+.canvas-spreadsheet-conditional-format .cf-rules-container .cf-rules-rows .cf-rule .cf-column-value {
+  padding-left: 8px;
+  padding-right: 16px;
+}
+.canvas-spreadsheet-conditional-format .cf-rules-container .cf-rules-rows .cf-rule .cf-column-format {
+  width: 210px;
+  padding-right: 16px;
+}
+.canvas-spreadsheet-conditional-format .cf-rules-container .cf-rules-rows .cf-rule .cf-column-range {
+  width: 130px;
+  padding-right: 16px;
+}
+.canvas-spreadsheet-conditional-format .cf-rules-container .cf-rules-rows .cf-rule .cf-column-delete {
+  width: 60px;
+  font-size: 1.7rem;
+}
+.canvas-spreadsheet-conditional-format .cf-addrule-container {
+  padding-top: 12px;
+}
+.canvas-spreadsheet-conditional-format .cf-button-container {
+  margin-top: 12px;
+}
+.canvas-spreadsheet-conditional-format .cf-button-container .cf-button {
+  margin-right: 20px;
+  min-width: 70px;
+}
+.canvas-spreadsheet-conditional-format .cf-panel-close {
+  float: right;
+}

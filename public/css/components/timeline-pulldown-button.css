@@ -1,0 +1,114 @@
+@charset "utf-8";
+.timeline-pulldown-button {
+  position: relative;
+  margin-right: 8px;
+}
+.timeline-pulldown-button-toggle-text {
+  margin-right: 8px;
+}
+.timeline-pulldown-button-menu {
+  display: none;
+  width: 150px;
+  position: absolute;
+  right: 0;
+  z-index: 1000;
+  background-color: #f5f5f5;
+  border: solid 1px #dddddd;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  padding: 8px;
+}
+.timeline-pulldown-button-menu-left {
+  left: 0;
+}
+.timeline-pulldown-button-menu.timeline-pulldown-button-showing {
+  display: block;
+}
+.timeline-pulldown-button-menu-title {
+  font-size: 1.2rem;
+  color: #aaaaaa;
+  padding: 4px;
+}
+.timeline-pulldown-button-menu-divider {
+  height: 1px;
+  background-color: #dddddd;
+  margin: 4px 0;
+}
+.timeline-pulldown-button-menu-item {
+  margin: 0;
+  cursor: pointer;
+  padding: 4px 4px 4px 20px;
+  position: relative;
+}
+.timeline-pulldown-button-menu-item-text {
+  color: #333333;
+  text-decoration: none;
+  width: 110px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  word-wrap: break-word;
+  display: block;
+}
+.timeline-pulldown-button-menu-item-text:hover,
+.timeline-pulldown-button-menu-item-text:focus {
+  color: #333333;
+}
+.timeline-pulldown-button-menu-item-actions {
+  line-height: 0;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+.timeline-pulldown-button-menu-item-action {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  font-size: 1rem;
+  padding: 2px;
+  cursor: pointer;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  vertical-align: middle;
+}
+.timeline-pulldown-button-menu-item-action-i {
+  vertical-align: top;
+}
+.timeline-pulldown-button-menu-item:hover {
+  background-color: #e8e8e8;
+}
+.timeline-pulldown-button-menu-item:hover .timeline-pulldown-button-menu-item-action {
+  zoom: 1;
+  filter: alpha(opacity=80);
+  -webkit-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+}
+.timeline-pulldown-button-menu-item-delete {
+  font-size: 1.7rem;
+  padding-top: 0;
+}
+.timeline-pulldown-button-menu-new {
+  color: #4285f4;
+  cursor: pointer;
+  padding: 4px 4px 4px 4px;
+}
+.timeline-pulldown-button-menu-new-text {
+  color: #4285f4;
+  text-decoration: none;
+  padding-left: 3px;
+}
+.timeline-pulldown-button-menu-new-text:hover,
+.timeline-pulldown-button-menu-new-text:focus {
+  color: #4285f4;
+}
+.timeline-pulldown-button-menu-new:hover {
+  background-color: #e8e8e8;
+}

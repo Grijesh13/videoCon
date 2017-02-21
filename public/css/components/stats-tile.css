@@ -1,0 +1,7 @@
+@charset "utf-8";
+.tile-stats {
+  height: 130px;
+}
+.tile-stats .num {
+  margin-bottom: 10px;
+}

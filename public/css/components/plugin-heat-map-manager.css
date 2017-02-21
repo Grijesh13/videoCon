@@ -1,0 +1,98 @@
+@charset "utf-8";
+.wap-zhuge-heatmaplist {
+  padding: 2px 10px 2px 0px;
+  overflow: auto;
+}
+.wap-zhuge-heatmaplist .wap-input-slider-horizontal {
+  padding: 6px 15px 3px 29px;
+}
+.wap-zhuge-heatmaplist .zhuge-edit-input {
+  padding-left: 25px;
+  padding-top: 2px;
+  height: 24px;
+}
+.wap-zhuge-heatmaplist input {
+  border: 1px solid #cccccc;
+}
+.wap-zhuge-heatmaplist input:focus {
+  outline: none;
+  border: 1px solid #4285f4;
+}
+.wap-heatmap-color-icon {
+  display: inline-block;
+  margin-left: 22px;
+  vertical-align: 3px;
+}
+.wap-heatmap-color-box {
+  display: inline-block;
+  height: 21px;
+  width: 38px;
+  margin-top: 2px;
+  margin-right: 5px;
+  border-radius: 2px;
+  border: 1px solid #e8e8e8;
+}
+.wap-heatmap-color-box:hover {
+  cursor: pointer;
+  background-color: #f1f1f1;
+}
+.wap-heatmap-color-box span {
+  line-height: 1;
+  height: 19px;
+  display: inline-block;
+  border-radius: 2px 0 0 2px;
+}
+.wap-heatmap-color-box span:before {
+  margin-top: 0;
+}
+.wap-heatmap-color-box .wap-heatmap-color-panel {
+  width: 23px;
+}
+.wap-heatmap-color-box .wap-heatmap-color-change {
+  width: 10px;
+  vertical-align: 3px;
+  padding-left: 1px;
+}
+.wap-heatmap-color-box .wap-heatmap-color-change:hover {
+  color: #818da2;
+}
+.wap-heatmap-color-box .wap-heatmap-color-change:before {
+  width: 12px;
+  margin: 0;
+}
+.wap-zhuge-heatmap-statistics {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+.wap-zhuge-heatmap-statistics .wap-heatmap-statistics-row {
+  margin-top: 2px;
+  margin-bottom: 6px;
+  height: 20px;
+}
+.wap-zhuge-heatmap-statistics .wap-heatmap-statistics-row .wap-heatmap-statistics-color-box {
+  height: 20px;
+  width: 20px;
+  float: left;
+}
+.wap-zhuge-heatmap-statistics .wap-heatmap-statistics-row .wap-heatmap-statistics-value {
+  padding-left: 25px;
+  height: 20px;
+  vertical-align: middle;
+}
+.heatmap-marker-cold {
+  background-color: #a0c2f9;
+  border: 1px solid #4285f4;
+}
+.heatmap-marker-cool {
+  background-color: #99d5b8;
+  border: 1px solid #33ac71;
+}
+.heatmap-marker-warm {
+  background-color: #f9d8a0;
+  border: 1px solid #f4b142;
+}
+.heatmap-marker-hot {
+  background-color: #f48eb1;
+  border: 1px solid #e91e63;
+}

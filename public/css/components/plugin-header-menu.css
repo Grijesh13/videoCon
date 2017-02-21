@@ -1,0 +1,182 @@
+@charset "utf-8";
+.wap-zhuge-header-menu-parent {
+  padding: 8px;
+  position: absolute;
+  z-index: 1000;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  min-width: 280px;
+}
+.wap-zhuge-header-menu .goog-twothumbslider-horizontal .goog-twothumbslider-rangehighlight {
+  position: absolute;
+  background-color: #cccccc;
+  border-radius: 3px;
+}
+.wap-zhuge-header-menu .goog-twothumbslider-handler,
+.wap-zhuge-header-menu .goog-slider-handler {
+  position: relative;
+  background: none repeat scroll 0 0 #cccccc;
+  border: 2px solid white;
+  border-radius: 4px;
+  width: 17px;
+  height: 18px;
+  margin: -4px 0 0 -10px;
+  cursor: pointer;
+}
+.wap-zhuge-header-menu .wap-menuitem {
+  color: #7f7f7f;
+  list-style: none;
+  height: 36px;
+  line-height: 36px;
+  margin: 0;
+  cursor: pointer;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+.wap-zhuge-header-menu .wap-zhuge-text-filter {
+  padding-right: 24px;
+}
+.wap-zhuge-header-menu-title {
+  padding-left: 26px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+.wap-zhuge-header-menu-hr {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.wap-zhuge-header-menu-date {
+  width: 420px;
+}
+.wap-zhuge-header-menu .wap-menuitem-disabled .wap-menuitem-accel,
+.wap-zhuge-header-menu .wap-menuitem-disabled .wap-menuitem-content {
+  color: #cccccc;
+}
+.wap-zhuge-header-menu .wap-zhuge-filterlist {
+  padding-left: 26px;
+}
+.wap-zhuge-header-menu-toggle {
+  text-align: right;
+}
+.wap-zhuge-header-menu-toggle a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.zhuge-header-menu-sort-asc-checkmark,
+.zhuge-header-menu-sort-dsc-checkmark {
+  display: none;
+}
+.zhuge-header-menu-sort-asc-checkmark.sort-active,
+.zhuge-header-menu-sort-dsc-checkmark.sort-active {
+  display: inline;
+}
+.wap-zhuge-header-menu-resize-handle {
+  height: 13px;
+  border-top: 1px solid;
+  border-color: #CCCCCC;
+  background: linear-gradient(#ffffff, #dddddd);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.wap-zhuge-header-menu-resize-handle-dragger {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 12px;
+  width: 12px;
+  cursor: nwse-resize;
+}
+.wap-zhuge-header-menu-resize-handle-draggable-dot1,
+.wap-zhuge-header-menu-resize-handle-draggable-dot2,
+.wap-zhuge-header-menu-resize-handle-draggable-dot3 {
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  background: #888888;
+}
+.wap-zhuge-header-menu-resize-handle-draggable-dot1 {
+  right: 2px;
+  bottom: 2px;
+}
+.wap-zhuge-header-menu-resize-handle-draggable-dot2 {
+  right: 2px;
+  bottom: 6px;
+}
+.wap-zhuge-header-menu-resize-handle-draggable-dot3 {
+  right: 6px;
+  bottom: 2px;
+}
+.wap-menuitem-disabled .wap-menuitem-icon {
+  zoom: 1;
+  filter: alpha(opacity=30);
+  -webkit-opacity: 0.3;
+  -moz-opacity: 0.3;
+  opacity: 0.3;
+}
+/* State: hover. */
+.wap-menuitem-highlight,
+.wap-menuitem-hover {
+  background-color: #f1f1f1;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+/* State: selected/checked. */
+.wap-menuitem-checkbox,
+.wap-menuitem-icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  height: 36px;
+  line-height: 36px;
+  margin-right: 4px;
+}
+/* BiDi override for the selected/checked state. */
+/* @noflip */
+.wap-menuitem-rtl .wap-menuitem-checkbox,
+.wap-menuitem-rtl .wap-menuitem-icon {
+  /* Flip left/right positioning. */
+  left: auto;
+  right: 6px;
+}
+/* Keyboard shortcut ("accelerator") style. */
+.wap-menuitem-accel {
+  color: #999;
+  /* Keyboard shortcuts are untranslated; always left-to-right. */
+  /* @noflip */
+  direction: ltr;
+  left: auto;
+  padding: 0 6px;
+  position: absolute;
+  right: 0;
+  text-align: right;
+}
+/* BiDi override for shortcut style. */
+/* @noflip */
+.wap-menuitem-rtl .wap-menuitem-accel {
+  /* Flip left/right positioning and text alignment. */
+  left: 0;
+  right: auto;
+  text-align: left;
+}
+/* Mnemonic styles. */
+.wap-menuitem-mnemonic-hint {
+  text-decoration: underline;
+}
+.wap-menuitem-mnemonic-separator {
+  color: #999;
+  font-size: 12px;
+  padding-left: 4px;
+}
+.wap-zhuge-filterlist .wap-menuitem,
+.wap-zhuge-filterlist .fixed-number-range-filter-menuitem,
+.wap-zhuge-filterlist .wap-menuitem-highlight {
+  padding-top: 0px;
+  padding-bottom: 1px;
+}
+.wap-menuitem-content {
+  padding-left: 8px;
+}
+.wap-menuitem-content .icon-area {
+  margin-right: 8px;
+}

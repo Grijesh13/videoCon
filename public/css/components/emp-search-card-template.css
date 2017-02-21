@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+/* --------------------------------------------------------------------------
+ * cell padding for layout system.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.grid-cell-padding {
+  padding: 16px 16px;
+}
+.emp-search-card-template-emp-search-card {
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 4px;
+  padding: 10px;
+}
+.emp-search-card-template-emp-search-card-left {
+  min-width: 80px;
+  position: relative;
+  padding-right: 4px;
+}
+.emp-search-card-template-emp-search-card-right {
+  width: 100%;
+}
+.emp-search-card-template-emp-search-card-right-header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.emp-search-card-template-emp-search-card-sya_nm {
+  font-size: 2rem;
+  margin-bottom: 2px;
+}
+.emp-search-card-template-emp-search-card-sya_nm_origin {
+  display: block;
+  font-size: 1.4rem;
+  margin-top: 2px;
+  height: 1.2em;
+}
+.emp-search-card-template-emp-search-card-kn {
+  margin-bottom: -4px;
+  font-size: 1.2rem;
+}
+.emp-search-card-template-emp-search-card-sya_bg {
+  margin-bottom: 2px;
+}
+.emp-search-card-template-emp-search-card-hover-button {
+  position: absolute;
+  margin: 10px;
+  right: 2px;
+  top: 2px;
+}

@@ -1,0 +1,10 @@
+@charset "utf-8";
+.notification-popover.popover.bottom .arrow {
+  left: 89%;
+}
+.notification-popover.popover-off {
+  display: none;
+}
+.notification-popover.popover-on {
+  display: block;
+}

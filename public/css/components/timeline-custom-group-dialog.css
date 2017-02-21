@@ -1,0 +1,13 @@
+@charset "utf-8";
+.timeline-custom-group-dialog-content-creategroup-subtitle {
+  color: #aaaaaa;
+  font-size: 1.2rem;
+  margin-left: 22px;
+  margin-top: -4px;
+}
+.timeline-custom-group-dialog-content-item {
+  padding-bottom: 32px;
+}
+.timeline-custom-group-dialog-content-item-label {
+  padding-bottom: 4px;
+}

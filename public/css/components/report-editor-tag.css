@@ -1,0 +1,243 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * report-editor-tag styles.
+ * @author shailesh_a
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col,
+.report-editor-tag-content-left,
+.report-editor-tag-content-right {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+/* --------------------------------------------------------------------------
+ * cell padding for layout system.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.grid-cell-padding {
+  padding: 16px 16px;
+}
+/* --------------------------------------------------------------------------
+ * report-editor-tag styles.
+ * @author shailesh_a
+ * ------------------------------------------------------------------------*/
+.report-editor-tag-content-left {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 48px;
+  flex-basis: 48px;
+  height: 100%;
+  text-align: center;
+}
+.report-editor-tag-content-left-icon {
+  border: 1px solid #dddddd;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  font-size: 2.7rem;
+}
+.report-editor-tag-content-right {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  max-width: 100%;
+  height: 100%;
+  padding-left: 12px;
+}
+.report-editor-tag-content-right-content {
+  font-size: 2.0rem;
+}
+.report-editor-element {
+  position: absolute;
+  outline: 1px solid #dddddd;
+  z-index: 2;
+}
+.report-editor-element:hover {
+  outline: 2px solid #f4b142;
+}
+.report-editor-container:hover {
+  outline: 1px solid #a0c2f9;
+}
+.report-editor-container.active {
+  outline: 1px solid #3b77db;
+}
+.report-editor-static-text-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.report-editor-static-text-inner-mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.report-editor-static-text-textarea {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  resize: none;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0);
+}
+.report-editor-text-field-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.report-editor-text-field-inner-mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.report-editor-text-field-textarea {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  resize: none;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0);
+}
+.report-editor-rectangle {
+  position: absolute;
+}
+.report-editor-rectangle-inner {
+  border: 1px solid #000000;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.report-editor-line-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.report-editor-line-canvas {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.report-editor-image-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.report-editor-image-inner-mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.report-editor-list-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.report-editor-frame-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.report-editor-frame-inner-mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.report-editor-table-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.report-editor-table-selector {
+  position: absolute;
+  outline: 2px solid #3b77db;
+}
+.report-editor-table-selector-vertical {
+  width: 100%;
+  top: -10px;
+  left: 0px;
+}
+.report-editor-table-selector-vertical-dragger {
+  height: 9px;
+  width: 100%;
+  background-color: #3b77db;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: move;
+}
+.report-editor-table-selector-horizontal {
+  z-index: 1;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+.report-editor-table-holder {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.report-editor-table-column {
+  position: relative;
+}
+.report-editor-table-cell {
+  position: relative;
+}
+.report-editor-table-cell-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}

@@ -1,0 +1,439 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.cassandraview-result-room {
+  margin-top: 4px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: inherit;
+  width: 100%;
+}
+.cassandraview-result-room-dialog {
+  transform: none;
+  transition: none;
+}
+.cassandraview-result-room-dialog-panel {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+}
+.cassandraview-result-room-results-view-main {
+  max-width: 50%;
+  width: 50%;
+}
+.cassandraview-result-room-parent-div {
+  display: inherit;
+}
+.cassandraview-result-room-results-view {
+  display: inherit;
+  margin-top: 4px;
+}
+.cassandraview-result-room-display {
+  width: 50%;
+  float: right;
+  padding-left: 8px;
+  text-align: right;
+}
+.cassandraview-result-room-display-table {
+  margin-left: 8px;
+}
+.cassandraview-result-room-display-table-container {
+  overflow: auto;
+  max-height: 1px;
+  text-align: left;
+  margin-top: 2px;
+  background-color: #ffffff;
+}
+.cassandraview-result-room-display-table-container::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.cassandraview-result-room-display-table-container::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+.cassandraview-result-room-display-table-container::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 5px;
+}
+.cassandraview-result-room-rows-count-container {
+  color: #4285f4;
+  font-size: 1.2rem;
+  float: left;
+}
+.cassandraview-result-room-rows-warning-container {
+  color: #f4b142;
+  font-size: 1.2rem;
+  margin-left: 8px;
+}
+.cassandraview-result-room-footer {
+  text-align: center;
+  margin-top: 8px;
+}
+.cassandraview-result-room-button {
+  margin-left: 8px;
+  height: 32px;
+  background-color: #f1f1f1;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+.cassandraview-result-room-button:hover {
+  background-color: #dddddd;
+  border-color: #cccccc;
+}
+.cassandraview-result-room-no-record-msg-container {
+  color: #4285f4;
+}
+.cassandraview-result-room-result-message {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.cassandraview-result-room-dto-table {
+  width: 100%;
+}
+.cassandraview-result-room-dto-table-tr :hover {
+  background-color: #f1f1f1;
+}
+.cassandraview-result-room-dto-table-td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+.cassandraview-result-room-dto-table-th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: center;
+  border-top: none;
+}
+.cassandraview-result-room-wap-icon-key {
+  margin-right: 8px;
+}
+.cassandraview-result-room-dto-info-dialog-container {
+  min-width: 600px;
+  max-height: 468px;
+  overflow: auto;
+}
+.cassandraview-result-room-dto-info-dialog-container::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.cassandraview-result-room-dto-info-dialog-container::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+.cassandraview-result-room-dto-info-dialog-container::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 5px;
+}
+.cassandraview-result-room-execution-time-container {
+  margin-left: 8px;
+  color: #4285f4;
+  font-size: 1.2rem;
+  float: right;
+}
+.cassandraview-result-room-dialog {
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 300px;
+  height: 150px;
+  margin-left: -16px;
+  padding: 16px;
+  background-color: #ffffff;
+  z-index: 1050;
+}
+.cassandraview-result-room-dialog-modal {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 1050;
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+.cassandraview-result-room-dialog-hide {
+  display: none;
+}
+.cassandraview-result-room-dialog-show {
+  display: block;
+}
+.cassandraview-result-room-dialog-yes-button {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+}
+.cassandraview-result-room-dialog-no-button {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+}
+.cassandraview-result-room-tooltip {
+  padding: 8px;
+  border-color: #aed7fa;
+  border-width: 1px;
+  background: #d0e1fc;
+  color: #0d5bdd;
+  max-width: 400px;
+  z-index: 1025;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.cassandraview-result-room-dto-layout-button {
+  float: right;
+}
+.cassandraview-result-room-reset-button {
+  float: right;
+}
+.cassandraview-result-room-result-grid {
+  display: block;
+  margin-top: 2px;
+  overflow: auto;
+  max-height: 480px;
+  min-height: 24px;
+  position: relative;
+}
+.cassandraview-result-room-result-grid-data {
+  width: 100%;
+}
+.cassandraview-result-room-result-grid-data-row:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+.cassandraview-result-room-result-grid-data-row-edited {
+  background-color: #f6f180;
+}
+.cassandraview-result-room-result-grid-data-row-highlight {
+  background-color: #f6f180;
+}
+.cassandraview-result-room-result-grid-data-row-error {
+  background-color: #d11b59;
+}
+.cassandraview-result-room-result-grid-data-row-selected {
+  background-color: #ecf2fd;
+}
+.cassandraview-result-room-result-grid-data-row-checkbox {
+  border-left: 1px solid #e8e8e8;
+}
+.cassandraview-result-room-result-grid-data-row-cell {
+  padding: 6px;
+  border-right: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  text-align: center;
+  vertical-align: middle;
+}
+.cassandraview-result-room-result-grid::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.cassandraview-result-room-result-grid::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+.cassandraview-result-room-result-grid::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 5px;
+}
+.cassandraview-result-room-results-icon-key {
+  padding-right: 4px;
+}
+.cassandraview-result-room-results-head-header-checkbox {
+  padding: 6px;
+  border: 1px solid #e8e8e8;
+  text-align: center;
+  vertical-align: middle;
+  width: 3%;
+}
+.cassandraview-result-room-results-head-header-cell {
+  padding: 6px;
+  border: 1px solid #e8e8e8;
+  border-left: none;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+.cassandraview-result-room-results-head-header-cell-text {
+  display: inline-block;
+}
+.cassandraview-result-room-header {
+  display: inline-block;
+}
+.cassandraview-result-room-header-search {
+  display: inline-block;
+  width: 50%;
+}
+.cassandraview-result-room-header-search-panel {
+  background-color: #ffffff;
+  height: 32px;
+  border: 1px solid #e8e8e8;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  text-align: right;
+}
+.cassandraview-result-room-header-search-panel-icon {
+  padding: 4px;
+}
+.cassandraview-result-room-header-search-panel-button {
+  height: 30px;
+  border: none;
+  background-color: #4285f4;
+}
+.cassandraview-result-room-header-search-panel-button-cancel {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.cassandraview-result-room-header-search-panel-button-icon {
+  color: #ffffff;
+}
+.cassandraview-result-room-header-search-panel-button:hover {
+  background-color: #3b77db;
+}
+.cassandraview-result-room-header-search-panel-input {
+  height: 29px;
+  border: none;
+  padding-left: 4px;
+  width: 82%;
+  float: left;
+}
+.cassandraview-result-room-header-search-keys {
+  position: absolute;
+  background-color: white;
+  z-index: 1250;
+  display: none;
+  border: 1px solid #f1f1f1;
+  padding: 8px;
+  margin-top: 4px;
+  right: 50%;
+}
+.cassandraview-result-room-header-search-keys-controls {
+  text-align: center;
+}
+.cassandraview-result-room-header-search-keys-controls-search {
+  background-color: #4285f4;
+  color: #ffffff;
+  border: none;
+  margin-left: 0px;
+}
+.cassandraview-result-room-header-search-keys-controls-search:hover {
+  background-color: #3b77db;
+}
+.cassandraview-result-room-header-search-keys-inputs-field {
+  padding-left: 4px;
+  height: 32px;
+  border: 1px solid #f1f1f1;
+  width: 300px;
+  display: block;
+  margin-bottom: 8px;
+}
+.cassandraview-result-room-header-controls {
+  float: right;
+  width: 50%;
+}
+.cassandraview-result-room-icon-remove {
+  cursor: pointer;
+}
+.cassandraview-result-room-icon-hide {
+  cursor: pointer;
+}
+.cassandraview-result-room-icon-show {
+  cursor: pointer;
+}
+.cassandraview-result-room-icon-cog {
+  cursor: pointer;
+}
+.cassandraview-result-room-icon-add {
+  cursor: pointer;
+}
+.cassandraview-result-room-icon-menulist {
+  cursor: pointer;
+}
+.cassandraview-result-room-icon-hidden {
+  color: transparent;
+  cursor: auto;
+}
+.cassandraview-result-room-display-container-cell {
+  display: table-cell;
+  padding: 2px;
+}
+.cassandraview-result-room-display-container-cell-key {
+  height: 20px;
+  width: 21px;
+}
+.cassandraview-result-room-display-container-cell-remove {
+  height: 20px;
+  width: 21px;
+}
+.cassandraview-result-room-display-container-cell-hide {
+  height: 20px;
+  width: 21px;
+}
+.cassandraview-result-room-display-container-cell-class {
+  color: #1565c0;
+}
+.cassandraview-result-room-display-container-cell-value {
+  color: #33ac71;
+  vertical-align: bottom;
+}
+.cassandraview-result-room-display-container-cell-value-display {
+  display: inline-block;
+}
+.cassandraview-result-room-display-container-cell-value-edit {
+  color: #000000;
+  display: none;
+}
+.cassandraview-result-room-display-container-cell-add {
+  height: 20px;
+  width: 21px;
+}
+.cassandraview-result-room-display-container-cell-highlight {
+  background-color: #f4ec42;
+}

@@ -1,0 +1,70 @@
+@charset "utf-8";
+.notification-content {
+  position: relative;
+}
+.notification-content-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 12px;
+}
+.notification-content-unread {
+  background-color: #ecf2fd;
+}
+.notification-content-unread:hover {
+  background-color: #f1f1f1;
+}
+.notification-content:hover {
+  cursor: pointer;
+  background-color: #f1f1f1;
+}
+.notification-content:hover .notification-content-remove {
+  display: block;
+}
+.notification-content-left-area {
+  margin: auto;
+}
+.notification-content-left-img {
+  height: 40px;
+  width: 40px;
+}
+.notification-content-right-area {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-left: 8px;
+}
+.notification-content-right-top-area {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.2rem;
+}
+.notification-content-name {
+  color: #333333;
+}
+.notification-content-time-area {
+  margin-left: 8px;
+}
+.notification-content-time {
+  color: #7f7f7f;
+}
+.notification-content-message {
+  font-size: 1.4rem;
+  color: #7f7f7f;
+}
+.notification-content-remove-area {
+  position: absolute;
+  right: 10px;
+  top: 4px;
+}
+.notification-content-remove {
+  display: none;
+}

@@ -1,0 +1,702 @@
+@charset "utf-8";
+.ganttview {
+  margin: 8px;
+  border: 1px solid #e8e8e8;
+  color: #333333;
+  /* slide-container */
+}
+.ganttview div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ganttview .ganttview-block {
+  cursor: move;
+}
+.ganttview .resize-handle-front,
+.ganttview .resize-handle-back {
+  cursor: w-resize;
+}
+.ganttview.hr-resizing {
+  cursor: w-resize;
+}
+.ganttview.hr-resizing .ganttview-block:hover {
+  cursor: w-resize;
+}
+.ganttview.moving {
+  cursor: move;
+}
+.ganttview.moving .resize-handle-front,
+.ganttview.moving .resize-handle-back {
+  cursor: move;
+}
+.ganttview.scrolling .ganttview-slide-container {
+  cursor: all-scroll;
+}
+.ganttview .ganttview-vtheader {
+  float: left;
+  margin-top: 62px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item {
+  clear: both;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item .ganttview-vtheader-item-name {
+  float: left;
+  width: 20px;
+  padding-left: 5px;
+  border-top: 1px solid #e8e8e8;
+  line-height: 16px;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item .ganttview-vtheader-item-name .group-title {
+  position: absolute;
+  display: 8121991;
+  margin-top: 7px;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item .ganttview-vtheader-item-name .group-title span {
+  width: 9px;
+  height: 9px;
+  margin-right: 5px;
+  display: inline-block;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item .ganttview-vtheader-item-name .group-title .group-title-text {
+  padding-left: 7px;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item .ganttview-vtheader-series {
+  float: left;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item .ganttview-vtheader-series > .ganttview-vtheader-series-name {
+  width: 420px;
+  height: 31px;
+  border-top: 1px solid #e8e8e8;
+  line-height: 16px;
+  padding-left: 5px;
+  display: 8121991;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item .ganttview-vtheader-series > .ganttview-vtheader-series-name .title-text {
+  margin-top: 7px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 45%;
+  padding-left: 5px;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item .ganttview-vtheader-series > .ganttview-vtheader-series-name .deadline-text {
+  margin-top: 7px;
+  width: 15%;
+  padding-left: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item .ganttview-vtheader-series > .ganttview-vtheader-series-name .actual-end {
+  margin-top: 7px;
+  padding-left: 5px;
+  width: 10%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item .ganttview-vtheader-series > .ganttview-vtheader-series-name .actual-end.actual-end-over {
+  font-weight: bold;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item .ganttview-vtheader-series > .ganttview-vtheader-series-name .actual-man-hour {
+  margin-top: 7px;
+  padding-left: 3px;
+  width: 10%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item .ganttview-vtheader-series > .ganttview-vtheader-series-name .actual-man-hour.actual-man-hour-over sub {
+  font-style: italic;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item .ganttview-vtheader-series > .ganttview-vtheader-series-name .assign-text {
+  width: auto;
+  padding-left: 3px;
+  display: 8121991;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item .ganttview-vtheader-series > .ganttview-vtheader-series-name .assign-text .title-img {
+  height: 24px;
+  width: 24px;
+  margin-top: 3px;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item .ganttview-vtheader-series > .ganttview-vtheader-series-name .assign-text .assign-name {
+  margin-top: 7px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-left: 3px;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item .ganttview-vtheader-series > .ganttview-vtheader-series-name .assign-text .assign-sub {
+  margin-top: 7px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ganttview .ganttview-vtheader .ganttview-vtheader-item .ganttview-vtheader-series.sub .ganttview-vtheader-series-name {
+  width: 400px;
+}
+.ganttview .ganttview-slide-container {
+  overflow: auto;
+  border-left: 1px solid #e8e8e8;
+  cursor: pointer;
+  /* hzheader */
+  /* grid */
+  /* blocks */
+}
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-months,
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-days,
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-dows,
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-times {
+  display: 8121991;
+}
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-month {
+  width: 60px;
+  height: 20px;
+  border-right: 1px solid #e8e8e8;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-day,
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-dow,
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-time {
+  width: 21px;
+  height: 21px;
+  position: relative;
+  border-right: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
+  line-height: 20px;
+  color: #e8e8e8;
+}
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-days .event-line {
+  width: 3px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  z-index: 5;
+}
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-days .event-line:hover {
+  background-color: #f4b142;
+  cursor: pointer;
+}
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-month,
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-day,
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-dow,
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-time {
+  text-align: center;
+}
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-day.dow-cell-sat,
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-dow.dow-cell-sat,
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-time.dow-cell-sat {
+  background-color: #4285f4;
+}
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-day.dow-cell-sun,
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-dow.dow-cell-sun,
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-time.dow-cell-sun {
+  background-color: #e91e63;
+}
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-day.dow-cell-today,
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-dow.dow-cell-today,
+.ganttview .ganttview-slide-container .ganttview-hzheader .ganttview-hzheader-time.dow-cell-today {
+  background-color: #9c9c9c;
+}
+.ganttview .ganttview-slide-container .ganttview-grid {
+  float: left;
+}
+.ganttview .ganttview-slide-container .ganttview-grid .ganttview-grid-row {
+  display: 8121991;
+}
+.ganttview .ganttview-slide-container .ganttview-grid .ganttview-grid-row:first-child > .ganttview-grid-row-cell {
+  border-top-color: 1px solid #e8e8e8;
+}
+.ganttview .ganttview-slide-container .ganttview-grid .ganttview-grid-row .ganttview-grid-row-cell {
+  width: 21px;
+  height: 31px;
+  border-right: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
+}
+.ganttview .ganttview-slide-container .ganttview-grid .ganttview-grid-row .ganttview-grid-row-cell.dow-cell-sat {
+  background-color: #4285f4;
+}
+.ganttview .ganttview-slide-container .ganttview-grid .ganttview-grid-row .ganttview-grid-row-cell.dow-cell-sun {
+  background-color: #e91e63;
+}
+.ganttview .ganttview-slide-container .ganttview-grid .ganttview-grid-row .ganttview-grid-row-cell.dow-cell-today {
+  background-color: #9c9c9c;
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container {
+  height: 31px;
+  padding-top: 2px;
+  /* highlight */
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container .ganttview-block {
+  position: relative;
+  height: 28px;
+  background-color: #a0c2f9;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container .ganttview-block .ganttview-block-progress {
+  position: absolute;
+  height: 28px;
+  background-color: #f4b142;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  top: 0;
+  left: 0;
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container .ganttview-block .resize-handle-front {
+  width: 3px;
+  height: 28px;
+  position: absolute;
+  left: 0;
+  z-index: 4;
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container .ganttview-block .resize-handle-back {
+  width: 3px;
+  height: 28px;
+  float: right;
+  position: absolute;
+  right: 0;
+  z-index: 4;
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container .ganttview-block .actual-height {
+  height: 14px;
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container .ganttview-block .ganttview-block-content {
+  position: absolute;
+  z-index: 3;
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container .ganttview-block .ganttview-block-content .ganttview-block-icon {
+  padding: 2px 3px;
+  float: left;
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container .ganttview-block .ganttview-block-content div.block-title-text {
+  text-overflow: clip;
+  white-space: nowrap;
+  padding-top: 5px;
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container .ganttview-block.parent-color-skelton {
+  background-color: transparent;
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container .ganttview-block-actual {
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  position: relative;
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container .ganttview-block-actual.parent-color-skelton {
+  background-color: transparent;
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container .ganttview-block-actual.color-orange {
+  background-color: #ffd066;
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container .actual-height {
+  height: 14px;
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container.block-highlight {
+  background-color: #000000;
+  zoom: 1;
+  filter: alpha(opacity=60);
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container.block-highlight > .ganttview-block {
+  background-color: #ffff00;
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container.actual-over-hightlight {
+  background-color: #9fceed;
+  zoom: 1;
+  filter: alpha(opacity=60);
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container.actual-over-hightlight > .ganttview-block,
+.ganttview .ganttview-slide-container .ganttview-blocks .ganttview-block-container.actual-over-hightlight > .ganttview-block-actual {
+  background-color: #ffff00;
+}
+.gantt-calender-block-contextmenu {
+  position: absolute;
+  z-index: 1000;
+  padding: 3px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-clip: padding-box;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding;
+}
+.gantt-calender-block-contextmenu > li > a {
+  display: block;
+  padding: 4px 8px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #e8e8e8;
+  margin: 0 4px;
+  white-space: nowrap;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-clip: padding-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding;
+}
+.gantt-calender-block-contextmenu > li > a:hover {
+  text-decoration: none;
+  background-color: #f1f1f1;
+  cursor: default;
+}
+.gantt-calender-block-contextmenu > hr {
+  margin: 4px;
+}
+#bizcal-gantt-assignee-editor {
+  width: 750px;
+  overflow: hidden;
+}
+#bizcal-gantt-assignee-editor .assignee-panel,
+#bizcal-gantt-assignee-editor .schedule-panel {
+  float: left;
+  padding-left: 8px;
+  padding-right: 16px;
+}
+#bizcal-gantt-assignee-editor .main-assignee-area {
+  height: 52px;
+}
+#bizcal-gantt-assignee-editor .main-assignee-area img {
+  margin-left: 4px;
+}
+#bizcal-gantt-assignee-editor .sub-assignee-area ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 250px;
+  display: inline-block;
+  border: 1px solid #dddddd;
+}
+#bizcal-gantt-assignee-editor .sub-assignee-area ul li {
+  margin: 4px;
+}
+#bizcal-gantt-assignee-editor .assignee-editor-caption {
+  display: inline-block;
+  width: 50px;
+  vertical-align: top;
+  font-size: 1.4rem;
+}
+#bizcal-gantt-assignee-editor .editor-assignee-name {
+  display: inline-block;
+  padding-top: 16px;
+  padding-left: 8px;
+  vertical-align: top;
+  font-size: 1.7rem;
+}
+#bizcal-gantt-assignee-editor .assignee-operate:before {
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-bottom: 16px;
+  vertical-align: top;
+}
+#bizcal-gantt-assignee-editor .assignee-operate:hover,
+#bizcal-gantt-assignee-editor .add-new-assigne-item:hover {
+  color: #aaaaaa;
+  cursor: pointer;
+}
+#bizcal-gantt-assignee-editor .schedule-caption-before,
+#bizcal-gantt-assignee-editor .schedule-caption-after {
+  height: 31px;
+  padding-top: 8px;
+  padding-right: 4px;
+  font-size: 1.4rem;
+}
+#bizcal-gantt-assignee-editor .schedule-panel-caption,
+#bizcal-gantt-assignee-editor .schedule-panel-calendar {
+  float: left;
+}
+#bizcal-gantt-assignee-editor .schedule-panel-calendar {
+  border-left: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+#bizcal-gantt-assignee-editor .assign-operate-panel {
+  float: right;
+  padding-right: 16px;
+}
+#bizcal-gantt-assignee-editor .add-new-assigne-caption {
+  display: inline-block;
+  padding-left: 24px;
+  font-size: 1.4rem;
+  padding-top: 16px;
+}
+#bizcal-gantt-assignee-editor .assigned-task {
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+}
+.sre-model .model-area {
+  position: relative;
+  height: 100%;
+}
+.sre-model thead td {
+  border: 1px solid #cccccc;
+  background: #f5f5f5;
+}
+.sre-model thead td:first-child {
+  border: none;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.sre-model tbody tr:last-child {
+  border-bottom: 1px solid #cccccc;
+}
+.sre-model tbody tr:last-child td {
+  border-bottom: none;
+}
+.sre-model tbody td {
+  border: 1px solid #e8e8e8;
+  zoom: 1;
+  filter: alpha(opacity=60);
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.sre-model tbody td:first-child {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  border: 1px solid #cccccc;
+  background: #f5f5f5;
+}
+.sre-model tbody td:last-child {
+  border-right: 1px solid #cccccc;
+}
+.sre-model tbody td .disbale-background {
+  background-color: black;
+  zoom: 1;
+  filter: alpha(opacity=10);
+  -webkit-opacity: 0.1;
+  -moz-opacity: 0.1;
+  opacity: 0.1;
+}
+.sre-model .node-area {
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+}
+.sre-model .node-area.select-node .node {
+  cursor: default;
+}
+.sre-model .node-area.select-node .node:not(.selected) {
+  zoom: 1;
+  filter: alpha(opacity=60);
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.sre-model .node {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3px;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  -webkit-transition: background-color 300ms ease, opacity 300ms ease;
+  -moz-transition: background-color 300ms ease, opacity 300ms ease;
+  -o-transition: background-color 300ms ease, opacity 300ms ease;
+  transition: background-color 300ms ease, opacity 300ms ease;
+}
+.sre-model .node > .header,
+.sre-model .node .body,
+.sre-model .node .footer {
+  align-items: center;
+}
+.sre-model .node .body {
+  height: 100%;
+  display: flex;
+}
+.sre-model .node .header,
+.sre-model .node .footer {
+  display: none;
+}
+.sre-model .node .title {
+  width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+.sre-model .node.selected {
+  z-index: 3;
+  border-width: 3px;
+  padding: 0px 1px;
+}
+.sre-model .node.selected .body,
+.sre-model .node.selected .header,
+.sre-model .node.selected .footer {
+  height: 33%;
+}
+.sre-model .node.selected .header,
+.sre-model .node.selected .footer {
+  display: flex;
+}
+.sre-model .node.selected .body {
+  white-space: nowrap;
+}
+.sre-model .node.selected .body .title {
+  overflow: visible;
+  white-space: nowrap;
+}
+.sre-model .node.selected .node-handle {
+  display: block;
+}
+.sre-model .node.selected .node-tool {
+  display: table;
+  white-space: nowrap;
+}
+.sre-model .node.not-target {
+  background: #bdbdbd;
+  border: 1px solid #999999;
+  zoom: 1;
+  filter: alpha(opacity=40);
+  -webkit-opacity: 0.4;
+  -moz-opacity: 0.4;
+  opacity: 0.4;
+}
+.sre-model .node.not-target.selected {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  border-width: 3px;
+}
+.sre-model .node.not-sre-target {
+  background: #f5f5f5;
+  border: 1px solid #999999;
+}
+.sre-model .node.dragging .background {
+  background-color: white;
+}
+.sre-model .node-tool {
+  display: none;
+}
+.sre-model .node-tool .btn {
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0;
+  -moz-background-clip: padding;
+  border-radius: 0;
+  background-clip: padding-box;
+  padding: 2px 4px;
+  margin-right: 3px;
+}
+.sre-model .node-handle {
+  color: #999999;
+  display: none;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.sre-model .node-handle:hover {
+  cursor: move;
+}
+.sre-model .event-line {
+  height: 100%;
+  width: 3px;
+  color: #333333;
+  position: absolute;
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  cursor: e-resize;
+  z-index: 5;
+  white-space: nowrap;
+}
+.sre-model .event-line.hide-back {
+  color: transparent;
+  background-color: transparent;
+  z-index: -1;
+}
+.sre-model .event-line .border-name {
+  padding-left: 5px;
+}
+.sre-model .lane-header,
+.sre-model .lane-body,
+.sre-model .task-user-info,
+.sre-model .task-importance {
+  display: none;
+}
+.sre-model .resize-handle {
+  position: absolute;
+  width: 3px;
+  height: inherit;
+  cursor: e-resize;
+}
+.sre-model .resize-handle.front {
+  left: 0;
+}
+.sre-model .resize-handle.back {
+  right: 0;
+}
+.sre-model .time-caption {
+  position: absolute;
+  top: -10px;
+}
+.sre-model .time-caption.front {
+  left: -35px;
+}
+.sre-model .time-caption.front.reverse {
+  left: 0px;
+}
+.sre-model .time-caption.back {
+  right: -35px;
+}
+.sre-model .time-caption.back.reverse {
+  right: 0px;
+}
+.sre-model .time-caption.not-show {
+  display: none;
+}

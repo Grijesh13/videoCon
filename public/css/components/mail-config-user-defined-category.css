@@ -1,0 +1,85 @@
+@charset "utf-8";
+.mail-config-user-defined-category {
+  margin: 8px 0px 8px 24px;
+  position: relative;
+  max-height: 100%;
+  overflow: auto;
+}
+.mail-config-user-defined-category::-webkit-scrollbar {
+  width: 5px;
+  -webkit-transition: all 600ms ease;
+  -moz-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+.mail-config-user-defined-category::-webkit-scrollbar-track {
+  -webkit-border-radius: 1px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1px;
+  -moz-background-clip: padding;
+  border-radius: 1px;
+  background-clip: padding-box;
+}
+.mail-config-user-defined-category::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 1px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1px;
+  -moz-background-clip: padding;
+  border-radius: 1px;
+  background-clip: padding-box;
+  background: #bdbdbd;
+}
+.mail-config-user-defined-category::-webkit-scrollbar-thumb:hover {
+  background: #7f7f7f;
+}
+.mail-config-user-defined-category .category {
+  padding: 8px;
+  height: 32px;
+  margin-bottom: 2px;
+  width: 20%;
+}
+.mail-config-user-defined-category .category-icon {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+  padding: 1px;
+  width: 12px;
+  height: 12px;
+  background: #f9d8a0;
+}
+.mail-config-user-defined-category .category-name {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: 16px;
+}
+.mail-config-user-defined-category .category:hover {
+  background: #dddddd;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+}
+.mail-config-user-defined-category .selected {
+  background: #dddddd;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+}

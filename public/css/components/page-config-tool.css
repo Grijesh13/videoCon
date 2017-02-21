@@ -1,0 +1,80 @@
+@charset "utf-8";
+.page-config-tool {
+  position: fixed;
+  right: 0px;
+  top: 50px;
+  z-index: 1000;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 8px;
+}
+.page-config-tool .menu-tabs {
+  font-size: 2rem;
+}
+.page-config-tool .icon {
+  padding: 4px;
+  padding-bottom: 8px;
+  margin-right: 8px;
+}
+.page-config-tool .button-margin-right {
+  margin-right: 12px;
+}
+.page-config-tool .pull-right {
+  float: right;
+}
+.page-config-tool .tool-main-content {
+  border: 3px solid #cccccc;
+  top: 45px;
+  right: 0px;
+  position: absolute;
+  min-width: 460px;
+}
+.page-config-tool .tool-footer {
+  background: #cccccc;
+  border-bottom: 5px solid #cccccc;
+  height: 24px;
+}
+.page-config-tool .tool-footer .tool-help {
+  cursor: pointer;
+  margin-top: 4px;
+  margin-right: 4px;
+}
+.page-config-tool .info-panel {
+  border: inherit;
+  background: #ffffff;
+  right: 0px;
+  max-height: 700px;
+  overflow-y: hidden;
+}
+.page-config-tool .info-panel.show-scroll-bar {
+  overflow-y: scroll;
+}
+.page-config-tool .icon:hover {
+  background: #e8e8e8;
+}
+.page-config-tool .icon.active {
+  background: #cccccc;
+}
+.page-config-tool .tool-bar {
+  width: 100%;
+  padding: 4px;
+  background: #cccccc;
+}
+.page-config-tool-overlap-element {
+  position: relative;
+}
+.page-config-tool .tool-message {
+  margin-left: 5px;
+}
+.page-config-tool .tool-msg-success {
+  color: #33ac71;
+}
+.page-config-tool .tool-msg-warn {
+  color: #f4b142;
+}
+.page-config-tool .tool-msg-info {
+  color: #4285f4;
+}
+.page-config-tool .tool-msg-error {
+  color: #e91e63;
+}

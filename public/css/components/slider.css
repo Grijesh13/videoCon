@@ -1,0 +1,163 @@
+@charset "utf-8";
+.slider {
+  /* gray is better for default */
+}
+.slider :focus {
+  outline: none;
+}
+.slider-horizontal {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.slider-horizontal-bar {
+  background: none repeat scroll 0 0 #e8e8e8;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  position: relative;
+  height: 4px;
+}
+.slider-horizontal-bar-rangehighlight {
+  height: 4px;
+  position: absolute;
+  background-color: #333333;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.slider-horizontal-bar-thumb {
+  position: absolute;
+  overflow: visible;
+  width: 0;
+  height: 0;
+}
+.slider-horizontal-bar-thumb-handler {
+  position: relative;
+  background: none repeat scroll 0 0 #333333;
+  border: 2px solid #ffffff;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  width: 20px;
+  height: 20px;
+  margin: -8px 0 0 -10px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  -moz-transition: -moz-transform 0.2s ease-out;
+  -o-transition: -o-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out,-moz-transform 0.2s ease-out,-o-transform 0.2s ease-out,transform 0.2s ease-out;
+}
+.slider-horizontal-bar-thumb-handler:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  background-color: #191919;
+}
+.slider-horizontal-bar-thumb-handler:active {
+  background-color: #191919;
+}
+.slider-important-scale,
+.slider-warning-scale,
+.slider-error-scale {
+  cursor: pointer;
+}
+.slider-scale {
+  top: -7px;
+  position: absolute;
+  width: 2px;
+  height: 18px;
+  background: #bdbdbd;
+}
+.slider-ui-label {
+  position: absolute;
+  top: -17px;
+  left: 50%;
+  white-space: nowrap;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.slider-scale-label {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  color: #bdbdbd;
+  white-space: nowrap;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.slider-input-min-div,
+.slider-input-max-div {
+  margin-top: 10px;
+}
+.slider-input-min-div {
+  float: left;
+}
+.slider-input-max-div {
+  float: right;
+}
+.slider-input-min,
+.slider-input-max {
+  width: 72px;
+  float: left;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.slider-input-min-unit,
+.slider-input-max-unit {
+  line-height: 32px;
+  margin-left: 4px;
+  float: right;
+}
+.slider-input-min:active,
+.slider-input-max:active,
+.slider-input-min:focus,
+.slider-input-max:focus {
+  width: 72px;
+}
+.slider-warning .slider-horizontal-bar-rangehighlight {
+  background-color: #f4b142;
+}
+.slider-warning .slider-horizontal-bar-thumb-handler {
+  background: none repeat scroll 0 0 #f4b142;
+}
+.slider-warning .slider-horizontal-bar-thumb-handler:hover {
+  background-color: #db9f3b;
+}
+.slider-warning .slider-horizontal-bar-thumb-handler:active {
+  background-color: #db9f3b;
+}
+.slider-error .slider-horizontal-bar-rangehighlight {
+  background-color: #e91e63;
+}
+.slider-error .slider-horizontal-bar-thumb-handler {
+  background: none repeat scroll 0 0 #e91e63;
+}
+.slider-error .slider-horizontal-bar-thumb-handler:hover {
+  background-color: #d11b59;
+}
+.slider-error .slider-horizontal-bar-thumb-handler:active {
+  background-color: #d11b59;
+}

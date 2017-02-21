@@ -1,0 +1,46 @@
+@charset "utf-8";
+.mail-list {
+  border-right: 1px solid #dddddd;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.mail-list .mail-list-search-input {
+  background-color: #f1f1f1;
+  padding: 39px 12px 19px 8px;
+}
+.mail-list .mail-list-search-input > .component > .btn-group {
+  display: none;
+}
+.mail-list .mail-list-table {
+  overflow: auto;
+  height: calc(100% - 150px);
+  background-color: #f5f5f5;
+}
+.mail-list .mail-list-table::-webkit-scrollbar {
+  width: 5px;
+  -webkit-transition: all 600ms ease;
+  -moz-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+.mail-list .mail-list-table::-webkit-scrollbar-track {
+  -webkit-border-radius: 1px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1px;
+  -moz-background-clip: padding;
+  border-radius: 1px;
+  background-clip: padding-box;
+}
+.mail-list .mail-list-table::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 1px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1px;
+  -moz-background-clip: padding;
+  border-radius: 1px;
+  background-clip: padding-box;
+  background: #bdbdbd;
+}
+.mail-list .mail-list-table::-webkit-scrollbar-thumb:hover {
+  background: #7f7f7f;
+}

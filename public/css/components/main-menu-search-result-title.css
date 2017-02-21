@@ -1,0 +1,20 @@
+@charset "utf-8";
+.main-menu-search-result-title {
+  color: #333333;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.main-menu-search-result-title-main {
+  font-size: 2.4rem;
+}
+.main-menu-search-result-title-prefix {
+  font-size: 2rem;
+  margin-right: 8px;
+}
+.main-menu-search-result-title-suffix {
+  font-size: 2rem;
+  margin-left: 8px;
+}
+.main-menu-search-result-title-no-data {
+  color: #333333;
+}

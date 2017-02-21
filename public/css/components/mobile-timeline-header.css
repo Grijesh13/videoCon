@@ -1,0 +1,23 @@
+@charset "utf-8";
+.mobile-timeline-header {
+  background-color: #333333;
+  border-bottom-color: #333333;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.mobile-timeline-header .tab-link {
+  font-size: 1.6rem;
+  color: #ffffff;
+  padding: 4px 8px;
+}
+.mobile-timeline-header .tab-link.active {
+  color: #ffffff;
+}
+.mobile-timeline-header .wap-icon-menulist {
+  font-size: 2.4rem;
+  margin-left: -8px;
+}
+.mobile-timeline-header .wap-icon-angle-left {
+  font-size: 3rem;
+  margin-left: -14px;
+}

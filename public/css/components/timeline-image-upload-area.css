@@ -1,0 +1,106 @@
+@charset "utf-8";
+.timeline-image-upload-area {
+  position: relative;
+  padding: 4px 0;
+}
+.timeline-image-upload-area-item {
+  width: 100px;
+  height: 100px;
+  margin: 2px;
+  display: inline-block;
+  position: relative;
+}
+.timeline-image-upload-area-item-full {
+  border: solid #bdbdbd 1px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.timeline-image-upload-area-item-full-icons {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  color: #cccccc;
+  cursor: pointer;
+}
+.timeline-image-upload-area-item-full-icons:hover {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+.timeline-image-upload-area-item-full-close {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  font-weight: 700;
+}
+.timeline-image-upload-area-item-full-close:hover {
+  color: #ffffff;
+}
+.timeline-image-upload-area-item-full-progress-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  display: none;
+  position: absolute;
+  top: 0;
+}
+.timeline-image-upload-area-item-full-progress-wrapper.timeline-image-upload-area-showing {
+  display: block;
+}
+.timeline-image-upload-area-item-full-progress {
+  position: absolute;
+  left: 5px;
+  top: 42px;
+  width: 88px;
+}
+.timeline-image-upload-area-item-empty {
+  border: dashed #bdbdbd 2px;
+  color: #bdbdbd;
+  cursor: pointer;
+  display: none;
+}
+.timeline-image-upload-area-item-empty.timeline-image-upload-area-showing {
+  display: inline-block;
+}
+.timeline-image-upload-area-item-empty:hover {
+  color: #aaaaaa;
+  border-color: #aaaaaa;
+}
+.timeline-image-upload-area-item-empty-add {
+  height: 100%;
+}
+.timeline-image-upload-area-item-empty-add-icon {
+  position: absolute;
+  left: 35px;
+  top: 36px;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.timeline-image-upload-area-item-empty-add-fileuploader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}

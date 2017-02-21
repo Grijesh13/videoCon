@@ -1,0 +1,9 @@
+@charset "utf-8";
+.timeline-like-check-dialog-content-list-all {
+  height: 432px;
+  overflow-x: auto;
+}
+.timeline-like-check-dialog-content-list-each {
+  border-bottom: 1px solid #dddddd;
+  padding: 8px 12px;
+}

@@ -1,0 +1,33 @@
+@charset "utf-8";
+.timeline-following-area-search-area {
+  width: 400px;
+  float: right;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timeline-following-area-search-area-wrapper:after {
+  visibility: hidden;
+  display: block;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.timeline-following-area-search-box-input {
+  width: 100%;
+  border: solid 1px #bdbdbd;
+  height: 32px;
+  -webkit-border-radius: 3px 0 0 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px 0 0 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px 0 0 3px;
+  background-clip: padding-box;
+  padding: 4px;
+}
+.timeline-following-area-data-area {
+  margin-top: 24px;
+  margin-bottom: 8px;
+}

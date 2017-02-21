@@ -1,0 +1,169 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+#dto-columns-header,
+#dto-columns {
+  margin-left: 15px;
+}
+.goog-tree-row {
+  white-space: nowrap;
+  font: icon;
+  line-height: 16px;
+  height: 16px;
+}
+.goog-tree-row span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.goog-tree-children-nolines {
+  font: icon;
+}
+.goog-tree-expand-icon {
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+  cursor: default;
+}
+.goog-tree-expand-icon-plus {
+  width: 19px;
+  background-position: 0 0;
+}
+.goog-tree-expand-icon-minus {
+  width: 19px;
+  background-position: -24px 0;
+}
+.goog-tree-expand-icon-tplus {
+  width: 19px;
+  background-position: -48px 0;
+}
+.goog-tree-expand-icon-tminus {
+  width: 19px;
+  background-position: -72px 0;
+}
+.goog-tree-expand-icon-lplus {
+  width: 19px;
+  background-position: -96px 0;
+}
+.goog-tree-expand-icon-lminus {
+  width: 19px;
+  background-position: -120px 0;
+}
+.goog-tree-expand-icon-t {
+  width: 19px;
+  background-position: -144px 0;
+}
+.goog-tree-expand-icon-l {
+  width: 19px;
+  background-position: -168px 0;
+}
+.goog-tree-expand-icon-blank {
+  width: 19px;
+  background-position: -168px -24px;
+}
+.goog-tree-collapsed-folder-icon {
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+  background-position: 0px -24px;
+}
+.goog-tree-expanded-folder-icon {
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+  background-position: -24px -24px;
+}
+.goog-tree-file-icon {
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+  background-position: -48px -24px;
+}
+.goog-tree-item-label {
+  margin-left: 3px;
+  padding: 1px 2px 1px 2px;
+  text-decoration: none;
+  color: WindowText;
+  cursor: default;
+}
+.goog-tree-item-label:hover {
+  text-decoration: underline;
+}
+.selected .goog-tree-item-label {
+  background-color: ButtonFace;
+  color: ButtonText;
+}
+.focused .selected .goog-tree-item-label {
+  background-color: Highlight;
+  color: HighlightText;
+}
+.goog-tree-hide-root {
+  display: none;
+}
+h2 a {
+  font: bold 18pt Tahoma, Arial, sans-serif;
+  color: #333;
+  text-decoration: underline;
+}
+h2 a:hover {
+  color: #00f;
+  text-decoration: underline;
+}
+.goog-tree-children {
+  background-repeat: repeat-y;
+  background-image: url("../../img/spreadsheet/tree/I.png") !important;
+  background-position-y: 1px !important;
+  /* IE only */
+  font: icon;
+}
+.goog-tree-icon {
+  background-image: url("../../img/spreadsheet/tree/tree.png");
+}
+.goog-tree-item-label {
+  font: bold 10pt Tahoma, Arial, sans-serif;
+  color: #333;
+  text-decoration: none;
+}
+.goog-tree-item-label a {
+  font: normal 10pt Tahoma, Arial, sans-serif;
+  color: #333;
+  text-decoration: none;
+}
+.goog-tree-item-label a:hover {
+  color: #00f;
+  text-decoration: underline;
+}
+.goog-tree-root:focus {
+  outline: none;
+}

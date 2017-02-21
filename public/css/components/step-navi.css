@@ -1,0 +1,110 @@
+@charset "utf-8";
+.step-navi {
+  min-width: 320px;
+  margin: 13.5px 0 0 0;
+}
+.step-navi.step-navi-rendering {
+  display: none;
+}
+.step-navi-body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+.step-navi-item {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+.step-navi-step {
+  position: relative;
+  display: block;
+  padding-top: 17.5px;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  cursor: auto;
+  font-weight: 700;
+}
+.step-navi-step-title {
+  position: absolute;
+  display: block;
+  background: #e8e8e8;
+  color: #7f7f7f;
+  line-height: 24px;
+  text-align: center;
+  margin-top: -31px;
+  left: 50%;
+  margin-left: -12px;
+  width: 24px;
+  height: 24px;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-box-shadow: #e8e8e8 0 0 0 3px;
+  -moz-box-shadow: #e8e8e8 0 0 0 3px;
+  box-shadow: #e8e8e8 0 0 0 3px;
+}
+.step-navi-step-desc {
+  overflow: hidden;
+  color: #7f7f7f;
+  line-height: 1;
+  font-size: 1.4rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.step-navi-step-progress {
+  background-color: #dddddd;
+  height: 3px;
+}
+.step-navi-progress-indicator {
+  -webkit-transition: width 0.35s ease-in;
+  -moz-transition: width 0.35s ease-in;
+  -o-transition: width 0.35s ease-in;
+  transition: width 0.35s ease-in;
+  background-color: #4285f4;
+  width: 0.0%;
+  height: 3px;
+}
+.step-navi-active .step-navi-step-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #4285f4;
+  background-color: #ffffff;
+  -webkit-box-shadow: #4285f4 0 0 0 3px;
+  -moz-box-shadow: #4285f4 0 0 0 3px;
+  box-shadow: #4285f4 0 0 0 3px;
+}
+.step-navi-active .step-navi-step-desc {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #4285f4;
+}
+.step-navi-completed .step-navi-step-title {
+  background-color: #4285f4;
+  color: #ffffff;
+  -webkit-box-shadow: #4285f4 0 0 0 3px;
+  -moz-box-shadow: #4285f4 0 0 0 3px;
+  box-shadow: #4285f4 0 0 0 3px;
+}
+.step-navi-completed .step-navi-step-desc {
+  color: #4285f4;
+}

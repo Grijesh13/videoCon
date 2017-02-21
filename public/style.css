@@ -1,0 +1,1709 @@
+body {
+	margin: 0px;
+	font-family: sans-serif;
+	font-size: 1em;
+}
+
+.theirVideoDiv {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.theirVideo {
+	width: 1300px;
+ 	margin: 0 auto;
+ 	height: 1200px;
+}
+
+.myVideo {
+	position: absolute;
+ 	bottom: 30px;
+ 	width: 400px;
+ 	right: 20px;
+}
+
+.talk-announcements {
+	z-index: 1200;
+	background-color: #d11b59;
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	top: 48px;
+	font-size: 14px;
+	color: white;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	display: none;
+}
+
+.talk-announcements-message {
+	display: inline-block;
+	padding-top: 2px;
+}
+
+.talk-announcements-close {
+	display: inline-block;
+	float: right;
+	padding-top: 2px;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;	
+}
+
+/* Page Header */
+.talk-header {
+	position: fixed;
+	height: 48px;
+	width: 100%;
+	background-color: #333333;
+	padding: 0px;
+	margin-left: 0px;
+	z-index: 100;
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.talk-header-logo {
+	vertical-align: middle;
+	padding-top: 6px;
+	padding-left: 16px;
+	display: inline-block;
+}
+
+.talk-header-logo-img {
+	width: 126px;
+}
+
+.talk-header-menu {
+	color: white;
+	display: inline-block;
+	vertical-align: middle;
+	position: absolute;
+	right: 16px;
+	font-size: 14px;
+}
+
+.talk-header-menu-icon {
+	font-size: 2rem;
+	color: #bdbdbd;
+	cursor: pointer;
+	padding-right: 8px;
+}
+
+.talk-header-menu-icon:hover {
+	color: white;
+}
+
+.talk-header-menu-image {
+	width: 38px;
+	border-radius: 100px;
+	cursor: pointer;
+	margin-top: 4px;
+	border: 4px solid #555;
+}
+
+.talk-header-menu-image-wrapper {
+	display: inline-block;
+	background-color: white;
+	width: 45px;
+	text-align: center;
+	height: 45px;
+	vertical-align: middle;
+	border-radius: 150px;
+}
+
+.talk-header-dropdown {
+	position: absolute;
+	right: 14px;
+	top: 57px;
+	border: 1px solid #bdbdbd;
+	background-color: white;
+	display: none;
+}
+
+.talk-header-dropdown:after, 
+.talk-header-dropdown:before {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}    
+.talk-header-dropdown:after {
+    border-color: transparent;
+    border-bottom-color: white;
+    border-width: 12px;
+    left: 63%;
+    margin-left: 12px;
+}
+.talk-header-dropdown:before {
+    border-color: transparent;
+    border-bottom-color: #bdbdbd;
+    border-width: 14px;
+    left: 63%;
+    margin-left: 10px;
+}
+
+.talk-header-dropdown-item {
+	font-size: 14px;
+	padding: 8px;
+	cursor: pointer;
+}
+
+.talk-header-dropdown-item:hover {
+	background-color: #e8e8e8;
+}
+
+.talk-header-dropdown-item-icon {
+	padding-right: 4px;
+	font-size: 1.9rem;
+}
+
+/* Main page display */
+.talk-body {
+	position: absolute;
+	padding: 0px;
+	top: 48px;
+	color: #333333;
+	font-size: 0;
+	width: 100%;
+}
+/* Main page contacts section */
+.talk-body-contacts {
+	display: inline-block;
+	height: 100%;
+	font-size: 14px;
+	width: 300px;
+	background-color: #f5f5f5;
+	border: 1px solid #e8e8e8;
+	border-bottom: none;
+}
+
+.talk-body-contacts-header {
+	vertical-align: middle;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.talk-body-contacts-header-icon {
+	font-size: 21px;
+	display: inline-block;
+	padding-bottom: 7px;
+	cursor: pointer;
+}
+
+.talk-body-contacts-header-title {
+	font-size: 21px;
+	display: inline-block;	
+}
+
+.talk-body-contacts-search {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 9px;
+	padding-right: 8px;
+	border-bottom: 1px solid #e8e8e8;
+	background-color: white;
+}
+
+.talk-body-contacts-search-dropdown {
+	background-color: white;
+	z-index: 1000;
+	border: 1px solid #bdbdbd;
+	position: absolute;
+	left: 3px;
+	top: 38px;
+	display: none;
+}
+
+.talk-body-contacts-search-dropdown:after, 
+.talk-body-contacts-search-dropdown:before {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}    
+.talk-body-contacts-search-dropdown:after {
+    border-color: transparent;
+    border-bottom-color: white;
+    border-width: 6px;
+    left: 1%;
+    margin-left: 6px;
+}
+.talk-body-contacts-search-dropdown:before {
+    border-color: transparent;
+    border-bottom-color: #bdbdbd;
+    border-width: 7px;
+    left: 1%;
+    margin-left: 5px;
+}
+
+.talk-body-contacts-search-dropdown-item {
+	padding: 8px;
+	cursor: pointer;
+}
+
+.talk-body-contacts-search-dropdown-item:hover {
+	background-color: #e8e8e8;
+}
+
+.talk-body-contacts-search-icon {
+	display: inline-block;
+	padding-bottom: 3px;
+	cursor: pointer;
+}
+
+.talk-body-contacts-search-box {
+	background-color: white;
+	width: calc(100% - 20px);
+	font-size: 0;
+	border: 1px solid #e8e8e8;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	display: inline-block;
+}
+
+.talk-body-contacts-options {
+	position: absolute;
+	z-index: 900;
+	background-color: white;
+	border: 1px solid #bdbdbd;
+	display: none;
+}
+
+.talk-body-contacts-options-item {
+	padding: 8px;
+	cursor: pointer;
+}
+
+.talk-body-contacts-options-item:hover {
+	background-color: #e8e8e8;
+}
+
+.talk-body-contacts-search-box-suggestion {
+	left: 30px;
+	top: 40px;
+	width: 260px;
+	position: absolute;
+	z-index: 900;
+	background-color: white;
+	border: 1px solid #bdbdbd;
+	display: none;
+}
+
+.talk-body-contacts-search-box-suggestion-item {
+	padding: 8px;
+	cursor: pointer;
+}
+
+.talk-body-contacts-search-box-suggestion-item:hover {
+	background-color: #e8e8e8;
+}
+
+.talk-body-contacts-search-box-hidden {
+	display: none;
+	padding: 1px;
+}
+
+.talk-body-contacts-search-box-hidden-button {
+	border-radius: 3px;
+	background-color: #4285f4;
+	color: white;
+	border: none;
+	height: 100%;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	width: 30px;
+	height: 28px;
+	font-size: 14px;
+}
+
+.talk-body-contacts-search-box-hidden-button:hover {
+	background-color: #3b77db;
+}
+
+.talk-body-contacts-search-box-input {
+	display: inline-block;
+	padding: 4px;
+	border: none;
+	height: 100%;
+	width: calc(100% - 30px);
+	font-size: 14px;
+}
+
+.talk-body-contacts-search-box-button {
+	display: inline-block;
+	background-color: #4285f4;
+	color: white;
+	border: none;
+	height: 100%;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	width: 30px;
+	height: 28px;
+	font-size: 14px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.talk-body-contacts-search-box-button:hover {
+	background-color: #3b77db;
+}
+
+.talk-body-contacts-list {
+	background-color: white;
+}
+
+.talk-body-contacts-list-table {
+	width: 100%;
+}
+
+.talk-body-contacts-list-table-body {
+	display: inline-block;
+	width: 100%;
+	overflow: auto;
+	max-height: 889px;
+}
+     
+.talk-body-contacts-list-table-body::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}      
+.talk-body-contacts-list-table-body::-webkit-scrollbar-track {
+  background: white;
+}      
+.talk-body-contacts-list-table-body::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 3px;
+}
+
+.talk-body-contacts-list-table-body-row {
+	cursor: pointer;
+	width: 100%;
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.talk-body-contacts-list-table-body-row-selected {
+	background-color: #f5f5f5;
+}
+
+.talk-body-contacts-list-table-body-row:hover {
+	background-color: #f5f5f5;
+}
+
+.talk-body-contacts-list-table-body-row-container-status {
+	width: 4px;
+	height: 50px;
+	display: inline-block;
+	float: left;
+}
+
+.talk-body-contacts-list-table-body-row-container-status-online {
+	background-color: #33ac71;
+}
+
+.talk-body-contacts-list-table-body-row-container-status-busy {
+	background-color: #e91e63;
+}
+
+.talk-body-contacts-list-table-body-row-container-status-offline {
+	background-color: #aaaaaa;
+}
+
+.talk-body-contacts-list-table-body-row-container-status-custom {
+	background-color: #4285f4;
+}
+
+.talk-body-contacts-list-table-body-row-container-status-away {
+	background-color: #f4b142;
+}
+
+.talk-body-contacts-list-table-body-row-container-image {
+	vertical-align: middle;
+	padding: 4px;
+	white-space: pre;
+}
+
+.talk-body-contacts-list-table-body-row-container-text {
+	padding: 8px;
+	padding-left: 4px;
+	width: 100%;
+}
+
+.talk-body-contacts-list-table-body-row-image {
+	width: 50px;
+}
+
+.talk-body-contacts-list-table-body-row-name {
+	font-size: 14px;
+}
+.talk-body-contacts-list-table-body-row-reminder {
+	font-size: 10px;
+	color: #bdbdbd;
+}
+.talk-body-contacts-list-table-body-row-activity {
+	font-size: 10px;
+	color: #bdbdbd;
+}
+
+.talk-body-contacts-list-table-body-row-activity-icon {
+	font-size: 10px;
+	padding-right: 4px;
+}
+
+/* Main page middle section, the chat */
+.talk-body-chat {
+	display: inline-block;
+	height: 100%;
+	font-size: 14px;
+	width: calc(100% - 800px);
+	vertical-align: top;
+	border: 1px solid #e8e8e8;
+	border-left: none;
+	border-bottom: none;
+	z-index: 200;
+}
+
+.talk-body-chat-header {
+	width: 100%;
+	vertical-align: middle;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.talk-body-chat-header-title {
+	font-size: 21px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: inline-block;
+}
+
+.talk-body-chat-header-controls {
+	display: inline-block;
+	float: right;
+	margin-top: 12px;
+}
+
+.talk-body-chat-header-controls-icon {
+	font-size: 2.5rem;
+	padding-right: 8px;
+	cursor: pointer;
+}
+
+.talk-body-chat-content {
+	height: 778px;
+	max-height: 778px;
+	overflow: auto;
+	text-align: center;
+}
+
+.talk-body-chat-content-system-header-separator {
+	display: inline-block;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.talk-body-chat-content-system-container {
+	padding: 12px;
+}
+
+.talk-body-chat-content-system {
+	background-color: #3b77db;
+	border-radius: 3px;
+	color: white;
+	font-size: 14px;
+}
+
+.talk-body-chat-content-system-header {
+	padding-top: 8px;
+}
+
+.talk-body-chat-content-system-header-time {
+	display: inline-block;
+}
+
+.talk-body-chat-content-system-header-name {
+	display: inline-block;
+}
+
+.talk-body-chat-content-system-message {
+	padding: 8px;
+	font-size: 14px;
+	background-color: #f1f1f1;
+	color: #7f7f7f;
+	border-radius: 3px;
+	border: 1px solid #e8e8e8;
+}
+
+.talk-body-chat-content::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}      
+.talk-body-chat-content::-webkit-scrollbar-track {
+  background: white;
+}      
+.talk-body-chat-content::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 3px;
+}
+
+.talk-body-chat-input {
+	width: 100%;
+	padding: 8px;	
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.talk-body-chat-input-controls {
+	text-align: right;
+	padding-top: 4px;
+}
+
+.talk-body-chat-input-controls-attachment {
+	display: inline-block;
+	float: left;
+	margin-top: 6px;
+}
+
+.talk-body-chat-input-controls-buttons {
+	display: inline-block;
+}
+
+.talk-body-chat-input-controls-icon {
+	font-size: 1.9rem;
+	padding-right: 8px;
+	cursor: pointer;
+}
+
+.talk-body-chat-input-text {
+	width: 100%;
+	padding-bottom: 4px;
+	border: 1px solid #e8e8e8;
+	font-size: 0;
+	cursor: text;
+}
+
+.talk-body-chat-input-text-textarea {
+	width: 100%;
+	resize: none;
+	border: none;
+	font-size: 14px;
+	padding-right: 30px;
+}
+
+.talk-body-chat-input-text-textarea::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}      
+.talk-body-chat-input-text-textarea::-webkit-scrollbar-track {
+  background: white;
+}      
+.talk-body-chat-input-text-textarea::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 3px;
+}
+
+.talk-body-chat-input-controls-icon-emoji {
+	vertical-align: top;
+	padding-top: 4px;
+	padding-right: 4px;
+	font-size: 1.9rem;
+	position: absolute;
+	margin-left: -30px;
+}
+
+.talk-body-chat-input-controls-send {
+	border: none;
+	background-color: #4285f4;
+	border-radius: 3px;
+	color: white;
+	height: 32px;
+	width: 64px;
+}
+
+.talk-body-chat-input-controls-buttons-check {
+	display: inline-block;
+}
+
+.talk-body-chat-input-controls-buttons-check-label {
+	color: #bdbdbd;
+}
+
+.talk-body-chat-input-controls-send:hover {
+	background-color: #3b77db;	
+}
+
+.talk-body-chat-content {
+  max-height: 778px;
+	padding: 8px;
+}
+
+.talk-body-chat-content-message-image-user {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	display: inline-block;
+	padding-top: 2px;	
+	padding-left: 8px;	
+}
+
+.talk-body-chat-content-message-text-user {
+	display: inline-block;
+	border: 1px solid #e8e8e8;
+	display: inline-block;
+	padding: 8px;
+	border-radius: 3px;
+	background-color: white;
+	max-width: calc(100% - 58px);
+	position: relative;
+}
+
+.talk-body-chat-content-message-text-user:after, 
+.talk-body-chat-content-message-text-user:before {
+	left: 100%;
+	top: 25px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.talk-body-chat-content-message-text-user:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-left-color: white;
+	border-width: 6px;
+	margin-top: -6px;
+}
+.talk-body-chat-content-message-text-user:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-left-color: #e8e8e8;
+	border-width: 7px;
+	margin-top: -7px;
+}
+
+.talk-body-chat-content-message-text-header-name-user {
+	display: inline-block;
+	float: right;
+	padding-left: 16px;
+}
+
+.talk-body-chat-content-message-text-header-time-user {
+	display: inline-block;
+}
+
+.talk-body-chat-content-message-text-message-user {
+	padding-top: 8px;
+	white-space: pre-line;
+	text-align: left;
+}
+
+.talk-body-chat-content-message {	
+	padding: 8px;
+	text-align: left;
+}
+
+.talk-body-chat-content-message-user {	
+	padding: 8px;
+	text-align: right;
+}
+
+.talk-body-chat-content-message-image {
+	vertical-align: top;
+	text-align: center;
+	display: inline-block;
+	padding-top: 2px;	
+	padding-right: 8px;
+}
+
+.talk-body-chat-content-message-image-img {
+	width: 50px;
+	border-radius: 150px;
+}
+
+.talk-body-chat-content-message-text {
+	border: 1px solid #e8e8e8;
+	display: inline-block;
+	padding: 8px;
+	border-radius: 3px;
+	background-color: #f5f5f5;
+	max-width: calc(100% - 58px);
+	position: relative;
+}	
+
+.talk-body-chat-content-message-text:after, 
+.talk-body-chat-content-message-text:before {
+	right: 100%;
+	top: 25px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.talk-body-chat-content-message-text:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-right-color: #f5f5f5;
+	border-width: 6px;
+	margin-top: -6px;
+}
+.talk-body-chat-content-message-text:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-right-color: #e8e8e8;
+	border-width: 7px;
+	margin-top: -7px;
+}
+
+.talk-body-chat-content-message-text-header {
+	vertical-align: top;
+	width: 100%;
+	text-align: left;
+	color: #999;
+}
+
+.talk-body-chat-content-message-text-header-name {
+	display: inline-block;
+}
+
+.talk-body-chat-content-message-text-header-time {
+	display: inline-block;
+	float: right;
+	padding-left: 4px;
+}
+
+.talk-body-chat-content-message-text-message {
+	padding-top: 8px;
+	white-space: pre-line;
+	text-align: left;
+}
+
+/* Main page side section, profile and search results */
+.talk-body-panel {
+	display: inline-block;
+	height: 100%;
+	font-size: 14px;
+	width: 500px;
+}
+
+.talk-body-panel-header {
+	width: 100%;
+	padding: 8px;
+	border-bottom: 1px solid #e8e8e8;
+	text-align: center;
+}
+
+.talk-body-panel-header-search-dropdown {
+	position: absolute;
+	background-color: white;
+	border: 1px solid #bdbdbd;
+	z-index: 900;
+	text-align: left;
+	display: none;
+}
+
+.talk-body-panel-header-search-dropdown:after, 
+.talk-body-panel-header-search-dropdown:before {
+    bottom: 100.2%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}    
+.talk-body-panel-header-search-dropdown:after {
+    border-color: transparent;
+    border-bottom-color: white;
+    border-width: 6px;
+    left: 3%;
+    margin-left: 6px;
+}
+.talk-body-panel-header-search-dropdown:before {
+    border-color: transparent;
+    border-bottom-color: #bdbdbd;
+    border-width: 7px;
+    left: 3%;
+    margin-left: 5px;
+}
+
+.talk-body-panel-header-search-dropdown-item {
+	padding: 8px;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;	
+}
+
+.talk-body-panel-header-search-dropdown-item:hover {
+	background-color: #e8e8e8;
+}
+
+.talk-body-panel-header-search-dropdown-item-text {
+	display: inline-block;
+	padding-left: 8px;
+	margin-bottom: 2px;
+}
+
+.talk-body-panel-header-search-hidden {
+	display: none;
+}
+
+.talk-body-panel-header-search-search-hidden {
+	border: none;
+	background-color: #4285f4;
+  height: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 30px;
+  height: 28px;
+  font-size: 14px;
+	border-radius: 3px;
+}
+
+.talk-body-panel-header-search-dropdown-item-reset {
+	padding: 8px;
+	cursor: pointer;
+	padding-left: 21px;
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;	
+}
+
+.talk-body-panel-header-search-dropdown-item-reset:hover {
+	background-color: #e8e8e8;
+}
+
+.talk-body-panel-header-search-search-hidden:hover {
+	background-color: #3b77db
+}
+
+.talk-body-panel-header-search {
+	font-size: 0;
+	border: 1px solid #e8e8e8;
+	border-radius: 3px;
+}
+
+.talk-body-panel-header-search-config {
+	border: none;
+	background-color: #f1f1f1;
+  height: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 30px;
+  height: 28px;
+  font-size: 14px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.talk-body-panel-header-search-config:hover {
+	background-color: #e8e8e8;
+}
+
+.talk-body-panel-header-search-search {
+	border: none;
+	background-color: #4285f4;
+  height: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 30px;
+  height: 28px;
+  font-size: 14px;
+}
+
+.talk-body-panel-header-search-search:hover {
+	background-color: #3b77db
+}
+
+.talk-body-panel-header-search-icon-cog {
+	font-size: 1.6rem;
+	color: #333333;
+}
+
+.talk-body-panel-header-search-icon-search {
+	font-size: 1.6rem;
+	color: white;
+}
+
+.talk-body-panel-header-search-input {
+	font-size: 14px;
+	padding: 4px;
+	border: none;
+	width: calc(100% - 90px);
+}
+
+.talk-body-panel-header-search-cancel {
+	border: none;
+	background-color: #4285f4;
+  height: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 30px;
+  height: 28px;
+  font-size: 14px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.talk-body-panel-header-search-cancel:hover {
+	background-color: #3b77db
+}
+
+.talk-body-panel-footer {
+	background-color: #f5f5f5;
+	border-top: 1px solid #e8e8e8;
+	border-right: 1px solid #e8e8e8;
+	position: absolute;
+	bottom: 0px;
+	width: 500px;
+	padding: 7px;
+	text-align: center;
+}
+
+.talk-body-panel-footer-button  {
+	border: none;
+	color: white;
+	background-color: #4285f4;
+	height: 32px;
+	border-radius: 3px;
+}
+
+.talk-body-panel-footer-button:hover {
+	background-color: #3b77db
+}
+
+.talk-body-panel-footer-profile {
+	display: none;
+}
+
+.talk-body-panel-main {
+	height: calc(100% - 48px);
+	overflow: auto;
+	position:absolute;
+	width: 500px;
+}
+
+.talk-body-panel-main::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}      
+.talk-body-panel-main::-webkit-scrollbar-track {
+  background: white;
+}      
+.talk-body-panel-main::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 3px;
+}
+
+.talk-body-panel-main-avatar {
+	padding: 8px;
+	text-align: center;
+	width: 100%;
+}
+.talk-body-panel-main-avatar-img {
+	width: 260px;
+}
+
+.talk-body-panel-main-info {
+	text-align: center;
+}
+
+.talk-body-panel-main-info-name {
+	font-size: 21px;
+	padding-bottom: 4px;
+}
+
+.talk-body-panel-main-info-email {
+	padding-bottom: 4px;
+}
+
+.talk-body-panel-main-info-status {
+	padding-bottom: 4px;
+}
+
+.talk-body-panel-main-info-status-icon {
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	border-radius: 150px;
+}
+
+.talk-body-panel-main-info-status-message {
+	display: inline-block;
+}
+
+.talk-body-panel-main-info-controls {
+	font-size: 0;
+}
+
+.talk-body-panel-main-info-controls-button {
+	border: none;
+	color: white;
+	background-color: #4285f4;
+	height: 32px;
+	width: 80px;
+	font-size: 14px;
+}
+
+.talk-body-panel-main-info-controls-button:hover {
+	background-color: #3b77db
+}
+
+.talk-body-panel-main-info-controls-button-archive {
+	border-bottom-left-radius: 3px;
+	border-top-left-radius: 3px;
+}
+
+.talk-body-panel-main-info-controls-button-files {
+	border-bottom-right-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.talk-body-panel-main-info-controls-button-icon {
+	color: white;	
+	padding-bottom: 4px;
+}
+
+.talk-body-panel-main-info-status-users {
+	display: none;
+	max-height: 50%;
+	overflow: auto;
+	text-align: center;
+	padding: 8px;
+	padding-top: 16px;
+}
+
+.talk-body-panel-main-info-status-users-member {
+	width: 20%;
+	text-align: left;
+	display: inline-block;	
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.talk-body-panel-main-info-status-users-status {
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	border-radius: 150px;
+	background-color: black;
+}
+
+.talk-body-panel-main-info-status-users-status-Online {
+	background-color: #33ac71;
+}
+.talk-body-panel-main-info-status-users-status-Busy {
+	background-color: #e91e63;
+}
+.talk-body-panel-main-info-status-users-status-Away {
+	background-color: #f4b142;
+}
+.talk-body-panel-main-info-status-users-status-Custom {
+	background-color: #4285f4;
+}
+.talk-body-panel-main-info-status-users-status-Offline {
+	background-color: #aaaaaa;
+}
+
+.talk-body-panel-main-info-status-users-name {
+	display: inline-block;
+	padding-left: 4px;
+	cursor: pointer;
+}
+
+.talk-chat {
+	position: absolute;
+	background-color: white;
+	bottom: 0px;
+	right: 0px;
+	width: 700px;
+	height: 450px;
+	border: 1px solid #e8e8e8;
+	display: none;
+	border-radius: 3px;
+}
+
+.talk-chat-contacts {
+	border: 1px solid #e8e8e8;
+	display: inline-block;
+	width: 200px;
+	height: 100%;
+	border-left: none;
+	border-top: none;
+	position: absolute;
+	border-bottom: none;
+}
+
+.talk-chat-contacts-header {
+	padding: 8px;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.talk-chat-contacts-header-container {
+	display: inline-block;
+	font-size: 21px;
+}
+
+.talk-chat-contacts-header-container-icon {
+	font-size: 1.9rem;
+	cursor: pointer;
+	display: block;
+}
+
+.talk-chat-contacts-header-container-text {
+	padding-bottom: 4px;
+}
+
+.talk-chat-contacts-search {
+	background-color: white;
+	padding: 8px;
+	border-bottom: 1px solid #e8e8e8;
+	padding-left: 4px;
+}
+
+.talk-chat-contacts-search-box {
+	border: 1px solid #e8e8e8;
+	font-size: 0px;
+	border-bottom-right-radius: 3px;
+	border-top-right-radius: 3px;
+	display: inline-block;
+	width: calc(100% - 20px);
+}
+
+.talk-chat-contacts-search-icon {
+	display: inline-block;
+	padding-bottom: 5px;
+	font-size: 1.7rem;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;	
+}
+
+.talk-chat-contacts-search-box-input {
+	border: none;
+	height: 100%;
+	padding: 4px;
+	width: calc(100% - 28px);
+	font-size: 14px;
+}
+
+.talk-chat-contacts-search-box-input-button {
+	background-color: #4285f4;
+	color: white;
+	border: none;
+	height: 100%;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-size: 14px;
+	border-bottom-right-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.talk-chat-contacts-search-box-input-button:hover {
+	background-color: #3b77db;
+}
+
+.talk-chat-contacts-contacts {
+	width: 100%;
+	height: calc(100% - 87px);
+	background-color: white;
+}
+
+.talk-chat-contacts-contacts-table {
+	width: 100%;
+}
+
+.talk-chat-contacts-contacts-table-list {
+	display: inline-block;
+	width: 100%;
+	overflow: auto;
+	max-height: 402px;
+}
+     
+.talk-chat-contacts-contacts-table-list::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}      
+.talk-chat-contacts-contacts-table-list::-webkit-scrollbar-track {
+  background: white;
+}      
+.talk-chat-contacts-contacts-table-list::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 3px;
+}
+
+.talk-chat-contacts-contacts-table-list-row {
+	max-width: 200px;
+	display: block;
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;	
+}
+
+.talk-chat-contacts-contacts-table-list-row:hover {
+	background-color: #f5f5f5;
+	cursor: pointer;
+}
+
+.talk-chat-contacts-contacts-table-list-row-selected {
+	background-color: #f5f5f5;
+}
+
+.talk-chat-contacts-contacts-table-list-row-image {
+	vertical-align: middle;
+	font-size: 0;
+	padding: 4px;
+}
+
+.talk-chat-contacts-contacts-table-list-row-image-status {
+	display: inline-block;
+	width: 4px;
+	height: 50px;
+	float: left;
+}
+
+.talk-chat-contacts-contacts-table-list-row-image-img {
+	width: 50px;
+}
+
+.talk-chat-contacts-contacts-table-list-row-name {
+	font-size: 14px;
+	vertical-align: middle;
+	padding-left: 4px;
+}
+
+.talk-chat-conversation {
+	background-color: white;
+	display: inline-block;
+	height: 100%;
+	width: calc(100% - 200px);
+	position: absolute;
+	right: 0px;
+}
+
+.talk-chat-conversation-header {
+	height: 43px;
+	width: 100%;
+	padding: 8px;
+	border-bottom: 1px solid #e8e8e8;
+	font-size: 0;
+}
+
+.talk-chat-conversation-header-title {
+	font-size: 21px;	
+	display: inline-block;
+}
+
+.talk-chat-conversation-header-status-container {
+	display: inline-block;
+}
+
+.talk-chat-conversation-header-status {
+	border-radius: 150px;
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+}
+
+.talk-chat-conversation-header-text {
+	display: inline-block;
+	font-size: 14px;
+	padding-left: 4px;	
+}
+
+.talk-chat-conversation-header-controls {
+	float: right;
+	display: inline-block;
+	padding-top: 3px;
+}
+
+.talk-chat-conversation-header-controls-close {
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.talk-chat-conversation-input {
+	padding: 8px;
+}
+
+.talk-chat-conversation-input-text {
+	border: 1px solid #e8e8e8;
+	font-size: 0;
+	width: 100%;
+}
+
+.talk-chat-conversation-input-text-textarea {
+	border: none;
+	resize: none;
+	font-size: 14px;
+	width: 100%;
+	padding-right: 30px;
+}
+
+.talk-chat-conversation-input-text-textarea::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}      
+.talk-chat-conversation-input-text-textarea::-webkit-scrollbar-track {
+  background: white;
+}      
+.talk-chat-conversation-input-text-textarea::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 3px;
+}
+
+.talk-chat-conversation-input-text-icon {
+	color: #333333;
+	font-size: 2rem;
+	cursor: pointer;
+	padding: 4px;
+}
+
+.talk-chat-conversation-input-text-emoji {
+	vertical-align: top;
+	z-index: 5000;
+	position: absolute;
+	right: 17px;
+}
+
+.talk-chat-conversation-input-controls {
+	padding-top: 4px;
+	font-size: 14px;
+	text-align: right;
+}
+
+.talk-chat-conversation-input-controls-attach {
+	display: inline-block;
+	float: left;
+	margin-top: 6px;
+}
+
+.talk-chat-conversation-input-controls-send {
+	display: inline-block;
+}
+
+.talk-chat-conversation-input-controls-send-option {
+	display: inline-block;
+}
+
+.talk-chat-conversation-input-controls-send-option-label {
+	color: #bdbdbd;
+}
+
+.talk-chat-conversation-input-controls-send-button {
+	display: inline-block;
+	border: none;
+  background-color: #4285f4;
+  border-radius: 3px;
+  color: white;
+  height: 32px;
+  width: 64px;
+}
+
+.talk-chat-conversation-input-controls-send-button:hover {
+	background-color: #3b77db;
+}
+
+.talk-chat-conversation-messages {
+	height: 313px;
+	max-height: 313px;
+	overflow: auto;
+	text-align: center;
+}
+
+.talk-chat-conversation-messages::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}      
+.talk-chat-conversation-messages::-webkit-scrollbar-track {
+  background: white;
+}      
+.talk-chat-conversation-messages::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 3px;
+}
+
+.talk-chat-conversation-messages-message {
+	text-align: left;
+	padding: 8px;
+}
+
+.talk-chat-conversation-messages-message-user {
+	text-align: right;
+	padding: 8px;
+}
+
+.talk-chat-conversation-messages-message-image {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	padding-top: 2px;
+	padding-right: 4px;
+}
+
+.talk-chat-conversation-messages-message-image-user {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	padding-top: 2px;
+	padding-left: 4px;
+}
+
+.talk-chat-conversation-messages-message-image-avatar {
+	width: 50px;
+	border-radius: 150px;
+}
+
+.talk-chat-conversation-messages-message-text {
+	display: inline-block;
+	font-size: 14px;
+	border: 1px solid #e8e8e8;
+	background-color: #f5f5f5;
+	border-radius: 3px;
+	padding: 8px;
+	max-width: calc(100% - 58px);
+}
+
+.talk-chat-conversation-messages-message-text-user {
+	display: inline-block;
+	font-size: 14px;
+	border: 1px solid #e8e8e8;
+	background-color: white;
+	border-radius: 3px;
+	padding: 8px;
+	max-width: calc(100% - 58px);
+}
+
+.talk-chat-conversation-messages-message-text-header {
+	padding-bottom: 4px;
+	text-align: left;
+}
+
+.talk-chat-conversation-messages-message-text-header-name {
+	display: inline-block;
+}
+
+.talk-chat-conversation-messages-message-text-header-time {
+	display: inline-block;
+	float: right;
+}
+
+.talk-chat-conversation-messages-message-text-header-name-user {
+	display: inline-block;
+	float: right;
+}
+
+.talk-chat-conversation-messages-message-text-header-time-user {
+	display: inline-block;
+	padding-right: 4px;
+}
+
+.talk-chat-conversation-messages-message-text-message-user {
+	text-align: left;
+	padding-bottom: 8px;
+	white-space: pre-line;
+}
+
+.talk-chat-conversation-messages-message-text-message {
+	padding-bottom: 8px;
+	white-space: pre-line;
+}
+
+.talk-chat-contacts-search-dropdown {
+	position: absolute;
+	background-color: white;
+	z-index: 900;
+	font-size: 14px;
+	border: 1px solid #e8e8e8;
+	top: 37px;
+	left: 3px;
+	display: none;
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.talk-chat-contacts-search-dropdown:after, 
+.talk-chat-contacts-search-dropdown:before {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}    
+.talk-chat-contacts-search-dropdown:after {
+    border-color: transparent;
+    border-bottom-color: white;
+    border-width: 6px;
+    left: 0%;
+    margin-left: 2px;
+}
+.talk-chat-contacts-search-dropdown:before {
+    border-color: transparent;
+    border-bottom-color: #bdbdbd;
+    border-width: 7px;
+    left: 0%;
+    margin-left: 1px;
+}
+
+.talk-chat-contacts-search-dropdown-item {
+	padding: 8px;
+	cursor: pointer;
+}
+
+.talk-chat-contacts-search-dropdown-item:hover {
+	background-color: #f5f5f5;
+}
+
+.talk-chat-contacts-search-button-hidden {
+	display: none;
+	background-color: #4285f4;
+	color: white;
+	border: none;
+	height: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 14px;
+	border-radius: 3px;
+}
+
+.talk-chat-contacts-search-button-hidden:hover {
+	background-color: #3b77db;
+}
+
+.talk-chat-contacts-suggestion {
+	position: absolute;
+	width: 166px;
+	background-color: white;
+	z-index: 1000;
+	border: 1px solid #bdbdbd;
+	top: 36px;
+	left: 24px;
+	display: none;
+	max-height: 200px;
+	overflow: auto;
+}
+
+.talk-chat-contacts-suggestion::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}      
+.talk-chat-contacts-suggestion::-webkit-scrollbar-track {
+  background: white;
+}      
+.talk-chat-contacts-suggestion::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 3px;
+}
+
+.talk-chat-contacts-suggestion-item {
+	font-size: 14px;
+	padding: 8px;
+	cursor: pointer;
+}
+
+.talk-chat-contacts-suggestion-item:hover {
+	background-color: #f5f5f5;
+}
+
+.talk-body-panel-main-search {
+	padding: 8px;
+	display: none;
+}
+
+.talk-body-panel-main-search-item {
+	padding-bottom: 8px;
+	cursor: pointer;
+}
+
+.talk-body-panel-main-search-item-container {
+	background-color: #f5f5f5;
+	padding: 8px;
+	border: 1px solid #e8e8e8;
+	border-radius: 3px;
+}
+
+.talk-body-panel-main-search-item-header-name {
+	display: inline-block;
+}
+
+.talk-body-panel-main-search-item-header-time {
+	display: inline-block;
+	float: right;
+	padding-left: 8px;
+}
+
+.talk-body-panel-main-search-item-body {
+	padding-top: 8px;
+}
+
+.talk-body-chat-input-emoticon {
+	position: absolute;
+	background-color: white;
+	border: 1px solid #e8e8e8;
+	border-radius: 3px;
+	bottom: 200px;
+	padding: 4px;
+}
+
+.talk-body-chat-input-emoticon-entry {
+	display: inline-block;
+	padding: 4px;
+}
+
+.talk-body-chat-input-emoticon-entry-emoji {
+	cursor: pointer;
+}

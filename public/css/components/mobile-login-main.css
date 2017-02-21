@@ -1,0 +1,317 @@
+@charset "utf-8";
+.mobile-login-main-page {
+  background: #a0c2f9;
+  height: 100%;
+  width: 100%;
+  background-image: url("../../img/login/login-background01.jpg");
+  overflow-y: auto;
+}
+.mobile-login-main-page.theme-ariel {
+  background-image: url("../../img/login/login-background02.jpg");
+}
+.mobile-login-main-header {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px 0 6px 0;
+  text-align: center;
+}
+.mobile-login-main-header:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  bottom: 0;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 16px 16px 0 16px;
+  border-color: transparent transparent transparent transparent;
+  border-top-color: rgba(255, 255, 255, 0.1);
+  margin-left: -16px;
+}
+.mobile-login-main-body {
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  padding-top: 24px;
+  padding-bottom: 40px;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 320px;
+}
+.mobile-login-main-body-hidden {
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.mobile-login-main-content-header {
+  padding-bottom: 0;
+  margin-top: 24px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.mobile-login-main-content-header-hidden {
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.mobile-login-main-logo-image {
+  width: 70%;
+  max-width: 496px;
+}
+.mobile-login-main-login-failure-message {
+  display: none;
+}
+.mobile-login-main-current-account-avatar {
+  height: 60px;
+  width: 60px;
+  -webkit-transition: height 0.25s ease-in;
+  -moz-transition: height 0.25s ease-in;
+  -o-transition: height 0.25s ease-in;
+  transition: height 0.25s ease-in;
+}
+.mobile-login-main-current-account-avatar.hide {
+  height: 0px;
+}
+.mobile-login-main-current-account-avatar-holder {
+  margin: 8px auto;
+  overflow: hidden;
+}
+.mobile-login-main-avatar {
+  display: block;
+  margin: 0 auto;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+}
+.mobile-login-main-avatar-blur {
+  zoom: 1;
+  filter: alpha(opacity=70);
+  -webkit-opacity: 0.7;
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+}
+.mobile-login-main-account-list {
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 8px;
+}
+.mobile-login-main-account-list-avatar {
+  height: 40px;
+  width: 40px;
+}
+.mobile-login-main-account-list-container {
+  padding: 6px 0;
+}
+.mobile-login-main-input-holder {
+  font-size: 1.4rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 32px;
+}
+.mobile-login-main-input-tool-container {
+  min-width: 48px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  margin-left: 16px;
+}
+.mobile-login-main-input-tool-angle-area {
+  font-size: 1.6rem;
+  width: 50%;
+  text-align: center;
+}
+.mobile-login-main-input-tool-angle-area.hide {
+  display: none;
+}
+.mobile-login-main-input-dropdown-menu {
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: height 0.25s ease-in, margin-bottom 0.25s ease-in;
+  -moz-transition: height 0.25s ease-in, margin-bottom 0.25s ease-in;
+  -o-transition: height 0.25s ease-in, margin-bottom 0.25s ease-in;
+  transition: height 0.25s ease-in, margin-bottom 0.25s ease-in;
+}
+.mobile-login-main-input-dropdown-menu-container {
+  height: auto;
+}
+.mobile-login-main-input-dropdown-menu.hide {
+  margin: 0;
+  padding: 0;
+}
+.mobile-login-main-blank-userid-holder {
+  margin-top: 16px;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.mobile-login-main-blank-userid-holder.fade-out {
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.mobile-login-main-input {
+  color: #333333;
+  background: transparent;
+  border: 0;
+  width: 100%;
+  height: 32px;
+}
+.mobile-login-main-input::-webkit-input-placeholder {
+  color: #7f7f7f;
+}
+.mobile-login-main-input:-moz-placeholder {
+  color: #7f7f7f;
+}
+.mobile-login-main-input::-moz-placeholder {
+  color: #7f7f7f;
+}
+.mobile-login-main-input:-ms-input-placeholder {
+  color: #7f7f7f;
+}
+.mobile-login-main-input:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-color: #000000;
+}
+.mobile-login-main-button {
+  display: block;
+  width: 100%;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  border: 1px solid #4285f4;
+  text-align: center;
+  padding: 12px 16px;
+  background-color: #4285f4;
+  -webkit-transition: border-color 0.3s ease;
+  -moz-transition: border-color 0.3s ease;
+  -o-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  color: #ffffff;
+}
+.mobile-login-main-button:hover,
+.mobile-login-main-button:focus,
+.mobile-login-main-button:active {
+  background-color: #1b6cf2;
+  border-color: #0e61eb;
+}
+.mobile-login-main-button-icon {
+  float: right;
+}
+.mobile-login-main-bottom-link-holder {
+  padding-bottom: 0;
+  margin-top: 16px;
+  text-align: center;
+}
+.mobile-login-main-bottom-link {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #dddddd;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.mobile-login-main-bottom-link.hide {
+  display: none;
+}
+.mobile-login-main-bottom-link-s {
+  width: 160px;
+}
+.mobile-login-main-bottom-link:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+.mobile-login-main-bottom-link:focus {
+  color: #ffffff;
+  cursor: pointer;
+}
+.mobile-login-main-footer-credit-holder {
+  text-align: center;
+  padding: 8px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 8px;
+  font-size: 0.98rem;
+}
+.mobile-login-main-footer-credit {
+  text-align: center;
+  color: #cccccc;
+}
+.mobile-login-main-footer-credit:hover {
+  text-decoration: none;
+  color: #cccccc;
+  cursor: default;
+}
+.mobile-login-main-footer-credit:focus {
+  outline: none;
+  border-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.mobile-login-main-language-picker {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 32px;
+  margin-right: 40px;
+}

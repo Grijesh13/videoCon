@@ -1,0 +1,30 @@
+@charset "utf-8";
+.timeline-header-user-profile {
+  padding: 8px 16px;
+}
+.timeline-header-user-profile-detail {
+  position: absolute;
+  left: 282px;
+  top: 50px;
+}
+.timeline-header-user-profile-thumbnail {
+  display: inline-block;
+  position: absolute;
+  left: 162px;
+  top: 18px;
+}
+.timeline-header-user-profile-thumbnail-img {
+  height: 108px;
+  width: 108px;
+  border: #ffffff 4px solid;
+  position: relative;
+  z-index: 1;
+}
+.timeline-header-user-profile-username {
+  font-size: 1.7rem;
+  color: #ffffff;
+  padding-bottom: 8px;
+}
+.timeline-header-user-profile-department {
+  color: #ffffff;
+}

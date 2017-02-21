@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * report-converter-template styles.
+ * @author Vaibhav
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * report-management-information styles.
+ * @author Vaibhav
+ * ------------------------------------------------------------------------*/
+.report-management-information {
+  padding: 15px 20px 15px 20px;
+  top: 88px;
+  background-color: #f1f1f1;
+  color: #3b77db;
+  margin-bottom: 17px;
+  border: 1px solid transparent;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+.report-management-information-app-info-message {
+  color: #4285f4;
+}
+.report-management-information-top-message-heading {
+  color: inherit;
+  display: inline-block;
+  font-weight: 700;
+  padding-bottom: 3px;
+  padding-left: 12px;
+  padding-right: 3px;
+  margin-bottom: 6px;
+  font-size: 1.4rem;
+}
+.report-management-information-top-message-p {
+  margin: 0 0 2px 12px;
+  margin-left: 52px;
+}

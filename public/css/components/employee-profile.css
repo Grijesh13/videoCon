@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * employee-profile styles.
+ * (temporary style)
+ * @author saito_j
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * employee-profile styles.
+ * (temporary style)
+ * @author saito_j
+ * ------------------------------------------------------------------------*/
+.employee-profile {
+  display: inline-flex;
+}
+.employee-profile-items {
+  line-height: initial;
+}
+.employee-profile-items-hiding {
+  display: none;
+}
+.employee-profile-items-showing {
+  position: absolute;
+  color: #7f7f7f;
+  cursor: pointer;
+}
+.employee-profile-items .font-size-title {
+  font-size: 2rem;
+}
+.employee-profile-items .font-size-caption {
+  font-size: 1.2rem;
+}
+.employee-profile-items .hyper-link:hover {
+  cursor: pointer;
+}
+.announe-chart {
+  margin-left: 40px;
+}

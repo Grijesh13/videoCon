@@ -1,0 +1,22 @@
+@charset "utf-8";
+.approval-list-search-input {
+  width: 240px;
+  border: 1px solid #dddddd;
+  border-right: none;
+  padding: 4px 8px;
+  height: 32px;
+}
+.approval-list-search > .wap-button {
+  vertical-align: bottom;
+}
+.approval-list-search > .wap-button > .wap-button-button {
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius-topleft: 0;
+  -moz-background-clip: padding;
+  border-top-left-radius: 0;
+  background-clip: padding-box;
+}

@@ -1,0 +1,172 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * report-editor-tag-palette styles.
+ * @author shailesh_a
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col,
+.report-editor-tag-palette-list {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+/* --------------------------------------------------------------------------
+ * cell padding for layout system.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.grid-cell-padding {
+  padding: 16px 16px;
+}
+/* --------------------------------------------------------------------------
+ * report-editor-tag-palette styles.
+ * @author shailesh_a
+ * ------------------------------------------------------------------------*/
+.report-editor-tag-palette {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  height: 50%;
+  max-height: 100%;
+  left: 0px;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border: 1px solid #dddddd;
+}
+.report-editor-tag-palette::-webkit-scrollbar {
+  width: 5px;
+  background: #f1f1f1;
+  -webkit-transition: all 600ms ease;
+  -moz-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+.report-editor-tag-palette::-webkit-scrollbar-track {
+  -webkit-border-radius: 1px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1px;
+  -moz-background-clip: padding;
+  border-radius: 1px;
+  background-clip: padding-box;
+}
+.report-editor-tag-palette::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 1px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1px;
+  -moz-background-clip: padding;
+  border-radius: 1px;
+  background-clip: padding-box;
+  background: #7f7f7f;
+}
+.report-editor-tag-palette::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+.report-editor-tag-palette-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  max-width: 100%;
+}
+.report-editor-tag-palette-list-title {
+  font-size: 1.7rem;
+  padding-left: 12px;
+  padding-top: 8px;
+}
+.report-editor-tag-palette-list-filter-filter-tab {
+  position: relative;
+}
+.report-editor-tag-palette-list-filter .nav.nav-tabs {
+  border-bottom: none;
+  margin-bottom: 8px;
+  padding-left: 16px;
+}
+.report-editor-tag-palette-list-filter .nav.nav-tabs .tab-header:first-child {
+  border-bottom: 4px solid #4285f4;
+}
+.report-editor-tag-palette-list-filter .nav.nav-tabs .tab-header a:hover {
+  border-color: transparent;
+  background-color: transparent;
+}
+.report-editor-tag-palette-list .cardgrid-scroll-target {
+  padding: 0px;
+}
+.report-editor-tag-palette-list .cardgrid-canvas {
+  padding: 0px;
+  width: 100%;
+}
+.report-editor-tag-palette-list .cardgrid-card {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-height: 100%;
+  cursor: pointer;
+  margin: 8px;
+  border: none;
+  border-left: 4px solid transparent;
+}
+.report-editor-tag-palette-list .cardgrid-card:hover {
+  background-color: #f1f1f1;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.report-editor-tag-palette-list .cardgrid-card.active {
+  background-color: #ecf2fd;
+  border-left: 4px solid #4285f4;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}

@@ -1,0 +1,67 @@
+@charset "utf-8";
+.badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 10px;
+  -moz-background-clip: padding;
+  border-radius: 10px;
+  background-clip: padding-box;
+  background-color: #999999;
+  color: #ffffff;
+}
+.badge.badge-overlap {
+  position: relative;
+  top: -18px;
+  left: -10px;
+}
+.badge.badge-default {
+  background-color: #d65071;
+  color: #ffffff;
+}
+.badge.badge-primary {
+  background-color: #4285f4;
+  color: #ffffff;
+}
+.badge.badge-success {
+  background-color: #33ac71;
+  color: #ffffff;
+}
+.badge.badge-info {
+  background-color: #4285f4;
+  color: #ffffff;
+}
+.badge.badge-warning {
+  background-color: #f4b142;
+  color: #ffffff;
+}
+.badge.badge-danger {
+  background-color: #e91e63;
+  color: #ffffff;
+}
+.badge.badge-roundless {
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -moz-background-clip: padding;
+  border-radius: 1px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.badge:empty {
+  display: none;
+}
+a.badge:hover,
+a.badge:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}

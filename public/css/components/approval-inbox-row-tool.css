@@ -1,0 +1,57 @@
+@charset "utf-8";
+.inbox-contents {
+  width: 1400px;
+  margin-bottom: 20px;
+}
+.inbox-contents .inbox-contents-row-menu {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+  width: 220px;
+  position: absolute;
+  z-index: 100;
+  top: 52px;
+  right: 16px;
+  line-height: 3em;
+  border: 1px solid #dddddd;
+}
+.inbox-contents .inbox-contents-row-menu-body {
+  max-height: 600px;
+  overflow-y: scroll;
+}
+.inbox-contents .inbox-contents-row-menu-header {
+  padding: 0px 10px 0px 10px;
+  border-bottom: 1px solid #dddddd;
+}
+.inbox-contents .inbox-contents-row-menu-group {
+  border-bottom: 1px solid #dddddd;
+}
+.inbox-contents .inbox-contents-row-menu-group-item {
+  display: flex;
+  margin: 1px 0 1px 0;
+  padding: 0px 20px 0px 20px;
+  cursor: pointer;
+}
+.inbox-contents .inbox-contents-row-menu-group-item.inbox-contents-row-menu-remove {
+  padding: 0px 10px 0px 10px;
+  border-bottom: 1px solid #dddddd;
+}
+.inbox-contents .inbox-contents-row-menu-group-item:hover {
+  background-color: #dddddd;
+}
+.inbox-contents .inbox-contents-row-menu-group-item-checked {
+  background: grey;
+}
+.inbox-contents .inbox-contents-row-menu-group-header {
+  padding: 0px 10px 0px 10px;
+  font-size: 120%;
+  color: #888;
+}
+.inbox-contents .inbox-contents-row-menu-footer {
+  padding: 0px 10px 0px 10px;
+}
+.inbox-contents .inbox-contents-row-menu-footer .wap-icon-tag {
+  margin-left: 8px;
+}
+.inbox-contents .inbox-contents-row-menu-hidden {
+  display: none;
+}

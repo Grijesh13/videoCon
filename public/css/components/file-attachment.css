@@ -1,0 +1,47 @@
+@charset "utf-8";
+.wap-attach-file-drop {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  border: 3px dotted #999999;
+  font-size: 2rem;
+  color: #aaaaaa;
+  text-align: center;
+  padding-top: 32px;
+}
+.wap-attach-file-target {
+  padding-top: 5px;
+  padding-bottom: 8px;
+  display: inline;
+}
+.wap-attach-file-hint {
+  color: #aaaaaa;
+}
+.wap-attach-file-name {
+  color: #555555;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.wap-attach-file-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 6px;
+  width: 70%;
+}

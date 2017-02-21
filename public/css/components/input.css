@@ -1,0 +1,86 @@
+@charset "utf-8";
+.text-base-style,
+textarea,
+input {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #333333;
+  vertical-align: middle;
+  line-height: 20px;
+  display: inline-block;
+  padding: 4px 8px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  overflow: visible;
+}
+.text-base-style::-webkit-input-placeholder {
+  color: #999999;
+}
+.text-base-style:-moz-placeholder {
+  color: #999999;
+}
+.text-base-style::-moz-placeholder {
+  color: #999999;
+}
+.text-base-style:-ms-input-placeholder {
+  color: #999999;
+}
+.text-base-style:focus {
+  border: 1px solid #4285f4;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 1px #4285f4;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 1px #4285f4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 1px #4285f4;
+}
+.text-base-style:disabled,
+.text-base-style.readonly {
+  background-color: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+input {
+  height: 36px;
+}
+.money-input {
+  text-align: right;
+}
+.wap-input-info-msg {
+  color: #4285f4;
+  display: block;
+}
+.wap-input-err-msg {
+  color: #e91e63;
+  display: block;
+}
+.wap-input-confirmation-msg {
+  color: #4285f4;
+  display: block;
+}
+.wap-input-warning-msg {
+  color: #e91e63;
+  display: block;
+}
+.wap-input-auto {
+  padding: 2px 4px;
+  vertical-align: baseline;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 1rem;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+  line-height: 11px;
+  margin-top: 5px;
+  margin-left: 3px;
+  margin-right: 1px;
+  display: block;
+  background-color: #dddddd;
+  color: #999999;
+  text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.8);
+  float: right;
+  cursor: pointer;
+}

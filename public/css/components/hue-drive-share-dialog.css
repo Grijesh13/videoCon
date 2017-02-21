@@ -1,0 +1,82 @@
+@charset "utf-8";
+.hue-drive-share-dialog-content-item-label {
+  padding-bottom: 4px;
+}
+.hue-drive-share-dialog-content-sharewith-wrapper {
+  margin-top: 16px;
+}
+.hue-drive-share-dialog-access-selector {
+  position: absolute;
+  right: 40px;
+  top: 80px;
+}
+.hue-drive-share-dialog-link-label {
+  margin-bottom: 16px;
+}
+.hue-drive-share-dialog-fetch-code-label {
+  margin-top: 20px;
+  margin-bottom: 5.6px;
+}
+.hue-drive-share-dialog-persons {
+  max-height: 176px;
+  overflow-y: auto;
+  border: 1px solid;
+  border-color: #dddddd;
+  padding: 8px;
+  width: 720px;
+  min-height: 160px;
+}
+.hue-drive-share-dialog-persons-div {
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 8px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+}
+.hue-drive-share-dialog-persons-div-details {
+  width: 635px;
+  overflow: hidden;
+}
+.hue-drive-share-dialog-public-link-input {
+  width: 720px;
+  border: 1px solid;
+  border-color: #dddddd;
+  padding: 8px;
+  min-height: 32px;
+}
+.hue-drive-share-dialog-fetch-code-div {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.hue-drive-share-dialog-fetch-code-content {
+  margin: 8px;
+  font-weight: 700;
+}
+.hue-drive-share-dialog-account-message {
+  padding-top: 8px;
+}
+.hue-drive-share-dialog-persons-div-details-cancel {
+  color: #7f7f7f;
+  cursor: pointer;
+  margin-top: 16px;
+  margin-bottom: 12px;
+  margin-left: -20px;
+}
+.hue-drive-share-dialog-persons-div-details-email {
+  color: #7f7f7f;
+}
+.hue-drive-share-dialog-persons-img {
+  height: 40px;
+}
+.hue-drive-share-dialog-search-suggest-select {
+  background-color: #f1f1f1;
+}

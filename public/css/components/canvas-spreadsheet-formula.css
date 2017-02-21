@@ -1,0 +1,136 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.spreadsheet-formula {
+  background: #ffffff;
+  height: 25px;
+  padding: 0;
+}
+.spreadsheet-formula .formula-bar-icon {
+  display: inline-block;
+  width: 44px;
+  height: 20px;
+  padding-left: 16px;
+  color: #555555;
+  border-right: 2px solid #cccccc;
+  margin-top: 2px;
+}
+.spreadsheet-formula .formula-bar-input {
+  display: inline-block;
+  padding: 2px 10px;
+  background-color: #ffffff;
+  cursor: text;
+  position: absolute;
+  left: 48px;
+  right: 0px;
+}
+.spreadsheet-formula .formula-bar-input:focus {
+  outline: none;
+  border-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.spreadsheet-formula-selection {
+  background-color: #ffffff;
+  border: 1px solid #bdbdbd;
+  -webkit-box-shadow: 0 2px 4px #bdbdbd;
+  -moz-box-shadow: 0 2px 4px #bdbdbd;
+  box-shadow: 0 2px 4px #bdbdbd;
+  color: #333333;
+  font-size: 1.4rem;
+  position: absolute;
+  width: 320px;
+  word-wrap: break-word;
+  z-index: 1000;
+}
+.spreadsheet-formula-selection .formula-item {
+  padding: 2px 0 2px 10px;
+  border: 1px solid transparent;
+}
+.spreadsheet-formula-selection .formula-item .formula-item-summary {
+  font-size: 1.2rem;
+  color: #555555;
+  display: none;
+}
+.spreadsheet-formula-selection .formula-item-selected {
+  background-color: #f5f5f5;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+.highlight-cell-editor {
+  outline: none;
+  border-color: #4285f4;
+  -webkit-box-shadow: 0 0 5px 1px #4285f4;
+  -moz-box-shadow: 0 0 5px 1px #4285f4;
+  box-shadow: 0 0 5px 1px #4285f4;
+}
+.spreadsheet-formula-hint {
+  background-color: #ffffff;
+  border: 1px solid #bdbdbd;
+  -webkit-box-shadow: 0 2px 4px #bdbdbd;
+  -moz-box-shadow: 0 2px 4px #bdbdbd;
+  box-shadow: 0 2px 4px #bdbdbd;
+  color: #333333;
+  font-size: 1.2rem;
+  position: absolute;
+  width: 320px;
+  word-wrap: break-word;
+  z-index: 1000;
+}
+.spreadsheet-formula-hint .formula-hint-title {
+  background-color: #f5f5f5;
+  color: #333333;
+  font-size: 1.4rem;
+  padding: 2px 0 2px 10px;
+}
+.spreadsheet-formula-hint .close-hint {
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.spreadsheet-formula-hint .formula-hint-body {
+  border-top: 1px solid #e8e8e8;
+}
+.spreadsheet-formula-hint .formula-hint-body .formula-hint-section {
+  padding: 6px 10px;
+}
+.spreadsheet-formula-hint .formula-hint-body .formula-hint-section .hint-title {
+  color: #555555;
+}
+.spreadsheet-formula-hint .formula-hint-body .formula-hint-section .hint-text {
+  text-align: left;
+}

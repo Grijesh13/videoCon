@@ -1,0 +1,171 @@
+@charset "utf-8";
+.timeline-shared-feed-operation-dialog-wrapper {
+  top: 50px;
+}
+.timeline-shared-feed-operation-dialog-dialog {
+  width: 720px;
+  height: 400px;
+}
+.timeline-shared-feed-operation-dialog-dialog-content {
+  width: 720px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+  position: relative;
+  background-color: #ffffff;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #f1f1f1;
+  outline: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.timeline-shared-feed-operation-dialog-dialog-content-header {
+  font-size: 1.7rem;
+  padding: 16px;
+  border-bottom: 1px solid #e8e8e8;
+  background-color: #ffffff;
+}
+.timeline-shared-feed-operation-dialog-dialog-content-header-close {
+  width: 33px;
+  height: 33px;
+  background: #f1f1f1;
+  display: inline-block;
+  padding: 0 4px;
+  line-height: 1;
+  color: #7f7f7f;
+  zoom: 1;
+  filter: alpha(opacity=70);
+  -webkit-opacity: 0.7;
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+  -moz-background-clip: padding-box;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  margin-top: -4px;
+  position: absolute;
+  right: 10px;
+}
+.timeline-shared-feed-operation-dialog-dialog-content-header-close:hover {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.timeline-shared-feed-operation-dialog-dialog-content-header-title-bar {
+  color: #000000;
+  border-left: 2px solid #4285f4;
+  margin-left: 4px;
+  padding-left: 16px;
+}
+.timeline-shared-feed-operation-dialog-dialog-content-body {
+  position: relative;
+  padding: 16px;
+  overflow: hidden;
+  background: #ffffff;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  top: auto;
+  bottom: auto;
+}
+.timeline-shared-feed-operation-dialog-dialog-content-body-post {
+  width: 100%;
+  max-height: 160px;
+  height: 100px;
+  padding: 12px 12px 0 16px;
+  border: 1px solid #dddddd;
+  overflow-x: auto;
+}
+.timeline-shared-feed-operation-dialog-dialog-content-body-post-title {
+  margin-bottom: 8px;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.timeline-shared-feed-operation-dialog-dialog-content-body-post-title-icon {
+  margin-right: 4px;
+}
+.timeline-shared-feed-operation-dialog-dialog-content-body-post-box {
+  height: auto;
+  font-size: 1.7rem;
+}
+.timeline-shared-feed-operation-dialog-dialog-content-body-feed {
+  width: 100%;
+  max-height: 140px;
+  overflow-x: auto;
+  margin-top: 16px;
+  border: 1px solid #dddddd;
+}
+.timeline-shared-feed-operation-dialog-dialog-content-footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  background-color: #ecf2fd;
+  padding: 8px;
+}
+.timeline-shared-feed-operation-dialog-dialog-content-footer-post {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 16px;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  padding-top: 1px;
+}
+.timeline-shared-feed-operation-dialog-dialog-content-footer-btn {
+  padding-right: 8px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.timeline-shared-feed-operation-dialog-dialog-content-footer-btn-post-btn {
+  margin-right: 8px;
+}

@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * input-confirm-section.xml style
+ * (used by common/input/fragment/confirm.xml)
+ *
+ * @author minami_n
+ * ------------------------------------------------------------------------*/
+.input-confirm-section {
+  padding-bottom: 28px;
+}
+.input-confirm-section.bottom {
+  padding-bottom: 0;
+}
+.input-confirm-section-header {
+  background-color: #f1f1f1;
+  margin-bottom: 8px;
+}
+.input-confirm-section-header-label {
+  padding-top: 4px;
+  padding-left: 8px;
+  font-size: 2rem;
+}
+.input-confirm-section-content {
+  margin-top: 8px;
+  margin-bottom: 20px;
+}

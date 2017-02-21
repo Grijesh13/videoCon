@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * report-editor-preview styles.
+ * (temporary style)
+ * @author shailesh_a
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * report-editor-preview styles.
+ * (temporary style)
+ * @author shailesh_a
+ * ------------------------------------------------------------------------*/
+.report-editor-preview {
+  position: relative;
+  width: 595px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  outline: 1px solid #cccccc;
+}
+.report-editor-preview-report {
+  height: 481px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.report-editor-preview-report-left-margin {
+  position: relative;
+  left: 0px;
+  width: 20px;
+  height: 100%;
+  outline: 1px dashed #dddddd;
+}
+.report-editor-preview-report-right-margin {
+  position: relative;
+  right: 0px;
+  width: 20px;
+  height: 100%;
+  outline: 1px dashed #dddddd;
+}
+.report-editor-preview-report-top-margin {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 20px;
+  outline: 1px dashed #dddddd;
+}
+.report-editor-preview-report-bottom-margin {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  height: 20px;
+  outline: 1px dashed #dddddd;
+}
+.report-editor-preview-report-center-elements {
+  width: 555px;
+}
+.report-editor-preview-report-background {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 0px;
+  right: 0px;
+  border: 1px dashed #dddddd;
+}
+.report-editor-preview-snap-line {
+  outline: 1px dashed #4285f4;
+  position: absolute;
+}
+.report-editor-preview-snap-line-v {
+  top: 0px;
+  height: 100%;
+}
+.report-editor-preview-snap-line-h {
+  left: 0px;
+  width: 100%;
+}

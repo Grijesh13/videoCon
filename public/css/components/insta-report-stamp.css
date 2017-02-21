@@ -1,0 +1,215 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * insta-report-stamp styles.
+ * @author akhil
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * insta-report-stamp styles.
+ * @author akhil
+ * ------------------------------------------------------------------------*/
+.insta-report-stamp:after {
+  clear: both;
+}
+.insta-report-stamp-outer:hover {
+  background-color: #f1f1f1;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.insta-report-stamp-outer-on-preview:hover {
+  background-color: none;
+}
+.insta-report-stamp-area-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  overflow: hidden;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.insta-report-stamp-area-wrapper:after {
+  clear: both;
+}
+.insta-report-stamp-area-wrapper-control {
+  height: 24px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.insta-report-stamp-area-wrapper-control-font-changer {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+}
+.insta-report-stamp-area-wrapper-control-theme-red {
+  background-color: #e91e63;
+}
+.insta-report-stamp-area-wrapper-control-theme-blue {
+  background-color: #4285f4;
+}
+.insta-report-stamp-area-wrapper-control-theme-black {
+  background-color: #333333;
+}
+.insta-report-stamp-area-wrapper-control-navigation {
+  height: 10px;
+  width: 10px;
+  -webkit-border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 10px;
+  -moz-background-clip: padding;
+  border-radius: 10px;
+  background-clip: padding-box;
+  margin-right: 10px;
+  background-color: #cccccc;
+}
+.insta-report-stamp-area-wrapper-control-navigation:hover {
+  cursor: pointer;
+}
+.insta-report-stamp-area-wrapper-control-active {
+  border: 1px solid #4285f4;
+  background-color: #ffffff;
+  -webkit-transition: border 1s, background-color 0.5s;
+  -moz-transition: border 1s, background-color 0.5s;
+  -o-transition: border 1s, background-color 0.5s;
+  transition: border 1s, background-color 0.5s;
+}
+.insta-report-stamp-area-wrapper-control-inactive {
+  background-color: #cccccc;
+  -webkit-transition: background-color 1.5s;
+  -moz-transition: background-color 1.5s;
+  -o-transition: background-color 1.5s;
+  transition: background-color 1.5s;
+}
+.insta-report-stamp-area-wrapper-display {
+  width: 10000000000000000000px;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  top: 0px;
+  left: 0px;
+  -webkit-transition: left 0.5s;
+  -moz-transition: left 0.5s;
+  -o-transition: left 0.5s;
+  transition: left 0.5s;
+}
+.insta-report-stamp-area-wrapper-display-slide {
+  width: 400px;
+  position: relative;
+  margin: 2px;
+  float: left;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.insta-report-stamp-area-wrapper-split {
+  background-color: #cccccc;
+  height: 1px;
+  margin-top: 4px;
+  margin-bottom: 1px;
+}
+.insta-report-stamp-data {
+  margin: 8px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-size: 200%;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2px 12px;
+  white-space: nowrap;
+}
+.insta-report-stamp-on-preview {
+  cursor: move;
+  margin: 0px;
+}
+.insta-report-stamp-option-border-solid {
+  border: 2px solid;
+  -webkit-border-radius: 8px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 8px;
+  -moz-background-clip: padding;
+  border-radius: 8px;
+  background-clip: padding-box;
+}
+.insta-report-stamp-option-border-dotted {
+  border: 2px;
+  border-style: dashed;
+  -webkit-border-radius: 8px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 8px;
+  -moz-background-clip: padding;
+  border-radius: 8px;
+  background-clip: padding-box;
+}
+.insta-report-stamp-option-theme-red {
+  border-color: #e91e63;
+  color: #e91e63;
+}
+.insta-report-stamp-option-theme-blue {
+  border-color: #4285f4;
+  color: #4285f4;
+}
+.insta-report-stamp-option-theme-black {
+  border-color: #333333;
+  color: #333333;
+}

@@ -1,0 +1,33 @@
+@charset "utf-8";
+.timeline-config-list {
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: -35px;
+}
+.timeline-config-list-profile-picture-area {
+  padding: 12px 12px 4px 12px;
+}
+.timeline-config-list-profile-picture {
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  height: 64px;
+  width: 64px;
+}
+.timeline-config-list-profile-user-info {
+  color: #ffffff;
+  padding: 8px 12px;
+}
+.timeline-config-list-profile-user-info-department-area {
+  font-size: 1.2rem;
+}
+.timeline-config-list-header {
+  color: #7f7f7f;
+  padding: 16px 8px;
+}
+.timeline-config-list-header-title {
+  margin-left: 8px;
+}

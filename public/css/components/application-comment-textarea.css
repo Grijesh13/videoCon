@@ -1,0 +1,13 @@
+@charset "utf-8";
+.application-comment-textarea {
+  position: relative;
+}
+.application-comment-textarea-textarea {
+  width: 100%;
+  resize: none;
+  padding-right: 72px;
+  overflow-y: hidden;
+}
+.application-comment-textarea-textarea-noborder {
+  border: none;
+}

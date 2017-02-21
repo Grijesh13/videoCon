@@ -1,0 +1,45 @@
+@charset "utf-8";
+.timeline-follow-button-following,
+.timeline-follow-button-unfollow {
+  display: none;
+}
+.timeline-follow-button-active .timeline-follow-button-following {
+  display: initial;
+}
+.timeline-follow-button-active .timeline-follow-button-do-follow {
+  display: none;
+}
+.timeline-follow-button-active:hover .timeline-follow-button-following {
+  display: none;
+}
+.timeline-follow-button-active:hover .timeline-follow-button-unfollow {
+  display: initial;
+}
+.timeline-follow-button-width {
+  width: 120px;
+}
+.timeline-follow-button-icon {
+  padding-right: 4px;
+  font-size: 1.6rem;
+  color: #7f7f7f;
+}
+.timeline-follow-button-icon-success {
+  color: #33ac71;
+}
+.timeline-follow-button-icon-danger {
+  color: #e91e63;
+}
+.timeline-follow-button-default {
+  color: #333333;
+  background-color: #f1f1f1;
+  border-color: #dddddd;
+}
+.timeline-follow-button-success {
+  color: #33ac71;
+}
+.timeline-follow-button-danger {
+  color: #e91e63;
+}
+.timeline-follow-button-icon {
+  margin-right: 2px;
+}

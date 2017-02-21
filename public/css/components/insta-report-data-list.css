@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * insta-report-data-list styles.
+ * (temporary style)
+ * @author nishiyama_k
+ * ------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col,
+.insta-report-data-list-cardgrid-card-default-card-datalist-center,
+.insta-report-data-list-cardgrid-card-default-card-datalist-right {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+/* --------------------------------------------------------------------------
+ * cell padding for layout system.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.grid-cell-padding {
+  padding: 16px 16px;
+}
+/* --------------------------------------------------------------------------
+ * insta-report-data-list styles.
+ * (temporary style)
+ * @author nishiyama_k
+ * ------------------------------------------------------------------------*/
+.insta-report-data-list {
+  width: auto;
+  height: 710px;
+  position: absolute;
+  right: 32px;
+  z-index: 1000;
+  margin-top: 24px;
+}
+.insta-report-data-list-area {
+  height: inherit;
+}
+.insta-report-data-list-area-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-height: 100%;
+}
+.insta-report-data-list .cardgrid-pane-body {
+  padding: 0px;
+}
+.insta-report-data-list .cardgrid-scroll-target {
+  padding: 0px;
+}
+.insta-report-data-list .cardgrid-canvas {
+  padding: 0px;
+}
+.insta-report-data-list-cardgrid-card {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  max-height: 100%;
+  padding: 2px;
+  margin: 0 4px 8px 0;
+  cursor: pointer;
+  background-color: #e8e8e8;
+}
+.insta-report-data-list-cardgrid-card-default-card-datalist-left {
+  margin: auto;
+}
+.insta-report-data-list-cardgrid-card-default-card-datalist-center {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 40px;
+  flex-basis: 40px;
+}
+.insta-report-data-list-cardgrid-card-default-card-datalist-right {
+  padding-left: 2px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  max-width: 100%;
+}
+.insta-report-data-list-cardgrid-card-default-card-datalist-right-datalist-contents {
+  font-size: 1.2rem;
+}
+.insta-report-data-list-cardgrid-card:hover {
+  background-color: #dddddd;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.insta-report-data-list-cardgrid-card.active {
+  border: 1px solid #4285f4;
+  background-color: #ecf2fd;
+}

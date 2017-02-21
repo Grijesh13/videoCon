@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.cassandraview-filter-room-navbar {
+  margin-bottom: 0px;
+}
+.cassandraview-filter-room-label {
+  display: block;
+  font-size: 1.2rem;
+}
+.cassandraview-filter-room-location-select {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #e8e8e8;
+}
+.cassandraview-filter-room-keyspace-select {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #e8e8e8;
+}
+.cassandraview-filter-room-new-tab-link {
+  cursor: pointer;
+  padding: 2px;
+}
+.cassandraview-filter-room-new-tab-link:hover {
+  background-color: #f1f1f1;
+}
+.cassandraview-filter-room-hkeys {
+  display: none;
+}
+.cassandraview-filter-room-search-input-div {
+  margin-bottom: 10px;
+}
+.cassandraview-filter-room-keyspace-list-div {
+  margin-bottom: 10px;
+}
+.cassandraview-filter-room-keyspace-header {
+  background-color: #4285f4;
+  color: #ffffff;
+  cursor: pointer;
+}
+.cassandraview-filter-room-keyspace-header:hover {
+  text-decoration: underline;
+}
+.cassandraview-filter-room-columnfamily-header {
+  background-color: #4285f4;
+  color: #ffffff;
+}
+.cassandraview-filter-room-show-detail {
+  cursor: pointer;
+}
+.cassandraview-filter-room-show-detail:hover {
+  background-color: #f1f1f1;
+}
+.cassandraview-filter-room-none {
+  color: #cccccc;
+}
+.cassandraview-filter-room-column-family-list-box {
+  width: 280px;
+}
+.cassandraview-filter-room-columnfamily-list-tbody {
+  display: block;
+  width: 280px;
+  height: 774px;
+  overflow: auto;
+}
+.cassandraview-filter-room-columnfamily-list-tbody::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.cassandraview-filter-room-columnfamily-list-tbody::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+.cassandraview-filter-room-columnfamily-list-tbody::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 5px;
+}
+.cassandraview-filter-room-table {
+  min-width: 280px;
+}
+.cassandraview-filter-room-tr-bordered-head {
+  border: 1px solid #e8e8e8;
+}
+.cassandraview-filter-room-tr-bordered {
+  border: 1px solid #e8e8e8;
+}
+.cassandraview-filter-room-record-line {
+  padding: 4px 8px;
+  width: 100%;
+}
+.cassandraview-filter-room-activeKeyspace {
+  background-color: #ecf2fd;
+}
+.cassandraview-filter-room-activeColumnFamily {
+  background-color: #ecf2fd;
+}
+.cassandraview-filter-room-columnfamimly-search-input {
+  width: 100%;
+  margin-bottom: 4px;
+  padding: 4px 16px 4px 8px;
+  border: 1px solid #e8e8e8;
+}

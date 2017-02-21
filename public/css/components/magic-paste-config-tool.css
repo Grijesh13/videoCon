@@ -1,0 +1,38 @@
+@charset "utf-8";
+.magic-paste-config-tool-title {
+  margin-top: 8px;
+  margin-left: 16px;
+  font-size: 2rem;
+}
+.magic-paste-config-tool-guide-area {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 16px;
+  margin-right: 16px;
+  border-radius: 3px;
+  padding: 15px;
+  display: block;
+  background-color: #ecf2fd;
+  color: #4285f4;
+  border: 1px solid #4285f4;
+}
+.magic-paste-config-tool-sub-guide {
+  margin-top: 8px;
+}
+.magic-paste-rule-editor {
+  position: absolute;
+  background-color: #ffffff;
+  white-space: pre-wrap;
+  width: auto;
+  border: 1px solid #4285f4;
+}
+.magic-paste-on {
+  z-index: 1000;
+}
+.magic-paste-off {
+  z-index: -1;
+}
+.magic-paste-search-helper {
+  font-size: 25px;
+  position: absolute;
+}

@@ -1,0 +1,155 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * HUE grid system.
+ * inspired by bootstrap and flexboxgrid.com
+ * row: children of row are aligned horizontaly. height of row can be fixed or auto
+ * col: children of col are aligned vertically. width of col can be x/12, fixed, or auto.
+ * col-as-row: from parents col-as-row looks like col and from children col-as-row looks like row.
+ * this grid system itselt is not aware of padding. use ./grid-cell-padding.less
+ * TODO col-lg(larger than 1440px width?)
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.col,
+.input-notify-message .input-notify-message-content,
+.input-notify-message .input-notify-message-content-emphasize {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.col-as-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+/* --------------------------------------------------------------------------
+ * cell padding for layout system.
+ * @author sato_hi
+ * ------------------------------------------------------------------------*/
+.grid-cell-padding {
+  padding: 16px 16px;
+}
+.input-notify-message {
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  padding: 12px 20px;
+  border: 1px solid;
+}
+.input-notify-message.input-notify-message-empty {
+  display: none;
+}
+.input-notify-message.input-notify-message-info {
+  background-color: #ecf2fd;
+  border-color: #a0c2f9;
+}
+.input-notify-message.input-notify-message-success {
+  background-color: #eaf7f0;
+  border-color: #99d5b8;
+}
+.input-notify-message.input-notify-message-warning {
+  background-color: #fdf7ec;
+  border-color: #f9d8a0;
+}
+.input-notify-message.input-notify-message-danger {
+  background-color: #fce8ef;
+  border-color: #f48eb1;
+}
+.input-notify-message .input-notify-message-content {
+  color: #3ea9c4;
+}
+.input-notify-message .input-notify-message-header {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #3ea9c4;
+}
+.input-notify-message .input-notify-message-header.validation {
+  color: #e91e63;
+}
+.input-notify-message .input-notify-message-header.success {
+  color: #33ac71;
+}
+.input-notify-message .input-notify-message-content-area {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.input-notify-message .input-notify-message-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  max-width: 100%;
+  font-size: 1.4rem;
+  color: #3ea9c4;
+  margin-bottom: 0;
+}
+.input-notify-message .input-notify-message-content.validation {
+  color: #e91e63;
+}
+.input-notify-message .input-notify-message-content.success {
+  color: #33ac71;
+}
+.input-notify-message .input-notify-message-content-emphasize {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 66.66666666666666%;
+  flex-basis: 66.66666666666666%;
+  max-width: 66.66666667%;
+  font-size: 1.4rem;
+  color: #33ac71;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.input-notify-message .input-notify-message-subcontent {
+  font-size: 1.4rem;
+  color: #3ea9c4;
+}
+.input-notify-message .input-notify-message-action {
+  font-size: 1.4rem;
+  text-align: right;
+}
+.input-notify-message .input-notify-message-action .action-link {
+  color: #4285f4;
+}
+.input-notify-message .input-notify-message-validation {
+  font-size: 1.4rem;
+  text-align: left;
+  padding-top: 4px;
+}
+.input-notify-message .input-notify-message-validation .validation-content {
+  padding: 4px 0 4px 16px;
+}
+.input-notify-message .input-notify-message-validation .validation-item {
+  cursor: pointer;
+  color: #e91e63;
+}
+.input-notify-message .input-notify-message-validation .validation-item:hover {
+  border-bottom: 1px solid #e91e63;
+}

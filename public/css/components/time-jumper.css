@@ -1,0 +1,58 @@
+@charset "utf-8";
+.time-jumper-holder {
+  position: absolute;
+  width: 80px;
+  height: auto;
+  left: 740px;
+  margin-top: 2px;
+}
+.time-jumper-holder.spyed {
+  top: 100px;
+  position: fixed;
+  left: auto;
+  right: auto;
+  margin-left: 724px;
+  margin-top: 6px;
+}
+.time-jumper-box {
+  color: #aaaaaa;
+  font-size: 1.4rem;
+  padding-left: 20px;
+  line-height: 2.1em;
+  cursor: pointer;
+  width: 100px;
+}
+.time-jumper-box:hover {
+  color: #4285f4;
+}
+.time-jumper-box.selected {
+  color: #4285f4;
+}
+.time-jumper-box.selected .time-jumper-bar {
+  background-color: #4285f4;
+}
+.time-jumper-box:hover .time-jumper-bar {
+  background-color: #4285f4;
+}
+.time-jumper-bar {
+  position: absolute;
+  left: 0;
+  width: 5px;
+  height: 28px;
+  background-color: #aaaaaa;
+}
+.time-jumper-display-none {
+  display: none;
+}
+.time-jumper-month-padding {
+  padding-left: 28px;
+}
+.time-jumper-week-padding {
+  padding-left: 36px;
+}
+.time-jumper-day-padding {
+  padding-left: 44px;
+}
+.time-jumper-invalid {
+  display: none;
+}

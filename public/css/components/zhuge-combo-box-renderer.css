@@ -1,0 +1,58 @@
+@charset "utf-8";
+.zhuge-combo-box-renderer {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  line-height: 100%;
+}
+.zhuge-combo-box-renderer-input {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 100%;
+  line-height: 100%;
+  background-color: transparent;
+  border: 0px solid;
+}
+.zhuge-combo-box-renderer-input:focus + .zhuge-combo-box-renderer-icon-focus {
+  display: inherit;
+}
+.zhuge-combo-box-renderer-icon {
+  position: relative;
+  float: right;
+  height: 100%;
+  width: 22px;
+  line-height: 100%;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAM0lEQVR42mNgGAWDEKSlpf0HYWLFmfAZhI2NDhgJaUYGs2bNYiTKAGyGYNNMdniMAioDAPD9GY1yl/y6AAAAAElFTkSuQmCC');
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  right: 0;
+  overflow: visible;
+  display: inline;
+  position: absolute;
+  font-size: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.zhuge-combo-box-renderer-icon-none {
+  visibility: hidden;
+}
+.zhuge-combo-box-renderer-icon-focus {
+  display: none;
+}
+.zhuge-combo-box-renderer-icon-show {
+  display: inherit;
+}
+.zhuge-combo-box-renderer-list {
+  width: intrinsic;
+  height: 24px;
+  min-width: 100%;
+  line-height: 24px;
+  outline-offset: -0.8px;
+  white-space: nowrap;
+  padding: 1px 24px 1px 6px;
+}

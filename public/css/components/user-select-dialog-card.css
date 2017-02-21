@@ -1,0 +1,121 @@
+@charset "utf-8";
+.user-select-dialog-card-panel {
+  width: 100%;
+  height: 110px;
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 4px 8px;
+}
+.user-select-dialog-card-panel.user-select-dialog-card-checked {
+  background-color: #eaf7f0;
+}
+.user-select-dialog-card-panel.user-select-dialog-card-checked:hover {
+  background-color: #eaf7f0;
+}
+.user-select-dialog-card-panel:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+.user-select-dialog-card-panel.active {
+  background-color: #f1f1f1;
+  border-left-color: #4285f4;
+}
+.user-select-dialog-card-panel-img {
+  float: left;
+  width: 60px;
+  margin-left: 4px;
+  margin-top: 4px;
+}
+.user-select-dialog-card-panel-info {
+  float: right;
+  width: 520px;
+}
+.user-select-dialog-card-panel-info-name-container {
+  display: inline-block;
+}
+.user-select-dialog-card-panel-info-name-container-name {
+  color: #4285f4;
+  margin-bottom: 4px;
+}
+.user-select-dialog-card-panel-info-favorite {
+  margin-left: 8px;
+  font-size: 1.7rem;
+  display: inline-block;
+  color: #aaaaaa;
+}
+.user-select-dialog-card-panel-info-favorite-i:before {
+  margin-top: -4px;
+}
+.user-select-dialog-card-panel-info-detail {
+  margin-top: 4px;
+}
+.user-select-dialog-card-panel-info-detail-i:before {
+  margin-top: 0;
+}
+.user-select-dialog-card-panel-info-detail-place {
+  margin-right: 32px;
+}
+.user-select-dialog-card-panel-info-detail-department {
+  color: #7f7f7f;
+}
+.user-select-dialog-card-panel-info-status {
+  position: absolute;
+  right: 32px;
+  top: 5px;
+}
+.user-select-dialog-card-panel-info-status-icon.user-select-dialog-card-offline {
+  background-color: #a0c2f9;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+}
+.user-select-dialog-card-panel-info-status-icon.user-select-dialog-card-online {
+  background-color: #33ac71;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+}
+.user-select-dialog-card-panel-info-status-text.user-select-dialog-card-offline {
+  color: #a0c2f9;
+}
+.user-select-dialog-card-panel-info-status-text.user-select-dialog-card-online {
+  color: #33ac71;
+}
+.user-select-dialog-card-panel-btn-group {
+  position: absolute;
+  bottom: 5px;
+  right: 32px;
+  font-size: 1.4rem;
+}
+.user-select-dialog-card-panel-btn-group-sharebtn {
+  width: 100px;
+  right: 10px;
+  bottom: 5px;
+  background-color: #ffffff;
+}
+.user-select-dialog-card-panel-btn-group-sharebtn:hover {
+  color: #ffffff;
+}
+.user-select-dialog-card-panel-btn-group-cancelsharebtn {
+  width: 100px;
+  right: 10px;
+}
+.user-select-dialog-card-panel-btn-group-button {
+  display: inline-block;
+}
+.user-select-dialog-card-panel-btn-group-button.user-select-dialog-card-hidden {
+  display: none;
+}

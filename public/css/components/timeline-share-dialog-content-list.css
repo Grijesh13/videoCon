@@ -1,0 +1,19 @@
+@charset "utf-8";
+.timeline-share-dialog-content-list-all {
+  height: 432px;
+  overflow-x: auto;
+}
+.timeline-share-dialog-content-list-each {
+  border-bottom: 1px solid #dddddd;
+  padding: 8px 12px;
+}
+.timeline-share-dialog-content-list-show-all {
+  border-bottom: 1px solid #dddddd;
+  padding: 8px 12px;
+  text-align: center;
+  color: #7f7f7f;
+  font-size: 1rem;
+}
+.timeline-share-dialog-content-list-show-all-text {
+  padding-left: 4px;
+}

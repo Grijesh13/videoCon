@@ -1,0 +1,56 @@
+@charset "utf-8";
+.wap-message-panel-content-anchor {
+  padding: 0;
+}
+.wap-message-panel-content-anchor > .wap-anchor-label > .wap-anchor-label-parent {
+  padding-left: 0;
+  padding-right: 4px;
+}
+.wap-message-panel-content-anchor:not(.wap-message-panel-content-anchor-disabled) > .wap-anchor-label > .wap-anchor-label-parent > .wap-anchor-label-label:hover {
+  text-decoration: underline;
+}
+.wap-message-panel-content-white .wap-message-panel-content-anchor > .wap-anchor-label > .wap-anchor-label-parent {
+  color: #333333;
+}
+.wap-message-panel-content-white .wap-message-panel-content-anchor:not(.wap-message-panel-content-anchor-disabled) > .wap-anchor-label > .wap-anchor-label-parent:hover {
+  color: #000000;
+}
+.wap-message-panel-content-default .wap-message-panel-content-anchor > .wap-anchor-label > .wap-anchor-label-parent {
+  color: #555555;
+}
+.wap-message-panel-content-default .wap-message-panel-content-anchor:not(.wap-message-panel-content-anchor-disabled) > .wap-anchor-label > .wap-anchor-label-parent:hover {
+  color: #191919;
+}
+.wap-message-panel-content-info .wap-message-panel-content-anchor > .wap-anchor-label > .wap-anchor-label-parent {
+  color: #4285f4;
+}
+.wap-message-panel-content-info .wap-message-panel-content-anchor:not(.wap-message-panel-content-anchor-disabled) > .wap-anchor-label > .wap-anchor-label-parent:hover {
+  color: #3b77db;
+}
+.wap-message-panel-content-primary .wap-message-panel-content-anchor > .wap-anchor-label > .wap-anchor-label-parent {
+  color: #4285f4;
+}
+.wap-message-panel-content-primary .wap-message-panel-content-anchor:not(.wap-message-panel-content-anchor-disabled) > .wap-anchor-label > .wap-anchor-label-parent:hover {
+  color: #3b77db;
+}
+.wap-message-panel-content-success .wap-message-panel-content-anchor > .wap-anchor-label > .wap-anchor-label-parent {
+  color: #33ac71;
+}
+.wap-message-panel-content-success .wap-message-panel-content-anchor:not(.wap-message-panel-content-anchor-disabled) > .wap-anchor-label > .wap-anchor-label-parent:hover {
+  color: #2d9a65;
+}
+.wap-message-panel-content-warning .wap-message-panel-content-anchor > .wap-anchor-label > .wap-anchor-label-parent {
+  color: #f4b142;
+}
+.wap-message-panel-content-warning .wap-message-panel-content-anchor:not(.wap-message-panel-content-anchor-disabled) > .wap-anchor-label > .wap-anchor-label-parent:hover {
+  color: #db9f3b;
+}
+.wap-message-panel-content-danger .wap-message-panel-content-anchor > .wap-anchor-label > .wap-anchor-label-parent {
+  color: #e91e63;
+}
+.wap-message-panel-content-danger .wap-message-panel-content-anchor:not(.wap-message-panel-content-anchor-disabled) > .wap-anchor-label > .wap-anchor-label-parent:hover {
+  color: #d11b59;
+}
+.wap-message-panel-content.hidden {
+  display: none;
+}

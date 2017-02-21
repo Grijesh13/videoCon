@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------
+ * service-title.xml style
+ * @author minami_n
+ * ------------------------------------------------------------------------*/
+.service-title {
+  padding-top: 10px;
+}
+.service-title-caption {
+  font-size: 2.4rem;
+}

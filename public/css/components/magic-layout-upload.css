@@ -1,0 +1,98 @@
+@charset "utf-8";
+.magic-layout-upload {
+  position: relative;
+  background-color: #ffffff;
+  padding: 48px;
+  height: 500px;
+  border: 3px dashed #bdbdbd;
+  -webkit-border-radius: 6px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 6px;
+  -moz-background-clip: padding;
+  border-radius: 6px;
+  background-clip: padding-box;
+  margin: 64px;
+}
+.magic-layout-upload-bg {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 100%;
+  -ms-flex: 1 100%;
+  flex: 1 100%;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #f1f1f1;
+}
+.magic-layout-upload-file-upload {
+  height: 500px;
+  position: absolute;
+  width: 100%;
+}
+.magic-layout-upload-file-upload-btn {
+  left: calc(-34%);
+  padding: 0;
+  font-size: 1.7rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.magic-layout-upload-file-upload-btn-wrapper {
+  position: relative;
+  top: 300px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.magic-layout-upload-file-preview {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 0;
+  background-color: #ffffff;
+}
+.magic-layout-upload-info-message {
+  width: 600px;
+  margin: 0 auto;
+  line-height: 1.42857143;
+  font-size: 1.7rem;
+}
+.magic-layout-upload-info-message-header {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+.magic-layout-upload-description {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 2rem;
+}
+.magic-layout-upload-description-spacing {
+  margin-top: 32px;
+}
+.magic-layout-upload-description-drop-icon {
+  display: inline;
+  font-size: 2rem;
+  margin-right: 8px;
+  color: #4285f4;
+}
+.magic-layout-upload-description-drop-text {
+  font-size: 2rem;
+  line-height: 1;
+  display: inline;
+}
+.magic-layout-upload-description-alternative {
+  font-size: 1.7rem;
+}
